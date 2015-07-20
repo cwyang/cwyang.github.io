@@ -2,9 +2,15 @@
 <html>
     <head>
 	<title>SPA Test</title>
-	
+	<!-- ie9+ rendering support for latest standards -->
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+	<!--   3rd-party stylesheet  -->
+
 	<!--   stylesheet  -->
 	<link rel="stylesheet" href="css/spa.css" type="text/css" />
+	<link rel="stylesheet" href="css/spa.chat.css" type="text/css" />
 	<link rel="stylesheet" href="css/spa.shell.css" type="text/css" />
 
 	<!--   third-party javascript -->
@@ -13,8 +19,11 @@
 	<script src="js/jq/jquery.uriAnchor.js"></script>
 
 	<!-- our javascript -->
-	<script src="js/spa.js"></script>
-	<script src="js/spa.shell.js"></script>
+	<script src="js/spa.js"></script>       <!-- namespace -->
+	<script src="js/spa.util.js"></script>  <!-- utility -->
+	<script src="js/spa.model.js"></script> <!-- model  -->
+	<script src="js/spa.shell.js"></script> <!-- shell -->
+	<script src="js/spa.chat.js"></script>  <!-- features -->
 	<script>
 	$(function () { spa.initModule ($('#spa')); });
 	</script>
