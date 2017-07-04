@@ -1,25 +1,21 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
+title:  "금주 연차입니다."
 date:   2017-07-04 19:57:00 +0900
 categories: jekyll update
+tags: [blog, jekyll]
+layout: post
+comments: yes
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+금주 연차를 내고 집에서 쉬고 있습니다.
+몸살난 주부의 역할을 체험하고 있으니, 이 옷이 내 몸에 딱 맞는듯합니다.
+이틀째인데 아내에게 벌써 한 소리 듣고 있습니다.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
+글을 쓸 준비를 하였습니다.
+지킬 세팅은 [subicura.com](https://subicura.com) 에서 가져왔습니다.
+이 분 글을 읽고 나도 무엇인가 쓰고 싶어졌습니다.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+사실 쓰고 싶은 것은 기술 이야기가 아닌데,
+그래도 일단 쓰기 쉬운 기술 이야기를 써 보겠습니다.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
