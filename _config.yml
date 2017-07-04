@@ -22,11 +22,27 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cwyang
 github_username:  cwyang
 
+paginate:	10
+timezone: "Asia/Seoul"
+
+#blog logo
+logo: "/assets/images/logo.jpg"
+cover: "/assets/images/background_image.jpg"
+name: 'cwyang'
+author: 'cwyang'
+author_image: "/assets/images/author.jpg"
+
+twitter_handle: '@cwyang'
+
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-sitemap
+  - jemoji
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -39,3 +55,16 @@ gems:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+social:
+  - icon:	facebook
+    url:	https://facebook.com/cwyang72
+    desc: Connect with me facebook
+    share_url: https://www.facebook.com/sharer.php
+    share_title: ?t=
+    share_link: "&amp;u="
+  - icon:	twitter
+    url:	https://twitter.com/cwyang
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="

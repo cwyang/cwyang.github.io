@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-양 철 웅 | Chul-Woong Yang
+양 철 웅 \| Chul-Woong Yang
 
 `system programming` `ssl/tls` `c` `haskell` `python` `machine learning`
 
