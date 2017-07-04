@@ -18,7 +18,7 @@ title: cwyang's blog
 description: > # this means to ignore newlines until "baseurl:"
   short essays
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://cwyang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cwyang
 github_username:  cwyang
 
