@@ -29,7 +29,9 @@ timezone: "Asia/Seoul"
 logo: "/assets/images/logo.jpg"
 cover: "/assets/images/background_image.jpg"
 name: 'cwyang'
-author: cwyang
+author:
+  name: 양철웅
+  bio: Chul-Woong Yang
 author_image: "/assets/images/author.jpg"
 
 twitter_handle: '@cwyang'
