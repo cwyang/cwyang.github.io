@@ -6,7 +6,7 @@ layout: post
 comments: yes
 author: cwyang
 ---
-[iCloudflare의 Nick Sullivan씨의 글](https://blog.cloudflare.com/why-tls-1-3-isnt-in-browsers-yet/)을 풀어본 것입니다.
+[Cloudflare의 Nick Sullivan씨의 글](https://blog.cloudflare.com/why-tls-1-3-isnt-in-browsers-yet/)을 풀어본 것입니다.
 
 현재 TLS1.3은 호환성 이슈가 많다. 보안성 강화와 빠른 속도를 장점으로 가지는 TLS1.3에 대해서 많은 브라우저들이 구현체를 탑재하였지만 대부분 기본적으로 비활성화 되어있다. 그 문제는 TLS 1.3 프로토콜 자체에 있다기 보다는 미들박스, 즉 이미 많이 도입되어 있는 SSL-proxy들이 TLS1.3 통신에 있어 장애요소가 되기 때문이다.
 
