@@ -4,6 +4,7 @@ date:   2017-12-30 00:15:00 +0900
 tags: [blog, tls, work]
 layout: post
 comments: yes
+author: cwyang
 ---
 [iCloudflare의 Nick Sullivan씨의 글](https://blog.cloudflare.com/why-tls-1-3-isnt-in-browsers-yet/)을 풀어본 것입니다.
 
