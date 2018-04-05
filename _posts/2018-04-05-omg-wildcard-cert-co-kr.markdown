@@ -1,7 +1,7 @@
 ---
 title:  "*.co.kr 인증서가 발급되었습니다."
 date:   2018-04-05 09:00:00 +0900
-tags: [blog, tls, work, certificate transparency, GPKI, ssl, tls]
+tags: [blog, ssl, tls, work, certificate transparency, GPKI]
 layout: post
 comments: yes
 author: cwyang
