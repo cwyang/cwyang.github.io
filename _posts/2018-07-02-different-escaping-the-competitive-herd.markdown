@@ -30,11 +30,11 @@ header-img: /assets/images/audio-dj-mix-63703.jpg
 
 무한 경쟁 카테고리에서 바둥거리기 보다는 살아남기 위한 세가지 접근 방법을 제안하였습니다. 
 
-  - Reversal 역발상
+  - Reversal 역발상  
     Feature를 단순화. Less is More
-  - Breakaway/일탈화
+  - Breakaway/일탈화  
     고정관념 타파. Break the Frame
-  - Hostility/적대발상
+  - Hostility/적대발상  
     싫으면 말고. Hate it or Love it
 
 Break the Frame은 올 시즌 한화 이글스의 캐치입니다. 이번 시즌 한화 이글스를 살리고 있는것이 이 캐치 때문일까요?
