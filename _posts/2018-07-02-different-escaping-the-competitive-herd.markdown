@@ -5,8 +5,8 @@ tags: [blog, book, different, management, strategy]
 layout: post
 comments: yes
 author: cwyang
-excerpt: 문체부가 2018년 5월 2일 웹툰 등 불법 유통 해외사이트 집중 단속 및 정품 이용 캠페인 연계 실시에 대하여 보도자료를 발표하였습니다. 이번 글에서는 기술적 측면에서 불법 사이트 차단 문제를 살펴보도록 하겠습니다.
-header-img: /assets/images/audio-dj-mix-63703.jpg
+excerpt: 지난 주말에 책 한권을 읽었습니다. 경영 서적인 <디퍼런트> 입니다. 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는 점이 인상적이었기에 짧게 책을 소개해드릴께요.
+header-img: /assets/images/different-becoming-herd.jpg
 ---
 지난 주말에 책 한권을 읽었습니다. 경영 서적인 <디퍼런트> 입니다.
 
