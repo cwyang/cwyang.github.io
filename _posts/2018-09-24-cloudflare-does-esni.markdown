@@ -26,4 +26,4 @@ DNS로 퍼블릭 키를 배포하고, 퍼블릭 키를 이용하여 DH (Diffie-H
 
 --
 
-[SecureDNS, DNSSec, TLS1.3, Encrypted SNI의 적용을테스트 할 수 있는 페이지를 cloudflare에서 서비스하고 있습니다.](https://www.cloudflare.com/ssl/encrypted-sni/)
+SecureDNS, DNSSec, TLS1.3, Encrypted SNI 환경을 테스트하는 페이지를 [cloudflare에서 서비스하고 있습니다.](https://www.cloudflare.com/ssl/encrypted-sni/)
