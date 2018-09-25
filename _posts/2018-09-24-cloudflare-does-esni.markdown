@@ -24,3 +24,6 @@ DNS로 퍼블릭 키를 배포하고, 퍼블릭 키를 이용하여 DH (Diffie-H
 
 기술은 점점 더 익명화를 지향하는 쪽으로 나아가고 있는 것이 맞는데, 그게 좋은 건지 생각해보게 됩니다. 
 
+--
+
+[SecureDNS, DNSSec, TLS1.3, Encrypted SNI의 적용을테스트 할 수 있는 페이지를 cloudflare에서 서비스하고 있습니다.](https://www.cloudflare.com/ssl/encrypted-sni/)
