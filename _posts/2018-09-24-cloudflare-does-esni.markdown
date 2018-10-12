@@ -6,7 +6,7 @@ layout: post
 comments: yes
 author: cwyang
 excerpt: 얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요.
-header-img: {{ site.url }}/assets/images/esni_cloudflare.png
+header-img: /assets/images/esni_cloudflare.png
 toc: true
 ---
 얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 [암호화 SNI](https://tools.ietf.org/html/draft-ietf-tls-esni-01) 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 [발표를 했네요.](https://blog.cloudflare.com/encrypted-sni/)

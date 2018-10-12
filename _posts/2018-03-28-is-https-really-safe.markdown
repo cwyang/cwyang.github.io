@@ -6,7 +6,7 @@ layout: post
 comments: yes
 author: cwyang
 excerpt: 주소창에 녹색 자물쇠가 보이면 안전하다구?
-header-img: {{ site.url }}/assets/images/life-of-pix-free-stock-photos-spain-door-padlock2.jpg
+header-img: /assets/images/life-of-pix-free-stock-photos-spain-door-padlock2.jpg
 ---
 
 인터넷 사용시 HTTP를 이용하면 도청이 가능하고, 변조가 가능하며, 인증이 결여되어 있기 때문에 최근 브라우저들은 HTTP사이트를 방문하면 안전하지 않은 연결이라고 안내하는 추세입니다. 전자입찰을 한다고 보았을때, 입찰가가 유출되고(도청), 입찰가를 해커가 바꿀 수 있으며(변조), 입찰을 제대로 했다고 생각했지만 그게 아니라 (인증결여) 입찰에 탈락할 수가 있는거죠. 그렇기 때문에 안전한 HTTPS, 즉 암호화 통신경로로 많은 서비스들이 옮겨가고 있죠. 인터넷 사용시 주소창에 녹색 자물쇠가 나타나면 아, 나의 통신은 안전하구나.. 하고 안심하면 되는 것이죠.

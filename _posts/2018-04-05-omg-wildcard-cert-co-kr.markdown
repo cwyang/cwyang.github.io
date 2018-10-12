@@ -6,7 +6,7 @@ layout: post
 comments: yes
 author: cwyang
 excerpt: 식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요. 인증서는 전 세계를 대상으로하는 주민등록증이라고 할 수 있는데 정부에서 운영을 잘 해주었어야 한다고 생각합니다. 오늘의 사건에 대해서 쉽게 풀어보겠습니다.
-header-img: {{ site.url }}/assets/images/gpki_wildcard_cert.jpg
+header-img: /assets/images/gpki_wildcard_cert.jpg
 ---
 
 식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요.
