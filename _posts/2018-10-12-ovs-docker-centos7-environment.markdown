@@ -147,8 +147,7 @@ PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
 rtt min/avg/max/mdev = 0.037/0.037/0.037/0.000 ms
 {% endhighlight bash linenos %}
-
-
+v
 # Three-containers w/ OVS bridge
 ## 구성
 {% highlight bash linenos %}
