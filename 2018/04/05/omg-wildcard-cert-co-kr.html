@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>*.co.kr 인증서가 발급되었습니다.</title>
+  <meta name="description" content="식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요. 인증서는 전 세계를 대상으로하는 주민등록증이라고 할 수 있는데 정부에서 운영을 잘 해주었어야 한다고 생각합니다. 오늘의 사건에 대해서 쉽게 풀어보겠습니다." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cwyang" />
+    <meta name="twitter:title" content="*.co.kr 인증서가 발급되었습니다." />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/logo.jpg" />
+    
+    <meta name="twitter:description"  content="식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요. 인증서는 전 세계를 대상으로하는 주민등록증이라고 할 수 있는데 정부에서 운영을 잘 해주었어야 한다고 생각합니다. 오늘의 사건에 대해서 쉽게 풀어보겠습니다." />
+    
+  
+  
+  <meta property="og:site_name" content="cwyang's blog" />
+  <meta property="og:title" content="*.co.kr 인증서가 발급되었습니다."/>
+  
+  <meta property="og:description" content="식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요. 인증서는 전 세계를 대상으로하는 주민등록증이라고 할 수 있는데 정부에서 운영을 잘 해주었어야 한다고 생각합니다. 오늘의 사건에 대해서 쉽게 풀어보겠습니다." />
+  
+  <meta property="og:image" content="http://localhost:4000/assets/images/gpki_wildcard_cert.jpg" />
+  <meta property="og:url" content="http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2018-04-05T09:00:00+09:00">
+
+  <meta property="fb:app_id" content="fbappid" />
+
+  <meta name="naver-site-verification" content="naver-site-verify-id" />
+
+  <link rel="canonical" href="http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1539336528117219047" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+
+  <script>
+    var _mailChimpUrl = "";
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'gaid', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.6&appId=fbappid";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo.jpg)"></span></a>
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              *.co.kr 인증서가 발급되었습니다.
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share pull-right">
+                <div class="fb-like" data-href="http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                
+                  
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%2A.co.kr+%EC%9D%B8%EC%A6%9D%EC%84%9C%EA%B0%80+%EB%B0%9C%EA%B8%89%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4.&amp;u=http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr"
+                      onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                    </a>
+                  
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=%2A.co.kr+%EC%9D%B8%EC%A6%9D%EC%84%9C%EA%B0%80+%EB%B0%9C%EA%B8%89%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4.&amp;url=http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+              </section>
+              
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
+              on
+              <time datetime="2018-04-05T09:00:00+09:00">05 Apr 2018</time>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요.</p>
+
+<p>인증서는 전 세계를 대상으로하는 주민등록증이라고 할 수 있는데 정부에서 운영을 잘 해주었어야 한다고 생각합니다.</p>
+
+<p>오늘의 사건에 대해서 쉽게 풀어보겠습니다.</p>
+
+<h2 id="인증서">인증서</h2>
+
+<p>인터넷 통신의 많은 부분이 프라이버시를 위하여 암호화 통신을 합니다. 인터넷으로 물건을 사고 송금을 하고 메세지를 보낼 때 통신 대상을 제외한 타인이 볼 수 없도록 되어있습니다. 그러면 이제 ‘내가 이야기하는 사람이 정말 내가 이야기하려는 사람이 맞나’만을 확인하면 안전한 통신을 할 수 있습니다.</p>
+
+<p>“저는 갑돌이와 이야기 하고 싶어요. 갑돌이에게만 돈을 보내야해요” 라는 을순이가 “안녕 나야, 갑돌이, 나 지금 돈이 필요한데 백만원만 보내줄래?”라는 메세지를 받는다고 돈을 부쳐서 발생하는 사건들은 잘 아시지요? <strong>인증서</strong>는 이 때 주민등록증처럼 제시할 수 있습니다. 이 인증서는 그에 상응하는 암호키를 가진 사람만 암호화 통신에서 사용할 수 있어요. 즉, 암호화 통신을 할 때 받은 인증서를 보면 상대방이 누군지 확실히 알 수 있는겁니다. “아, 너 갑돌이 맞구나. 무슨일이야, 백만원 보내줄께”</p>
+
+<h2 id="인증기관-ca-certificate-authority">인증기관 (CA: Certificate Authority)</h2>
+
+<p>을순이가 너그럽다는 것을 안 병태는 메신저상에서 을순이를 속이려고 해요.</p>
+
+<p>“을순아 나 갑돌인데, 교통사고를 냈어. 급히 백만원이 필요해.”</p>
+
+<p>을순이가 상대방의 인증서를 봤더니 이름이 갑돌이인거에요. 을순이는 너그럽기는 했지만 꼼꼼한 성격이었기 때문에 인증서의 발급기관을 확인합니다. 보니까 발급기관이 대한민국이 아니고 버뮤다라고 되어 있네요?</p>
+
+<p>“너 갑돌이 아니구나, 이 얌생이! 사기치지말아” 하면서 을순이는 메신저를 꺼버리게 되었습니다.</p>
+
+<p>인증서 자체는 누구나 만들 수가 있어요. 그럼 그것을 어떻게 믿을까요? 대한민국이 발급한 주민등록증만 믿는 것 처럼, 인증서 역시 신뢰된 소수의 기관이 발급한 인증서만을 믿도록 인터넷은 구성되어 있어요.</p>
+
+<p>인증서를 발급해 주는 기관을 CA라고 합니다. CA는 인증서 발급 요청을 받으면 요청받은 인증서에 인감도장을 찍어줘요. 즉 전자 서명을 붙여주는 것이에요. 
+사용자는 그 전자 서명을 보고 “나, 이 CA는 믿고 있어. 그러니까 이 CA의 인감도장이 찍혀 있으니 이 인증서도 믿을래” 라고 생각하게 되는 것이에요.
+그래서 인증기관의 역할은 굉장히 중요하고, 인증기관은 자신의 신뢰도를 유지하기 위하여 노력을 하고 있죠.</p>
+
+<h2 id="사고치는-인증기관들">사고치는 인증기관들</h2>
+
+<p>인증기관도 사람이 운영하기 때문에 실수도 있을 수 있고, 의도적으로 사고를 칠 수도 있습니다.
+병태가 정식으로 갑돌이 인증서를 발급받을 수 있다면 어떻게 되겠어요?</p>
+
+<p>그런데 그것이 실제로 일어났습니다.</p>
+
+<ul>
+  <li>2017년 1월에 Symantec사가 도메인 소유자가 아닌 사람에게 인증서를 발급해준다는 리포트가 나옵니다.
+  (이 사건에도 우리나라가 등장합니다. 해당 인증서는 Symantec이 인증한 기관인 우리나라의 Crosscert사에서 발급한 것입니다. 으음..)
+  <a href="https://www.mail-archive.com/dev-security-policy@lists.mozilla.org/msg05455.html">관련정보</a></li>
+  <li>그래서 사람들이 Symantec사를 들여다보았더니, Crosscert이외에도 다른 여러 기관에 특별한 관리감독 없이 인증서를 발급할 권리를 주었고, 그 결과로 발급된 인증서들의 수가 30,000에 이른다고 합니다.</li>
+</ul>
+
+<p>이 사건이 어떻게 끝났냐고요? 구글과 모질라사는 시만텍사가 발급한 인증서를 모두 취급정지하였고
+(<a href="https://blog.qualys.com/ssllabs/2017/09/26/google-and-mozilla-deprecating-existing-symantec-certificates">관련기사</a>)그 여파로 시만텍사는 자사의 인증서 사업부를 Digicert사에 매각하게 됩니다.</p>
+
+<h2 id="오늘의-사건">오늘의 사건</h2>
+
+<p>우리나라에도 전자정부 서비스를 위하여 인증기관이 있습니다.</p>
+
+<blockquote>
+  <p>행정전자서명 인증관리센터 (GPKI: Government Public Key Infrastructre) <a href="https://www.gpki.go.kr">https://www.gpki.go.kr</a></p>
+</blockquote>
+
+<p>이 GPKI에서 교육부에 아래의 인증서를 발급하였습니다.
+인증서는 2015년 6월부터 2017년 9월까지 유효한 인증서이며, 발급기관(Issuer)이 대한민국 정부(Government of Korea)의 GPKI라고 명시되어 있죠. Subject를 보면 support.gne.go.kr을 대표할 도메인으로 만든 것입니다.</p>
+
+<p><img src="http://localhost:4000/assets/images/gpki_wildcard_cert1.png" alt="문제의 인증서" /></p>
+
+<p>문제는 이 인증서가 support.gne.go.kr 말고도 다른 여러 도메인을 대표하고 있고, 그 안에 <strong>*.co.kr</strong>과 <strong>*.go.kr</strong>, <strong>*.or.kr</strong>등이 포함되어 있다는 것입니다.</p>
+
+<p><img src="http://localhost:4000/assets/images/gpki_wildcard_cert2.png" alt="문제의 인증서가 대표하는 도메인들" /></p>
+
+<p>그러면 이 인증서를 탑재한 사이트는 https://president.go.kr(청와대), https://kait.or.kr(한국정보통신진흥협회), https://lgcns.co.kr(LGCNS) 등을 자처할 수 있게 됩니다. DNS를 이용한 피싱이나 중간자공격(Man-In-The-Middle)등이 가능해지는 등 인터넷상의 보안 사고의 가능성이 열리게 되는 거에요.</p>
+
+<p>CA/Browser 포럼은 인증기관이 이런 문제가 있을만한 와일드카드 도메인의 발급 요청을 허락하여서는 절대로 아니된다(MUST NOT)고 규정하고 있습니다. (<a href="https://cabforum.org/wp-content/uploads/CA-Browser-Forum-BR-1.5.6.pdf">Baseline Requirements 문서의 3.2.2.6 Wildcard Domain Validation 참고</a>) *.mycompany.co.kr은 발급해 줄 수 있으나, *.co.kr은 안된다는 거에요.</p>
+
+<p>인증기관 업무의 중요성이 간과되었기에 발생한 일일 것이라고 생각합니다.
+오늘 인터넷에 회자되어서 그렇지 이것은 과거에 벌어진 일이고 위의 인증서는 이미 만료되었습니다.
+그러나 다른 인증서들에 문제가 없는지 점검하여 문제가 있다면 폐기하고, 
+유사한 일이 다시 생기지 않도록 앞으로 잘 운영해 나가는 것이 중요하겠죠.</p>
+
+<h2 id="잘못된-인증서의-발급을-어떻게-알-수-있었나요">잘못된 인증서의 발급을 어떻게 알 수 있었나요</h2>
+
+<p>인증서 운영의 투명화를 위하여 여러 인증기관은 인증서를 발급할 때에 인증서 투명 로그 (Certificate Transparency Log)에 발급한 인증서를 등록하고 있습니다. 이번 사건과 같이 잘못된 형태의 도메인에 대해서 인증서가 발급이 되는지, 혹은 내 회사 도메인에 대해서 다른 제3자가 발급을 하는지에 대한 모니터링이 가능합니다.</p>
+
+<p>또한 브라우저마다, 인증서를 투명하게 공개하지 않은 인증서에 대해 경고를 하는 기능이 탑재될 예정에 있습니다.</p>
+
+<p>잘못된 인증서를 슬그머니 발급하려고 해도 이제 안돼요.</p>
+
+          <p class="tags">
+            
+              <a href="/tags#blog-ref">blog</a>
+            
+              <a href="/tags#ssl-ref">ssl</a>
+            
+              <a href="/tags#tls-ref">tls</a>
+            
+              <a href="/tags#work-ref">work</a>
+            
+              <a href="/tags#certificate-transparency-ref">certificate transparency</a>
+            
+              <a href="/tags#gpki-ref">GPKI</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%2A.co.kr+%EC%9D%B8%EC%A6%9D%EC%84%9C%EA%B0%80+%EB%B0%9C%EA%B8%89%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4.&amp;u=http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%2A.co.kr+%EC%9D%B8%EC%A6%9D%EC%84%9C%EA%B0%80+%EB%B0%9C%EA%B8%89%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4.&amp;url=http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>양철웅</h4>
+              <p class="bio">Chul-Woong Yang</p>
+              <hr>
+              <p class="published">Published <time datetime="2018-04-05 09:00">05 Apr 2018</time></p>
+            </section>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
+              
+            </footer>
+          </div>
+        </div>
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+        <a class="read-next-story no-cover" href="/2018/06/01/internet-filtering.html">
+          <section class="post">
+            <h2>문체부의 불법 유통 해외사이트 집중 단속에 붙여</h2>
+            <p>문체부가 2018년 5월 2일 웹툰 등 불법 유통 해외사이트 집중 단속 및 정품 이용 캠페인...</p>
+          </section>
+        </a>
+      
+      
+        <a class="read-next-story prev no-cover" href="/2018/03/28/is-https-really-safe.html">
+          <section class="post">
+            <h2>HTTPS를 쓴다고 안심할 수 만은 없다는데, 왜?</h2>
+            <p>주소창에 녹색 자물쇠가 보이면 안전하다구?</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">cwyang's blog</a> © 2018</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1539336528117219047"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>

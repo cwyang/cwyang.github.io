@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>OVS, Docker, CentOS7 환경 만들기</title>
+  <meta name="description" content="centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cwyang" />
+    <meta name="twitter:title" content="OVS, Docker, CentOS7 환경 만들기" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/logo.jpg" />
+    
+    <meta name="twitter:description"  content="centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다." />
+    
+  
+  
+  <meta property="og:site_name" content="cwyang's blog" />
+  <meta property="og:title" content="OVS, Docker, CentOS7 환경 만들기"/>
+  
+  <meta property="og:description" content="centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다." />
+  
+  <meta property="og:image" content="http://localhost:4000/assets/images/animals.jpg" />
+  <meta property="og:url" content="http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2018-10-12T14:38:00+09:00">
+
+  <meta property="fb:app_id" content="fbappid" />
+
+  <meta name="naver-site-verification" content="naver-site-verify-id" />
+
+  <link rel="canonical" href="http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1539336528117219047" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+
+  <script>
+    var _mailChimpUrl = "";
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'gaid', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.6&appId=fbappid";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo.jpg)"></span></a>
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              OVS, Docker, CentOS7 환경 만들기
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share pull-right">
+                <div class="fb-like" data-href="http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                
+                  
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=OVS%2C+Docker%2C+CentOS7+%ED%99%98%EA%B2%BD+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;u=http://localhost:4000/2018/10/12/ovs-docker-centos7-environment"
+                      onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                    </a>
+                  
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=OVS%2C+Docker%2C+CentOS7+%ED%99%98%EA%B2%BD+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;url=http://localhost:4000/2018/10/12/ovs-docker-centos7-environment"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+              </section>
+              
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
+              on
+              <time datetime="2018-10-12T14:38:00+09:00">12 Oct 2018</time>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#vagrant">Vagrant</a></li>
+<li class="toc-entry toc-h1"><a href="#ssl-접속환경-확인">SSL 접속환경 확인</a></li>
+<li class="toc-entry toc-h1"><a href="#설치">설치</a></li>
+<li class="toc-entry toc-h1"><a href="#설치-확인">설치 확인</a></li>
+<li class="toc-entry toc-h1"><a href="#two-containers-w-ovs-bridge">Two containers w/ OVS bridge</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#구성">구성</a></li>
+<li class="toc-entry toc-h2"><a href="#ovs-브릿지-생성">OVS 브릿지 생성</a></li>
+<li class="toc-entry toc-h2"><a href="#컨테이너-생성후-ovs-bridge에-연결">컨테이너 생성후 ovs-bridge에 연결</a></li>
+<li class="toc-entry toc-h2"><a href="#컨테이너간-연결-확인">컨테이너간 연결 확인</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#three-containers-w-ovs-bridge">Three-containers w/ OVS bridge</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#구성-1">구성</a></li>
+<li class="toc-entry toc-h2"><a href="#ovs-브릿지-생성-1">OVS 브릿지 생성</a></li>
+<li class="toc-entry toc-h2"><a href="#컨테이너-생성후-ovs-bridge에-연결-1">컨테이너 생성후 ovs-bridge에 연결</a></li>
+<li class="toc-entry toc-h2"><a href="#host-bridge">host-bridge</a></li>
+<li class="toc-entry toc-h2"><a href="#컨테이너간-연결-확인-1">컨테이너간 연결 확인</a></li>
+</ul>
+</li>
+</ul><h1 id="vagrant">
+<a id="vagrant" class="anchor" href="#vagrant" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vagrant</h1>
+
+<p>centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.
+vagrant는 가상 머신 설치를 도와주는 프로그램입니다. vagrant가 없었던 시절에는 VM에 직접 인스톨 한 후 VM 이미지를 복사해 두어 재 사용하는 방법을 사용했었습니다.
+vagrant에서는 기본 이미지 (box라고 합니다.)를 제공하면서, 그 위에 설치 프로그램 형상을 사용자가 지정할 수 있도록 합니다. 쓰면 매우 편한겁니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="code"><pre><span class="nv">$ </span>uname <span class="nt">-a</span>
+Linux cwyang 4.10.0-42-generic <span class="c">#46~16.04.1-Ubuntu SMP Mon Dec 4 15:57:59 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get install virtualbox vagrant</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h1 id="ssl-접속환경-확인">
+<a id="ssl-접속환경-확인" class="anchor" href="#ssl-%EC%A0%91%EC%86%8D%ED%99%98%EA%B2%BD-%ED%99%95%EC%9D%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>SSL 접속환경 확인</h1>
+
+<p>다음 ssl domain들이 인증서 피닝을 요구합니다.</p>
+
+<ul>
+  <li>vagrantcloud.com</li>
+  <li>cbs.centos.org</li>
+  <li>yum.dockerproject.org</li>
+  <li>raw.githubusercontent.com</li>
+</ul>
+
+<p>회사안에서 SSL 복호화 장비가 있는 경우 회사 인증서를 VM에 신뢰할 수 있는 인증서로 심거나, SSL 복호화 장비에서 위의 사이트들에 대하여 복호화를 바이패스 하도록 설정합니다.</p>
+
+<h1 id="설치">
+<a id="설치" class="anchor" href="#%EC%84%A4%EC%B9%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>설치</h1>
+
+<p>github에 설치 스크립트를 작업해 둔 분이 있습니다. (<a href="https://github.com/joatmon08/vagrantfiles/tree/master/ovs-vagrant">링크</a>)그 파일들을 이용해서 설치해 보았습니다. 감사합니다.</p>
+
+<p>아래 두 파일을 저장한 후 <code class="highlighter-rouge">vagrant up</code>  명령어를 실행하면 수 분 안에 centos/7을 다운 받고 dependency package를 설치하고 ovs를 설치하고 docker를 설치해줍니다. 좋은 세상입니다.</p>
+
+<ul>
+  <li><a href="https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/Vagrantfile"><code class="highlighter-rouge">Vagrantfile</code></a></li>
+  <li><a href="https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/bootstrap.sh"><code class="highlighter-rouge">bootstrap.sh</code></a></li>
+</ul>
+
+<h1 id="설치-확인">
+<a id="설치-확인" class="anchor" href="#%EC%84%A4%EC%B9%98-%ED%99%95%EC%9D%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>설치 확인</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="code"><pre><span class="nv">$ </span>vagrant ssh
+Last login: Fri Oct 12 01:13:18 2018 from 10.0.2.2
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>호스트의 id_rsa.pub를 VM의 <code class="highlighter-rouge">.ssh/authorized_keys</code>에 등록하면 직접 ssh도 가능합니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="code"><pre><span class="nv">$ </span>ssh vagrant@127.0.0.1 <span class="nt">-p</span> 2222
+Last login: Fri Oct 12 01:22:25 2018 from 10.0.2.2
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>도커와 OvS를 확인합니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>systemctl status openvswitch docker
+● openvswitch.service - Open vSwitch
+   Loaded: loaded <span class="o">(</span>/usr/lib/systemd/system/openvswitch.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: disabled<span class="o">)</span>
+   Active: active <span class="o">(</span>exited<span class="o">)</span> since Fri 2018-10-12 01:05:18 UTC<span class="p">;</span> 21min ago
+ Main PID: 25616 <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span>0/SUCCESS<span class="o">)</span>
+    Tasks: 0
+   Memory: 0B
+   CGroup: /system.slice/openvswitch.service
+
+● docker.service - Docker Application Container Engine
+   Loaded: loaded <span class="o">(</span>/usr/lib/systemd/system/docker.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: disabled<span class="o">)</span>
+   Active: active <span class="o">(</span>running<span class="o">)</span> since Fri 2018-10-12 01:05:37 UTC<span class="p">;</span> 21min ago
+     Docs: https://docs.docker.com
+ Main PID: 25686 <span class="o">(</span>dockerd<span class="o">)</span>
+    Tasks: 16
+   Memory: 16.0M
+   CGroup: /system.slice/docker.service
+           ├─25686 /usr/bin/dockerd
+           └─25689 docker-containerd <span class="nt">-l</span> unix:///var/run/docker/libcontainerd/docker-containerd.sock <span class="nt">--metrics-interval</span><span class="o">=</span>0 -...</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>도커 실행을 위해서 <code class="highlighter-rouge">docker</code>그룹에 <code class="highlighter-rouge">vagrant</code> 사용자를 등록합니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker vagrant</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h1 id="two-containers-w-ovs-bridge">
+<a id="two-containers-w-ovs-bridge" class="anchor" href="#two-containers-w-ovs-bridge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two containers w/ OVS bridge</h1>
+<h2 id="구성">
+<a id="구성" class="anchor" href="#%EA%B5%AC%EC%84%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>구성</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="code"><pre>moby1: eth1 192.168.0.1/24
+  | <span class="o">(</span>ovs-br1<span class="o">)</span>
+moby2: eth1 192.168.0.2/24</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h2 id="ovs-브릿지-생성">
+<a id="ovs-브릿지-생성" class="anchor" href="#ovs-%EB%B8%8C%EB%A6%BF%EC%A7%80-%EC%83%9D%EC%84%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>OVS 브릿지 생성</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="code"><pre>root@localhost vagrant]# ovs-vsctl add-br ovs-br1
+root@localhost vagrant]# ovs-vsctl show
+94185d0-937e-49bf-a0a4-69ca5027718b
+   Bridge <span class="s2">"ovs-br1"</span>
+       Port <span class="s2">"ovs-br1"</span>
+           Interface <span class="s2">"ovs-br1"</span>
+               <span class="nb">type</span>: internal
+   ovs_version: <span class="s2">"2.9.0"</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h2 id="컨테이너-생성후-ovs-bridge에-연결">
+<a id="컨테이너-생성후-ovs-bridge에-연결" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%83%9D%EC%84%B1%ED%9B%84-ovs-bridge%EC%97%90-%EC%97%B0%EA%B2%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 생성후 ovs-bridge에 연결</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker run <span class="nt">-dit</span> <span class="nt">--name</span><span class="o">=</span>moby1 ubuntu
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby1 apt-get update
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby1 apt-get install iproute2 iputils-ping
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span><span class="nb">sudo </span>ovs-docker add-port ovs-br1 eth1 moby1 <span class="nt">--ipaddress</span><span class="o">=</span>192.168.0.1/24
+
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker run <span class="nt">-dit</span> <span class="nt">--name</span><span class="o">=</span>moby2 ubuntu
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 apt-get update
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 apt-get install iproute2 iputils-ping
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span><span class="nb">sudo </span>ovs-docker add-port ovs-br1 eth2 moby1 <span class="nt">--ipaddress</span><span class="o">=</span>192.168.0.2/24
+
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby1 ip address
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+...
+21: eth0@if22: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default
+...
+23: eth1@if24: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether b2:bf:61:25:7e:f8 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 192.168.0.1/24 scope global eth1
+       valid_lft forever preferred_lft forever</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h2 id="컨테이너간-연결-확인">
+<a id="컨테이너간-연결-확인" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EA%B0%84-%EC%97%B0%EA%B2%B0-%ED%99%95%EC%9D%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너간 연결 확인</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span><span class="nb">sudo </span>ovs-vsctl list-ports ovs-br1
+6b9045d2be344_l
+90cd4018819e4_l
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec </span>moby1 ping 192.168.0.2 <span class="nt">-c</span> 1
+PING 192.168.0.2 <span class="o">(</span>192.168.0.2<span class="o">)</span> 56<span class="o">(</span>84<span class="o">)</span> bytes of data.
+64 bytes from 192.168.0.2: <span class="nv">icmp_seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.037 ms
+
+<span class="nt">---</span> 192.168.0.2 ping statistics <span class="nt">---</span>
+1 packets transmitted, 1 received, 0% packet loss, <span class="nb">time </span>0ms
+rtt min/avg/max/mdev <span class="o">=</span> 0.037/0.037/0.037/0.000 ms
+<span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec </span>moby2 ping 192.168.0.1 <span class="nt">-c</span> 1
+PING 192.168.0.1 <span class="o">(</span>192.168.0.1<span class="o">)</span> 56<span class="o">(</span>84<span class="o">)</span> bytes of data.
+64 bytes from 192.168.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.037 ms
+
+<span class="nt">---</span> 192.168.0.1 ping statistics <span class="nt">---</span>
+1 packets transmitted, 1 received, 0% packet loss, <span class="nb">time </span>0ms
+rtt min/avg/max/mdev <span class="o">=</span> 0.037/0.037/0.037/0.000 ms</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>v</p>
+<h1 id="three-containers-w-ovs-bridge">
+<a id="three-containers-w-ovs-bridge" class="anchor" href="#three-containers-w-ovs-bridge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Three-containers w/ OVS bridge</h1>
+<h2 id="구성-1">
+<a id="구성-1" class="anchor" href="#%EA%B5%AC%EC%84%B1-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>구성</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="code"><pre>moby1: eth1 192.168.0.1/24
+  | <span class="o">(</span>ovs-br1<span class="o">)</span>
+moby2: eth1 - <span class="o">(</span>moby2-bridge<span class="o">)</span> - eth2
+  | <span class="o">(</span>ovs-br2<span class="o">)</span>
+moby3: eth1 192.168.0.2/24</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h2 id="ovs-브릿지-생성-1">
+<a id="ovs-브릿지-생성-1" class="anchor" href="#ovs-%EB%B8%8C%EB%A6%BF%EC%A7%80-%EC%83%9D%EC%84%B1-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>OVS 브릿지 생성</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="code"><pre>vagrant@localhost ~]<span class="nv">$ </span><span class="nb">sudo </span>ovs-vsctl add-br ovs-br1
+vagrant@localhost ~]<span class="nv">$ </span><span class="nb">sudo </span>ovs-vsctl add-br ovs-br2
+vagrant@localhost ~]<span class="nv">$ </span><span class="nb">sudo </span>ovs-vsctl show
+94185d0-937e-49bf-a0a4-69ca5027718b
+   Bridge <span class="s2">"ovs-br2"</span>
+       Port <span class="s2">"ovs-br2"</span>
+           Interface <span class="s2">"ovs-br2"</span>
+               <span class="nb">type</span>: internal
+   Bridge <span class="s2">"ovs-br1"</span>
+       Port <span class="s2">"ovs-br1"</span>
+           Interface <span class="s2">"ovs-br1"</span>
+               <span class="nb">type</span>: internal
+   ovs_version: <span class="s2">"2.9.0"</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h2 id="컨테이너-생성후-ovs-bridge에-연결-1">
+<a id="컨테이너-생성후-ovs-bridge에-연결-1" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%83%9D%EC%84%B1%ED%9B%84-ovs-bridge%EC%97%90-%EC%97%B0%EA%B2%B0-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 생성후 ovs-bridge에 연결</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="nv">$ </span><span class="nb">cat </span>run.sh
+<span class="nb">sudo </span>ovs-vsctl add-br ovs-br1
+<span class="nb">sudo </span>ovs-vsctl add-br ovs-br2
+<span class="nb">sudo </span>ovs-vsctl show
+
+docker run <span class="nt">-dit</span> <span class="nt">--name</span><span class="o">=</span>moby1 ubuntu
+docker <span class="nb">exec </span>moby1 apt-get update
+docker <span class="nb">exec </span>moby1 apt-get <span class="nt">-y</span> install iproute2 iputils-ping
+<span class="nb">sudo </span>ovs-docker add-port ovs-br1 eth1 moby1 <span class="nt">--ipaddress</span><span class="o">=</span>192.168.0.1/24
+
+docker run <span class="nt">-dit</span> <span class="nt">--privileged</span> <span class="nt">--name</span><span class="o">=</span>moby2 ubuntu
+docker <span class="nb">exec </span>moby2 apt-get update
+docker <span class="nb">exec </span>moby2 apt-get <span class="nt">-y</span> install iproute2 iputils-ping
+<span class="nb">sudo </span>ovs-docker add-port ovs-br1 eth1 moby2
+<span class="nb">sudo </span>ovs-docker add-port ovs-br2 eth2 moby2
+
+docker run <span class="nt">-dit</span> <span class="nt">--name</span><span class="o">=</span>moby3 ubuntu
+docker <span class="nb">exec </span>moby3 apt-get update
+docker <span class="nb">exec </span>moby3 apt-get <span class="nt">-y</span> install iproute2 iputils-ping
+<span class="nb">sudo </span>ovs-docker add-port ovs-br2 eth1 moby3 <span class="nt">--ipaddress</span><span class="o">=</span>192.168.0.2/24</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h2 id="host-bridge">
+<a id="host-bridge" class="anchor" href="#host-bridge" aria-hidden="true"><span class="octicon octicon-link"></span></a>host-bridge</h2>
+
+<p>moby2안에서 bridge를 생성하여야 하는데, 기본적으로 NET-ADMIN capability를 가지고 있지 못하므로 아래와 같이 실패할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="code"><pre>root@79c82193d876:/# ip link add name moby2-bridge <span class="nb">type </span>bridge
+RTNETLINK answers: Operation not permitted</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>그래서 위에서 moby2는 <code class="highlighter-rouge">--privileged</code> 옵션을 이용하여 구동하였습니다. 자 브릿지를 만들어 봅시다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 ip link add name moby2-bridge <span class="nb">type </span>bridge
+<span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 ip link <span class="nb">set </span>dev moby2-bridge up
+<span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 ip link <span class="nb">set </span>dev eth1 master moby2-bridge
+<span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 ip link <span class="nb">set </span>dev eth2 master moby2-bridge
+
+<span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 ip link show
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: moby2-bridge: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 1e:d3:03:6a:8d:53 brd ff:ff:ff:ff:ff:ff
+55: eth0@if56: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP mode DEFAULT group default
+    link/ether 02:42:ac:11:00:03 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+57: eth1@if58: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue master moby2-bridge state UP mode DEFAULT group default qlen 1000
+    link/ether 1e:d3:03:6a:8d:53 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+59: eth2@if60: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue master moby2-bridge state UP mode DEFAULT group default qlen 1000
+    link/ether 7e:a1:31:29:09:fc brd ff:ff:ff:ff:ff:ff link-netnsid 0</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h2 id="컨테이너간-연결-확인-1">
+<a id="컨테이너간-연결-확인-1" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EA%B0%84-%EC%97%B0%EA%B2%B0-%ED%99%95%EC%9D%B8-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너간 연결 확인</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 apt-get install tcpdump
+
+<span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="nv">$ </span>docker <span class="nb">exec </span>moby1 ping 192.168.0.2 <span class="nt">-c</span> 1
+PING 192.168.0.2 <span class="o">(</span>192.168.0.2<span class="o">)</span> 56<span class="o">(</span>84<span class="o">)</span> bytes of data.
+64 bytes from 192.168.0.2: <span class="nv">icmp_seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.339 ms
+
+<span class="nt">---</span> 192.168.0.2 ping statistics <span class="nt">---</span>
+1 packets transmitted, 1 received, 0% packet loss, <span class="nb">time </span>0ms
+rtt min/avg/max/mdev <span class="o">=</span> 0.339/0.339/0.339/0.000 ms
+<span class="o">[</span>vagrant@localhost ovs_3hosts]<span class="err">$</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>이 때 moby2에서 moby2-bridge에 대고 패킷을 뜨면 위의 연결 확인 패킷을 잡을 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="code"><pre><span class="o">[</span>vagrant@localhost ~]<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> moby2 tcpdump <span class="nt">-i</span> moby2-bridge <span class="nt">-A</span>
+tcpdump: verbose output suppressed, use <span class="nt">-v</span> or <span class="nt">-vv</span> <span class="k">for </span>full protocol decode
+listening on moby2-bridge, link-type EN10MB <span class="o">(</span>Ethernet<span class="o">)</span>, capture size 262144 bytes
+05:24:36.195869 IP 192.168.0.1 <span class="o">&gt;</span> 192.168.0.2: ICMP <span class="nb">echo </span>request, id 344, seq 1, length 64
+E..T..@.@..............L.X...0.[....G....................... <span class="o">!</span><span class="s2">"#</span><span class="nv">$%</span><span class="s2">&amp;'()*+,-./01234567
+05:24:36.195971 IP 192.168.0.2 &gt; 192.168.0.1: ICMP echo reply, id 344, seq 1, length 64
+E..T....@.x...........!L.X...0.[....G....................... !"</span><span class="c">#$%&amp;'()*+,-./01234567</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+
+          <p class="tags">
+            
+              <a href="/tags#blog-ref">blog</a>
+            
+              <a href="/tags#ovs-ref">ovs</a>
+            
+              <a href="/tags#docker-ref">docker</a>
+            
+              <a href="/tags#centos-ref">centos</a>
+            
+              <a href="/tags#vagrant-ref">vagrant</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=OVS%2C+Docker%2C+CentOS7+%ED%99%98%EA%B2%BD+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;u=http://localhost:4000/2018/10/12/ovs-docker-centos7-environment"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=OVS%2C+Docker%2C+CentOS7+%ED%99%98%EA%B2%BD+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;url=http://localhost:4000/2018/10/12/ovs-docker-centos7-environment"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>양철웅</h4>
+              <p class="bio">Chul-Woong Yang</p>
+              <hr>
+              <p class="published">Published <time datetime="2018-10-12 14:38">12 Oct 2018</time></p>
+            </section>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
+              
+            </footer>
+          </div>
+        </div>
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+      
+        <a class="read-next-story prev no-cover" href="/2018/09/24/cloudflare-does-esni.html">
+          <section class="post">
+            <h2>Encrypted SNI</h2>
+            <p>얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서...</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">cwyang's blog</a> © 2018</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1539336528117219047"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>

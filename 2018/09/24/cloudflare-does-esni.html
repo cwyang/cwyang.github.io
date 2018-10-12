@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>HTTPS 사용이 100%가 된다면?</title>
-  <meta name="description" content="HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 ..." />
+  <title>Encrypted SNI</title>
+  <meta name="description" content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,28 +17,28 @@
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
-    <meta name="twitter:title" content="HTTPS 사용이 100%가 된다면?" />
+    <meta name="twitter:title" content="Encrypted SNI" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/logo.jpg" />
     
-    <meta name="twitter:description"  content="HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 ..." />
+    <meta name="twitter:description"  content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요." />
     
   
   
   <meta property="og:site_name" content="cwyang's blog" />
-  <meta property="og:title" content="HTTPS 사용이 100%가 된다면?"/>
+  <meta property="og:title" content="Encrypted SNI"/>
   
-  <meta property="og:description" content="HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 ..." />
+  <meta property="og:description" content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요." />
   
-  <meta property="og:image" content="http://localhost:4000/assets/images/logo.jpg" />
-  <meta property="og:url" content="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" />
+  <meta property="og:image" content="http://localhost:4000/assets/images/esni_cloudflare.png" />
+  <meta property="og:url" content="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" />
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2018-03-24T10:15:00+09:00">
+  <meta property="article:published_time" content="2018-09-24T09:40:00+09:00">
 
   <meta property="fb:app_id" content="fbappid" />
 
   <meta name="naver-site-verification" content="naver-site-verify-id" />
 
-  <link rel="canonical" href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html"/>
+  <link rel="canonical" href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -103,22 +103,22 @@
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">
-              HTTPS 사용이 100%가 된다면?
+              Encrypted SNI
               
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;u=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Encrypted+SNI&amp;u=http://localhost:4000/2018/09/24/cloudflare-does-esni"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;url=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=Encrypted+SNI&amp;url=http://localhost:4000/2018/09/24/cloudflare-does-esni"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -129,7 +129,7 @@
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
               on
-              <time datetime="2018-03-24T10:15:00+09:00">24 Mar 2018</time>
+              <time datetime="2018-09-24T09:40:00+09:00">24 Sep 2018</time>
             </div>
           </div>
         </div>
@@ -142,61 +142,56 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 근접하지는 않을까요?</p>
+          <ul class="section-nav">
+</ul><p>얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 <a href="https://tools.ietf.org/html/draft-ietf-tls-esni-01">암호화 SNI</a> 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 <a href="https://blog.cloudflare.com/encrypted-sni/">발표를 했네요.</a></p>
 
-<p>초기에 HTTPS의 사용이 증가한 이유는 유튜브 등의 일부 OTT 사이트가 HTTPS 사이트로 전환되었기 때문입니다. 그러나 최근의 증가 추세는 주요 브라우저 벤더들이 HTTPS를 밀어주고 있기 때문입니다. 어떤 관리자가 자신의 웹 페이지를 방문하면 브라우저에 보안이 취약하다고 난리(?)를 치는데 그냥 둘까요? 브라우저 변화와 HTTPS의 점유<sup><a href="#footnote1">1</a></sup>의 상승에 대한 흥미로운 자료<sup><a href="#footnote2">2</a></sup>가 있습니다. 다음을 보시지요.</p>
+<p><img src="http://localhost:4000/assets/images/esni_cloudflare.png" alt="ESNI"></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|Date     | HTTPS | 사건
-|2013     |  25%  | NSA에서 정보 감청을 하고 있음이 알려짐
-|2014 Dec |  32%  | Google - 크롬에서 HTTP를 몰아낼 계획발표 - HTTP방문시 적색경고 예정
-|2015 Apr |  35%  | Mozilla - Firefox에서 HTTP를 몰아낼 계획 발표
-|2015 Oct |  38%  | 무료 인증서 Let's Encrypt가 주요 브라우저에서 인식
-|2016 Jun |  45%  | Apple - 앱들은 ATS 의무장착. ATS는 HTTPS만을 사용
-|2017 Jan |  52%  | 크롬56부터 HTTP사이트에서 패스워드/카드정보를 입력할 경우 취약성 경고.  
-		    Firefox에서도 HTTP사이트에서 사용자명/패스워드를 입력시 경고
-|2017 Apr |  56%  | Google - 10월부터 크롬에서 다음 두가지 상황에서 취약성 경고 예고.  
-		    (1) HTTP페이지에서 데이터 입력시 
-		    (2) 비밀브라우징모드에서 HTTP페이지 방문시
-|2018 Jan |  70%  | Mozilla - HTTP방문시 새로운 웹 기능들을 제공하지 않는다고 예고
-|2018 Feb |  70%  | Google - 7월부터 모든 HTTP사이트에 대하여 취약하다고 경고
-</code></pre></div></div>
+<blockquote>
+  <p>이제 SNI 차단은 안된다는 것이에요.</p>
+</blockquote>
 
-<p>Google과 Mozilla는 현재의 “HTTPS:안전, HTTP:보통”의 자세에서 “HTTPS:보통, HTTP:취약”으로 태세 전환을 예고했습니다. Google은 또 인터넷 주소 입력시 HTTPS를 먼저 방문하겠다는 계획도 발표했습니다. www.naver.com 을 주소창에 입력할 때 지금은 http://www.naver.com 으로 접속되지만 (실제로 해 보시면 https사이트로 유도되는데요, 그것은 처음에 http로 접속이 완료된 후 웹 사이트 설정으로 인해 https://www.naver.com으로 유도되기 때문입니다), 어느 순간부터는 https://www.naver.com 으로 바로 접속이 된다는 것입니다.</p>
+<p>정확히 말하면 SNI 차단을 막아주는 환경을 제공하는 사업자가 생겼다라는 것입니다.</p>
 
-<p>Let’s Encrypt와 같이 무료 인증서를 발급하는 CA도 늘어날 것으로 예상되기 때문에, 인증서 비용은 HTTPS 보급에 진입 장벽이 되지 않을 것으로 생각됩니다.</p>
+<p>DNS over TLS와 함께 SSL/TLS통신을 쓰면 대부분이 암호화 통신이 되고 있었지만, 유일하게 암호화 되지 않았던 부분이 요청시의 SNI필드 <code class="highlighter-rouge">나 www.naver.com에 방문하고 싶어요</code>와 함께 응답시의 인증서필드 <code class="highlighter-rouge">알았어요. 우선 www.naver.com인증서를 보낼테니 확인해보세요</code>  였습니다.</p>
 
-<p>메이저 브라우저들이 HTTPS를 이렇게 밀고 있으니 HTTPS 실질적 사용이 지속적으로 올라가지 않겠습니까? 그 때 어떤 변화와 기회와 위기가 기다리고 있을까요?</p>
+<p>TLS 1.3부터는 인증서도 암호화해서 보냅니다. 그래서 진짜 남은게 요청시의  SNI 필드였는데, 그것도 저 인터넷 드래프트의 구현으로 해결한거죠. 저 인터넷 드래프트는 RFC로 등록이 될 것이라고 생각해요.</p>
 
-<ul>
-  <li><a id="footnote1">[1]</a> Firefox의 텔레메트리 데이터와 Let’s Encrypt에 기인한 수치입니다.</li>
-  <li><a id="footnote2">[2]</a> <a href="https://blog.cloudflare.com/https-or-bust-chromes-plan-to-label-sites-as-not-secure/">https://blog.cloudflare.com/https-or-bust-chromes-plan-to-label-sites-as-not-secure/</a></li>
-</ul>
+<p>DNS로 퍼블릭 키를 배포하고, 퍼블릭 키를 이용하여 DH (Diffie-Hellman)로 공유키를 만듭니다. DH를 이용하기 때문에 매 세션마다 공유키가 바뀌니까 암호화된 공유키로 원본을 특정할 수가 없구요, 퍼블릭 키를 주기적으로 바꾸게 되면 암호화 메카니즘이 완전히 안전해지는거에요.</p>
+
+<p>기술은 점점 더 익명화를 지향하는 쪽으로 나아가고 있는 것이 맞는데, 그게 좋은 건지 생각해보게 됩니다.</p>
+
+<p>–</p>
+
+<p>SecureDNS, DNSSec, TLS1.3, Encrypted SNI 환경을 테스트하는 페이지를 <a href="https://www.cloudflare.com/ssl/encrypted-sni/">cloudflare에서 서비스하고 있습니다.</a></p>
 
           <p class="tags">
             
               <a href="/tags#blog-ref">blog</a>
             
+              <a href="/tags#sni-ref">sni</a>
+            
               <a href="/tags#tls-ref">tls</a>
             
-              <a href="/tags#work-ref">work</a>
+              <a href="/tags#ssl-ref">ssl</a>
             
-              <a href="/tags#https-ref">https</a>
+              <a href="/tags#filtering-ref">filtering</a>
             
           </p>
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;u=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Encrypted+SNI&amp;u=http://localhost:4000/2018/09/24/cloudflare-does-esni"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;url=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Encrypted+SNI&amp;url=http://localhost:4000/2018/09/24/cloudflare-does-esni"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -212,7 +207,7 @@
               <h4>양철웅</h4>
               <p class="bio">Chul-Woong Yang</p>
               <hr>
-              <p class="published">Published <time datetime="2018-03-24 10:15">24 Mar 2018</time></p>
+              <p class="published">Published <time datetime="2018-09-24 09:40">24 Sep 2018</time></p>
             </section>
           </div>
 
@@ -229,7 +224,7 @@
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -240,20 +235,18 @@
 
     <aside class="read-next">
       
-        <a class="read-next-story no-cover" href="/2018/03/28/is-https-really-safe.html">
+        <a class="read-next-story no-cover" href="/2018/10/12/ovs-docker-centos7-environment.html">
           <section class="post">
-            <h2>HTTPS를 쓴다고 안심할 수 만은 없다는데, 왜?</h2>
-            <p>주소창에 녹색 자물쇠가 보이면 안전하다구?</p>
+            <h2>OVS, Docker, CentOS7 환경 만들기</h2>
+            <p>centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.</p>
           </section>
         </a>
       
       
-        <a class="read-next-story prev no-cover" href="/2018/01/09/meltdown-exploit.html">
+        <a class="read-next-story prev no-cover" href="/2018/07/02/different-escaping-the-competitive-herd.html">
           <section class="post">
-            <h2>Meltdown/Spectre 취약점 확인</h2>
-            <p>신년 벽두를 강타하고 있는 Meltdown/Spectre 취약점을 직접 확인해보았다.
-
-</p>
+            <h2>디퍼런트 - Escaping the Competitive Herd</h2>
+            <p>지난 주말에 책 한권을 읽었습니다. 경영 서적인 입니다. 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는...</p>
           </section>
         </a>
       
