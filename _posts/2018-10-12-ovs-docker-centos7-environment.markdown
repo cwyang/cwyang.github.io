@@ -5,13 +5,14 @@ tags: [blog, ovs, docker, centos, vagrant]
 layout: post
 comments: yes
 author: cwyang
-excerpt: 얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요.
+excerpt: centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.
 header-img: /assets/images/animals.jpg
 ---
 # Vagrant
 
-centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 한다.
-vagrant는 가상 머신 설치를 도와주는 프로그램이다. vagrant가 없었던 시절에는 VM에 직접 인스톨 한 후 VM 이미지를 복사해 두어 재 사용하는 방법을 사용했었다. vagrant에서는 기본 이미지 (box라고 한다)를 제공하면서, 그 위에 설치 프로그램 형상을 사용자가 지정할 수 있도록 한다. 쓰면 매우 편한거다.
+centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.
+vagrant는 가상 머신 설치를 도와주는 프로그램입니다. vagrant가 없었던 시절에는 VM에 직접 인스톨 한 후 VM 이미지를 복사해 두어 재 사용하는 방법을 사용했었습니다.
+vagrant에서는 기본 이미지 (box라고 한다)를 제공하면서, 그 위에 설치 프로그램 형상을 사용자가 지정할 수 있도록 합니다. 쓰면 매우 편한겁니다..
 
 
     $ uname -a
@@ -21,18 +22,18 @@ vagrant는 가상 머신 설치를 도와주는 프로그램이다. vagrant가 �
 
 # SSL 접속환경 확인
 
-다음 ssl domain들이 인증서 피닝을 요구한다. 
+다음 ssl domain들이 인증서 피닝을 요구합니다.
 
 - vagrantcloud.com
 - cbs.centos.org
 - yum.dockerproject.org
 - raw.githubusercontent.com
 
-회사안에서 SSL 복호화 장비가 있는 경우 회사 인증서를 VM에 신뢰할 수 있는 인증서로 심거나, SSL 복호화 장비에서 위의 사이트들에 대하여 복호화를 바이패스 하도록 설정한다.
+회사안에서 SSL 복호화 장비가 있는 경우 회사 인증서를 VM에 신뢰할 수 있는 인증서로 심거나, SSL 복호화 장비에서 위의 사이트들에 대하여 복호화를 바이패스 하도록 설정합니다.
 
 # 설치
 
-아래 두 파일을 저장한 후 `vagrant up`  명령어를 실행하면 수 분 안에 centos/7을 다운 받고 dependency package를 설치하고 ovs를 설치하고 docker를 설치해준다. 좋은 세상이다.
+아래 두 파일을 저장한 후 `vagrant up`  명령어를 실행하면 수 분 안에 centos/7을 다운 받고 dependency package를 설치하고 ovs를 설치하고 docker를 설치해줍니다. 좋은 세상입니다.
 
 - `Vagrantfile` https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/Vagrantfile
 - `bootstrap.sh` https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/bootstrap.sh
@@ -43,13 +44,13 @@ vagrant는 가상 머신 설치를 도와주는 프로그램이다. vagrant가 �
     Last login: Fri Oct 12 01:13:18 2018 from 10.0.2.2
     [vagrant@localhost ~]$ 
 
-호스트의 id_rsa.pub를 VM의 `.ssh/authorized_keys`에 등록하면 직접 ssh도 가능하다.
+호스트의 id_rsa.pub를 VM의 `.ssh/authorized_keys`에 등록하면 직접 ssh도 가능합니다.
 
     $ ssh vagrant@127.0.0.1 -p 2222
     Last login: Fri Oct 12 01:22:25 2018 from 10.0.2.2
     [vagrant@localhost ~]$ 
 
-도커와 OvS를 확인한다.
+도커와 OvS를 확인합니다.
 
     [vagrant@localhost ~]$ systemctl status openvswitch docker
     ● openvswitch.service - Open vSwitch
@@ -71,7 +72,7 @@ vagrant는 가상 머신 설치를 도와주는 프로그램이다. vagrant가 �
                ├─25686 /usr/bin/dockerd
                └─25689 docker-containerd -l unix:///var/run/docker/libcontainerd/docker-containerd.sock --metrics-interval=0 -...
 
-도커 실행을 위해서 `docker`그룹에 `vagrant` 사용자를 등록한다.
+도커 실행을 위해서 `docker`그룹에 `vagrant` 사용자를 등록합니다.
 
     [vagrant@localhost ~]$ sudo usermod -aG docker vagrant
 
@@ -176,12 +177,12 @@ vagrant는 가상 머신 설치를 도와주는 프로그램이다. vagrant가 �
     sudo ovs-docker add-port ovs-br2 eth1 moby3 --ipaddress=192.168.0.2/24
 ## host-bridge
 
-moby2안에서 bridge를 생성하여야 하는데, 기본적으로 NET-ADMIN capability를 가지고 있지 못하므로 아래와 같이 실패할 수 있다.
+moby2안에서 bridge를 생성하여야 하는데, 기본적으로 NET-ADMIN capability를 가지고 있지 못하므로 아래와 같이 실패할 수 있습니다.
 
     root@79c82193d876:/# ip link add name moby2-bridge type bridge
     RTNETLINK answers: Operation not permitted
 
-그래서 위에서 moby2는 `--privileged` 옵션을 이용하여 구동하였다. 자 브릿지를 만들자
+그래서 위에서 moby2는 `--privileged` 옵션을 이용하여 구동하였습니다. 자 브릿지를 만들어 봅시다.
 
     [vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link add name moby2-bridge type bridge
     [vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link set dev moby2-bridge up
@@ -212,7 +213,7 @@ moby2안에서 bridge를 생성하여야 하는데, 기본적으로 NET-ADMIN ca
     rtt min/avg/max/mdev = 0.339/0.339/0.339/0.000 ms
     [vagrant@localhost ovs_3hosts]$
 
-이 때 moby2에서 moby2-bridge에 대고 패킷을 뜨면 위의 연결 확인 패킷을 잡을 수 있다. 
+이 때 moby2에서 moby2-bridge에 대고 패킷을 뜨면 위의 연결 확인 패킷을 잡을 수 있습니다. 
 
     
     [vagrant@localhost ~]$ docker exec -it moby2 tcpdump -i moby2-bridge -A
