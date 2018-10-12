@@ -36,7 +36,9 @@ vagrant는 가상 머신 설치를 도와주는 프로그램이다. vagrant가 �
 
 - `Vagrantfile` https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/Vagrantfile
 - `bootstrap.sh` https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/bootstrap.sh
+
 # 설치 확인
+
     $ vagrant ssh
     Last login: Fri Oct 12 01:13:18 2018 from 10.0.2.2
     [vagrant@localhost ~]$ 
