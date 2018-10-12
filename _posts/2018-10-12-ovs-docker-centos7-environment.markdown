@@ -15,9 +15,9 @@ vagrant는 가상 머신 설치를 도와주는 프로그램입니다. vagrant�
 vagrant에서는 기본 이미지 (box라고 한다)를 제공하면서, 그 위에 설치 프로그램 형상을 사용자가 지정할 수 있도록 합니다. 쓰면 매우 편한겁니다.
 
 {% highlight bash linenos %}
-    $ uname -a
-    Linux cwyang 4.10.0-42-generic #46~16.04.1-Ubuntu SMP Mon Dec 4 15:57:59 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
-    $ sudo apt-get install virtualbox vagrant
+$ uname -a
+Linux cwyang 4.10.0-42-generic #46~16.04.1-Ubuntu SMP Mon Dec 4 15:57:59 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+$ sudo apt-get install virtualbox vagrant
 {% endhighlight bash linenos %}
 
 # SSL 접속환경 확인
@@ -46,12 +46,15 @@ Last login: Fri Oct 12 01:13:18 2018 from 10.0.2.2
 {% endhighlight %}
 호스트의 id_rsa.pub를 VM의 `.ssh/authorized_keys`에 등록하면 직접 ssh도 가능합니다.
 
-    $ ssh vagrant@127.0.0.1 -p 2222
-    Last login: Fri Oct 12 01:22:25 2018 from 10.0.2.2
-    [vagrant@localhost ~]$ 
+{% highlight bash linenos %}
+$ ssh vagrant@127.0.0.1 -p 2222
+Last login: Fri Oct 12 01:22:25 2018 from 10.0.2.2
+[vagrant@localhost ~]$ 
+{% endhighlight bash linenos %}
 
 도커와 OvS를 확인합니다.
 
+    {% highlight bash linenos %}
     [vagrant@localhost ~]$ systemctl status openvswitch docker
     ● openvswitch.service - Open vSwitch
        Loaded: loaded (/usr/lib/systemd/system/openvswitch.service; enabled; vendor preset: disabled)
@@ -71,6 +74,7 @@ Last login: Fri Oct 12 01:13:18 2018 from 10.0.2.2
        CGroup: /system.slice/docker.service
                ├─25686 /usr/bin/dockerd
                └─25689 docker-containerd -l unix:///var/run/docker/libcontainerd/docker-containerd.sock --metrics-interval=0 -...
+    {% endhighlight bash linenos %}
 
 도커 실행을 위해서 `docker`그룹에 `vagrant` 사용자를 등록합니다.
 
