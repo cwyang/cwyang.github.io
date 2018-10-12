@@ -6,8 +6,8 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Oct 2018 18:41:56 +0900</pubDate>
-    <lastBuildDate>Fri, 12 Oct 2018 18:41:56 +0900</lastBuildDate>
+    <pubDate>Fri, 12 Oct 2018 18:46:03 +0900</pubDate>
+    <lastBuildDate>Fri, 12 Oct 2018 18:46:03 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -146,26 +146,6 @@
         <category>work</category>
         
         <category>https</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Meltdown/Spectre 취약점 확인</title>
-        <description>&lt;p&gt;신년 벽두를 강타하고 있는 &lt;a href=&quot;https://meltdownattack.com/&quot;&gt;Meltdown/Spectre 취약점&lt;/a&gt;을 직접 확인해보았다.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 09 Jan 2018 14:29:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/01/09/meltdown-exploit.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/01/09/meltdown-exploit.html</guid>
-        
-        <category>blog</category>
-        
-        <category>meltdown</category>
-        
-        <category>spectre</category>
-        
-        <category>security</category>
         
         
       </item>

@@ -6,8 +6,8 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Oct 2018 18:41:56 +0900</pubDate>
-    <lastBuildDate>Fri, 12 Oct 2018 18:41:56 +0900</lastBuildDate>
+    <pubDate>Fri, 12 Oct 2018 18:46:03 +0900</pubDate>
+    <lastBuildDate>Fri, 12 Oct 2018 18:46:03 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -887,58 +887,6 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
         <category>work</category>
         
         <category>https</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Meltdown/Spectre 취약점 확인</title>
-        <description>&lt;p&gt;신년 벽두를 강타하고 있는 &lt;a href=&quot;https://meltdownattack.com/&quot;&gt;Meltdown/Spectre 취약점&lt;/a&gt;을 직접 확인해보았다.&lt;/p&gt;
-
-&lt;p&gt;보안 전공이 아닌 입장에서, &lt;a href=&quot;https://meltdownattack.com/meltdown.pdf&quot;&gt;논문만을 보고&lt;/a&gt; 그것을 재현하기란 쉽지 않다.
-그러나 시대가 시대이니만큼 github에는 이미 meltdown exploit poc 소스들이 많이 있다. 그 중 다음 소스를 가지고
-작업 서버에서 테스트 를해 보기로 했다.&lt;/p&gt;
-
-&lt;p&gt;https://github.com/paboldin/meltdown-exploit&lt;/p&gt;
-
-&lt;p&gt;소스는 크게 두 부분으로 이루어져 있다&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;meltdown.c: 커널주소와 길이를 받아 해당 커널주소부터 길이만큼의 메모리를 덤프하는 meltdown 공격.&lt;/li&gt;
-  &lt;li&gt;run.sh: meltdown공격을 쉽게 보여주기 위해서, 커널에 들어가 있는 `linux_proc_banner’ 스트링의 주소를 찾은 후, 그 주소를 meltdown 바이너리에 넘겨주는 스크립트&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;meltdown.c는 &lt;code class=&quot;highlighter-rouge&quot;&gt;/proc/version'을 읽어들이는데, 이 경우 커널 심볼인 &lt;/code&gt;linux_proc_banner’의 내용이 캐시에 로드된다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; meltdown-exploit $ ./meltdown ffffffff924000a0 40
- cached = 34, uncached = 322, threshold 104
- read ffffffff924000a0 = 25 % (score=421/1000)
- read ffffffff924000a1 = 73 s (score=512/1000)
- read ffffffff924000a2 = 20   (score=540/1000)
- read ffffffff924000a3 = 76 v (score=494/1000)
- read ffffffff924000a4 = 65 e (score=120/1000)
- read ffffffff924000a5 = 72 r (score=394/1000)
- read ffffffff924000a6 = 73 s (score=344/1000)
- read ffffffff924000a7 = 69 i (score=416/1000)
- read ffffffff924000a8 = 6f o (score=469/1000)
- read ffffffff924000a9 = 6e n (score=481/1000)
- read ffffffff924000aa = 20   (score=425/1000)
- read ffffffff924000ab = 25 % (score=467/1000)
- read ffffffff924000ac = 73 s (score=428/1000)
- ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Tue, 09 Jan 2018 14:29:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/01/09/meltdown-exploit.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/01/09/meltdown-exploit.html</guid>
-        
-        <category>blog</category>
-        
-        <category>meltdown</category>
-        
-        <category>spectre</category>
-        
-        <category>security</category>
         
         
       </item>
