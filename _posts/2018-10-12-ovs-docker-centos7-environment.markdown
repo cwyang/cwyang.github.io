@@ -33,10 +33,12 @@ $ sudo apt-get install virtualbox vagrant
 
 # 설치
 
+github에 설치 스크립트를 작업해 둔 분이 있습니다. ([링크](https://github.com/joatmon08/vagrantfiles/tree/master/ovs-vagrant))그 파일들을 이용해서 설치해 보았습니다. 감사합니다.
+
 아래 두 파일을 저장한 후 `vagrant up`  명령어를 실행하면 수 분 안에 centos/7을 다운 받고 dependency package를 설치하고 ovs를 설치하고 docker를 설치해줍니다. 좋은 세상입니다.
 
-- `Vagrantfile` https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/Vagrantfile
-- `bootstrap.sh` https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/bootstrap.sh
+- [`Vagrantfile`](https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/Vagrantfile)
+- [`bootstrap.sh`](https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/bootstrap.sh)
 
 # 설치 확인
 {% highlight bash linenos %}
