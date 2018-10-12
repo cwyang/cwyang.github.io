@@ -44,6 +44,7 @@ plugins:
   - jekyll-gist
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-toc
   - jemoji
 
 # Exclude from processing.
