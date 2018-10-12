@@ -6,7 +6,7 @@ layout: post
 comments: yes
 author: cwyang
 excerpt: 식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요. 인증서는 전 세계를 대상으로하는 주민등록증이라고 할 수 있는데 정부에서 운영을 잘 해주었어야 한다고 생각합니다. 오늘의 사건에 대해서 쉽게 풀어보겠습니다.
-header-img: /assets/images/gpki_wildcard_cert.jpg
+header-img: {{ site.url }}/assets/images/gpki_wildcard_cert.jpg
 ---
 
 식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요.
@@ -62,11 +62,11 @@ header-img: /assets/images/gpki_wildcard_cert.jpg
 이 GPKI에서 교육부에 아래의 인증서를 발급하였습니다.
 인증서는 2015년 6월부터 2017년 9월까지 유효한 인증서이며, 발급기관(Issuer)이 대한민국 정부(Government of Korea)의 GPKI라고 명시되어 있죠. Subject를 보면 support.gne.go.kr을 대표할 도메인으로 만든 것입니다.
 
-![문제의 인증서]({{ "/assets/images/gpki_wildcard_cert1.png"| absolute_url }})
+![문제의 인증서]({{ site.url }}/assets/images/gpki_wildcard_cert1.png)
 
 문제는 이 인증서가 support.gne.go.kr 말고도 다른 여러 도메인을 대표하고 있고, 그 안에 **\*.co.kr**과 **\*.go.kr**, **\*.or.kr**등이 포함되어 있다는 것입니다.
 
-![문제의 인증서가 대표하는 도메인들]({{ "/assets/images/gpki_wildcard_cert2.png"| absolute_url }})
+![문제의 인증서가 대표하는 도메인들]({{ site.url }}/assets/images/gpki_wildcard_cert2.png)
 
 그러면 이 인증서를 탑재한 사이트는 https://president.go.kr(청와대), https://kait.or.kr(한국정보통신진흥협회), https://lgcns.co.kr(LGCNS) 등을 자처할 수 있게 됩니다. DNS를 이용한 피싱이나 중간자공격(Man-In-The-Middle)등이 가능해지는 등 인터넷상의 보안 사고의 가능성이 열리게 되는 거에요.
 

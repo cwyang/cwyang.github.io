@@ -6,7 +6,7 @@ layout: post
 comments: yes
 author: cwyang
 excerpt: 문체부가 2018년 5월 2일 웹툰 등 불법 유통 해외사이트 집중 단속 및 정품 이용 캠페인 연계 실시에 대하여 보도자료를 발표하였습니다. 이번 글에서는 기술적 측면에서 불법 사이트 차단 문제를 살펴보도록 하겠습니다.
-header-img: /assets/images/audio-dj-mix-63703.jpg
+header-img: {{ site.url }}/assets/images/audio-dj-mix-63703.jpg
 toc: true
 ---
 > 이 글에서 등장하는 JYB, 갑돌이는 실제의 어떤 단체나 인물과도 관계가 없으며 설명을 위한 가공의 이름입니다. 
@@ -39,7 +39,7 @@ IP주소를 알아내어서 사이트에 접속할 경우 예전에 사용했던
 
 ## 통신 자유를 위한 움직임: DNS
 
-![솔로가 하고 싶어요]({{ "/assets/images/audio-dj-mix-63703.jpg"| absolute_url }})
+![솔로가 하고 싶어요]({{ site.url }}/assets/images/audio-dj-mix-63703.jpg)
 
 > 저는 한 아이돌 그룹의 막내 갑돌이에요. 솔로가 하고싶어서 형들 모르게 JYB로 이적하고 싶어요. 이적을 위한 등록 서버 주소를 알려주세요.
 

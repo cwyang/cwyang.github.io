@@ -6,13 +6,13 @@ layout: post
 comments: yes
 author: cwyang
 excerpt: 지난 주말에 책 한권을 읽었습니다. 경영 서적인 <디퍼런트> 입니다. 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는 점이 인상적이었기에 짧게 책을 소개해드릴께요.
-header-img: /assets/images/different-becoming-herd.jpg
+header-img: {{ site.url }}/assets/images/different-becoming-herd.jpg
 ---
 지난 주말에 책 한권을 읽었습니다. 경영 서적인 <디퍼런트> 입니다.
 
 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는 점이 인상적이었기에 짧게 책을 소개해드릴께요.
 
-![Different - by Y.M.Moon]({{"/assets/images/different-cover.jpg"| absolute_url }})
+![Different - by Y.M.Moon]({{ site.url }}/assets/images/different-cover.jpg)
 
 국문판 부제는 "넘버원을 넘어 온리원으로"이고, 영문판 부제는 "Escaping the Competitive Herd"인데, 영문판 부제가 주제를 더 정확히 설명하고 있습니다.
 
@@ -22,7 +22,7 @@ header-img: /assets/images/different-becoming-herd.jpg
 
 참여자가 모두 비슷비슷해지게 되는 과잉 성숙 단계의 카테고리에서 활동하는 기업들은 제자리를 지키기 위해 엄청난 에너지를 소비하게 되는데, 기업들은 그것이 치열한 경쟁 상황에서 피할 수 없는 운명이라고 결론짓기도 합니다. 그러나 모두가 발전을 위해 달려가지만 마지막에 도달하는 곳은 공동의 파멸뿐이라는 진화의 역설이 나타납니다.
 
-![Becoming Herd]({{"/assets/images/different-becoming-herd.jpg"| absolute_url }})
+![Becoming Herd]({{ site.url }}/assets/images/different-becoming-herd.jpg)
 
 ## Escaping Herd
 
