@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>HTTPS 사용이 100%가 된다면?</title>
+  <meta name="description" content="HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 ..." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cwyang" />
+    <meta name="twitter:title" content="HTTPS 사용이 100%가 된다면?" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/logo.jpg" />
+    
+    <meta name="twitter:description"  content="HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 ..." />
+    
+  
+  
+  <meta property="og:site_name" content="cwyang's blog" />
+  <meta property="og:title" content="HTTPS 사용이 100%가 된다면?"/>
+  
+  <meta property="og:description" content="HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 ..." />
+  
+  <meta property="og:image" content="http://localhost:4000/assets/images/logo.jpg" />
+  <meta property="og:url" content="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2018-03-24T10:15:00+09:00">
+
+  <meta property="fb:app_id" content="fbappid" />
+
+  <meta name="naver-site-verification" content="naver-site-verify-id" />
+
+  <link rel="canonical" href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1539332954126294079" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+
+  <script>
+    var _mailChimpUrl = "";
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'gaid', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.6&appId=fbappid";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo.jpg)"></span></a>
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              HTTPS 사용이 100%가 된다면?
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share pull-right">
+                <div class="fb-like" data-href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                
+                  
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;u=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                      onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                    </a>
+                  
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;url=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+              </section>
+              
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
+              on
+              <time datetime="2018-03-24T10:15:00+09:00">24 Mar 2018</time>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 근접하지는 않을까요?</p>
+
+<p>초기에 HTTPS의 사용이 증가한 이유는 유튜브 등의 일부 OTT 사이트가 HTTPS 사이트로 전환되었기 때문입니다. 그러나 최근의 증가 추세는 주요 브라우저 벤더들이 HTTPS를 밀어주고 있기 때문입니다. 어떤 관리자가 자신의 웹 페이지를 방문하면 브라우저에 보안이 취약하다고 난리(?)를 치는데 그냥 둘까요? 브라우저 변화와 HTTPS의 점유<sup><a href="#footnote1">1</a></sup>의 상승에 대한 흥미로운 자료<sup><a href="#footnote2">2</a></sup>가 있습니다. 다음을 보시지요.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|Date     | HTTPS | 사건
+|2013     |  25%  | NSA에서 정보 감청을 하고 있음이 알려짐
+|2014 Dec |  32%  | Google - 크롬에서 HTTP를 몰아낼 계획발표 - HTTP방문시 적색경고 예정
+|2015 Apr |  35%  | Mozilla - Firefox에서 HTTP를 몰아낼 계획 발표
+|2015 Oct |  38%  | 무료 인증서 Let's Encrypt가 주요 브라우저에서 인식
+|2016 Jun |  45%  | Apple - 앱들은 ATS 의무장착. ATS는 HTTPS만을 사용
+|2017 Jan |  52%  | 크롬56부터 HTTP사이트에서 패스워드/카드정보를 입력할 경우 취약성 경고.  
+		    Firefox에서도 HTTP사이트에서 사용자명/패스워드를 입력시 경고
+|2017 Apr |  56%  | Google - 10월부터 크롬에서 다음 두가지 상황에서 취약성 경고 예고.  
+		    (1) HTTP페이지에서 데이터 입력시 
+		    (2) 비밀브라우징모드에서 HTTP페이지 방문시
+|2018 Jan |  70%  | Mozilla - HTTP방문시 새로운 웹 기능들을 제공하지 않는다고 예고
+|2018 Feb |  70%  | Google - 7월부터 모든 HTTP사이트에 대하여 취약하다고 경고
+</code></pre></div></div>
+
+<p>Google과 Mozilla는 현재의 “HTTPS:안전, HTTP:보통”의 자세에서 “HTTPS:보통, HTTP:취약”으로 태세 전환을 예고했습니다. Google은 또 인터넷 주소 입력시 HTTPS를 먼저 방문하겠다는 계획도 발표했습니다. www.naver.com 을 주소창에 입력할 때 지금은 http://www.naver.com 으로 접속되지만 (실제로 해 보시면 https사이트로 유도되는데요, 그것은 처음에 http로 접속이 완료된 후 웹 사이트 설정으로 인해 https://www.naver.com으로 유도되기 때문입니다), 어느 순간부터는 https://www.naver.com 으로 바로 접속이 된다는 것입니다.</p>
+
+<p>Let’s Encrypt와 같이 무료 인증서를 발급하는 CA도 늘어날 것으로 예상되기 때문에, 인증서 비용은 HTTPS 보급에 진입 장벽이 되지 않을 것으로 생각됩니다.</p>
+
+<p>메이저 브라우저들이 HTTPS를 이렇게 밀고 있으니 HTTPS 실질적 사용이 지속적으로 올라가지 않겠습니까? 그 때 어떤 변화와 기회와 위기가 기다리고 있을까요?</p>
+
+<ul>
+  <li><a id="footnote1">[1]</a> Firefox의 텔레메트리 데이터와 Let’s Encrypt에 기인한 수치입니다.</li>
+  <li><a id="footnote2">[2]</a> <a href="https://blog.cloudflare.com/https-or-bust-chromes-plan-to-label-sites-as-not-secure/">https://blog.cloudflare.com/https-or-bust-chromes-plan-to-label-sites-as-not-secure/</a></li>
+</ul>
+
+          <p class="tags">
+            
+              <a href="/tags#blog-ref">blog</a>
+            
+              <a href="/tags#tls-ref">tls</a>
+            
+              <a href="/tags#work-ref">work</a>
+            
+              <a href="/tags#https-ref">https</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;u=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=HTTPS+%EC%82%AC%EC%9A%A9%EC%9D%B4+100%25%EA%B0%80+%EB%90%9C%EB%8B%A4%EB%A9%B4%3F&amp;url=http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>양철웅</h4>
+              <p class="bio">Chul-Woong Yang</p>
+              <hr>
+              <p class="published">Published <time datetime="2018-03-24 10:15">24 Mar 2018</time></p>
+            </section>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
+              
+            </footer>
+          </div>
+        </div>
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+        <a class="read-next-story no-cover" href="/2018/03/28/is-https-really-safe.html">
+          <section class="post">
+            <h2>HTTPS를 쓴다고 안심할 수 만은 없다는데, 왜?</h2>
+            <p>주소창에 녹색 자물쇠가 보이면 안전하다구?</p>
+          </section>
+        </a>
+      
+      
+        <a class="read-next-story prev no-cover" href="/2018/01/09/meltdown-exploit.html">
+          <section class="post">
+            <h2>Meltdown/Spectre 취약점 확인</h2>
+            <p>신년 벽두를 강타하고 있는 Meltdown/Spectre 취약점을 직접 확인해보았다.
+
+</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">cwyang's blog</a> © 2018</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1539332954126294079"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>

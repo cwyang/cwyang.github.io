@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Encrypted SNI</title>
+  <meta name="description" content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cwyang" />
+    <meta name="twitter:title" content="Encrypted SNI" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/logo.jpg" />
+    
+    <meta name="twitter:description"  content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요." />
+    
+  
+  
+  <meta property="og:site_name" content="cwyang's blog" />
+  <meta property="og:title" content="Encrypted SNI"/>
+  
+  <meta property="og:description" content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요." />
+  
+  <meta property="og:image" content="http://localhost:4000/assets/images/esni_cloudflare.png" />
+  <meta property="og:url" content="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2018-09-24T09:40:00+09:00">
+
+  <meta property="fb:app_id" content="fbappid" />
+
+  <meta name="naver-site-verification" content="naver-site-verify-id" />
+
+  <link rel="canonical" href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1539332954126294079" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+
+  <script>
+    var _mailChimpUrl = "";
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'gaid', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.6&appId=fbappid";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo.jpg)"></span></a>
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              Encrypted SNI
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share pull-right">
+                <div class="fb-like" data-href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                
+                  
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Encrypted+SNI&amp;u=http://localhost:4000/2018/09/24/cloudflare-does-esni"
+                      onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                    </a>
+                  
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=Encrypted+SNI&amp;url=http://localhost:4000/2018/09/24/cloudflare-does-esni"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+              </section>
+              
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
+              on
+              <time datetime="2018-09-24T09:40:00+09:00">24 Sep 2018</time>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <ul class="section-nav">
+</ul><p>얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 <a href="https://tools.ietf.org/html/draft-ietf-tls-esni-01">암호화 SNI</a> 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 <a href="https://blog.cloudflare.com/encrypted-sni/">발표를 했네요.</a></p>
+
+<p><img src="http://localhost:4000/assets/images/esni_cloudflare.png" alt="ESNI"></p>
+
+<blockquote>
+  <p>이제 SNI 차단은 안된다는 것이에요.</p>
+</blockquote>
+
+<p>정확히 말하면 SNI 차단을 막아주는 환경을 제공하는 사업자가 생겼다라는 것입니다.</p>
+
+<p>DNS over TLS와 함께 SSL/TLS통신을 쓰면 대부분이 암호화 통신이 되고 있었지만, 유일하게 암호화 되지 않았던 부분이 요청시의 SNI필드 <code class="highlighter-rouge">나 www.naver.com에 방문하고 싶어요</code>와 함께 응답시의 인증서필드 <code class="highlighter-rouge">알았어요. 우선 www.naver.com인증서를 보낼테니 확인해보세요</code>  였습니다.</p>
+
+<p>TLS 1.3부터는 인증서도 암호화해서 보냅니다. 그래서 진짜 남은게 요청시의  SNI 필드였는데, 그것도 저 인터넷 드래프트의 구현으로 해결한거죠. 저 인터넷 드래프트는 RFC로 등록이 될 것이라고 생각해요.</p>
+
+<p>DNS로 퍼블릭 키를 배포하고, 퍼블릭 키를 이용하여 DH (Diffie-Hellman)로 공유키를 만듭니다. DH를 이용하기 때문에 매 세션마다 공유키가 바뀌니까 암호화된 공유키로 원본을 특정할 수가 없구요, 퍼블릭 키를 주기적으로 바꾸게 되면 암호화 메카니즘이 완전히 안전해지는거에요.</p>
+
+<p>기술은 점점 더 익명화를 지향하는 쪽으로 나아가고 있는 것이 맞는데, 그게 좋은 건지 생각해보게 됩니다.</p>
+
+<p>–</p>
+
+<p>SecureDNS, DNSSec, TLS1.3, Encrypted SNI 환경을 테스트하는 페이지를 <a href="https://www.cloudflare.com/ssl/encrypted-sni/">cloudflare에서 서비스하고 있습니다.</a></p>
+
+          <p class="tags">
+            
+              <a href="/tags#blog-ref">blog</a>
+            
+              <a href="/tags#sni-ref">sni</a>
+            
+              <a href="/tags#tls-ref">tls</a>
+            
+              <a href="/tags#ssl-ref">ssl</a>
+            
+              <a href="/tags#filtering-ref">filtering</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Encrypted+SNI&amp;u=http://localhost:4000/2018/09/24/cloudflare-does-esni"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Encrypted+SNI&amp;url=http://localhost:4000/2018/09/24/cloudflare-does-esni"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>양철웅</h4>
+              <p class="bio">Chul-Woong Yang</p>
+              <hr>
+              <p class="published">Published <time datetime="2018-09-24 09:40">24 Sep 2018</time></p>
+            </section>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
+              
+            </footer>
+          </div>
+        </div>
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+        <a class="read-next-story no-cover" href="/2018/10/12/ovs-docker-centos7-environment.html">
+          <section class="post">
+            <h2>OVS, Docker, CentOS7 환경 만들기</h2>
+            <p>centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.</p>
+          </section>
+        </a>
+      
+      
+        <a class="read-next-story prev no-cover" href="/2018/07/02/different-escaping-the-competitive-herd.html">
+          <section class="post">
+            <h2>디퍼런트 - Escaping the Competitive Herd</h2>
+            <p>지난 주말에 책 한권을 읽었습니다. 경영 서적인 입니다. 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는...</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">cwyang's blog</a> © 2018</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1539332954126294079"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>

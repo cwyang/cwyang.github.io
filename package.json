@@ -1,5 +1,5 @@
 {
-  "name": "cwyang.github.io",
+  "name": "subicura.github.io",
   "version": "1.0.0",
   "description": "by jekyll",
   "main": "gulpfile.js",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cwyang/cwyang.github.io.git"
+    "url": "git+https://github.com/subicura/subicura.github.io.git"
   },
-  "author": "Chul-Woong Yang <cwyang@gmail.com> (cwyang@gmail.com)",
-  "license": "Apache",
+  "author": "Chungsub Kim <subicura@subicura.com> (subicura@subicura.com)",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cwyang/cwyang.github.io/issues"
+    "url": "https://github.com/subicura/subicura.github.io/issues"
   },
-  "homepage": "https://github.com/cwyang/cwyang.github.io#readme",
+  "homepage": "https://github.com/subicura/subicura.github.io#readme",
   "devDependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4"
   }
 }
