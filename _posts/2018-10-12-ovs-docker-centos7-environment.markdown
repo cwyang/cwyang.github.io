@@ -39,11 +39,11 @@ vagrant에서는 기본 이미지 (box라고 한다)를 제공하면서, 그 위
 - `bootstrap.sh` https://github.com/joatmon08/vagrantfiles/blob/master/ovs-vagrant/bootstrap.sh
 
 # 설치 확인
-
-    $ vagrant ssh
-    Last login: Fri Oct 12 01:13:18 2018 from 10.0.2.2
-    [vagrant@localhost ~]$ 
-
+{% highlight bash linenos %}
+$ vagrant ssh
+Last login: Fri Oct 12 01:13:18 2018 from 10.0.2.2
+[vagrant@localhost ~]$ 
+{% endhighlight %}
 호스트의 id_rsa.pub를 VM의 `.ssh/authorized_keys`에 등록하면 직접 ssh도 가능합니다.
 
     $ ssh vagrant@127.0.0.1 -p 2222
