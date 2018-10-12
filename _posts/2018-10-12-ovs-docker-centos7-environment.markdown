@@ -200,9 +200,9 @@ sudo ovs-docker add-port ovs-br2 eth1 moby3 --ipaddress=192.168.0.2/24
 moby2안에서 bridge를 생성하여야 하는데, 기본적으로 NET-ADMIN capability를 가지고 있지 못하므로 아래와 같이 실패할 수 있습니다.
 
 {% highlight bash linenos %}
-    root@79c82193d876:/# ip link add name moby2-bridge type bridge
-    RTNETLINK answers: Operation not permitted
-{% highlight bash linenos %}
+root@79c82193d876:/# ip link add name moby2-bridge type bridge
+RTNETLINK answers: Operation not permitted
+{% endhighlight bash linenos %}
 
 그래서 위에서 moby2는 `--privileged` 옵션을 이용하여 구동하였습니다. 자 브릿지를 만들어 봅시다.
 
