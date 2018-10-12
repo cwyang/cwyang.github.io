@@ -12,13 +12,13 @@ header-img: /assets/images/animals.jpg
 
 centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.
 vagrant는 가상 머신 설치를 도와주는 프로그램입니다. vagrant가 없었던 시절에는 VM에 직접 인스톨 한 후 VM 이미지를 복사해 두어 재 사용하는 방법을 사용했었습니다.
-vagrant에서는 기본 이미지 (box라고 한다)를 제공하면서, 그 위에 설치 프로그램 형상을 사용자가 지정할 수 있도록 합니다. 쓰면 매우 편한겁니다..
+vagrant에서는 기본 이미지 (box라고 한다)를 제공하면서, 그 위에 설치 프로그램 형상을 사용자가 지정할 수 있도록 합니다. 쓰면 매우 편한겁니다.
 
-
+{% highlight bash linenos %}
     $ uname -a
     Linux cwyang 4.10.0-42-generic #46~16.04.1-Ubuntu SMP Mon Dec 4 15:57:59 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
     $ sudo apt-get install virtualbox vagrant
-
+{% endhighlight bash linenos %}
 
 # SSL 접속환경 확인
 
