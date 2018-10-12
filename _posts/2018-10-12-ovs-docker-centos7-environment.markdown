@@ -54,176 +54,198 @@ Last login: Fri Oct 12 01:22:25 2018 from 10.0.2.2
 
 도커와 OvS를 확인합니다.
 
-    {% highlight bash linenos %}
-    [vagrant@localhost ~]$ systemctl status openvswitch docker
-    ● openvswitch.service - Open vSwitch
-       Loaded: loaded (/usr/lib/systemd/system/openvswitch.service; enabled; vendor preset: disabled)
-       Active: active (exited) since Fri 2018-10-12 01:05:18 UTC; 21min ago
-     Main PID: 25616 (code=exited, status=0/SUCCESS)
-        Tasks: 0
-       Memory: 0B
-       CGroup: /system.slice/openvswitch.service
-    
-    ● docker.service - Docker Application Container Engine
-       Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
-       Active: active (running) since Fri 2018-10-12 01:05:37 UTC; 21min ago
-         Docs: https://docs.docker.com
-     Main PID: 25686 (dockerd)
-        Tasks: 16
-       Memory: 16.0M
-       CGroup: /system.slice/docker.service
-               ├─25686 /usr/bin/dockerd
-               └─25689 docker-containerd -l unix:///var/run/docker/libcontainerd/docker-containerd.sock --metrics-interval=0 -...
-    {% endhighlight bash linenos %}
+{% highlight bash linenos %}
+[vagrant@localhost ~]$ systemctl status openvswitch docker
+● openvswitch.service - Open vSwitch
+   Loaded: loaded (/usr/lib/systemd/system/openvswitch.service; enabled; vendor preset: disabled)
+   Active: active (exited) since Fri 2018-10-12 01:05:18 UTC; 21min ago
+ Main PID: 25616 (code=exited, status=0/SUCCESS)
+    Tasks: 0
+   Memory: 0B
+   CGroup: /system.slice/openvswitch.service
+
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2018-10-12 01:05:37 UTC; 21min ago
+     Docs: https://docs.docker.com
+ Main PID: 25686 (dockerd)
+    Tasks: 16
+   Memory: 16.0M
+   CGroup: /system.slice/docker.service
+           ├─25686 /usr/bin/dockerd
+           └─25689 docker-containerd -l unix:///var/run/docker/libcontainerd/docker-containerd.sock --metrics-interval=0 -...
+{% endhighlight bash linenos %}
 
 도커 실행을 위해서 `docker`그룹에 `vagrant` 사용자를 등록합니다.
 
-    [vagrant@localhost ~]$ sudo usermod -aG docker vagrant
-
+{% highlight bash linenos %}
+[vagrant@localhost ~]$ sudo usermod -aG docker vagrant
+{% endhighlight bash linenos %}
 
 # Two containers w/ OVS bridge
 ## 구성
-    moby1: eth1 192.168.0.1/24
-      | (ovs-br1)
-    moby2: eth1 192.168.0.2/24
+{% highlight bash linenos %}
+moby1: eth1 192.168.0.1/24
+  | (ovs-br1)
+moby2: eth1 192.168.0.2/24
+{% endhighlight bash linenos %}
 ## OVS 브릿지 생성
-    [root@localhost vagrant]# ovs-vsctl add-br ovs-br1
-    [root@localhost vagrant]# ovs-vsctl show
-    294185d0-937e-49bf-a0a4-69ca5027718b
-        Bridge "ovs-br1"
-            Port "ovs-br1"
-                Interface "ovs-br1"
-                    type: internal
-        ovs_version: "2.9.0"
-
+{% highlight bash linenos %}
+root@localhost vagrant]# ovs-vsctl add-br ovs-br1
+root@localhost vagrant]# ovs-vsctl show
+94185d0-937e-49bf-a0a4-69ca5027718b
+   Bridge "ovs-br1"
+       Port "ovs-br1"
+           Interface "ovs-br1"
+               type: internal
+   ovs_version: "2.9.0"
+{% endhighlight bash linenos %}
 
 ## 컨테이너 생성후 ovs-bridge에 연결
-    [vagrant@localhost ~]$ docker run -dit --name=moby1 ubuntu
-    [vagrant@localhost ~]$ docker exec -it moby1 apt-get update
-    [vagrant@localhost ~]$ docker exec -it moby1 apt-get install iproute2 iputils-ping
-    [vagrant@localhost ~]$ sudo ovs-docker add-port ovs-br1 eth1 moby1 --ipaddress=192.168.0.1/24
-    
-    [vagrant@localhost ~]$ docker run -dit --name=moby2 ubuntu
-    [vagrant@localhost ~]$ docker exec -it moby2 apt-get update
-    [vagrant@localhost ~]$ docker exec -it moby2 apt-get install iproute2 iputils-ping
-    [vagrant@localhost ~]$ sudo ovs-docker add-port ovs-br1 eth2 moby1 --ipaddress=192.168.0.2/24
-    
-    [vagrant@localhost ~]$ docker exec -it moby1 ip address
-    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    ...
-    21: eth0@if22: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
-    ...
-    23: eth1@if24: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
-        link/ether b2:bf:61:25:7e:f8 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-        inet 192.168.0.1/24 scope global eth1
-           valid_lft forever preferred_lft forever
+{% highlight bash linenos %}
+[vagrant@localhost ~]$ docker run -dit --name=moby1 ubuntu
+[vagrant@localhost ~]$ docker exec -it moby1 apt-get update
+[vagrant@localhost ~]$ docker exec -it moby1 apt-get install iproute2 iputils-ping
+[vagrant@localhost ~]$ sudo ovs-docker add-port ovs-br1 eth1 moby1 --ipaddress=192.168.0.1/24
+
+[vagrant@localhost ~]$ docker run -dit --name=moby2 ubuntu
+[vagrant@localhost ~]$ docker exec -it moby2 apt-get update
+[vagrant@localhost ~]$ docker exec -it moby2 apt-get install iproute2 iputils-ping
+[vagrant@localhost ~]$ sudo ovs-docker add-port ovs-br1 eth2 moby1 --ipaddress=192.168.0.2/24
+
+[vagrant@localhost ~]$ docker exec -it moby1 ip address
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+...
+21: eth0@if22: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+...
+23: eth1@if24: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether b2:bf:61:25:7e:f8 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 192.168.0.1/24 scope global eth1
+       valid_lft forever preferred_lft forever
+{% endhighlight bash linenos %}
 ## 컨테이너간 연결 확인
-    [vagrant@localhost ~]$ sudo ovs-vsctl list-ports ovs-br1
-    6b9045d2be344_l
-    90cd4018819e4_l
-    [vagrant@localhost ~]$ docker exec moby1 ping 192.168.0.2 -c 1
-    PING 192.168.0.2 (192.168.0.2) 56(84) bytes of data.
-    64 bytes from 192.168.0.2: icmp_seq=1 ttl=64 time=0.037 ms
-    
-    --- 192.168.0.2 ping statistics ---
-    1 packets transmitted, 1 received, 0% packet loss, time 0ms
-    rtt min/avg/max/mdev = 0.037/0.037/0.037/0.000 ms
-    [vagrant@localhost ~]$ docker exec moby2 ping 192.168.0.1 -c 1
-    PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
-    64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.037 ms
-    
-    --- 192.168.0.1 ping statistics ---
-    1 packets transmitted, 1 received, 0% packet loss, time 0ms
-    rtt min/avg/max/mdev = 0.037/0.037/0.037/0.000 ms
+{% highlight bash linenos %}
+[vagrant@localhost ~]$ sudo ovs-vsctl list-ports ovs-br1
+6b9045d2be344_l
+90cd4018819e4_l
+[vagrant@localhost ~]$ docker exec moby1 ping 192.168.0.2 -c 1
+PING 192.168.0.2 (192.168.0.2) 56(84) bytes of data.
+64 bytes from 192.168.0.2: icmp_seq=1 ttl=64 time=0.037 ms
+
+--- 192.168.0.2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.037/0.037/0.037/0.000 ms
+[vagrant@localhost ~]$ docker exec moby2 ping 192.168.0.1 -c 1
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+64 bytes from 192.168.0.1: icmp_seq=1 ttl=64 time=0.037 ms
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.037/0.037/0.037/0.000 ms
+{% endhighlight bash linenos %}
 
 
 # Three-containers w/ OVS bridge
 ## 구성
-    moby1: eth1 192.168.0.1/24
-      | (ovs-br1)
-    moby2: eth1 - (moby2-bridge) - eth2
-      | (ovs-br2)
-    moby3: eth1 192.168.0.2/24
+{% highlight bash linenos %}
+moby1: eth1 192.168.0.1/24
+  | (ovs-br1)
+moby2: eth1 - (moby2-bridge) - eth2
+  | (ovs-br2)
+moby3: eth1 192.168.0.2/24
+{% endhighlight bash linenos %}
 ## OVS 브릿지 생성
-    [vagrant@localhost ~]$ sudo ovs-vsctl add-br ovs-br1
-    [vagrant@localhost ~]$ sudo ovs-vsctl add-br ovs-br2
-    [vagrant@localhost ~]$ sudo ovs-vsctl show
-    294185d0-937e-49bf-a0a4-69ca5027718b
-        Bridge "ovs-br2"
-            Port "ovs-br2"
-                Interface "ovs-br2"
-                    type: internal
-        Bridge "ovs-br1"
-            Port "ovs-br1"
-                Interface "ovs-br1"
-                    type: internal
-        ovs_version: "2.9.0"
+{% highlight bash linenos %}
+vagrant@localhost ~]$ sudo ovs-vsctl add-br ovs-br1
+vagrant@localhost ~]$ sudo ovs-vsctl add-br ovs-br2
+vagrant@localhost ~]$ sudo ovs-vsctl show
+94185d0-937e-49bf-a0a4-69ca5027718b
+   Bridge "ovs-br2"
+       Port "ovs-br2"
+           Interface "ovs-br2"
+               type: internal
+   Bridge "ovs-br1"
+       Port "ovs-br1"
+           Interface "ovs-br1"
+               type: internal
+   ovs_version: "2.9.0"
+{% endhighlight bash linenos %}
 ## 컨테이너 생성후 ovs-bridge에 연결
-    [vagrant@localhost ovs_3hosts]$ cat run.sh
-    sudo ovs-vsctl add-br ovs-br1
-    sudo ovs-vsctl add-br ovs-br2
-    sudo ovs-vsctl show
-    
-    docker run -dit --name=moby1 ubuntu
-    docker exec moby1 apt-get update
-    docker exec moby1 apt-get -y install iproute2 iputils-ping
-    sudo ovs-docker add-port ovs-br1 eth1 moby1 --ipaddress=192.168.0.1/24
-    
-    docker run -dit --privileged --name=moby2 ubuntu
-    docker exec moby2 apt-get update
-    docker exec moby2 apt-get -y install iproute2 iputils-ping
-    sudo ovs-docker add-port ovs-br1 eth1 moby2
-    sudo ovs-docker add-port ovs-br2 eth2 moby2
-    
-    docker run -dit --name=moby3 ubuntu
-    docker exec moby3 apt-get update
-    docker exec moby3 apt-get -y install iproute2 iputils-ping
-    sudo ovs-docker add-port ovs-br2 eth1 moby3 --ipaddress=192.168.0.2/24
+{% highlight bash linenos %}
+[vagrant@localhost ovs_3hosts]$ cat run.sh
+sudo ovs-vsctl add-br ovs-br1
+sudo ovs-vsctl add-br ovs-br2
+sudo ovs-vsctl show
+
+docker run -dit --name=moby1 ubuntu
+docker exec moby1 apt-get update
+docker exec moby1 apt-get -y install iproute2 iputils-ping
+sudo ovs-docker add-port ovs-br1 eth1 moby1 --ipaddress=192.168.0.1/24
+
+docker run -dit --privileged --name=moby2 ubuntu
+docker exec moby2 apt-get update
+docker exec moby2 apt-get -y install iproute2 iputils-ping
+sudo ovs-docker add-port ovs-br1 eth1 moby2
+sudo ovs-docker add-port ovs-br2 eth2 moby2
+
+docker run -dit --name=moby3 ubuntu
+docker exec moby3 apt-get update
+docker exec moby3 apt-get -y install iproute2 iputils-ping
+sudo ovs-docker add-port ovs-br2 eth1 moby3 --ipaddress=192.168.0.2/24
+{% endhighlight bash linenos %}
 ## host-bridge
 
 moby2안에서 bridge를 생성하여야 하는데, 기본적으로 NET-ADMIN capability를 가지고 있지 못하므로 아래와 같이 실패할 수 있습니다.
 
+{% highlight bash linenos %}
     root@79c82193d876:/# ip link add name moby2-bridge type bridge
     RTNETLINK answers: Operation not permitted
+{% highlight bash linenos %}
 
 그래서 위에서 moby2는 `--privileged` 옵션을 이용하여 구동하였습니다. 자 브릿지를 만들어 봅시다.
 
-    [vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link add name moby2-bridge type bridge
-    [vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link set dev moby2-bridge up
-    [vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link set dev eth1 master moby2-bridge
-    [vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link set dev eth2 master moby2-bridge
-    
-    [vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link show
-    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    2: moby2-bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
-        link/ether 1e:d3:03:6a:8d:53 brd ff:ff:ff:ff:ff:ff
-    55: eth0@if56: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default
-        link/ether 02:42:ac:11:00:03 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    57: eth1@if58: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master moby2-bridge state UP mode DEFAULT group default qlen 1000
-        link/ether 1e:d3:03:6a:8d:53 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    59: eth2@if60: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master moby2-bridge state UP mode DEFAULT group default qlen 1000
-        link/ether 7e:a1:31:29:09:fc brd ff:ff:ff:ff:ff:ff link-netnsid 0
+{% highlight bash linenos %}
+[vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link add name moby2-bridge type bridge
+[vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link set dev moby2-bridge up
+[vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link set dev eth1 master moby2-bridge
+[vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link set dev eth2 master moby2-bridge
+
+[vagrant@localhost ovs_3hosts]$ docker exec -it moby2 ip link show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: moby2-bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 1e:d3:03:6a:8d:53 brd ff:ff:ff:ff:ff:ff
+55: eth0@if56: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default
+    link/ether 02:42:ac:11:00:03 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+57: eth1@if58: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master moby2-bridge state UP mode DEFAULT group default qlen 1000
+    link/ether 1e:d3:03:6a:8d:53 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+59: eth2@if60: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master moby2-bridge state UP mode DEFAULT group default qlen 1000
+    link/ether 7e:a1:31:29:09:fc brd ff:ff:ff:ff:ff:ff link-netnsid 0
+{% endhighlight bash linenos %}
     
 ## 컨테이너간 연결 확인
-    [vagrant@localhost ~]$ docker exec -it moby2 apt-get install tcpdump
-    
-    [vagrant@localhost ovs_3hosts]$ docker exec moby1 ping 192.168.0.2 -c 1
-    PING 192.168.0.2 (192.168.0.2) 56(84) bytes of data.
-    64 bytes from 192.168.0.2: icmp_seq=1 ttl=64 time=0.339 ms
-    
-    --- 192.168.0.2 ping statistics ---
-    1 packets transmitted, 1 received, 0% packet loss, time 0ms
-    rtt min/avg/max/mdev = 0.339/0.339/0.339/0.000 ms
-    [vagrant@localhost ovs_3hosts]$
+{% highlight bash linenos %}
+[vagrant@localhost ~]$ docker exec -it moby2 apt-get install tcpdump
+
+[vagrant@localhost ovs_3hosts]$ docker exec moby1 ping 192.168.0.2 -c 1
+PING 192.168.0.2 (192.168.0.2) 56(84) bytes of data.
+64 bytes from 192.168.0.2: icmp_seq=1 ttl=64 time=0.339 ms
+
+--- 192.168.0.2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.339/0.339/0.339/0.000 ms
+[vagrant@localhost ovs_3hosts]$
+{% endhighlight bash linenos %}
 
 이 때 moby2에서 moby2-bridge에 대고 패킷을 뜨면 위의 연결 확인 패킷을 잡을 수 있습니다. 
 
     
-    [vagrant@localhost ~]$ docker exec -it moby2 tcpdump -i moby2-bridge -A
-    tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
-    listening on moby2-bridge, link-type EN10MB (Ethernet), capture size 262144 bytes
-    05:24:36.195869 IP 192.168.0.1 > 192.168.0.2: ICMP echo request, id 344, seq 1, length 64
-    E..T..@.@..............L.X...0.[....G....................... !"#$%&'()*+,-./01234567
-    05:24:36.195971 IP 192.168.0.2 > 192.168.0.1: ICMP echo reply, id 344, seq 1, length 64
-    E..T....@.x...........!L.X...0.[....G....................... !"#$%&'()*+,-./01234567
+{% highlight bash linenos %}
+[vagrant@localhost ~]$ docker exec -it moby2 tcpdump -i moby2-bridge -A
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on moby2-bridge, link-type EN10MB (Ethernet), capture size 262144 bytes
+05:24:36.195869 IP 192.168.0.1 > 192.168.0.2: ICMP echo request, id 344, seq 1, length 64
+E..T..@.@..............L.X...0.[....G....................... !"#$%&'()*+,-./01234567
+05:24:36.195971 IP 192.168.0.2 > 192.168.0.1: ICMP echo reply, id 344, seq 1, length 64
+E..T....@.x...........!L.X...0.[....G....................... !"#$%&'()*+,-./01234567
+{% endhighlight bash linenos %}
