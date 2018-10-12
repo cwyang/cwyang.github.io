@@ -6,7 +6,7 @@ layout: post
 comments: yes
 author: cwyang
 excerpt: centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.
-header-img: {{ site.url }}/assets/images/animals.jpg
+header-img: /assets/images/animals.jpg
 toc: true
 ---
 # Vagrant
