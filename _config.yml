@@ -7,7 +7,7 @@ plugins:
   - jekyll-toc
 
 # Site settings
-title: cwyang's blog
+title: 양철웅의 블로그
 description: > # this means to ignore newlines until "email:"
   short essays
 url: "http://cwyang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
