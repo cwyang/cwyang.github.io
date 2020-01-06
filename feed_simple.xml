@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cwyang's blog</title>
+    <title>양철웅의 블로그</title>
     <description>short essays
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 06 Jan 2020 10:54:29 +0900</pubDate>
-    <lastBuildDate>Mon, 06 Jan 2020 10:54:29 +0900</lastBuildDate>
+    <pubDate>Mon, 06 Jan 2020 18:23:20 +0900</pubDate>
+    <lastBuildDate>Mon, 06 Jan 2020 18:23:20 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
