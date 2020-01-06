@@ -4,10 +4,10 @@
     <title>cwyang's blog</title>
     <description>short essays
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 12 Jun 2019 14:52:11 +0900</pubDate>
-    <lastBuildDate>Wed, 12 Jun 2019 14:52:11 +0900</lastBuildDate>
+    <link>http://cwyang.github.io/</link>
+    <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 06 Jan 2020 10:54:29 +0900</pubDate>
+    <lastBuildDate>Mon, 06 Jan 2020 10:54:29 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -33,8 +33,8 @@
 
 </description>
         <pubDate>Wed, 12 Jun 2019 14:30:00 +0900</pubDate>
-        <link>http://localhost:4000/2019/06/12/guan_zhong.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/06/12/guan_zhong.html</guid>
+        <link>http://cwyang.github.io/2019/06/12/guan_zhong.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2019/06/12/guan_zhong.html</guid>
         
         <category>blog</category>
         
@@ -428,8 +428,8 @@ E..T....@.x...........!L.X...0.[....G....................... !&quot;&lt;/span&gt
 
 </description>
         <pubDate>Fri, 12 Oct 2018 14:38:00 +0900</pubDate>
-        <link>http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html</guid>
+        <link>http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html</guid>
         
         <category>blog</category>
         
@@ -448,7 +448,7 @@ E..T....@.x...........!L.X...0.[....G....................... !&quot;&lt;/span&gt
         <title>Encrypted SNI</title>
         <description>&lt;p&gt;얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 &lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-tls-esni-01&quot;&gt;암호화 SNI&lt;/a&gt; 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 &lt;a href=&quot;https://blog.cloudflare.com/encrypted-sni/&quot;&gt;발표를 했네요.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/esni_cloudflare.png&quot; alt=&quot;ESNI&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/esni_cloudflare.png&quot; alt=&quot;ESNI&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;이제 SNI 차단은 안된다는 것이에요.&lt;/p&gt;
@@ -469,8 +469,8 @@ E..T....@.x...........!L.X...0.[....G....................... !&quot;&lt;/span&gt
 &lt;p&gt;SecureDNS, DNSSec, TLS1.3, Encrypted SNI 환경을 테스트하는 페이지를 &lt;a href=&quot;https://www.cloudflare.com/ssl/encrypted-sni/&quot;&gt;cloudflare에서 서비스하고 있습니다.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 24 Sep 2018 09:40:00 +0900</pubDate>
-        <link>http://localhost:4000/2018/09/24/cloudflare-does-esni.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/09/24/cloudflare-does-esni.html</guid>
+        <link>http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html</guid>
         
         <category>blog</category>
         
@@ -491,7 +491,7 @@ E..T....@.x...........!L.X...0.[....G....................... !&quot;&lt;/span&gt
 
 &lt;p&gt;성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는 점이 인상적이었기에 짧게 책을 소개해드릴께요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/different-cover.jpg&quot; alt=&quot;Different - by Y.M.Moon&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/different-cover.jpg&quot; alt=&quot;Different - by Y.M.Moon&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;국문판 부제는 “넘버원을 넘어 온리원으로”이고, 영문판 부제는 “Escaping the Competitive Herd”인데, 영문판 부제가 주제를 더 정확히 설명하고 있습니다.&lt;/p&gt;
 
@@ -501,7 +501,7 @@ E..T....@.x...........!L.X...0.[....G....................... !&quot;&lt;/span&gt
 
 &lt;p&gt;참여자가 모두 비슷비슷해지게 되는 과잉 성숙 단계의 카테고리에서 활동하는 기업들은 제자리를 지키기 위해 엄청난 에너지를 소비하게 되는데, 기업들은 그것이 치열한 경쟁 상황에서 피할 수 없는 운명이라고 결론짓기도 합니다. 그러나 모두가 발전을 위해 달려가지만 마지막에 도달하는 곳은 공동의 파멸뿐이라는 진화의 역설이 나타납니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/different-becoming-herd.jpg&quot; alt=&quot;Becoming Herd&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/different-becoming-herd.jpg&quot; alt=&quot;Becoming Herd&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;escaping-herd&quot;&gt;Escaping Herd&lt;/h2&gt;
 
@@ -525,8 +525,8 @@ Feature를 단순화. Less is More&lt;/li&gt;
 &lt;p&gt;p.s. 전반적으로 번역은 매끄러운 편입니다만  9장에서 머니볼 이야기를 하면서 (전문)통계만 의지하면 시장조사 자료(스카우트들의 정보)를 무시하게 되므로 그러지 마라고 번역한 부분은 오역입니다. 원문은 정반대에요.  머니볼은 감독이나 스카우트들의 경험이나 감(즉 시장조사)에 의지하기보다는 전문 통계정보를 의지한 팀이 Underdog의 반란을 이루어냈다라는 책이거든요. 메이저리그 좋아하시는 분들께는 &lt;a href=&quot;http://a.co/2orsCkM&quot;&gt;머니볼 책도&lt;/a&gt; 추천해드립니다.&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Jul 2018 12:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2018/07/02/different-escaping-the-competitive-herd.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/07/02/different-escaping-the-competitive-herd.html</guid>
+        <link>http://cwyang.github.io/2018/07/02/different-escaping-the-competitive-herd.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/07/02/different-escaping-the-competitive-herd.html</guid>
         
         <category>blog</category>
         
@@ -577,7 +577,7 @@ Feature를 단순화. Less is More&lt;/li&gt;
 
 &lt;h2 id=&quot;통신-자유를-위한-움직임-dns&quot;&gt;통신 자유를 위한 움직임: DNS&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/audio-dj-mix-63703.jpg&quot; alt=&quot;솔로가 하고 싶어요&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/audio-dj-mix-63703.jpg&quot; alt=&quot;솔로가 하고 싶어요&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;저는 한 아이돌 그룹의 막내 갑돌이에요. 솔로가 하고싶어서 형들 모르게 JYB로 이적하고 싶어요. 이적을 위한 등록 서버 주소를 알려주세요.&lt;/p&gt;
@@ -687,8 +687,8 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
 
 </description>
         <pubDate>Fri, 01 Jun 2018 15:10:00 +0900</pubDate>
-        <link>http://localhost:4000/2018/06/01/internet-filtering.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/06/01/internet-filtering.html</guid>
+        <link>http://cwyang.github.io/2018/06/01/internet-filtering.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/06/01/internet-filtering.html</guid>
         
         <category>blog</category>
         
@@ -761,11 +761,11 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
 &lt;p&gt;이 GPKI에서 교육부에 아래의 인증서를 발급하였습니다.
 인증서는 2015년 6월부터 2017년 9월까지 유효한 인증서이며, 발급기관(Issuer)이 대한민국 정부(Government of Korea)의 GPKI라고 명시되어 있죠. Subject를 보면 support.gne.go.kr을 대표할 도메인으로 만든 것입니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/gpki_wildcard_cert1.png&quot; alt=&quot;문제의 인증서&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/gpki_wildcard_cert1.png&quot; alt=&quot;문제의 인증서&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;문제는 이 인증서가 support.gne.go.kr 말고도 다른 여러 도메인을 대표하고 있고, 그 안에 &lt;strong&gt;*.co.kr&lt;/strong&gt;과 &lt;strong&gt;*.go.kr&lt;/strong&gt;, &lt;strong&gt;*.or.kr&lt;/strong&gt;등이 포함되어 있다는 것입니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/gpki_wildcard_cert2.png&quot; alt=&quot;문제의 인증서가 대표하는 도메인들&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/gpki_wildcard_cert2.png&quot; alt=&quot;문제의 인증서가 대표하는 도메인들&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그러면 이 인증서를 탑재한 사이트는 https://president.go.kr(청와대), https://kait.or.kr(한국정보통신진흥협회), https://lgcns.co.kr(LGCNS) 등을 자처할 수 있게 됩니다. DNS를 이용한 피싱이나 중간자공격(Man-In-The-Middle)등이 가능해지는 등 인터넷상의 보안 사고의 가능성이 열리게 되는 거에요.&lt;/p&gt;
 
@@ -785,8 +785,8 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
 &lt;p&gt;잘못된 인증서를 슬그머니 발급하려고 해도 이제 안돼요.&lt;/p&gt;
 </description>
         <pubDate>Thu, 05 Apr 2018 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html</guid>
+        <link>http://cwyang.github.io/2018/04/05/omg-wildcard-cert-co-kr.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/04/05/omg-wildcard-cert-co-kr.html</guid>
         
         <category>blog</category>
         
@@ -807,7 +807,7 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
         <title>HTTPS를 쓴다고 안심할 수 만은 없다는데, 왜?</title>
         <description>&lt;p&gt;인터넷 사용시 HTTP를 이용하면 도청이 가능하고, 변조가 가능하며, 인증이 결여되어 있기 때문에 최근 브라우저들은 HTTP사이트를 방문하면 안전하지 않은 연결이라고 안내하는 추세입니다. 전자입찰을 한다고 보았을때, 입찰가가 유출되고(도청), 입찰가를 해커가 바꿀 수 있으며(변조), 입찰을 제대로 했다고 생각했지만 그게 아니라 (인증결여) 입찰에 탈락할 수가 있는거죠. 그렇기 때문에 안전한 HTTPS, 즉 암호화 통신경로로 많은 서비스들이 옮겨가고 있죠. 인터넷 사용시 주소창에 녹색 자물쇠가 나타나면 아, 나의 통신은 안전하구나.. 하고 안심하면 되는 것이죠.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/life-of-pix-free-stock-photos-spain-door-padlock2.jpg&quot; alt=&quot;주소창에 자물쇠가 보이면 안전하다구?&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/life-of-pix-free-stock-photos-spain-door-padlock2.jpg&quot; alt=&quot;주소창에 자물쇠가 보이면 안전하다구?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그/러/나 꼭 그렇지만도 않습니다!&lt;/p&gt;
 
@@ -863,8 +863,8 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 28 Mar 2018 17:15:00 +0900</pubDate>
-        <link>http://localhost:4000/2018/03/28/is-https-really-safe.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/03/28/is-https-really-safe.html</guid>
+        <link>http://cwyang.github.io/2018/03/28/is-https-really-safe.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/03/28/is-https-really-safe.html</guid>
         
         <category>blog</category>
         
@@ -912,8 +912,8 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 24 Mar 2018 10:15:00 +0900</pubDate>
-        <link>http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html</guid>
+        <link>http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html</guid>
         
         <category>blog</category>
         
@@ -982,8 +982,8 @@ TLS1.3을 최대한 TLS1.2와 유사하게 만든다.
 &lt;p&gt;마지막으로 미들박스를 만드는 분들은 Cloudflare에서 제공하는 TLS1.3 미들박스 호환성 테스트를 사용해보는 것을 추천한다. &lt;a href=&quot;https://tls13.mitm.watch/&quot;&gt;https://tls13.mitm.watch/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 Dec 2017 00:15:00 +0900</pubDate>
-        <link>http://localhost:4000/2017/12/30/why-tls-1-3-isnt-in-browsers.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/12/30/why-tls-1-3-isnt-in-browsers.html</guid>
+        <link>http://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html</guid>
         
         <category>blog</category>
         
@@ -1009,8 +1009,8 @@ TLS1.3을 최대한 TLS1.2와 유사하게 만든다.
 
 </description>
         <pubDate>Tue, 04 Jul 2017 19:57:00 +0900</pubDate>
-        <link>http://localhost:4000/2017/07/04/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/04/welcome-to-jekyll.html</guid>
+        <link>http://cwyang.github.io/2017/07/04/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2017/07/04/welcome-to-jekyll.html</guid>
         
         <category>blog</category>
         
