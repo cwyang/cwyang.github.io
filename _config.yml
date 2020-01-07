@@ -28,6 +28,10 @@ permalink: /:year/:month/:day/:title.html
 
 timezone: "Asia/Seoul"
 
+# tracking & ad code
+fb_app_id: "596017104565491"
+google_analytics_id: "UA-6183151-15"
+naver_site_verification: "cec40b2338ce973c5b5588326daed5c126a0c415"
 
 #################################
 
