@@ -201,8 +201,3 @@ sub route_setup {
     iptables_add("PREROUTING", "-t raw -i $nic_proxy -d $net_client -j CT --zone 1");
 }
 ```
-
-# 참고
-
-* [https://serverfault.com/questions/1012570/why-an-iptables-nat-does-not-happen-in-the-network-namespace-separated-transpare](https://serverfault.com/questions/1012570/why-an-iptables-nat-does-not-happen-in-the-network-namespace-separated-transpare)
-
