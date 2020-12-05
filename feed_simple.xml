@@ -6,8 +6,8 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 05 Dec 2020 20:51:50 +0900</pubDate>
-    <lastBuildDate>Sat, 05 Dec 2020 20:51:50 +0900</lastBuildDate>
+    <pubDate>Sat, 05 Dec 2020 20:54:23 +0900</pubDate>
+    <lastBuildDate>Sat, 05 Dec 2020 20:54:23 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -22,24 +22,6 @@
         <category>cloud-first</category>
         
         <category>politics</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>아파치 서버에 SSL 접속이 안돼요</title>
-        <description>g</description>
-        <pubDate>Wed, 22 Apr 2020 09:15:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2020/04/22/cannot-connect-to-my-kt-com.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2020/04/22/cannot-connect-to-my-kt-com.html</guid>
-        
-        <category>blog</category>
-        
-        <category>tls</category>
-        
-        <category>http</category>
-        
-        <category>kt</category>
         
         
       </item>
@@ -202,6 +184,24 @@
         <category>https</category>
         
         <category>interception</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>HTTPS 사용이 100%가 된다면?</title>
+        <description>HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 근접하지는 않을까요?</description>
+        <pubDate>Sat, 24 Mar 2018 10:15:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html</guid>
+        
+        <category>blog</category>
+        
+        <category>tls</category>
+        
+        <category>work</category>
+        
+        <category>https</category>
         
         
       </item>
