@@ -6,9 +6,102 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 05 Dec 2020 20:54:23 +0900</pubDate>
-    <lastBuildDate>Sat, 05 Dec 2020 20:54:23 +0900</lastBuildDate>
+    <pubDate>Wed, 09 Dec 2020 19:16:51 +0900</pubDate>
+    <lastBuildDate>Wed, 09 Dec 2020 19:16:51 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>맥OS 앱 코드사인 및 공증하기</title>
+        <description>&lt;p&gt;윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.
+앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이
+사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/osx_gatekeeper_bad.png&quot; alt=&quot;앱이 의심스러워 실행을 금지합니다!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;따라서 앱의 배포를 위해서는 코드사인과 공증 작업이 필요하다. 
+Xcode앱인 경우 Xcode에서 대부분 알아서 해 줄 것인데, 수작업으로 작업을 진행해야 할 때도 있다.
+당신(이라고 쓰고 미래의 나 라고 읽자)은 수작업으로 진행해야 하기 때문에 이 글을
+읽고 있으리라.
+자세한 내용은 아래 관련정보에서 얻을 수 있지만, 미래의 나에게 요약하는 의미로
+중요한 것을 별도로 정리한다.
+&lt;a href=&quot;https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution&quot;&gt;관련정보&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;코드사인-code-sign&quot;&gt;코드사인 (Code-sign)&lt;/h1&gt;
+
+&lt;p&gt;앱에 제작자를 새겨 넣는 작업이다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;맥 개발자 프로그램이 필요하다. 가입한다. (유료. 연간 $99)&lt;/li&gt;
+  &lt;li&gt;https://developer.apple.com/ 에 방문하여 Developer-ID 인증서를 만든다.
+만든 인증서는 다운받아 컴의 Keychain access에 저장한다.
+Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 뭔가 잘못된 것.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드사인을 한다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;codesign --options=runtime -s 'Developer ID Application' MyApp.app&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드사인이 잘 안된다면 앱의 모든 화일을 대상으로 extended attribute를 지우고 다시 시도한다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;find MyApp.app | xargs xattr -xc&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;공증-notarization&quot;&gt;공증 (Notarization)&lt;/h1&gt;
+
+&lt;p&gt;코드사인된 앱을 애플에 보내서 기본적인 검사를 진행하고 OK도장을 받는 작업이다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Xcode command toolset을 설치한다. &lt;code class=&quot;highlighter-rouge&quot;&gt;xcrun altool&lt;/code&gt; 명령어가 성공해야한다.&lt;/li&gt;
+  &lt;li&gt;다음 명령어를 이용하여 공증을 시도한다. 잘 되었으면 UUID가 반환된다.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% xcrun altool --notarize-app
+            --primary-bundle-id &quot;com.example.ote.zip&quot;
+            --username &quot;AC_USERNAME&quot;
+            --password &quot;@keychain:AC_PASSWORD&quot;
+            --asc-provider &amp;lt;ProviderShortname&amp;gt;
+            --file OvernightTextEditor_11.6.8.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;username: 개발자 ID&lt;/li&gt;
+      &lt;li&gt;password: 개발자 ID 비밀번호가 &lt;strong&gt;아니고&lt;/strong&gt; 앱개발 전용 비밀번호이다. &lt;a href=&quot;https://appleid.apple.com&quot;&gt;애플아이디 설정페이지&lt;/a&gt; 에서 지정하는 앱개발용 암호이다.&lt;/li&gt;
+      &lt;li&gt;asc-provider: &lt;code class=&quot;highlighter-rouge&quot;&gt;xcrun altool --list-providers -u &quot;AC_USERNAME&quot; -p &quot;@keychain:AC_PASSWORD&quot;&lt;/code&gt;을 이용하여 얻어낸 provider id를 사용한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;공증 상태를 체크하기 위해서는 아래 명령어를 사용한다.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% xcrun altool --notarization-history 0 -u &quot;AC_USERNAME&quot; \
+ -p &quot;@keychain:AC_PASSWORD&quot;
+% xcrun altool --notarization-info \
+ 2EFE2717-52EF-43A5-96DC-0797E4CA1041 -u &quot;AC_USERNAME&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;공증이 잘 끝났으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;xcrun stapler staple &quot;Overnight TextEditor.app&quot;&lt;/code&gt; 명령어를 이용하여 공증 결과를 화일에 첨부한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이제 해당 파일을 웹 서버에 올리고 다운을 받아보자. 다음과 같이 실행할 것인지 물어본다면 성공!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/osx_gatekeeper_ok.png&quot; alt=&quot;인터넷에서 받은 앱을 실행하시겠어요?&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;하얗게 불타버린 오늘 하루였다. 커피한잔 사주실분!!!&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;cwyang&quot; data-color=&quot;#FFDD00&quot; data-emoji=&quot;&quot; data-font=&quot;Cookie&quot; data-text=&quot;Buy me a coffee&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#000000&quot; data-coffee-color=&quot;#ffffff&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Dec 2020 18:12:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html</guid>
+        
+        <category>blog</category>
+        
+        <category>macos</category>
+        
+        <category>osx</category>
+        
+        <category>code-sign</category>
+        
+        <category>notarization</category>
+        
+        
+      </item>
     
       <item>
         <title>클라우드 퍼스트 단상</title>
@@ -1115,53 +1208,6 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
         <category>https</category>
         
         <category>interception</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>HTTPS 사용이 100%가 된다면?</title>
-        <description>&lt;p&gt;HTTP 사이트가 HTTPS 사이트로 전환되고 있는 추세에 대해서는 잘 아시고 계시지요? 웹 트래픽 중 양적으로나 수적으로 60%정도 사용되고 있고, 계속 증가 추세입니다. 그 추세는 점유율이 어느정도가 되면 완만하게 꺾일 것이라고 저도, 그리고 여러분도 생각하고 있을 텐데요, 그 어느 정도가 어느 정도 일까요? HTTPS의 실질적 사용이 100%에 근접하지는 않을까요?&lt;/p&gt;
-
-&lt;p&gt;초기에 HTTPS의 사용이 증가한 이유는 유튜브 등의 일부 OTT 사이트가 HTTPS 사이트로 전환되었기 때문입니다. 그러나 최근의 증가 추세는 주요 브라우저 벤더들이 HTTPS를 밀어주고 있기 때문입니다. 어떤 관리자가 자신의 웹 페이지를 방문하면 브라우저에 보안이 취약하다고 난리(?)를 치는데 그냥 둘까요? 브라우저 변화와 HTTPS의 점유&lt;sup&gt;&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;의 상승에 대한 흥미로운 자료&lt;sup&gt;&lt;a href=&quot;#footnote2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;가 있습니다. 다음을 보시지요.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|Date     | HTTPS | 사건
-|2013     |  25%  | NSA에서 정보 감청을 하고 있음이 알려짐
-|2014 Dec |  32%  | Google - 크롬에서 HTTP를 몰아낼 계획발표 - HTTP방문시 적색경고 예정
-|2015 Apr |  35%  | Mozilla - Firefox에서 HTTP를 몰아낼 계획 발표
-|2015 Oct |  38%  | 무료 인증서 Let's Encrypt가 주요 브라우저에서 인식
-|2016 Jun |  45%  | Apple - 앱들은 ATS 의무장착. ATS는 HTTPS만을 사용
-|2017 Jan |  52%  | 크롬56부터 HTTP사이트에서 패스워드/카드정보를 입력할 경우 취약성 경고.  
-		    Firefox에서도 HTTP사이트에서 사용자명/패스워드를 입력시 경고
-|2017 Apr |  56%  | Google - 10월부터 크롬에서 다음 두가지 상황에서 취약성 경고 예고.  
-		    (1) HTTP페이지에서 데이터 입력시 
-		    (2) 비밀브라우징모드에서 HTTP페이지 방문시
-|2018 Jan |  70%  | Mozilla - HTTP방문시 새로운 웹 기능들을 제공하지 않는다고 예고
-|2018 Feb |  70%  | Google - 7월부터 모든 HTTP사이트에 대하여 취약하다고 경고
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Google과 Mozilla는 현재의 “HTTPS:안전, HTTP:보통”의 자세에서 “HTTPS:보통, HTTP:취약”으로 태세 전환을 예고했습니다. Google은 또 인터넷 주소 입력시 HTTPS를 먼저 방문하겠다는 계획도 발표했습니다. www.naver.com 을 주소창에 입력할 때 지금은 http://www.naver.com 으로 접속되지만 (실제로 해 보시면 https사이트로 유도되는데요, 그것은 처음에 http로 접속이 완료된 후 웹 사이트 설정으로 인해 https://www.naver.com으로 유도되기 때문입니다), 어느 순간부터는 https://www.naver.com 으로 바로 접속이 된다는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;Let’s Encrypt와 같이 무료 인증서를 발급하는 CA도 늘어날 것으로 예상되기 때문에, 인증서 비용은 HTTPS 보급에 진입 장벽이 되지 않을 것으로 생각됩니다.&lt;/p&gt;
-
-&lt;p&gt;메이저 브라우저들이 HTTPS를 이렇게 밀고 있으니 HTTPS 실질적 사용이 지속적으로 올라가지 않겠습니까? 그 때 어떤 변화와 기회와 위기가 기다리고 있을까요?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a id=&quot;footnote1&quot;&gt;[1]&lt;/a&gt; Firefox의 텔레메트리 데이터와 Let’s Encrypt에 기인한 수치입니다.&lt;/li&gt;
-  &lt;li&gt;&lt;a id=&quot;footnote2&quot;&gt;[2]&lt;/a&gt; &lt;a href=&quot;https://blog.cloudflare.com/https-or-bust-chromes-plan-to-label-sites-as-not-secure/&quot;&gt;https://blog.cloudflare.com/https-or-bust-chromes-plan-to-label-sites-as-not-secure/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 24 Mar 2018 10:15:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html</guid>
-        
-        <category>blog</category>
-        
-        <category>tls</category>
-        
-        <category>work</category>
-        
-        <category>https</category>
         
         
       </item>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>맥OS 앱 코드사인 및 공증하기</title>
+  <meta name="description" content="윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cwyang" />
+    <meta name="twitter:title" content="맥OS 앱 코드사인 및 공증하기" />
+    <meta name="twitter:image" content="http://cwyang.github.io/assets/images/logo.jpg" />
+    
+    <meta name="twitter:description"  content="윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다." />
+    
+  
+  
+  <meta property="og:site_name" content="양철웅의 블로그" />
+  <meta property="og:title" content="맥OS 앱 코드사인 및 공증하기"/>
+  
+  <meta property="og:description" content="윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다." />
+  
+  <meta property="og:image" content="http://cwyang.github.io/assets/images/osx_gatekeeper_bad.png" />
+  <meta property="og:url" content="http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2020-12-09T18:12:00+09:00">
+
+  <meta property="fb:app_id" content="596017104565491" />
+  <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+
+  <link rel="canonical" href="http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1607509011712487816" />
+  <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+
+  <script>
+    var _mailChimpUrl = "";
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.12&appId=596017104565491";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="http://cwyang.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/logo.jpg)"></span></a>
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              맥OS 앱 코드사인 및 공증하기
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share pull-right">
+                <div class="fb-like" data-href="http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                
+                  
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%EB%A7%A5OS+%EC%95%B1+%EC%BD%94%EB%93%9C%EC%82%AC%EC%9D%B8+%EB%B0%8F+%EA%B3%B5%EC%A6%9D%ED%95%98%EA%B8%B0&amp;u=http://cwyang.github.io/2020/12/09/osx-codesign-notarization"
+                      onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                    </a>
+                  
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=%EB%A7%A5OS+%EC%95%B1+%EC%BD%94%EB%93%9C%EC%82%AC%EC%9D%B8+%EB%B0%8F+%EA%B3%B5%EC%A6%9D%ED%95%98%EA%B8%B0&amp;url=http://cwyang.github.io/2020/12/09/osx-codesign-notarization"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+              </section>
+              
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
+              on
+              <time datetime="2020-12-09T18:12:00+09:00">09 Dec 2020</time>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#코드사인-code-sign">코드사인 (Code-sign)</a></li>
+<li class="toc-entry toc-h1"><a href="#공증-notarization">공증 (Notarization)</a></li>
+</ul><p>윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.
+앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이
+사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다.</p>
+
+<p><img src="http://cwyang.github.io/assets/images/osx_gatekeeper_bad.png" alt="앱이 의심스러워 실행을 금지합니다!"></p>
+
+<p>따라서 앱의 배포를 위해서는 코드사인과 공증 작업이 필요하다. 
+Xcode앱인 경우 Xcode에서 대부분 알아서 해 줄 것인데, 수작업으로 작업을 진행해야 할 때도 있다.
+당신(이라고 쓰고 미래의 나 라고 읽자)은 수작업으로 진행해야 하기 때문에 이 글을
+읽고 있으리라.
+자세한 내용은 아래 관련정보에서 얻을 수 있지만, 미래의 나에게 요약하는 의미로
+중요한 것을 별도로 정리한다.
+<a href="https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution">관련정보</a></p>
+
+<h1 id="코드사인-code-sign">
+<a id="코드사인-code-sign" class="anchor" href="#%EC%BD%94%EB%93%9C%EC%82%AC%EC%9D%B8-code-sign" aria-hidden="true"><span class="octicon octicon-link"></span></a>코드사인 (Code-sign)</h1>
+
+<p>앱에 제작자를 새겨 넣는 작업이다.</p>
+<ol>
+  <li>맥 개발자 프로그램이 필요하다. 가입한다. (유료. 연간 $99)</li>
+  <li>https://developer.apple.com/ 에 방문하여 Developer-ID 인증서를 만든다.
+만든 인증서는 다운받아 컴의 Keychain access에 저장한다.
+Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 뭔가 잘못된 것.</li>
+  <li>
+    <p>코드사인을 한다.</p>
+
+    <p><code class="highlighter-rouge">codesign --options=runtime -s 'Developer ID Application' MyApp.app</code></p>
+  </li>
+  <li>
+    <p>코드사인이 잘 안된다면 앱의 모든 화일을 대상으로 extended attribute를 지우고 다시 시도한다.</p>
+
+    <p><code class="highlighter-rouge">find MyApp.app | xargs xattr -xc</code></p>
+  </li>
+</ol>
+
+<h1 id="공증-notarization">
+<a id="공증-notarization" class="anchor" href="#%EA%B3%B5%EC%A6%9D-notarization" aria-hidden="true"><span class="octicon octicon-link"></span></a>공증 (Notarization)</h1>
+
+<p>코드사인된 앱을 애플에 보내서 기본적인 검사를 진행하고 OK도장을 받는 작업이다.</p>
+
+<ol>
+  <li>Xcode command toolset을 설치한다. <code class="highlighter-rouge">xcrun altool</code> 명령어가 성공해야한다.</li>
+  <li>다음 명령어를 이용하여 공증을 시도한다. 잘 되었으면 UUID가 반환된다.
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>% xcrun altool --notarize-app
+            --primary-bundle-id "com.example.ote.zip"
+            --username "AC_USERNAME"
+            --password "@keychain:AC_PASSWORD"
+            --asc-provider &lt;ProviderShortname&gt;
+            --file OvernightTextEditor_11.6.8.zip
+</code></pre></div>    </div>
+    <ul>
+      <li>username: 개발자 ID</li>
+      <li>password: 개발자 ID 비밀번호가 <strong>아니고</strong> 앱개발 전용 비밀번호이다. <a href="https://appleid.apple.com">애플아이디 설정페이지</a> 에서 지정하는 앱개발용 암호이다.</li>
+      <li>asc-provider: <code class="highlighter-rouge">xcrun altool --list-providers -u "AC_USERNAME" -p "@keychain:AC_PASSWORD"</code>을 이용하여 얻어낸 provider id를 사용한다.</li>
+    </ul>
+  </li>
+  <li>공증 상태를 체크하기 위해서는 아래 명령어를 사용한다.
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>% xcrun altool --notarization-history 0 -u "AC_USERNAME" \
+ -p "@keychain:AC_PASSWORD"
+% xcrun altool --notarization-info \
+ 2EFE2717-52EF-43A5-96DC-0797E4CA1041 -u "AC_USERNAME"
+</code></pre></div>    </div>
+  </li>
+  <li>공증이 잘 끝났으면 <code class="highlighter-rouge">xcrun stapler staple "Overnight TextEditor.app"</code> 명령어를 이용하여 공증 결과를 화일에 첨부한다.</li>
+</ol>
+
+<p>이제 해당 파일을 웹 서버에 올리고 다운을 받아보자. 다음과 같이 실행할 것인지 물어본다면 성공!</p>
+
+<p><img src="http://cwyang.github.io/assets/images/osx_gatekeeper_ok.png" alt="인터넷에서 받은 앱을 실행하시겠어요?"></p>
+
+<p>하얗게 불타버린 오늘 하루였다. 커피한잔 사주실분!!!</p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="cwyang" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+<p><br><br></p>
+
+          <p class="tags">
+            
+              <a href="/tags#blog-ref">blog</a>
+            
+              <a href="/tags#macos-ref">macos</a>
+            
+              <a href="/tags#osx-ref">osx</a>
+            
+              <a href="/tags#code-sign-ref">code-sign</a>
+            
+              <a href="/tags#notarization-ref">notarization</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%EB%A7%A5OS+%EC%95%B1+%EC%BD%94%EB%93%9C%EC%82%AC%EC%9D%B8+%EB%B0%8F+%EA%B3%B5%EC%A6%9D%ED%95%98%EA%B8%B0&amp;u=http://cwyang.github.io/2020/12/09/osx-codesign-notarization"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%EB%A7%A5OS+%EC%95%B1+%EC%BD%94%EB%93%9C%EC%82%AC%EC%9D%B8+%EB%B0%8F+%EA%B3%B5%EC%A6%9D%ED%95%98%EA%B8%B0&amp;url=http://cwyang.github.io/2020/12/09/osx-codesign-notarization"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>양철웅</h4>
+              <p class="bio">Chul-Woong Yang</p>
+              <hr>
+              <p class="published">Published <time datetime="2020-12-09 18:12">09 Dec 2020</time></p>
+            </section>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
+              
+            </footer>
+          </div>
+        </div>
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+      
+        <a class="read-next-story prev no-cover" href="/2020/12/05/what-does-cloud-computing-bring-to-us.html">
+          <section class="post">
+            <h2>클라우드 퍼스트 단상</h2>
+            <p>미국은 이미 10년전에 클라우드 퍼스트 전략을 발표했다. 우리 정부도 클라우드 퍼스트. 많은 기업들도 디지털 트랜스포메이션이라는...</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">양철웅의 블로그</a> © 2020</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1607509011712487816"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>
