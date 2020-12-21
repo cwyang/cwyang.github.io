@@ -48,3 +48,16 @@ social:
     share_url: http://twitter.com/share
     share_title: ?text=
     share_link: "&amp;url="
+defaults:
+  - scope:
+            path: "docs/**"
+    values:
+            sitemap: false
+  - scope:
+            path: "play/**"
+    values:
+            sitemap: false
+  - scope:
+            path: "[g|n]*.html"
+    values:
+            sitemap: false
