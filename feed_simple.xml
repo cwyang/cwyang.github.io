@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>양철웅의 디지털 트랜스포메이션</title>
+    <title>양철웅의 DX 이야기</title>
     <description>short essays on DX, AI, and cloud
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 21 Dec 2020 21:37:00 +0900</pubDate>
-    <lastBuildDate>Mon, 21 Dec 2020 21:37:00 +0900</lastBuildDate>
+    <pubDate>Tue, 22 Dec 2020 09:59:50 +0900</pubDate>
+    <lastBuildDate>Tue, 22 Dec 2020 09:59:50 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
