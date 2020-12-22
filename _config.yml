@@ -7,7 +7,7 @@ plugins:
   - jekyll-toc
 
 # Site settings
-title: 양철웅의 디지털 트랜스포메이션 
+title: 양철웅의 DX 이야기
 description: > # this means to ignore newlines until "email:"
   short essays on DX, AI, and cloud
 url: "http://cwyang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
