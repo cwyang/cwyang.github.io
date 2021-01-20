@@ -6,9 +6,131 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 22 Dec 2020 09:59:50 +0900</pubDate>
-    <lastBuildDate>Tue, 22 Dec 2020 09:59:50 +0900</lastBuildDate>
+    <pubDate>Wed, 20 Jan 2021 15:16:37 +0900</pubDate>
+    <lastBuildDate>Wed, 20 Jan 2021 15:16:37 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>도커허브 이미지 풀 제약을 하버로 해결하기</title>
+        <description>&lt;h2 id=&quot;tl-dr&quot;&gt;TL; DR&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;이미지 다운이 막혔어요. 도커허브 미워요.&lt;/li&gt;
+  &lt;li&gt;하버 짱이에요.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;도커허브에서-무턱대고-이미지를-당기다보면-에러가-난다&quot;&gt;도커허브에서 무턱대고 이미지를 당기다보면 에러가 난다.&lt;/h2&gt;
+
+&lt;p&gt;도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ip별 6시간에 100번&lt;/li&gt;
+  &lt;li&gt;무료사용자 id하나에 대해 6시간에 200번&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NAME             READY   STATUS             RESTARTS   AGE
+pod/test         2/3     ImagePullBackOff   0          11m
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;로그를 보면 아래와 같이 도커허브에서 알려주는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Too Many Requests&lt;/code&gt; 메세지가 보인다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Normal   Pulling    7m4s (x3 over 8m22s)    kubelet   Pulling image &quot;alpine:latest&quot;
+Warning  Failed     6m50s (x2 over 8m8s)    kubelet   Failed to pull image &quot;alpine:latest&quot;: rpc error: code = Unknown desc = failed to pull and unpack image &quot;docker.io/library/alpine:latest&quot;: failed to copy: httpReaderSeeker: failed open: unexpected status code https://registry-1.docker.io/v2/library/alpine/manifests/sha256:d9a7354e3845ea8466bb00b22224d9116b183e594527fb5b6c3d30bc01a20378: 
+  429 Too Many Requests - Server message: toomanyrequests: You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limit
+Warning  Failed     6m50s (x3 over 8m8s)    kubelet   Error: ErrImagePull
+Warning  Failed     3m23s (x12 over 7m18s)  kubelet   Error: ImagePullBackOff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이 상황을 타개하기 위해 이미지 레지스트리 서버인 &lt;a href=&quot;https://goharbor.io/&quot;&gt;Harbor&lt;/a&gt;를 설치하기로 했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/goharbor/harbor/releases&quot;&gt;다운로드 페이지&lt;/a&gt;에서 인스톨러를 다운받은 이후 &lt;code class=&quot;highlighter-rouge&quot;&gt;harbor.yml.tmpl&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;harbor.yml&lt;/code&gt;로 바꾼후 안의 내용을 보고 수정한다. TCP port와 SSL인증서 값을 설정한 후 설치하면 바로 구동된다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+[cwyang@jupiter harbor]$ sudo ./install.sh
+[Step 0]: checking if docker is installed ...
+Note: docker version: 19.03.6
+...
+Creating redis ...
+Creating harbor-core ...
+Creating nginx ...
+Creating harbor-jobservice ...
+✔ ----Harbor has been installed and started successfully.----
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;웹브라우저로 접속하고, admin password를 바꾼 후, proxy cache를 설정해보자.
+하버 프락시 캐시를 설정하고 사용자가 프락시 캐시를 요청하면 하버는 이미지를 origin에서 받아서 제공하는 한편 그를 저장해 두고 다음부터는 저장된 이미지를 제공한다. 이미지 요청이 오면 origin 서버로 확인을 하게 되는데 다음과 같이 4가지 경우를 구분하여 처리한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;이미지가 안바뀜 → 저장된 이미지 제공&lt;/li&gt;
+  &lt;li&gt;이미지가 바뀜 → 새 이미지를 다운받아 제공&lt;/li&gt;
+  &lt;li&gt;origin에 연결안됨 → 저장된 이미지 제공&lt;/li&gt;
+  &lt;li&gt;이미지가 삭제됨 → 이미지 제공하지 않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;하버가 매 요청마다 origin에 확인을 할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt; 요청을 이용하는데,
+도커허브 ratelimiter가 &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;는 (현재까지는) 무제한 허용을 해 주기 때문에 안심하고 사용할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;하버-설정하기&quot;&gt;하버 설정하기&lt;/h2&gt;
+
+&lt;p&gt;레지스트리 메뉴에서 새 엔드포인트를 생성한다&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor01.png&quot; alt=&quot;엔드포인트 생성&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그 다음에는 프로젝트 메뉴에서 프락시 캐시 타입의 프로젝트를 생성한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor02.png&quot; alt=&quot;프락시 캐시 프로직트  생성&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;설정된-주소로-컨테이너-이미지-가져오기&quot;&gt;설정된 주소로 컨테이너 이미지 가져오기&lt;/h2&gt;
+&lt;p&gt;이제 됐다. 사용하기 위해서는 이미지 URL 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;harbor_server_name&amp;gt;/&amp;lt;proxy_project_name&amp;gt;/&lt;/code&gt;을 붙여주어야한다. 그리고 toplevel 이미지를 당기려면 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;library&lt;/code&gt; path를 붙여준다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;​​# pull alpine:latest
+​​cwyang@cwyang ~ $ docker pull jupiter.soosanint.com:4433/proxy/library/alpine:latest
+​​latest: Pulling from proxy/library/alpine
+​​596ba82af5aa: Pull complete
+​​Digest: sha256:d9a7354e3845ea8466bb00b22224d9116b183e594527fb5b6c3d30bc01a20378
+​​Status: Downloaded newer image for jupiter.soosanint.com:4433/proxy/library/alpine:latest
+​​jupiter.soosanint.com:4433/proxy/library/alpine:latest
+​​
+​​#pull networkservicemesh/test-common:v0.2.0
+​​cwyang@cwyang ~ $ docker pull jupiter.soosanint.com:4433/proxy/networkservicemesh/test-common:v0.2.0
+​​v0.2.0: Pulling from proxy/networkservicemesh/test-common
+​​89d9c30c1d48: Pull complete
+​​139dffae8422: Pull complete
+​​Digest: sha256:6ba5743738a0244d9c7f69ff2f2ac1fbd7598eb8ff2f9b40ddba8c533d918b21
+​​Status: Downloaded newer image for jupiter.soosanint.com:4433/proxy/networkservicemesh/test-common:v0.2.0
+​​jupiter.soosanint.com:4433/proxy/networkservicemesh/test-common:v0.2.0
+​​cwyang@cwyang ~ $
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이후 콘솔을 확인하면 아래와 같이 캐시된 것을 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor03.png&quot; alt=&quot;저장된 컨테이너 이미지들&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;기본적으로 캐시된 이미지는 7일간 유효하다. 설치시에 &lt;code class=&quot;highlighter-rouge&quot;&gt;--with-trivy&lt;/code&gt; 옵션을 주면 저장 이미지에 대해서 취약점 스캐닝을 하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;trivy&lt;/code&gt;가 같이 설치된다.&lt;/p&gt;
+
+&lt;p&gt;이제 파드 매니페스트 파일에서 이미지 레지스트리주소를 하버 주소로 바꾸고 사용하도록 하자.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2021 15:02:41 +0900</pubDate>
+        <link>http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</guid>
+        
+        <category>blog</category>
+        
+        <category>docker</category>
+        
+        <category>dockerhub</category>
+        
+        <category>harbor</category>
+        
+        <category>container</category>
+        
+        <category>k8s</category>
+        
+        <category>kubernetes</category>
+        
+        
+      </item>
     
       <item>
         <title>맥OS 앱 코드사인 및 공증하기</title>
@@ -1132,82 +1254,6 @@ DNS over HTTP를 차단할 수도, HTTP/2를 차단하는 것 도 현 시대에 
         <category>certificate transparency</category>
         
         <category>GPKI</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>HTTPS를 쓴다고 안심할 수 만은 없다는데, 왜?</title>
-        <description>&lt;p&gt;인터넷 사용시 HTTP를 이용하면 도청이 가능하고, 변조가 가능하며, 인증이 결여되어 있기 때문에 최근 브라우저들은 HTTP사이트를 방문하면 안전하지 않은 연결이라고 안내하는 추세입니다. 전자입찰을 한다고 보았을때, 입찰가가 유출되고(도청), 입찰가를 해커가 바꿀 수 있으며(변조), 입찰을 제대로 했다고 생각했지만 그게 아니라 (인증결여) 입찰에 탈락할 수가 있는거죠. 그렇기 때문에 안전한 HTTPS, 즉 암호화 통신경로로 많은 서비스들이 옮겨가고 있죠. 인터넷 사용시 주소창에 녹색 자물쇠가 나타나면 아, 나의 통신은 안전하구나.. 하고 안심하면 되는 것이죠.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/life-of-pix-free-stock-photos-spain-door-padlock2.jpg&quot; alt=&quot;주소창에 자물쇠가 보이면 안전하다구?&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;그/러/나 꼭 그렇지만도 않습니다!&lt;/p&gt;
-
-&lt;p&gt;암호화 통신이라는 것은 양날의 검이어서 나도 안전하게 이용할 수 있지만, 해커들도 검문없이 드나들 수가 있게됩니다. 자유는 위험을 수반하고 보안은 불편이 따라붙죠. 그래서 우리들이 이용하는 암호화 통신은 통신 경로상에서 암호화를 벗겨서 내용을 검사하는 과정, 즉 복호화 과정을 거칩니다. 이게 꼭 나쁜것만은 아니에요. 보안은 불편을 수반한다니까요. 그럼 어떤 녀석들이 복호화를 하는가 하는지 볼까요?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Anti-Virus S/W: PC나 휴대폰에 설치된 Avast나 AVG등의 앤티바이러스 소프트웨어들. PC 및 휴대기기를 지키기 위해서 외부와 주고받는 암호화 통신을 검사합니다.&lt;/li&gt;
-  &lt;li&gt;회사 내의 보안 장비: 회사, 학교, 단체들은 외부로부터의 보안위협, 즉 악성코드나 랜섬웨어들로부터 내부를 지키기 위하여 암호화 통신을 검사합니다. 보안등급이 높은 단체는 내부의 귀중한 자료, 예를 들면 반도체 설계도면 등이 밖으로 유출되지 않도록 지키기 위하여 검사하기도 합니다.&lt;/li&gt;
-  &lt;li&gt;ISP 장비: ISP, 특히 모바일 ISP의 경우 트래픽 분석/최적화를 위하여 통신을 검사합니다.&lt;/li&gt;
-  &lt;li&gt;악성코드: 위의 3가지 분류는 좋은 목적(?)으로 통신 검사를 하지만, 반대로 개인정보를 유출하기 위해 통신을 검사하는 악성 코드가 존재합니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;암호화 통신이 정말 저렇게 많이 중간에 검사가 될까요? 그렇습니다. 2017년 NDSS 심포지움에서 발표된 “The Security Impact of HTTPS Interceptions”&lt;sup&gt;&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 논문의 내용을 간단히 소개해드리겠습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTTPS 트래픽 중 5~10%가 경로 중간에서 복호화 되고 있다(Interception)&lt;/li&gt;
-  &lt;li&gt;Antivirus S/W, Bluecoat 기기, Mobile api등이 주된 녀석들&lt;/li&gt;
-  &lt;li&gt;과테말라가 15%, 그린랜드가 10%, 그리고 한국이 8.8%로 복호화 율 최고!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;뭐 좋은 의미로 중간에서 복호화 할 수도 있겠죠. 내 암호화 데이터를 중간에서 나도 모르게 들여다본다니 기분은 상할 수도 있겠지만요. 하지만 문제는 중간에 난입한 저 장비들이 보안을 망쳐버릴수 있다는 것입니다. 잘 포장된 선물을 경비원이 검문한다음에 대충 스카치테이프로 붙여서 돌려준다고나 할까요?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;중간의 장비들 때문에 원래의 보안 수준이 망쳐지는 비율이 굉장히 많다라는 것이 [1]에 조사되어 있습니다. A등급 보안이 F등급으로 변하는 비율이 8~36%입니다. 중간에 끼어들지 않으면 완벽한 보안이, 중간의 복호화장비가 잘못 하여 누구나 도청할 수 있는 보안수준으로 망가진다는 이야기입니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;왜 그럴까요? 보안장비 만드는 사람들의 월화수목금금금 스케쥴 때문에 그럴 수도 있겠지만.. :-) 원래 보안 프로그래밍이 어려운 것이다라는 이야기가 더 맞겠지요. Texas Austin에서 2012년에 발표한 논문&lt;sup&gt;&lt;a href=&quot;#footnote2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;의 연구결과를 보시지요.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;보안 API가 원래 쓰기가 어렵게 만들어져 있어서 보안 프로그래밍을 제대로 하기가 어렵다.&lt;/li&gt;
-  &lt;li&gt;Google, MS, Mozilla들이 만드는 브라우저들은 품질을 맞추지만, 그렇지 않은 경우, 즉 브라우저가 아닌 보안제품의 경우는 품질이 떨어질 수 밖에 없는데, 예를 들면
-    &lt;ul&gt;
-      &lt;li&gt;Amazon Payment, Paypal, Lynx, Apache Client, Trillian 메신저, Rackspace 관리도구, TextSecure 안드로이드 앱, Apache Axis, Pusher, Chase mobile banking, Amazon Elastic LB API, 여러 Shopping cart, Google Admob, AIM등, 괜찮을 것 같은 앱들도 다 부실하게 만들어 놓았더라.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;그러면 어떻게 해야 할까요? 일부 보안강도가 높은 서비스들은 고정 공개 키(Public Key Pinning)등의 기법들을 사용하여 중간에 복호화하는 기기가 있으면 아예 서비스를 중단하도록 하기도 해요. 모든 서비스들에 대해서 중간에 복호화 하지 말도록 해야 할까요? 이 경우  중간에 복호화 장비의 순기능을 없애버리게 되는것이죠. 결국 한쪽 극단은 해답이 되기 어렵고요, 중용의 묘를 살려야 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;오늘의 결론은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;인터넷 주소창에 초록 자물쇠가 뜬다해도 중간에 복호화 장비가 &lt;strong&gt;삽질&lt;/strong&gt;을 하는 경우 내 데이터는 여전히 위험해요.&lt;/li&gt;
-  &lt;li&gt;그렇다고 복호화 장비나 Anti-Virus를 &lt;em&gt;안쓰면 또 위험해져요&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;따라서 &lt;strong&gt;삽질&lt;/strong&gt;을 하는 복호화 장비, &lt;strong&gt;삽질&lt;/strong&gt;을 하는 안티바이러스를 쓰지 말고 좋은 제품을 골라서 사용해야 합니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;감사합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a id=&quot;footnote1&quot;&gt; [1]&lt;/a&gt; &lt;a href=&quot;https://jhalderm.com/pub/papers/interception-ndss17.pdf&quot;&gt;Zakir Durumeric et al, The Security Impact of HTTPS Interception, NDSS ‘17&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a id=&quot;footnote2&quot;&gt; [2]&lt;/a&gt; &lt;a href=&quot;http://www.cs.columbia.edu/~suman/docs/suman_ccs12.pdf&quot;&gt;Martin Georgiev et al, The Most Dangerous Code in the World: Validating SSL Certificates in Non-Browser Software, CCS ‘12&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 28 Mar 2018 17:15:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/03/28/is-https-really-safe.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/03/28/is-https-really-safe.html</guid>
-        
-        <category>blog</category>
-        
-        <category>tls</category>
-        
-        <category>work</category>
-        
-        <category>https</category>
-        
-        <category>interception</category>
         
         
       </item>
