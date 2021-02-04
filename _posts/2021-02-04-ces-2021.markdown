@@ -1,11 +1,11 @@
 ---
-title:  "인간이 중요해지는 시대 - CES 2021"
+title:  "인간이 중요해진 시대 - CES 2021"
 date:   2021-02-04 14;33 +0900
 tags: [blog, ces, digital transformation]
 layout: post
 comments: yes
 author: cwyang
-excerpt: 2021년. 무엇보다 인간의 생활이 중요해지는 시대.
+excerpt: 2021년. 무엇보다 인간의 생활이 중요해진 시대.
 toc: true
 header-img: /assets/images/life-is-on-lg-ces2021.png
 ---
@@ -19,7 +19,7 @@ CES 2021의 주제는 `언택트 + 홈코노미 + ESG`.
 
 뉴노멀의 등장. 베터 노멀 Better Normal (LG의 캐치프레이즈)의 추구. 일(Work)이 바뀌고 (onoff mix), 교육이 바뀐다. (정신적 치유/학습의 질)
 
-2021년. 무엇보다 인간의 생활이 중요해지는 시대.
+2021년. 무엇보다 인간의 생활이 중요해진 시대.
 
 ![당연했던 것들이 추억이 되어버린 시대]({{ site.url }}/assets/images/life-is-on-lg-ces2021.png)
 
