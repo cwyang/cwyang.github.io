@@ -39,13 +39,13 @@ CES 2021의 주제는 `언택트 + 홈코노미 + ESG`.
 
 사람 관점에서의 몇가지 기술들
 - LIFE = CONNECT + CARE + COMFORT
-- 삼성의 “Better Normal for All” https://www.youtube.com/watch?v=bQd2J-53PTU
-- LG의 “Life is ON” https://www.youtube.com/watch?v=Y-7coIGK7IM
-- AI-pet: MOFLIN. AI Model학습→Cloud→배포 https://www.youtube.com/watch?v=z4rSG8f8N00
-- 삼성 휴대폰 업사이클링 https://www.youtube.com/watch?v=m9AL266C0lc
-- Shower Power: 수력발전 스피커 https://www.youtube.com/watch?v=bNSCIuHKhro
-- AI 스킨케어: 아모레 립스틱 색 추천, 맞춤형 토너 https://www.youtube.com/watch?v=OWVy_bq8VFI
-- LG의 버추얼 아바타 레아 https://www.youtube.com/watch?v=Yj0R1RgyIx4
+- [삼성의 “Better Normal for All”](https://www.youtube.com/watch?v=bQd2J-53PTU)
+- [LG의 “Life is ON”](https://www.youtube.com/watch?v=Y-7coIGK7IM)
+- [AI-pet: MOFLIN. AI Model학습→Cloud→배포](https://www.youtube.com/watch?v=z4rSG8f8N00)
+- [삼성 휴대폰 업사이클링 ](https://www.youtube.com/watch?v=m9AL266C0lc)
+- [Shower Power: 수력발전 스피커 ](https://www.youtube.com/watch?v=bNSCIuHKhro)
+- [AI 스킨케어: 아모레 립스틱 색 추천, 맞춤형 토너 ](https://www.youtube.com/watch?v=OWVy_bq8VFI]
+- [LG의 버추얼 아바타 레아 ](https://www.youtube.com/watch?v=Yj0R1RgyIx4)
 - 필립스 바이오스티커
 
 p.s. 행사자체 면에서는 줄어든 관객(적은 관심), 교류 부족, 체험 불가, 확인 불가, 지루한 진행.
