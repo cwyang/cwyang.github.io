@@ -44,7 +44,7 @@ CES 2021의 주제는 `언택트 + 홈코노미 + ESG`.
 - [AI-pet: MOFLIN. AI Model학습→Cloud→배포](https://www.youtube.com/watch?v=z4rSG8f8N00)
 - [삼성 휴대폰 업사이클링 ](https://www.youtube.com/watch?v=m9AL266C0lc)
 - [Shower Power: 수력발전 스피커 ](https://www.youtube.com/watch?v=bNSCIuHKhro)
-- [AI 스킨케어: 아모레 립스틱 색 추천, 맞춤형 토너 ](https://www.youtube.com/watch?v=OWVy_bq8VFI]
+- [AI 스킨케어: 아모레 립스틱 색 추천, 맞춤형 토너 ](https://www.youtube.com/watch?v=OWVy_bq8VFI)
 - [LG의 버추얼 아바타 레아 ](https://www.youtube.com/watch?v=Yj0R1RgyIx4)
 - 필립스 바이오스티커
 
