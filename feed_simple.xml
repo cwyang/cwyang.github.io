@@ -6,9 +6,29 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 04 Feb 2021 15:53:36 +0900</pubDate>
-    <lastBuildDate>Thu, 04 Feb 2021 15:53:36 +0900</lastBuildDate>
+    <pubDate>Tue, 14 Dec 2021 12:19:22 +0900</pubDate>
+    <lastBuildDate>Tue, 14 Dec 2021 12:19:22 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>이번 Log4J 자바취약점 요약</title>
+        <description>이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다.</description>
+        <pubDate>Tue, 14 Dec 2021 12:08:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2021/12/14/cve-2021-44228.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2021/12/14/cve-2021-44228.html</guid>
+        
+        <category>blog</category>
+        
+        <category>vulnerability</category>
+        
+        <category>log4j</category>
+        
+        <category>java</category>
+        
+        <category>jndi</category>
+        
+        
+      </item>
     
       <item>
         <title>인간이 중요해진 시대 - CES 2021</title>
@@ -186,26 +206,6 @@
         <category>management</category>
         
         <category>strategy</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>문체부의 불법 유통 해외사이트 집중 단속에 붙여</title>
-        <description>문체부가 2018년 5월 2일 웹툰 등 불법 유통 해외사이트 집중 단속 및 정품 이용 캠페인 연계 실시에 대하여 보도자료를 발표하였습니다. 이번 글에서는 기술적 측면에서 불법 사이트 차단 문제를 살펴보도록 하겠습니다.</description>
-        <pubDate>Fri, 01 Jun 2018 15:10:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/06/01/internet-filtering.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/06/01/internet-filtering.html</guid>
-        
-        <category>blog</category>
-        
-        <category>tls</category>
-        
-        <category>work</category>
-        
-        <category>web filtering</category>
-        
-        <category>dns</category>
         
         
       </item>
