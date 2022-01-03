@@ -6,9 +6,31 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Dec 2021 12:20:46 +0900</pubDate>
-    <lastBuildDate>Tue, 14 Dec 2021 12:20:46 +0900</lastBuildDate>
+    <pubDate>Mon, 03 Jan 2022 15:53:10 +0900</pubDate>
+    <lastBuildDate>Mon, 03 Jan 2022 15:53:10 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>디파이의 위험</title>
+        <description>2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고 신년 첫날 알고랜드 디파이 LP풀에 $30를 예치해보았는데...</description>
+        <pubDate>Mon, 03 Jan 2022 15:45:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html</guid>
+        
+        <category>blog</category>
+        
+        <category>defi</category>
+        
+        <category>algorand</category>
+        
+        <category>tinyman</category>
+        
+        <category>exploit</category>
+        
+        <category>security</category>
+        
+        
+      </item>
     
       <item>
         <title>이번 Log4J 자바취약점 요약</title>
@@ -186,26 +208,6 @@
         <category>ssl</category>
         
         <category>filtering</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>디퍼런트 - Escaping the Competitive Herd</title>
-        <description>지난 주말에 책 한권을 읽었습니다. 경영 서적인 &lt;디퍼런트&gt; 입니다. 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는 점이 인상적이었기에 짧게 책을 소개해드릴께요.</description>
-        <pubDate>Mon, 02 Jul 2018 12:00:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/07/02/different-escaping-the-competitive-herd.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/07/02/different-escaping-the-competitive-herd.html</guid>
-        
-        <category>blog</category>
-        
-        <category>book</category>
-        
-        <category>different</category>
-        
-        <category>management</category>
-        
-        <category>strategy</category>
         
         
       </item>
