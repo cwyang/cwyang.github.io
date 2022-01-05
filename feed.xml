@@ -6,9 +6,68 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 03 Jan 2022 15:59:05 +0900</pubDate>
-    <lastBuildDate>Mon, 03 Jan 2022 15:59:05 +0900</lastBuildDate>
+    <pubDate>Wed, 05 Jan 2022 15:20:00 +0900</pubDate>
+    <lastBuildDate>Wed, 05 Jan 2022 15:20:00 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>블럭체인 지갑과 NFT</title>
+        <description>&lt;h2 id=&quot;블럭체인-지갑과-nft&quot;&gt;블럭체인 지갑과 NFT&lt;/h2&gt;
+
+&lt;p&gt;NFT나 가상화폐는 디지털 자산이며, 자산의 소유권은 블럭체인상에 저장된다. 자산의 소유자의 비밀키로 자산(의 해시값)을 서명한 내용이 저장되므로 해당 자산에 대한 소유권이 증명된다.
+비밀키를 가지고 있으면 자산 양도가 가능하다. 따라서 비밀키의 보관이 매우 중요하다.&lt;/p&gt;
+
+&lt;p&gt;블럭체인 지갑은 해당 블럭체인에서 사용되는 비밀키를 저장하는 소프트웨어이다. 대표적인 블럭체인 지갑으로서 다음과 같은 제품들이 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ethereum: Metamask (https://metamask.io/), Bitski (https://wallet.bitski.com/)&lt;/li&gt;
+  &lt;li&gt;Solana: Phantom (https://phantom.app/)&lt;/li&gt;
+  &lt;li&gt;Klayton: Klip (https://klipwallet.com/)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;nft-거래&quot;&gt;NFT 거래&lt;/h2&gt;
+
+&lt;p&gt;NFT 거래는 이론적으로는 분산형으로 일어날 수 있지만, 대부분 편의상 거래소에서 이루어진다. NFT 자산의 탐색(explore/browse), 경매, 매매등을 제공하기 때문이다. 사용자의 트랜잭션은 블럭체인 지갑을 매개체로 이루어진다. 해당 NFT 거래소와 거래가 가능한 블럭체인 지갑을 이용해야하며, 해당 블럭체인 지갑에서 금액을 지불하고, 블럭체인 지갑으로 NFT를 받는 형식이다.&lt;/p&gt;
+
+&lt;p&gt;OpenSea에서 제공하는 블럭체인 지갑은 아래와 같다. 이들 중 가장 널리 사용되는 메타마스크의 예를 들어 어떠한 보안 위협이 있는지 살펴보자.
+&lt;img src=&quot;http://cwyang.github.io/assets/images/NFT_wallets_opensea.png&quot; alt=&quot;Opensea에서 지원하는 블럭체인 지갑들&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;메타마스크-보안-이슈&quot;&gt;메타마스크 보안 이슈&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/NFT_metamask.png&quot; alt=&quot;메타마스크 지갑&quot; /&gt;
+메타마스크는 크롬 브라우저 플러그인형태이며, 블록체인 트랜잭션이 필요한 비밀키(및 공개키 쌍)을 관리한다. NFT/가상화폐 서비스가 비밀키가 필요한 작업을 해야할 때 메타마스크에 작업을 요청하고, 메타마스크는 web3.js API를 이용하여 브라우저캐시에 저장된 비밀키를 접근하게 된다.&lt;/p&gt;
+
+&lt;p&gt;브라우저캐시에는 사용자의 비밀키가 패스워드로 암호화 되어 저장되어 있다.&lt;/p&gt;
+
+&lt;p&gt;사용자가 메타마스크를 사용함에 있어서 관리해야하는 정보는 두 가지이다&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;패스워드: 브라우저 로그인 시에 사용&lt;/li&gt;
+  &lt;li&gt;비밀 구문: 새로운 접근 환경 또는 패스워드 분실시 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;패스워드는 저장된 비밀키를 복호화 하기 위하여 필요하다.
+비밀 구문은 날것의 비밀키를 사람이 저장하기 쉬운 형태로 코드화 한 것이다.&lt;/p&gt;
+
+&lt;p&gt;해커가 패스워드를 입수하면, 해당 메타마스크가 구동되는 PC에 접근하여 비밀키를 알아낸 후 자산을 탈취할 수 있다.
+해커가 비밀구문을 입수하면, 블럭체인은 누구에게나 오픈되어 있으므로 바로 자산을 탈취할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;그러면&quot;&gt;그러면?&lt;/h2&gt;
+&lt;p&gt;안전한 NFT거래를 위해서는 무엇보다 패스워드와 비밀 구문을 관리하여 유출되지 않도록 한다.
+또한 지갑의 비밀키가 저장된 영역 (브라우저캐시)을 보호해야한다. 암호화된 비밀키를 대상으로 Brute-force 공격이 가능하기 때문이다.
+또한 비밀키 관리를 하드웨어 지갑이나 HW Trusted Environment에 위임하여 안전성을 높일 수 있다.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 05 Jan 2022 15:13:17 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/01/05/nft_metamask.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/01/05/nft_metamask.html</guid>
+        
+        <category>blog</category>
+        
+        <category>blockchain</category>
+        
+        <category>metamask</category>
+        
+        <category>nft</category>
+        
+        
+      </item>
     
       <item>
         <title>디파이의 위험</title>
@@ -1037,47 +1096,6 @@ E..T....@.x...........!L.X...0.[....G....................... !&quot;&lt;/span&gt
         <category>centos</category>
         
         <category>vagrant</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Encrypted SNI</title>
-        <description>&lt;p&gt;얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 &lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-tls-esni-01&quot;&gt;암호화 SNI&lt;/a&gt; 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 &lt;a href=&quot;https://blog.cloudflare.com/encrypted-sni/&quot;&gt;발표를 했네요.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/esni_cloudflare.png&quot; alt=&quot;ESNI&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이제 SNI 차단은 안된다는 것이에요.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;정확히 말하면 SNI 차단을 막아주는 환경을 제공하는 사업자가 생겼다라는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;DNS over TLS와 함께 SSL/TLS통신을 쓰면 대부분이 암호화 통신이 되고 있었지만, 유일하게 암호화 되지 않았던 부분이 요청시의 SNI필드 &lt;code class=&quot;highlighter-rouge&quot;&gt;나 www.naver.com에 방문하고 싶어요&lt;/code&gt;와 함께 응답시의 인증서필드 &lt;code class=&quot;highlighter-rouge&quot;&gt;알았어요. 우선 www.naver.com인증서를 보낼테니 확인해보세요&lt;/code&gt;  였습니다.&lt;/p&gt;
-
-&lt;p&gt;TLS 1.3부터는 인증서도 암호화해서 보냅니다. 그래서 진짜 남은게 요청시의  SNI 필드였는데, 그것도 저 인터넷 드래프트의 구현으로 해결한거죠. 저 인터넷 드래프트는 RFC로 등록이 될 것이라고 생각해요.&lt;/p&gt;
-
-&lt;p&gt;DNS로 퍼블릭 키를 배포하고, 퍼블릭 키를 이용하여 DH (Diffie-Hellman)로 공유키를 만듭니다. DH를 이용하기 때문에 매 세션마다 공유키가 바뀌니까 암호화된 공유키로 원본을 특정할 수가 없구요, 퍼블릭 키를 주기적으로 바꾸게 되면 암호화 메카니즘이 완전히 안전해지는거에요.&lt;/p&gt;
-
-&lt;p&gt;기술은 점점 더 익명화를 지향하는 쪽으로 나아가고 있는 것이 맞는데, 그게 좋은 건지 생각해보게 됩니다.&lt;/p&gt;
-
-&lt;p&gt;–&lt;/p&gt;
-
-&lt;p&gt;SecureDNS, DNSSec, TLS1.3, Encrypted SNI 환경을 테스트하는 페이지를 &lt;a href=&quot;https://www.cloudflare.com/ssl/encrypted-sni/&quot;&gt;cloudflare에서 서비스하고 있습니다.&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 24 Sep 2018 09:40:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html</guid>
-        
-        <category>blog</category>
-        
-        <category>sni</category>
-        
-        <category>tls</category>
-        
-        <category>ssl</category>
-        
-        <category>filtering</category>
         
         
       </item>

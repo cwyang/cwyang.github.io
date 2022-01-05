@@ -6,9 +6,27 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 03 Jan 2022 15:59:05 +0900</pubDate>
-    <lastBuildDate>Mon, 03 Jan 2022 15:59:05 +0900</lastBuildDate>
+    <pubDate>Wed, 05 Jan 2022 15:20:00 +0900</pubDate>
+    <lastBuildDate>Wed, 05 Jan 2022 15:20:00 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>블럭체인 지갑과 NFT</title>
+        <description>메타마스크는 브라우저캐시에 사용자의 비밀키를 패스워드로 암호화 하여 저장한다. 사용자가 메타마스크를 사용함에 있어서 관리해야하는 정보는 두 가지이다 (1) 패스워드 - 브라우저 로그인 시에 사용 (2) 비밀 구문 - 새로운 접근 환경 또는 패스워드 분실시 사용. 패스워드는 저장된 비밀키를 복호화 하기 위하여 필요하다. 비밀 구문은 날것의 비밀키를 사람이 저장하기 쉬운 형태로 코드화 한 것이다.</description>
+        <pubDate>Wed, 05 Jan 2022 15:13:17 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/01/05/nft_metamask.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/01/05/nft_metamask.html</guid>
+        
+        <category>blog</category>
+        
+        <category>blockchain</category>
+        
+        <category>metamask</category>
+        
+        <category>nft</category>
+        
+        
+      </item>
     
       <item>
         <title>디파이의 위험</title>
@@ -188,26 +206,6 @@
         <category>centos</category>
         
         <category>vagrant</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Encrypted SNI</title>
-        <description>얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요.</description>
-        <pubDate>Mon, 24 Sep 2018 09:40:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html</guid>
-        
-        <category>blog</category>
-        
-        <category>sni</category>
-        
-        <category>tls</category>
-        
-        <category>ssl</category>
-        
-        <category>filtering</category>
         
         
       </item>
