@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "email:"
 url: "http://cwyang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cwyang
 github_username:  cwyang
-logo: "/assets/images/logo.jpg"
+logo: "/assets/images/cwyang2016.jpg"
 cover: "/assets/images/background_image.jpg"
 name: 'cwyang'
 author: 양철웅
@@ -37,7 +37,7 @@ naver_site_verification: "cec40b2338ce973c5b5588326daed5c126a0c415"
 
 social:
   - icon:	facebook
-    url:	https://facebook.com/cwyang72
+    url:	https://facebook.com/cwyang89
     desc: Connect with me facebook
     share_url: https://www.facebook.com/sharer.php
     share_title: ?t=
