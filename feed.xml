@@ -6,8 +6,8 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Mar 2022 11:06:38 +0900</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2022 11:06:38 +0900</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2022 11:23:06 +0900</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2022 11:23:06 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -90,6 +90,132 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
         <category>xdp</category>
         
         <category>libbpf</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>창업가의 답</title>
+        <description>&lt;p&gt;좋은책 추천받아 읽었습니다.&lt;/p&gt;
+
+&lt;p&gt;창업가의 답 - 성호철, 임경업&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/entrepreneurs.png&quot; alt=&quot;창업가의 답&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-라스트-무버가-1등이-된-당근마켓&quot;&gt;1. 라스트 무버가 1등이 된 당근마켓.&lt;/h2&gt;
+&lt;p&gt;목표는 맘카페 (지역 커뮤니티 마케팅), 교차로(지역광고).&lt;/p&gt;
+
+&lt;p&gt;2021.4 MAU 1500만. 국내 평균 침투율 60% (전체 타깃 대비 이용자수).&lt;/p&gt;
+
+&lt;p&gt;앱은 자주 쓰지 않으면 살아남지 못한다. 이용자는 앱을 자꾸 지운다.
+판교장터 앱은 2주만에 개발했다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-철저한-상업적-접근의-웹소설-래디쉬&quot;&gt;2. 철저한 상업적 접근의 웹소설 래디쉬&lt;/h2&gt;
+&lt;p&gt;사업을 하나 고르면 7년은 해야하는데 좋아하는 일을 해야한다. 비전이나 모티베이션이 없으면 버틸 수가 없다.&lt;/p&gt;
+
+&lt;p&gt;혁신은 너 자신이 하는 것이다. 자문 쇼핑을 다니지 말라.
+집단창작. A/B 테스트를 통한 구성.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-전국의-사장님들을-위한-솔루션-한국신용데이터&quot;&gt;3. 전국의 사장님들을 위한 솔루션 한국신용데이터&lt;/h2&gt;
+&lt;p&gt;한국의 자영업자 절반, 생활밀접업종의 70%가 캐시노트의 가맹점.&lt;/p&gt;
+
+&lt;p&gt;현장 영업으로는 고객확보가 불가능했던 상황 → 페이스북광고 &amp;amp; 입소문.&lt;/p&gt;
+
+&lt;p&gt;자영업자의 pain point 카드매출정산관리에서 시작 데이터 분석을 통해 여러 pain point를 계속 해결 → 벌판에 깃발꽂음 → 그러나 아직도 “첫날”일 뿐.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-카카오에는-창업dna가-있나&quot;&gt;4. 카카오에는 창업DNA가 있나?&lt;/h2&gt;
+&lt;p&gt;카카오에는 유난히 창업가가 많다.&lt;/p&gt;
+
+&lt;h2 id=&quot;5-예측가능한-중소가구배송-오늘의-집&quot;&gt;5. 예측가능한 중소가구배송 오늘의 집&lt;/h2&gt;
+&lt;p&gt;항상 10년뒤에도 변하지 않을 고객가치를 생각하라.&lt;/p&gt;
+
+&lt;p&gt;“어떻게 오늘에 이르렀나?” — “그만두지 않았을 뿐입니다”&lt;/p&gt;
+
+&lt;p&gt;“스타벅스커피를 한번 마셔봐야 자판기랑 차이를 알고 에어비앤비를 써봐야 좋은줄을 알게된다”&lt;/p&gt;
+
+&lt;p&gt;“스타트업은 망할때까지 망할 것 같다”&lt;/p&gt;
+
+&lt;p&gt;스타트업은 동료가 중요하다. — 너 내 동료가 돼라.&lt;/p&gt;
+
+&lt;h2 id=&quot;6-직장꿀팁-고품질-유료-텍스트-퍼블리&quot;&gt;6. 직장꿀팁 고품질 유료 텍스트 퍼블리&lt;/h2&gt;
+
+&lt;p&gt;스타트업은 가설을 실험하는 조직이다. 스타트업 비전에는 유효기간이 있다.&lt;/p&gt;
+
+&lt;p&gt;래디쉬에이어 이재웅이 창업권유 — “완전히 속았어요”&lt;/p&gt;
+
+&lt;p&gt;비타민에서 페인킬러로 피벗. 진통제는 안먹으면 죽는다.&lt;/p&gt;
+
+&lt;p&gt;오늘도 우리가 만드는 서비스가 누군가의 인생을 돕고 있구나. 사업할 맛이 나죠.&lt;/p&gt;
+
+&lt;h2 id=&quot;7-제주창업후-본토확장-캐플릭스&quot;&gt;7. 제주창업후 본토확장 캐플릭스&lt;/h2&gt;
+&lt;p&gt;렌트카 시장에서 중소기업을 모아 대기업과 경쟁시킨다. 야놀자가 모텔에 하듯.&lt;/p&gt;
+
+&lt;p&gt;공공과 연관된 아이템은 불확실성이 너무 크더라.&lt;/p&gt;
+
+&lt;p&gt;살기위해 노동했으며, 지식기업으로 탈피후 꾸준히 노력하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;8-김봉진은-왜-구주에-소액을-투자하는가&quot;&gt;8. 김봉진은 왜 구주에 소액을 투자하는가&lt;/h2&gt;
+&lt;p&gt;시리즈D 창업가도 전세자금때문에 고생하더라. 반지하에 사는 이유가 초심을 잃기 때문이 아니라 그냥 돈이 없어서더라.&lt;/p&gt;
+
+&lt;h2 id=&quot;9-완전한-기술중심의-문제-해결-뤼이드&quot;&gt;9. 완전한 기술중심의 문제 해결 뤼이드&lt;/h2&gt;
+&lt;p&gt;맞춤형 교육 어댑티브 러닝도 진짜 AI가 아니었다.&lt;/p&gt;
+
+&lt;p&gt;넷플릭스는 사용자의 상태가 천천히 변하나 교육은 학습에 따라 사용자의 상태가 수시로 바뀐다&lt;/p&gt;
+
+&lt;p&gt;퍼스트 무버가 살아남으면 강력해진다. 정주영. 돌아올 다리를 불태워라.&lt;/p&gt;
+
+&lt;h2 id=&quot;10-보이지-않는-고릴라와-독점의-법칙-런드리고&quot;&gt;10. 보이지 않는 고릴라와 독점의 법칙 런드리고&lt;/h2&gt;
+&lt;p&gt;도둑도 빨래는 안훔쳐가네? 비대면 빨래서비스가 가능하겠군!&lt;/p&gt;
+
+&lt;p&gt;세탁업의 본질? → 양방향 → 편의가 중요 → 신뢰가 더중요 → 업의 본질인 세탁을 내재화 → 원가가 문제 → 스케일과 기술로 접근 → 세탁비교로 고객에게 증명&lt;/p&gt;
+
+&lt;h2 id=&quot;11-러닝화의-나이키와-푸드트럭의-고피자&quot;&gt;11. 러닝화의 나이키와 푸드트럭의 고피자&lt;/h2&gt;
+&lt;p&gt;피자가 좋아서 피자사업을 했다&lt;/p&gt;
+
+&lt;p&gt;가설검증을 위해 푸드트럭에서 2년간 피자를 굽다.&lt;/p&gt;
+
+&lt;p&gt;스타트업에도 조직문화가 안맞아서 창업결정 (싱가포르에서 대학다님)&lt;/p&gt;
+
+&lt;p&gt;custom 도우 + 화덕개발 + AI 토핑 가이드 w/ 딥러닝 → 인건비 절감 + 균일한 맛 유지&lt;/p&gt;
+
+&lt;h2 id=&quot;12-우승-아니면-감독-교체라는-양키즈-스타일-창업-강남언니&quot;&gt;12. 우승 아니면 감독 교체라는 양키즈 스타일 창업 강남언니&lt;/h2&gt;
+&lt;p&gt;배는 항구에 정박해 있을때 가장 안전하지만 그게 배의 존재 이유는 아니야.&lt;/p&gt;
+
+&lt;p&gt;모두에게 사랑받으려다 누구에게도 사랑받지 못해. 꼭 필요한 사람에게 간절하게 잊혀지지 않는 서비스를 하자.&lt;/p&gt;
+
+&lt;p&gt;의사였지만, 암·고혈압·당뇨·갑상선에 차례로 도전했고 차례로 실패했다.&lt;/p&gt;
+
+&lt;p&gt;얼마나 큰 시장에 도전하는냐보다 우리가 풀수 있는 문제인가가 중요했다.&lt;/p&gt;
+
+&lt;p&gt;영원히 성장하고 싶다. j자 커브를 위해 자율과 몰두를 소중히하다.&lt;/p&gt;
+
+&lt;p&gt;10x 철학. 구글이 하는 일은 어떤것보다 10배 더 위대하고 나으고 빨라야한다.&lt;/p&gt;
+
+&lt;p&gt;5등이냐? 공부시간을 늘려라. 100등이냐? 자율과 몰두하라.&lt;/p&gt;
+
+&lt;h2 id=&quot;13-theres-no-silver-bullet-손에-피를-묻혀라-정육각&quot;&gt;13. There’s no silver bullet. 손에 피를 묻혀라 정육각&lt;/h2&gt;
+&lt;p&gt;세절과 배송을 묶어 맛을 지킨다.&lt;/p&gt;
+
+&lt;p&gt;정육업계의 Zara.&lt;/p&gt;
+
+&lt;p&gt;네이버 스마트스토어도 농민이 쓰기는 불편해.&lt;/p&gt;
+
+&lt;h2 id=&quot;14-주변에-한-명쯤-있는-박식한-친구-뉴닉&quot;&gt;14. 주변에 한 명쯤 있는 박식한 친구 뉴닉&lt;/h2&gt;
+&lt;p&gt;요즘 세대들은 뉴스도 그냥 콘텐츠. 텍스트를 따라가기는 어렵다. 관심사도 파편화. 일회성소비.&lt;/p&gt;
+
+&lt;p&gt;젊은 세대들에게 많이 노출이 된 이슈.&lt;/p&gt;
+
+&lt;h2 id=&quot;에필로그&quot;&gt;에필로그.&lt;/h2&gt;
+&lt;p&gt;어디서 어떻게 만나더라도 창업 멤버들은 생의 한 순간을 같이 불태웠던 동료라는 것을.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Feb 2022 01:53:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</guid>
+        
+        <category>blog</category>
+        
+        <category>book</category>
+        
+        <category>enterpreneurs</category>
         
         
       </item>
@@ -746,41 +872,6 @@ make a packet 6-tuple, including zone,  and be processed at nat table multiple t
         <category>transparenty proxy</category>
         
         <category>perl</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>춘추의 설계자 관중</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;“춘추전국 이야기 1: 춘추의 설계자 관중”을 읽고.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;FAANG.&lt;/p&gt;
-
-&lt;p&gt;Facebook, Apple/Amazon, Netflix, Google로 대표되는 현 IT세계의 지배자들이다. 아니 IT로 국한하는 것이 좀 잘못된 것 같다. 현 세계 비즈니스의 빅 플레이어들이다. 4차 산업 혁명의 최 전선에서 달려가고 있으며, 세계 발전을 리드하고, 무수히 많은 가치를 창출하는 플레이어들. 그들과의 경쟁에서는 살아남을 수 없으며, 그들이 취하지 않는 작은 시장, 그리고 그들이 제공하는 플랫폼에서 영유할 수 있는 시장만을 노려야 하는 것이 나머지 기업들의 상황이다. 그러면 그  나머지 기업들은 어떻게 살아남아야 하는가.&lt;/p&gt;
-
-&lt;p&gt;FAANG을 직접적으로 다룬 책들 “플랫폼 제국의 미래”, “구글 스토리”, “비커밍 페이스북”등과 같은 책들이 이야기하는 것은 그들의 “기술개발”, “투자자”, “불굴의 집념”, 그리고 “행운”이라는 요소들이었다. 토끼가 앞서가는데 잠도 안자, 더 좋은 밥을 먹어, 지구력도 더 좋아. 운까지 따라. 거북이는 토끼를 영원히 이길 수 없을까?&lt;/p&gt;
-
-&lt;p&gt;기원전 8세기~기원전2세기에 걸친 중국의 춘추전국시대에서 그 답을 찾고자 한다.
-중국 역사상 가장 오랜동안인 800년간 유지되었던 주나라. 주나라도 왕권이 바뀜에 따라 쇠약해지고 그와 함께 나타난 춘추오패(제, 진, 초, 오, 월). 마이크로소프트(주나라)의 쇠약과 함께 나타난 FAANG과 비슷하다. 사티아 나델라가 MS를 다시 추스려 부흥시키기 전까지 MS는 망한다고 여겨지고 있었다. 제왕의 자리를 차지하고 있었던 MS가 말이다. 그와 마찬가지로 지금 보면 영원할 것 같은 FAANG도 언젠가는 쇠약해지고 다른 기업이 그 위치를 차지할 것이다. 춘추오패의 뒤를 이어 전국 칠웅이 나타난 것 처럼. 그리고 그 뒤로 진, 한, 등 계속 역사가 되풀이 되듯.&lt;/p&gt;
-
-&lt;p&gt;춘추오패의 첫번째 패자인 제 환공은 관중을 재상으로 삼아 나라를 강하게 만들어 유명무실해진 동주 왕실을 대신해 회맹을 거행하였다. 제 환공은 자신을 죽이려고 까지 했던 관중을 등용하였고 관중의 개혁을 받아들인 훌륭한 군주이다. 관중은 인치와 법치를 중시하였다. 즉 인재 제일을 표방하였으며, 법을 명확하게 하여 백성들이 나라에는 규칙이 명확히  집행되는 것을 알게 하였다. 백성들이 잘 살아야 왕실이 잘 살 수 있다는 이념하에 생업기반을 잡아주어 경제를 부흥시켰다. 사농공상의 거주지를 분할하여 산업을 특화시키고,  행정과 군사편제를 결합시켜 군사력을 증강시켰으며, 행정조직별로 책임과 권한을 분할하였다. 이렇게 긴 시간을 보내면서 패자로서의 역량이 생긴 것이다.&lt;/p&gt;
-
-&lt;p&gt;노동 생산성 향상을 위하여 제시한 관중의 분업은 서구의 컨베이어 벨트형 분업이 아니고, 하나의 공정을 지배하는 분업이라는 점이 인상깊다. 생산을 편안하고 천직으로 받아들이게 하는 분업이다. 산업사회의 분업과는 다른 것이다. 또한 이들을 모여서 거주하게 하여 상승 효과를 유도한 것에도 감탄하였다. 군사간의 사기와 친밀도를 강병의 요체라고 파악하여 행정과 군사편제를 결합한 것도 좋았다. 즉 같은 부대는 같은 마을에서 친하게 지내온 사람들인 것이다. “연대의식으로 뭉친 군대는 강하다”는 것.&lt;/p&gt;
-
-&lt;p&gt;맡은 바 업무를 편안하고 천직으로 받아들일 수 있는 환경. 오랜 기간 합을 맞춘 사람들이 이루어내는 시너지. 관중의 이야기를 읽으면서 이를 생각해 보았다.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 12 Jun 2019 14:30:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2019/06/12/guan_zhong.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2019/06/12/guan_zhong.html</guid>
-        
-        <category>blog</category>
-        
-        <category>book</category>
-        
-        <category>history</category>
         
         
       </item>
