@@ -6,9 +6,29 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 05 Jan 2022 15:21:03 +0900</pubDate>
-    <lastBuildDate>Wed, 05 Jan 2022 15:21:03 +0900</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2022 11:06:38 +0900</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2022 11:06:38 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>eBPF와 libbpf</title>
+        <description>eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹 포인트를 제공하고 있기 때문에 종래의 top, iostat, vmstat, perf등보다 상세한 시스템 모니터링을 위해 사용할 수 있다. 넷플릭스 SRE팀의 브렌단 그렉이 eBPF를 이용한 여러가지 도구를 만들어 발표한 이후 SRE, 데브옵스 직무로부터 많은 관심을 받고 있다.</description>
+        <pubDate>Fri, 11 Mar 2022 09:36:43 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/03/11/libxdp.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/03/11/libxdp.html</guid>
+        
+        <category>blog</category>
+        
+        <category>ebpf</category>
+        
+        <category>sre</category>
+        
+        <category>xdp</category>
+        
+        <category>libbpf</category>
+        
+        
+      </item>
     
       <item>
         <title>블럭체인 지갑과 NFT</title>
@@ -186,26 +206,6 @@
         <category>book</category>
         
         <category>history</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>OVS, Docker, CentOS7 환경 만들기</title>
-        <description>centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.</description>
-        <pubDate>Fri, 12 Oct 2018 14:38:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html</guid>
-        
-        <category>blog</category>
-        
-        <category>ovs</category>
-        
-        <category>docker</category>
-        
-        <category>centos</category>
-        
-        <category>vagrant</category>
         
         
       </item>
