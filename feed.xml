@@ -6,8 +6,8 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Jun 2022 19:59:28 +0900</pubDate>
-    <lastBuildDate>Thu, 23 Jun 2022 19:59:28 +0900</lastBuildDate>
+    <pubDate>Thu, 23 Jun 2022 20:12:00 +0900</pubDate>
+    <lastBuildDate>Thu, 23 Jun 2022 20:12:00 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -41,7 +41,8 @@
 
 &lt;p&gt;땅덩이가 넓은 미국이나 글로벌 스케일로 업무환경을 구축하는 경우라면 보안 엣지의 구축이 필요하지만, 인터넷 인프라가 잘 되어 있는 우리나라의 경우 사용자 근처 엣지까지가 아니더라도 클라우드에서 제로트러스트 모델을 그리는 것만으로도 충분한 효과를 가져 올 수 있을 것이라고 생각합니다. &lt;a href=&quot;https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/#:~:text=Zero%20Trust&quot;&gt;작년 바이든 대통령의 행정명령에 제로트러스트라는 말이 여러번 등장&lt;/a&gt;했잖아요? 공공 클라우드를 10년 앞서간 미국은 이제 클라우드 보안이 굉장히 중요해지게 된 것이고, 그 답은 제로트러스트다라고 대통령이 답을 내놓은 것이지요. 이 흐름을 우리나라도 조금의 시차를 두고 따라갈 것이라는 것이 합리적인 추측이라고 생각합니다.&lt;/p&gt;
 
-&lt;p&gt;저는 요즘 제로트러스트와 보안서비스엣지 기술에 많은 관심을 가지고 있어요. 앞으로도 관련한 정보들 전해드릴께요. 많은 관심 부탁드립니다!&lt;/p&gt;
+&lt;p&gt;저는 요즘 제로트러스트와 보안서비스엣지 기술에 많은 관심을 가지고 있어요.
+가끔씩 글을 써보겠습니다. 감사합니다.&lt;/p&gt;
 
 &lt;p&gt;감사합니다.&lt;/p&gt;
 </description>
