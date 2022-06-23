@@ -81,10 +81,11 @@
 <lastmod>2022-03-11T09:36:43+09:00</lastmod>
 </url>
 <url>
-<loc>http://cwyang.github.io/about/</loc>
+<loc>http://cwyang.github.io/2022/06/23/secure-service-edge.html</loc>
+<lastmod>2022-06-23T19:58:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://cwyang.github.io/categories/</loc>
+<loc>http://cwyang.github.io/about/</loc>
 </url>
 <url>
 <loc>http://cwyang.github.io/</loc>
@@ -94,5 +95,9 @@
 </url>
 <url>
 <loc>http://cwyang.github.io/page2/</loc>
+</url>
+<url>
+<loc>http://cwyang.github.io/node_modules/es6-promise/dist/test/</loc>
+<lastmod>2015-04-15T18:58:29+09:00</lastmod>
 </url>
 </urlset>

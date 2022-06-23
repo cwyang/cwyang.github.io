@@ -2,13 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>양철웅의 DX 이야기</title>
-    <description>short essays on DX, AI, and cloud
+    <description>short essays on DX, cyber security, and cloud
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Mar 2022 12:22:44 +0900</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2022 12:22:44 +0900</lastBuildDate>
-    <generator>Jekyll v3.7.4</generator>
+    <pubDate>Thu, 23 Jun 2022 19:59:28 +0900</pubDate>
+    <lastBuildDate>Thu, 23 Jun 2022 19:59:28 +0900</lastBuildDate>
+    <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>비대면 시대의 보안기술 - 보안 서비스 엣지</title>
+        <description>&lt;p&gt;오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 자세한 내용은 링크해드리는 &lt;a href=&quot;https://www.itfind.or.kr/WZIN/jugidong/2051/file1834924209108887227-2051(2022.06.22)-23.pdf&quot;&gt;주간기술동향 2051호&lt;/a&gt; 안의 보안 서비스 엣지 소개글에서 읽어보실 수 있어요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse-unsplash.jpg&quot; alt=&quot;하이브리드 워크 시대의 정보 보안은 어떻게?&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;사용자들의 근처에 엣지를 두어 통신경로를 짧게해서 빠른 서비스를 제공하는 것이 CDN이라면, 마찬가지로 사용자들의 근처에 엣지를 두고, 모든 통신을 엣지를 거치게 하면서 엣지에서 사용자 인증 및 인가, 트래픽 검사, 악성코드 다운로드 차단, 정보 유출 방지 등 보안 기능을 수행하도록 하는 것이 SSE (Secure Service Edge)입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse1.png&quot; alt=&quot;SSE와 SASE의 구성&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 그림이 클라우드 시대에는 맞지 않게 되었어요.&lt;/p&gt;
+
+&lt;p&gt;보안을 하려면 검사및 조치를 하는 중앙지점이 필요한데, 사람은 안에도 있고 밖에도 있고요, 업무 자산도 사내망에도 있고 클라우드에도 있고 파편화되기 시작한거에요. 보안 입장에서 보면 혼돈의 카오스죠.&lt;/p&gt;
+
+&lt;p&gt;사내망으로 일단 트래픽을 유도한 다음에 보안을 수행 후 외부 자산 접근시에는 다시 외부로 내보내는 그림도 충분히 생각해 볼 수 있습니다. 하지만 전송경로가 매우 길어지겠죠. 그래서 엣지에서 하면 되겠네 라고 이야기하고 있는 것이에요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse3.png&quot; alt=&quot;(좌): 혼돈의 카오스 (우):엣지에서 제로트러스트&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2019년 가트너에서 CDN과 같이 네트워크 성능도 빠르게 하고, 보안 기능도 수행하는 SASE (새시, Secure Access Service Edge)라는 모델을 제시하였고요, 2021년에는 네트워크랑 보안이랑 굳이 다 할 필요 있느냐, 보안만 수행하는 엣지도 충분히 가치있다 하면서 SASE에서 Access를 빼버린 SSE(Secure Service Edge) 모델을 클라우드 보안의 필수 기술로 제시했어요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse2.png&quot; alt=&quot;가트너 클라우드 보안 하이프 사이클&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2022년 가트너는 SSE에 대한 시장 정의, 전망 및 유력 참여자를 기술한 매직 쿼드런트 보고서를 출판하면서
+여러 보안 기능을 사용해야만 하는 고객들은 여러 솔루션을 개별적으로 운영하는 것보다는 통합관리를 선호한다고 하였습니다.&lt;/p&gt;
+
+&lt;p&gt;① ZTNA 도입에 있어서 단일 서비스보다는 SSE에 통합된 형태를 선택할 것이고 (2021년 20% → 2025년 70%). ② 2025년 80%의 기관들은 SWG, CASB, ZTNA를 별도 구매하기보 다는 통합된 SSE 서비스를 사용할 것이며 ③ SSE의 기능 중 데이터 보안의 중요도가 증가할 것이라고 하였습니다.(2021년 15%→2026년 50%)&lt;/p&gt;
+
+&lt;p&gt;보안 서비스 엣지의 주요 기술은 누가 뭐래도 제로트러스트에요. 모든 자원에 대해서 제로트러스트 인증/인가를 집행하고, 그와 아울러 다른 보안기술도 적용하자라는 것이죠.&lt;/p&gt;
+
+&lt;p&gt;땅덩이가 넓은 미국이나 글로벌 스케일로 업무환경을 구축하는 경우라면 보안 엣지의 구축이 필요하지만, 인터넷 인프라가 잘 되어 있는 우리나라의 경우 사용자 근처 엣지까지가 아니더라도 클라우드에서 제로트러스트 모델을 그리는 것만으로도 충분한 효과를 가져 올 수 있을 것이라고 생각합니다. &lt;a href=&quot;https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/#:~:text=Zero%20Trust&quot;&gt;작년 바이든 대통령의 행정명령에 제로트러스트라는 말이 여러번 등장&lt;/a&gt;했잖아요? 공공 클라우드를 10년 앞서간 미국은 이제 클라우드 보안이 굉장히 중요해지게 된 것이고, 그 답은 제로트러스트다라고 대통령이 답을 내놓은 것이지요. 이 흐름을 우리나라도 조금의 시차를 두고 따라갈 것이라는 것이 합리적인 추측이라고 생각합니다.&lt;/p&gt;
+
+&lt;p&gt;저는 요즘 제로트러스트와 보안서비스엣지 기술에 많은 관심을 가지고 있어요. 앞으로도 관련한 정보들 전해드릴께요. 많은 관심 부탁드립니다!&lt;/p&gt;
+
+&lt;p&gt;감사합니다.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jun 2022 19:58:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/06/23/secure-service-edge.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/06/23/secure-service-edge.html</guid>
+        
+        <category>blog</category>
+        
+        <category>security</category>
+        
+        <category>보안</category>
+        
+        <category>보안서비스엣지</category>
+        
+        <category>SSE</category>
+        
+        <category>제로트러스트</category>
+        
+        <category>ZTNA</category>
+        
+        
+      </item>
     
       <item>
         <title>eBPF와 libbpf</title>
@@ -24,7 +80,7 @@
 &lt;p&gt;eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다.
 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹 포인트를 제공하고 있기 때문에
 종래의 top, iostat, vmstat, perf등보다 상세한
-시스템 모니터링을 위해 사용할 수 있다. 넷플릭스 SRE팀의 브렌단 그렉이 eBPF를 이용한 여러가지 도구를 만들어 발표한 이후 &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+시스템 모니터링을 위해 사용할 수 있다. 넷플릭스 SRE팀의 브렌단 그렉이 eBPF를 이용한 여러가지 도구를 만들어 발표한 이후 &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
 SRE, 데브옵스 직무로부터 많은 관심을 받고 있다.&lt;/p&gt;
 
 &lt;h2 id=&quot;bcc&quot;&gt;BCC&lt;/h2&gt;
@@ -35,17 +91,17 @@ eBPF에서 커널과 인터페이스하려면 stable interface가 필요한데 �
 그래서 결과적으로 바이너리가 크고, 실행시 로딩타임이 있고, 타겟 머신에 커널 헤더가 있어야한다는 부담이 있다.&lt;/p&gt;
 
 &lt;h2 id=&quot;libbpf&quot;&gt;libbpf&lt;/h2&gt;
-&lt;p&gt;최근 커뮤니티에서 인기를 얻는 것이 &lt;a href=&quot;https://github.com/libbpf/libbpf&quot;&gt;libbpf&lt;/a&gt;이다. &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;
-실행시 &lt;a href=&quot;https://www.kernel.org/doc/html/latest/bpf/btf.html#:~:text=1.-,Introduction,info%20for%20source%2Fline%20information.&quot;&gt;BPF Type Format (BTF)&lt;/a&gt;가 필요하기 때문에, 그의 지원을 위하여  커널 컴파일시 &lt;code class=&quot;highlighter-rouge&quot;&gt;CONFIG_DEBUG_INFO_BTF=y&lt;/code&gt;
+&lt;p&gt;최근 커뮤니티에서 인기를 얻는 것이 &lt;a href=&quot;https://github.com/libbpf/libbpf&quot;&gt;libbpf&lt;/a&gt;이다. &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;
+실행시 &lt;a href=&quot;https://www.kernel.org/doc/html/latest/bpf/btf.html#:~:text=1.-,Introduction,info%20for%20source%2Fline%20information.&quot;&gt;BPF Type Format (BTF)&lt;/a&gt;가 필요하기 때문에, 그의 지원을 위하여  커널 컴파일시 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CONFIG_DEBUG_INFO_BTF=y&lt;/code&gt;
 옵션을 넣어줘야한다.
 libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 컴파일된 BPF코드를 수정해서 로딩해준다.&lt;/p&gt;
 
 &lt;p&gt;최근 커널은 자신을 설명하는 BTF를 제공한다.
 아래 명령을 수행하면 모든 커널 타입을 포함하는 vmlinux.h가 생성된다.
-이것과 libbpf의 &lt;code class=&quot;highlighter-rouge&quot;&gt;bpf_helpers.h&lt;/code&gt;만 가지면 eBPF에서 커널의 웬만한 것은 다 접근할 수 있다.
+이것과 libbpf의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bpf_helpers.h&lt;/code&gt;만 가지면 eBPF에서 커널의 웬만한 것은 다 접근할 수 있다.
 다만 &lt;a href=&quot;https://lwn.net/Articles/753601/&quot;&gt;USDT support&lt;/a&gt;등과 같이 아직 BCC가 필요한 부분도 남아있다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bpftool btf dump file /sys/kernel/btf/vmlinux format c &amp;gt; vmlinux.h
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bpftool btf dump file /sys/kernel/btf/vmlinux format c &amp;gt; vmlinux.h
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;libbpf-bpf프로그램의-작성순서&quot;&gt;libbpf BPF프로그램의 작성순서&lt;/h2&gt;
@@ -60,19 +116,19 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 
 &lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Performance-Tools-Addison-Wesley-Professional-Computing/dp/0136554822&quot;&gt;https://www.amazon.com/Performance-Tools-Addison-Wesley-Professional-Computing/dp/0136554822&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Performance-Tools-Addison-Wesley-Professional-Computing/dp/0136554822&quot;&gt;https://www.amazon.com/Performance-Tools-Addison-Wesley-Professional-Computing/dp/0136554822&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://nakryiko.com/posts/bcc-to-libbpf-howto-guide/&quot;&gt;https://nakryiko.com/posts/bcc-to-libbpf-howto-guide/&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://nakryiko.com/posts/bcc-to-libbpf-howto-guide/&quot;&gt;https://nakryiko.com/posts/bcc-to-libbpf-howto-guide/&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://nakryiko.com/posts/bpf-portability-and-co-re/&quot;&gt;https://nakryiko.com/posts/bpf-portability-and-co-re/&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://nakryiko.com/posts/bpf-portability-and-co-re/&quot;&gt;https://nakryiko.com/posts/bpf-portability-and-co-re/&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.brendangregg.com/blog/2020-11-04/bpf-co-re-btf-libbpf.html&quot;&gt;https://www.brendangregg.com/blog/2020-11-04/bpf-co-re-btf-libbpf.html&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.brendangregg.com/blog/2020-11-04/bpf-co-re-btf-libbpf.html&quot;&gt;https://www.brendangregg.com/blog/2020-11-04/bpf-co-re-btf-libbpf.html&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -367,8 +423,8 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
 
 &lt;hr /&gt;
 
-&lt;p&gt;CES 2020의 주제가 &lt;code class=&quot;highlighter-rouge&quot;&gt;기술의 급변 + AI war + 비즈니스 영역붕괴 + 미래 경험의 가치&lt;/code&gt;였다면,
-CES 2021의 주제는 &lt;code class=&quot;highlighter-rouge&quot;&gt;언택트 + 홈코노미 + ESG&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;CES 2020의 주제가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;기술의 급변 + AI war + 비즈니스 영역붕괴 + 미래 경험의 가치&lt;/code&gt;였다면,
+CES 2021의 주제는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;언택트 + 홈코노미 + ESG&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;이는 100% COVID-19가 가지고 온 라이프스타일의 파괴적 변화때문.&lt;/p&gt;
 
@@ -440,13 +496,13 @@ CES 2021의 주제는 &lt;code class=&quot;highlighter-rouge&quot;&gt;언택트 
 
 &lt;p&gt;연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NAME             READY   STATUS             RESTARTS   AGE
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NAME             READY   STATUS             RESTARTS   AGE
 pod/test         2/3     ImagePullBackOff   0          11m
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;로그를 보면 아래와 같이 도커허브에서 알려주는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Too Many Requests&lt;/code&gt; 메세지가 보인다.&lt;/p&gt;
+&lt;p&gt;로그를 보면 아래와 같이 도커허브에서 알려주는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Too Many Requests&lt;/code&gt; 메세지가 보인다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 Normal   Pulling    7m4s (x3 over 8m22s)    kubelet   Pulling image &quot;alpine:latest&quot;
 Warning  Failed     6m50s (x2 over 8m8s)    kubelet   Failed to pull image &quot;alpine:latest&quot;: rpc error: code = Unknown desc = failed to pull and unpack image &quot;docker.io/library/alpine:latest&quot;: failed to copy: httpReaderSeeker: failed open: unexpected status code https://registry-1.docker.io/v2/library/alpine/manifests/sha256:d9a7354e3845ea8466bb00b22224d9116b183e594527fb5b6c3d30bc01a20378: 
   429 Too Many Requests - Server message: toomanyrequests: You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limit
@@ -455,9 +511,9 @@ Warning  Failed     3m23s (x12 over 7m18s)  kubelet   Error: ImagePullBackOff
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;이 상황을 타개하기 위해 이미지 레지스트리 서버인 &lt;a href=&quot;https://goharbor.io/&quot;&gt;Harbor&lt;/a&gt;를 설치하기로 했다.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/goharbor/harbor/releases&quot;&gt;다운로드 페이지&lt;/a&gt;에서 인스톨러를 다운받은 이후 &lt;code class=&quot;highlighter-rouge&quot;&gt;harbor.yml.tmpl&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;harbor.yml&lt;/code&gt;로 바꾼후 안의 내용을 보고 수정한다. TCP port와 SSL인증서 값을 설정한 후 설치하면 바로 구동된다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/goharbor/harbor/releases&quot;&gt;다운로드 페이지&lt;/a&gt;에서 인스톨러를 다운받은 이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;harbor.yml.tmpl&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;harbor.yml&lt;/code&gt;로 바꾼후 안의 내용을 보고 수정한다. TCP port와 SSL인증서 값을 설정한 후 설치하면 바로 구동된다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 [cwyang@jupiter harbor]$ sudo ./install.sh
 [Step 0]: checking if docker is installed ...
 Note: docker version: 19.03.6
@@ -479,8 +535,8 @@ Creating harbor-jobservice ...
   &lt;li&gt;이미지가 삭제됨 → 이미지 제공하지 않음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;하버가 매 요청마다 origin에 확인을 할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt; 요청을 이용하는데,
-도커허브 ratelimiter가 &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;는 (현재까지는) 무제한 허용을 해 주기 때문에 안심하고 사용할 수 있다.&lt;/p&gt;
+&lt;p&gt;하버가 매 요청마다 origin에 확인을 할 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt; 요청을 이용하는데,
+도커허브 ratelimiter가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;는 (현재까지는) 무제한 허용을 해 주기 때문에 안심하고 사용할 수 있다.&lt;/p&gt;
 
 &lt;h2 id=&quot;하버-설정하기&quot;&gt;하버 설정하기&lt;/h2&gt;
 
@@ -493,9 +549,9 @@ Creating harbor-jobservice ...
 &lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor02.png&quot; alt=&quot;프락시 캐시 프로직트  생성&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;설정된-주소로-컨테이너-이미지-가져오기&quot;&gt;설정된 주소로 컨테이너 이미지 가져오기&lt;/h2&gt;
-&lt;p&gt;이제 됐다. 사용하기 위해서는 이미지 URL 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;harbor_server_name&amp;gt;/&amp;lt;proxy_project_name&amp;gt;/&lt;/code&gt;을 붙여주어야한다. 그리고 toplevel 이미지를 당기려면 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;library&lt;/code&gt; path를 붙여준다.&lt;/p&gt;
+&lt;p&gt;이제 됐다. 사용하기 위해서는 이미지 URL 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;harbor_server_name&amp;gt;/&amp;lt;proxy_project_name&amp;gt;/&lt;/code&gt;을 붙여주어야한다. 그리고 toplevel 이미지를 당기려면 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;library&lt;/code&gt; path를 붙여준다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;​​# pull alpine:latest
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;​​# pull alpine:latest
 ​​cwyang@cwyang ~ $ docker pull jupiter.soosanint.com:4433/proxy/library/alpine:latest
 ​​latest: Pulling from proxy/library/alpine
 ​​596ba82af5aa: Pull complete
@@ -518,7 +574,7 @@ Creating harbor-jobservice ...
 
 &lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor03.png&quot; alt=&quot;저장된 컨테이너 이미지들&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;기본적으로 캐시된 이미지는 7일간 유효하다. 설치시에 &lt;code class=&quot;highlighter-rouge&quot;&gt;--with-trivy&lt;/code&gt; 옵션을 주면 저장 이미지에 대해서 취약점 스캐닝을 하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;trivy&lt;/code&gt;가 같이 설치된다.&lt;/p&gt;
+&lt;p&gt;기본적으로 캐시된 이미지는 7일간 유효하다. 설치시에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--with-trivy&lt;/code&gt; 옵션을 주면 저장 이미지에 대해서 취약점 스캐닝을 하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;trivy&lt;/code&gt;가 같이 설치된다.&lt;/p&gt;
 
 &lt;p&gt;이제 파드 매니페스트 파일에서 이미지 레지스트리주소를 하버 주소로 바꾸고 사용하도록 하자.&lt;/p&gt;
 </description>
@@ -570,12 +626,12 @@ Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 �
   &lt;li&gt;
     &lt;p&gt;코드사인을 한다.&lt;/p&gt;
 
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;codesign --options=runtime -s 'Developer ID Application' MyApp.app&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;codesign --options=runtime -s 'Developer ID Application' MyApp.app&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;코드사인이 잘 안된다면 앱의 모든 화일을 대상으로 extended attribute를 지우고 다시 시도한다.&lt;/p&gt;
 
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;find MyApp.app | xargs xattr -xc&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;find MyApp.app | xargs xattr -xc&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -584,9 +640,9 @@ Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 �
 &lt;p&gt;코드사인된 앱을 애플에 보내서 기본적인 검사를 진행하고 OK도장을 받는 작업이다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Xcode command toolset을 설치한다. &lt;code class=&quot;highlighter-rouge&quot;&gt;xcrun altool&lt;/code&gt; 명령어가 성공해야한다.&lt;/li&gt;
+  &lt;li&gt;Xcode command toolset을 설치한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xcrun altool&lt;/code&gt; 명령어가 성공해야한다.&lt;/li&gt;
   &lt;li&gt;다음 명령어를 이용하여 공증을 시도한다. 잘 되었으면 UUID가 반환된다.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% xcrun altool --notarize-app
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% xcrun altool --notarize-app
             --primary-bundle-id &quot;com.example.ote.zip&quot;
             --username &quot;AC_USERNAME&quot;
             --password &quot;@keychain:AC_PASSWORD&quot;
@@ -596,17 +652,17 @@ Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 �
     &lt;ul&gt;
       &lt;li&gt;username: 개발자 ID&lt;/li&gt;
       &lt;li&gt;password: 개발자 ID 비밀번호가 &lt;strong&gt;아니고&lt;/strong&gt; 앱개발 전용 비밀번호이다. &lt;a href=&quot;https://appleid.apple.com&quot;&gt;애플아이디 설정페이지&lt;/a&gt; 에서 지정하는 앱개발용 암호이다.&lt;/li&gt;
-      &lt;li&gt;asc-provider: &lt;code class=&quot;highlighter-rouge&quot;&gt;xcrun altool --list-providers -u &quot;AC_USERNAME&quot; -p &quot;@keychain:AC_PASSWORD&quot;&lt;/code&gt;을 이용하여 얻어낸 provider id를 사용한다.&lt;/li&gt;
+      &lt;li&gt;asc-provider: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xcrun altool --list-providers -u &quot;AC_USERNAME&quot; -p &quot;@keychain:AC_PASSWORD&quot;&lt;/code&gt;을 이용하여 얻어낸 provider id를 사용한다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;공증 상태를 체크하기 위해서는 아래 명령어를 사용한다.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% xcrun altool --notarization-history 0 -u &quot;AC_USERNAME&quot; \
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% xcrun altool --notarization-history 0 -u &quot;AC_USERNAME&quot; \
  -p &quot;@keychain:AC_PASSWORD&quot;
 % xcrun altool --notarization-info \
  2EFE2717-52EF-43A5-96DC-0797E4CA1041 -u &quot;AC_USERNAME&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;공증이 잘 끝났으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;xcrun stapler staple &quot;Overnight TextEditor.app&quot;&lt;/code&gt; 명령어를 이용하여 공증 결과를 화일에 첨부한다.&lt;/li&gt;
+  &lt;li&gt;공증이 잘 끝났으면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xcrun stapler staple &quot;Overnight TextEditor.app&quot;&lt;/code&gt; 명령어를 이용하여 공증 결과를 화일에 첨부한다.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;이제 해당 파일을 웹 서버에 올리고 다운을 받아보자. 다음과 같이 실행할 것인지 물어본다면 성공!&lt;/p&gt;
@@ -660,218 +716,6 @@ Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 �
         <category>cloud-first</category>
         
         <category>politics</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요</title>
-        <description>&lt;h1 id=&quot;tl-dr&quot;&gt;TL; DR&lt;/h1&gt;
-
-&lt;p&gt;같은 5-tuple의 패킷을 정책 라우팅으로 iptables를 여러번 태운다면
-conntrack이 개입하는 nat테이블의 경우 zone으로 분리를 해줘야해요.&lt;/p&gt;
-
-&lt;h1 id=&quot;문제&quot;&gt;문제&lt;/h1&gt;
-
-&lt;p&gt;호스트 머신에서 투명 프락시 네트워크를 구성하려고 합니다.
-실제 클라이언트와 프록시는 컨테이너가 될 것이지만, 실험을 위해서
-리눅스 네임스페이스로 구별되는 환경을 구성하였습니다.
-클라이언트에서 인터넷으로의 트래픽을 프락시 네임스페이스로 유도하기 위해서
-정책 라우팅을 사용하였습니다.&lt;/p&gt;
-
-&lt;p&gt;I’m trying to setup transparent proxying networks on my host.
-Real Client and Proxy targets are containters but in this experiment I use netns (network namespace) separated envinroment.
-To redirect client traffic to proxy transparently, I use policy routing.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Client (C)         Proxy (P)
-10.10.1.1/24      10.10.2.1/24
-    veth0             veth0
-     |                 |
-  veth pair         veth pair
-     |                 |
- -----------(HOST)--------------
-client-veth0       proxy-veth0
-10.10.1.2/24      10.10.2.2/24
-     |                 |            172.16.202.30
-     +-----------------+-------------- enp4s0 ---- INTERNET
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;정책 라우팅은 &lt;code class=&quot;highlighter-rouge&quot;&gt;ip rule&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;ip route&lt;/code&gt;, 그리고 &lt;code class=&quot;highlighter-rouge&quot;&gt;iptables&lt;/code&gt;를 사용하여 아래와 같이
-설정하였습니다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Client-&amp;gt;Proxy]
-ip rule:  from 10.10.1.0/24 iif client-veth0 lookup 100
-ip route: (100) default via 10.10.2.1 dev proxy-veth0
-[Proxy-&amp;gt;Internet]
-ip route: (master) default via 172.16.202.1 dev enp4s0 proto static metric 100
-iptables: -t nat -A POSTROUTING -s 10.10.10.1/32 -o enp4s0 -j MASQUERADE
-[Internet-&amp;gt;Proxy]
-ip rule:  from all to 10.10.1.0/24 iif enp4s0 lookup 100
-ip route: (100) default via 10.10.2.1 dev proxy-veth0
-[Proxy-&amp;gt;Client]
-ip rule:  from all to 10.10.1.0/24 iif proxy-veth0 lookup 101
-ip route: (101) default via 10.10.1.1 dev client-veth0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;문제는 클라이언트에서 인터넷을 접속할 때 NAT가 이루어지지 않는다는 것입니다.
-클라이언트에서 8.8.8.8으로 ping을 할 경우 인터넷 구간으로 10.10.1.1 소스 IP가
-그대로 출력됩니다.&lt;/p&gt;
-
-&lt;p&gt;이 설정의 특이한 점이라면 정책 라우팅으로 같은 5-tuple 패킷을 iptables에
-여러번 보내는 것입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;iptales -L -nv&lt;/code&gt;로 패킷 카운트를 보면 MASQUERADE
-룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?&lt;/p&gt;
-
-&lt;p&gt;Problem is, When I ping 8.8.8.8 from Client, within client netns, source ip masquerading does not happen. iptables masquerade rule does not match and defaults to ACCEPT . I expect that tcpdump on enp4s0 shows 172.16.202.30 –&amp;gt; 8.8.8.8, but it shows 10.10.1.1 –&amp;gt; 8.8.8.8, without source IP masquerading. Why doesn’t NAT happen?&lt;/p&gt;
-
-&lt;h1 id=&quot;해결&quot;&gt;해결&lt;/h1&gt;
-
-&lt;p&gt;conntrack 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;nat테이블은 컨트랙의 NEW 상태 패킷만을 처리합니다.
-첫번째 iptables nat테이블 처리시 NEW상태가 되기 때문에
-두번째 iptables에 들어왔을때 매치가 되지 않는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lwn.net/Articles/370152/&quot;&gt;Conntrack zone&lt;/a&gt;을 이용하여
-conntrack의 key를 5-tuple에서 zone을 포함한 6-tuple로 만들어 주어 해결할 수 있습니다.
-zone이 다르면 새로운 연결이라고 판단하여 각기 nat테이블 처리를 하게되는 것입니다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;iptables -t raw -A PREROUTING -i client-veth0 -j CT --zone 1
-iptables -t raw -A PREROUTING -i proxy-veth0 -d 10.10.1.0/24 -j CT --zone 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It’s because conntrack gets involved.&lt;/p&gt;
-
-&lt;p&gt;Iptables nat table handles the packet with NEW state.
-When a packet traverses nat table, conntrack adds a NEW entry.
-The packet with same 5-tuple enters nat table again,
-it is matched against conntrack database and skipped processing
-since the packet is on conntrack database&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lwn.net/Articles/370152/&quot;&gt;Conntrack zone&lt;/a&gt; can be used to 
-make a packet 6-tuple, including zone,  and be processed at nat table multiple times.&lt;/p&gt;
-
-&lt;h1 id=&quot;코드&quot;&gt;코드&lt;/h1&gt;
-
-&lt;p&gt;conntrack zone을 분리한 펄 코드입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-perl highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;strict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$debug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dryrun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ip&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$iptables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;iptables&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nic_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;veth0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;sub &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;run_cmd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$cmd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;$cmd\n&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dryrun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$cmd &amp;gt; /dev/null&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;  Error: ($result) $cmd \n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;sub &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;iptables_add&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;@_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;run_cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$iptables -D $target $line&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;run_cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$iptables -A $target $line&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;sub &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ip&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;shift&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;@_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;@_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$cmd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ns&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;$ip netns exec $ns $ip&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;$ip&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;run_cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$cmd $line&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;sub &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;make_ns&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nsaddr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$hostaddr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;@_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/\//&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$hostaddr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;netns del $target&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;link del $target-$nic_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# create namespace&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;netns add $target&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# create a veth pair&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;link add $target-$nic_name type veth peer name $nic_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;link set $nic_name netns $target&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# address setup&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;addr add $hostaddr dev $target-$nic_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;link set $target-$nic_name up&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# address setup on target namespace&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;addr add $nsaddr dev $nic_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;link set $nic_name up&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;link set lo up&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;route add default via $host dev $nic_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;make_ns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;client&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10.10.1.1/24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10.10.1.2/24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;make_ns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;proxy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;&quot;10.10.2.1/24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10.10.2.2/24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;route_setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10.10.10.0/24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;sub &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;route_setup&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$net_client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10.10.1.0/24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$net_proxy&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10.10.2.0/24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10.10.1.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_proxy&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10.10.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nic_client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;client-veth0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nic_proxy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;proxy-veth0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nic_internet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;enp4s0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# debug&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nv&quot;&gt;iptables_add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PREROUTING&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-t raw -j TRACE&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;# we need to do following things like to enable netfliter logging&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;# sysctl -w net.netfilter.nf_log_all_netns=1&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;# sysctl -w &quot;net.netfilter.nf_log.2&quot;=nf_log_ipv4&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# flush&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;route flush table 100&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;route flush table 101&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# OUTBOUND: src --&amp;gt; proxy&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rule del from $net_client iif $nic_client prio 100 table 100&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rule add from $net_client iif $nic_client prio 100 table 100&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# INBOUND: internet --&amp;gt; proxy&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rule del to $net_client iif $nic_internet prio 102 table 100&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rule add to $net_client iif $nic_internet prio 102 table 100&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# RT: route to proxy&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;route add default via $gw_proxy dev $nic_proxy table 100&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# OUTBOUND: proxy --&amp;gt; internet&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# proxy --&amp;gt; default route w/ masquerade&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;iptables_add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POSTROUTING&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-t nat -s $net_client ! -d $net_client -o $nic_internet -j MASQUERADE&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# INBOUND: proxy --&amp;gt; client&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rule del to $net_client iif $nic_proxy prio 101 table 101&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rule add to $net_client iif $nic_proxy prio 101 table 101&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# RT: route to client&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;route add default via $gw_client dev $nic_client table 101&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# conntrack zone split&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# zone 0: default zone, generic host traffic along proxy and Internet&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# zone 1: client &amp;lt;-&amp;gt; proxy traffic&lt;/span&gt;
-
-    &lt;span class=&quot;nv&quot;&gt;iptables_add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PREROUTING&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-t raw -i $nic_client -j CT --zone 1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;iptables_add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PREROUTING&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-t raw -i $nic_proxy -d $net_client -j CT --zone 1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2020 09:15:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html</guid>
-        
-        <category>blog</category>
-        
-        <category>policy routing</category>
-        
-        <category>NAT</category>
-        
-        <category>iptables</category>
-        
-        <category>linux</category>
-        
-        <category>transparenty proxy</category>
-        
-        <category>perl</category>
         
         
       </item>

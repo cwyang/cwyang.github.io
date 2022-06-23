@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1646968964973401592" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1655981968838037200" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
@@ -142,19 +142,19 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <ul class="section-nav">
+          <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#tl-dr">TL; DR</a></li>
 <li class="toc-entry toc-h1"><a href="#문제">문제</a></li>
 <li class="toc-entry toc-h1"><a href="#해결">해결</a></li>
 <li class="toc-entry toc-h1"><a href="#코드">코드</a></li>
 </ul><h1 id="tl-dr">
-<a id="tl-dr" class="anchor" href="#tl-dr" aria-hidden="true"><span class="octicon octicon-link"></span></a>TL; DR</h1>
+<a class="anchor" href="#tl-dr" aria-hidden="true"><span class="octicon octicon-link"></span></a>TL; DR</h1>
 
 <p>같은 5-tuple의 패킷을 정책 라우팅으로 iptables를 여러번 태운다면
 conntrack이 개입하는 nat테이블의 경우 zone으로 분리를 해줘야해요.</p>
 
 <h1 id="문제">
-<a id="문제" class="anchor" href="#%EB%AC%B8%EC%A0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>문제</h1>
+<a class="anchor" href="#%EB%AC%B8%EC%A0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>문제</h1>
 
 <p>호스트 머신에서 투명 프락시 네트워크를 구성하려고 합니다.
 실제 클라이언트와 프록시는 컨테이너가 될 것이지만, 실험을 위해서
@@ -166,7 +166,7 @@ conntrack이 개입하는 nat테이블의 경우 zone으로 분리를 해줘야�
 Real Client and Proxy targets are containters but in this experiment I use netns (network namespace) separated envinroment.
 To redirect client traffic to proxy transparently, I use policy routing.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client (C)         Proxy (P)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client (C)         Proxy (P)
 10.10.1.1/24      10.10.2.1/24
     veth0             veth0
      |                 |
@@ -179,10 +179,10 @@ client-veth0       proxy-veth0
      +-----------------+-------------- enp4s0 ---- INTERNET
 </code></pre></div></div>
 
-<p>정책 라우팅은 <code class="highlighter-rouge">ip rule</code>과 <code class="highlighter-rouge">ip route</code>, 그리고 <code class="highlighter-rouge">iptables</code>를 사용하여 아래와 같이
+<p>정책 라우팅은 <code class="language-plaintext highlighter-rouge">ip rule</code>과 <code class="language-plaintext highlighter-rouge">ip route</code>, 그리고 <code class="language-plaintext highlighter-rouge">iptables</code>를 사용하여 아래와 같이
 설정하였습니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Client-&gt;Proxy]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Client-&gt;Proxy]
 ip rule:  from 10.10.1.0/24 iif client-veth0 lookup 100
 ip route: (100) default via 10.10.2.1 dev proxy-veth0
 [Proxy-&gt;Internet]
@@ -201,13 +201,13 @@ ip route: (101) default via 10.10.1.1 dev client-veth0
 그대로 출력됩니다.</p>
 
 <p>이 설정의 특이한 점이라면 정책 라우팅으로 같은 5-tuple 패킷을 iptables에
-여러번 보내는 것입니다. <code class="highlighter-rouge">iptales -L -nv</code>로 패킷 카운트를 보면 MASQUERADE
+여러번 보내는 것입니다. <code class="language-plaintext highlighter-rouge">iptales -L -nv</code>로 패킷 카운트를 보면 MASQUERADE
 룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?</p>
 
 <p>Problem is, When I ping 8.8.8.8 from Client, within client netns, source ip masquerading does not happen. iptables masquerade rule does not match and defaults to ACCEPT . I expect that tcpdump on enp4s0 shows 172.16.202.30 –&gt; 8.8.8.8, but it shows 10.10.1.1 –&gt; 8.8.8.8, without source IP masquerading. Why doesn’t NAT happen?</p>
 
 <h1 id="해결">
-<a id="해결" class="anchor" href="#%ED%95%B4%EA%B2%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>해결</h1>
+<a class="anchor" href="#%ED%95%B4%EA%B2%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>해결</h1>
 
 <p>conntrack 때문입니다.</p>
 
@@ -219,7 +219,7 @@ ip route: (101) default via 10.10.1.1 dev client-veth0
 conntrack의 key를 5-tuple에서 zone을 포함한 6-tuple로 만들어 주어 해결할 수 있습니다.
 zone이 다르면 새로운 연결이라고 판단하여 각기 nat테이블 처리를 하게되는 것입니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iptables -t raw -A PREROUTING -i client-veth0 -j CT --zone 1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iptables -t raw -A PREROUTING -i client-veth0 -j CT --zone 1
 iptables -t raw -A PREROUTING -i proxy-veth0 -d 10.10.1.0/24 -j CT --zone 1
 </code></pre></div></div>
 
@@ -235,7 +235,7 @@ since the packet is on conntrack database</p>
 make a packet 6-tuple, including zone,  and be processed at nat table multiple times.</p>
 
 <h1 id="코드">
-<a id="코드" class="anchor" href="#%EC%BD%94%EB%93%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>코드</h1>
+<a class="anchor" href="#%EC%BD%94%EB%93%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>코드</h1>
 
 <p>conntrack zone을 분리한 펄 코드입니다.</p>
 
@@ -243,100 +243,100 @@ make a packet 6-tuple, including zone,  and be processed at nat table multiple t
 
 <span class="k">my</span> <span class="nv">$debug</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
 <span class="k">my</span> <span class="nv">$dryrun</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="k">my</span> <span class="nv">$ip</span><span class="o">=</span><span class="s">"ip"</span><span class="p">;</span>
-<span class="k">my</span> <span class="nv">$iptables</span><span class="o">=</span><span class="s">"iptables"</span><span class="p">;</span>
-<span class="k">my</span> <span class="nv">$nic_name</span><span class="o">=</span><span class="s">"veth0"</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$ip</span><span class="o">=</span><span class="p">"</span><span class="s2">ip</span><span class="p">";</span>
+<span class="k">my</span> <span class="nv">$iptables</span><span class="o">=</span><span class="p">"</span><span class="s2">iptables</span><span class="p">";</span>
+<span class="k">my</span> <span class="nv">$nic_name</span><span class="o">=</span><span class="p">"</span><span class="s2">veth0</span><span class="p">";</span>
 
 <span class="k">sub </span><span class="nf">run_cmd</span> <span class="p">{</span>
     <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
-    <span class="k">print</span> <span class="s">"$cmd\n"</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$debug</span><span class="p">);</span>
+    <span class="k">print</span> <span class="p">"</span><span class="si">$cmd</span><span class="se">\n</span><span class="p">"</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$debug</span><span class="p">);</span>
     <span class="k">return</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$dryrun</span><span class="p">);</span>
-    <span class="k">my</span> <span class="nv">$result</span> <span class="o">=</span> <span class="nb">system</span><span class="p">(</span><span class="s">"$cmd &gt; /dev/null"</span><span class="p">);</span>
+    <span class="k">my</span> <span class="nv">$result</span> <span class="o">=</span> <span class="nb">system</span><span class="p">("</span><span class="si">$cmd</span><span class="s2"> &gt; /dev/null</span><span class="p">");</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-	<span class="k">print</span> <span class="s">"  Error: ($result) $cmd \n"</span><span class="p">;</span>
+	<span class="k">print</span> <span class="p">"</span><span class="s2">  Error: (</span><span class="si">$result</span><span class="s2">) </span><span class="si">$cmd</span><span class="s2"> </span><span class="se">\n</span><span class="p">";</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="k">sub </span><span class="nf">iptables_add</span> <span class="p">{</span>
     <span class="k">my</span> <span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="nv">$line</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
-    <span class="nv">run_cmd</span><span class="p">(</span><span class="s">"$iptables -D $target $line"</span><span class="p">);</span>
-    <span class="nv">run_cmd</span><span class="p">(</span><span class="s">"$iptables -A $target $line"</span><span class="p">);</span>
+    <span class="nv">run_cmd</span><span class="p">("</span><span class="si">$iptables</span><span class="s2"> -D </span><span class="si">$target</span><span class="s2"> </span><span class="si">$line</span><span class="p">");</span>
+    <span class="nv">run_cmd</span><span class="p">("</span><span class="si">$iptables</span><span class="s2"> -A </span><span class="si">$target</span><span class="s2"> </span><span class="si">$line</span><span class="p">");</span>
 <span class="p">}</span>
 <span class="k">sub </span><span class="nf">ip</span> <span class="p">{</span>
-    <span class="k">my</span> <span class="nv">$ns</span> <span class="o">=</span> <span class="nb">shift</span> <span class="k">if</span> <span class="p">(</span><span class="nv">@_</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="k">my</span> <span class="nv">$ns</span> <span class="o">=</span> <span class="nb">shift</span> <span class="k">if</span> <span class="p">(</span><span class="err">@</span><span class="nv">_</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">);</span>
     <span class="k">my</span> <span class="p">(</span><span class="nv">$line</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
-    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$ns</span> <span class="p">?</span> <span class="s">"$ip netns exec $ns $ip"</span> <span class="p">:</span> <span class="s">"$ip"</span><span class="p">;</span>
-    <span class="nv">run_cmd</span><span class="p">(</span><span class="s">"$cmd $line"</span><span class="p">);</span>
+    <span class="k">my</span> <span class="nv">$cmd</span> <span class="o">=</span> <span class="nv">$ns</span> <span class="p">?</span> <span class="p">"</span><span class="si">$ip</span><span class="s2"> netns exec </span><span class="si">$ns</span><span class="s2"> </span><span class="si">$ip</span><span class="p">"</span> <span class="p">:</span> <span class="p">"</span><span class="si">$ip</span><span class="p">";</span>
+    <span class="nv">run_cmd</span><span class="p">("</span><span class="si">$cmd</span><span class="s2"> </span><span class="si">$line</span><span class="p">");</span>
 <span class="p">}</span>
 
 <span class="k">sub </span><span class="nf">make_ns</span> <span class="p">{</span>
     <span class="k">my</span> <span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="nv">$nsaddr</span><span class="p">,</span> <span class="nv">$hostaddr</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
     <span class="k">my</span> <span class="p">(</span><span class="nv">$host</span><span class="p">)</span> <span class="o">=</span> <span class="nb">split</span><span class="p">(</span><span class="sr">/\//</span><span class="p">,</span> <span class="nv">$hostaddr</span><span class="p">);</span>
     
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"netns del $target"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"link del $target-$nic_name"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">netns del </span><span class="si">$target</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">link del </span><span class="si">$target</span><span class="s2">-</span><span class="si">$nic_name</span><span class="p">");</span>
     <span class="c1"># create namespace</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"netns add $target"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">netns add </span><span class="si">$target</span><span class="p">");</span>
     <span class="c1"># create a veth pair</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"link add $target-$nic_name type veth peer name $nic_name"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"link set $nic_name netns $target"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">link add </span><span class="si">$target</span><span class="s2">-</span><span class="si">$nic_name</span><span class="s2"> type veth peer name </span><span class="si">$nic_name</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">link set </span><span class="si">$nic_name</span><span class="s2"> netns </span><span class="si">$target</span><span class="p">");</span>
     <span class="c1"># address setup</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"addr add $hostaddr dev $target-$nic_name"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"link set $target-$nic_name up"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">addr add </span><span class="si">$hostaddr</span><span class="s2"> dev </span><span class="si">$target</span><span class="s2">-</span><span class="si">$nic_name</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">link set </span><span class="si">$target</span><span class="s2">-</span><span class="si">$nic_name</span><span class="s2"> up</span><span class="p">");</span>
     <span class="c1"># address setup on target namespace</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="s">"addr add $nsaddr dev $nic_name"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="s">"link set $nic_name up"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="s">"link set lo up"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="s">"route add default via $host dev $nic_name"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="p">"</span><span class="s2">addr add </span><span class="si">$nsaddr</span><span class="s2"> dev </span><span class="si">$nic_name</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="p">"</span><span class="s2">link set </span><span class="si">$nic_name</span><span class="s2"> up</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="p">"</span><span class="s2">link set lo up</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">(</span><span class="nv">$target</span><span class="p">,</span> <span class="p">"</span><span class="s2">route add default via </span><span class="si">$host</span><span class="s2"> dev </span><span class="si">$nic_name</span><span class="p">");</span>
 <span class="p">}</span>
 
-<span class="nv">make_ns</span><span class="p">(</span><span class="s">"client"</span><span class="p">,</span> <span class="s">"10.10.1.1/24"</span><span class="p">,</span> <span class="s">"10.10.1.2/24"</span><span class="p">);</span>
-<span class="nv">make_ns</span><span class="p">(</span><span class="s">"proxy"</span><span class="p">,</span>  <span class="s">"10.10.2.1/24"</span><span class="p">,</span> <span class="s">"10.10.2.2/24"</span><span class="p">);</span>
-<span class="nv">route_setup</span><span class="p">(</span><span class="s">"10.10.10.0/24"</span><span class="p">);</span>
+<span class="nv">make_ns</span><span class="p">("</span><span class="s2">client</span><span class="p">",</span> <span class="p">"</span><span class="s2">10.10.1.1/24</span><span class="p">",</span> <span class="p">"</span><span class="s2">10.10.1.2/24</span><span class="p">");</span>
+<span class="nv">make_ns</span><span class="p">("</span><span class="s2">proxy</span><span class="p">",</span>  <span class="p">"</span><span class="s2">10.10.2.1/24</span><span class="p">",</span> <span class="p">"</span><span class="s2">10.10.2.2/24</span><span class="p">");</span>
+<span class="nv">route_setup</span><span class="p">("</span><span class="s2">10.10.10.0/24</span><span class="p">");</span>
 
 <span class="k">sub </span><span class="nf">route_setup</span> <span class="p">{</span>
-    <span class="k">my</span> <span class="nv">$net_client</span> <span class="o">=</span> <span class="s">"10.10.1.0/24"</span><span class="p">;</span>
-    <span class="k">my</span> <span class="nv">$net_proxy</span>  <span class="o">=</span> <span class="s">"10.10.2.0/24"</span><span class="p">;</span>
-    <span class="k">my</span> <span class="nv">$gw_client</span> <span class="o">=</span> <span class="s">"10.10.1.1"</span><span class="p">;</span>
-    <span class="k">my</span> <span class="nv">$gw_proxy</span>  <span class="o">=</span> <span class="s">"10.10.2.1"</span><span class="p">;</span>
-    <span class="k">my</span> <span class="nv">$nic_client</span><span class="o">=</span><span class="s">"client-veth0"</span><span class="p">;</span>
-    <span class="k">my</span> <span class="nv">$nic_proxy</span> <span class="o">=</span><span class="s">"proxy-veth0"</span><span class="p">;</span>
-    <span class="k">my</span> <span class="nv">$nic_internet</span><span class="o">=</span><span class="s">"enp4s0"</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$net_client</span> <span class="o">=</span> <span class="p">"</span><span class="s2">10.10.1.0/24</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$net_proxy</span>  <span class="o">=</span> <span class="p">"</span><span class="s2">10.10.2.0/24</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$gw_client</span> <span class="o">=</span> <span class="p">"</span><span class="s2">10.10.1.1</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$gw_proxy</span>  <span class="o">=</span> <span class="p">"</span><span class="s2">10.10.2.1</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$nic_client</span><span class="o">=</span><span class="p">"</span><span class="s2">client-veth0</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$nic_proxy</span> <span class="o">=</span><span class="p">"</span><span class="s2">proxy-veth0</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$nic_internet</span><span class="o">=</span><span class="p">"</span><span class="s2">enp4s0</span><span class="p">";</span>
 
     <span class="c1"># debug</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$debug</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nv">iptables_add</span><span class="p">(</span><span class="s">"PREROUTING"</span><span class="p">,</span> <span class="s">"-t raw -j TRACE"</span><span class="p">);</span>
+		<span class="nv">iptables_add</span><span class="p">("</span><span class="s2">PREROUTING</span><span class="p">",</span> <span class="p">"</span><span class="s2">-t raw -j TRACE</span><span class="p">");</span>
 		<span class="c1"># we need to do following things like to enable netfliter logging</span>
 		<span class="c1"># sysctl -w net.netfilter.nf_log_all_netns=1</span>
 		<span class="c1"># sysctl -w "net.netfilter.nf_log.2"=nf_log_ipv4</span>
     <span class="p">}</span>
     <span class="c1"># flush</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"route flush table 100"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"route flush table 101"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">route flush table 100</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">route flush table 101</span><span class="p">");</span>
     <span class="c1"># OUTBOUND: src --&gt; proxy</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"rule del from $net_client iif $nic_client prio 100 table 100"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"rule add from $net_client iif $nic_client prio 100 table 100"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">rule del from </span><span class="si">$net_client</span><span class="s2"> iif </span><span class="si">$nic_client</span><span class="s2"> prio 100 table 100</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">rule add from </span><span class="si">$net_client</span><span class="s2"> iif </span><span class="si">$nic_client</span><span class="s2"> prio 100 table 100</span><span class="p">");</span>
     <span class="c1"># INBOUND: internet --&gt; proxy</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"rule del to $net_client iif $nic_internet prio 102 table 100"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"rule add to $net_client iif $nic_internet prio 102 table 100"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">rule del to </span><span class="si">$net_client</span><span class="s2"> iif </span><span class="si">$nic_internet</span><span class="s2"> prio 102 table 100</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">rule add to </span><span class="si">$net_client</span><span class="s2"> iif </span><span class="si">$nic_internet</span><span class="s2"> prio 102 table 100</span><span class="p">");</span>
     <span class="c1"># RT: route to proxy</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"route add default via $gw_proxy dev $nic_proxy table 100"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">route add default via </span><span class="si">$gw_proxy</span><span class="s2"> dev </span><span class="si">$nic_proxy</span><span class="s2"> table 100</span><span class="p">");</span>
 
     <span class="c1"># OUTBOUND: proxy --&gt; internet</span>
     <span class="c1"># proxy --&gt; default route w/ masquerade</span>
-    <span class="nv">iptables_add</span><span class="p">(</span><span class="s">"POSTROUTING"</span><span class="p">,</span> <span class="s">"-t nat -s $net_client ! -d $net_client -o $nic_internet -j MASQUERADE"</span><span class="p">);</span>
+    <span class="nv">iptables_add</span><span class="p">("</span><span class="s2">POSTROUTING</span><span class="p">",</span> <span class="p">"</span><span class="s2">-t nat -s </span><span class="si">$net_client</span><span class="s2"> ! -d </span><span class="si">$net_client</span><span class="s2"> -o </span><span class="si">$nic_internet</span><span class="s2"> -j MASQUERADE</span><span class="p">");</span>
 
     <span class="c1"># INBOUND: proxy --&gt; client</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"rule del to $net_client iif $nic_proxy prio 101 table 101"</span><span class="p">);</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"rule add to $net_client iif $nic_proxy prio 101 table 101"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">rule del to </span><span class="si">$net_client</span><span class="s2"> iif </span><span class="si">$nic_proxy</span><span class="s2"> prio 101 table 101</span><span class="p">");</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">rule add to </span><span class="si">$net_client</span><span class="s2"> iif </span><span class="si">$nic_proxy</span><span class="s2"> prio 101 table 101</span><span class="p">");</span>
     <span class="c1"># RT: route to client</span>
-    <span class="nv">ip</span><span class="p">(</span><span class="s">"route add default via $gw_client dev $nic_client table 101"</span><span class="p">);</span>
+    <span class="nv">ip</span><span class="p">("</span><span class="s2">route add default via </span><span class="si">$gw_client</span><span class="s2"> dev </span><span class="si">$nic_client</span><span class="s2"> table 101</span><span class="p">");</span>
 
     <span class="c1"># conntrack zone split</span>
     <span class="c1"># zone 0: default zone, generic host traffic along proxy and Internet</span>
     <span class="c1"># zone 1: client &lt;-&gt; proxy traffic</span>
 
-    <span class="nv">iptables_add</span><span class="p">(</span><span class="s">"PREROUTING"</span><span class="p">,</span> <span class="s">"-t raw -i $nic_client -j CT --zone 1"</span><span class="p">);</span>
-    <span class="nv">iptables_add</span><span class="p">(</span><span class="s">"PREROUTING"</span><span class="p">,</span> <span class="s">"-t raw -i $nic_proxy -d $net_client -j CT --zone 1"</span><span class="p">);</span>
+    <span class="nv">iptables_add</span><span class="p">("</span><span class="s2">PREROUTING</span><span class="p">",</span> <span class="p">"</span><span class="s2">-t raw -i </span><span class="si">$nic_client</span><span class="s2"> -j CT --zone 1</span><span class="p">");</span>
+    <span class="nv">iptables_add</span><span class="p">("</span><span class="s2">PREROUTING</span><span class="p">",</span> <span class="p">"</span><span class="s2">-t raw -i </span><span class="si">$nic_proxy</span><span class="s2"> -d </span><span class="si">$net_client</span><span class="s2"> -j CT --zone 1</span><span class="p">");</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -436,7 +436,7 @@ make a packet 6-tuple, including zone,  and be processed at nat table multiple t
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1646968964973401592"></script>
+<script type="text/javascript" src="/assets/js/index.js?1655981968838037200"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

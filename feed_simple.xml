@@ -2,13 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>양철웅의 DX 이야기</title>
-    <description>short essays on DX, AI, and cloud
+    <description>short essays on DX, cyber security, and cloud
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Mar 2022 12:22:44 +0900</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2022 12:22:44 +0900</lastBuildDate>
-    <generator>Jekyll v3.7.4</generator>
+    <pubDate>Thu, 23 Jun 2022 19:59:28 +0900</pubDate>
+    <lastBuildDate>Thu, 23 Jun 2022 19:59:28 +0900</lastBuildDate>
+    <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>비대면 시대의 보안기술 - 보안 서비스 엣지</title>
+        <description>오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 전통적인 보안 모델이 클라우드 시대에는 맞지 않게 되었어요. 보안을 하려면 검사및 조치를 하는 중앙지점이 필요한데, 사람은 안에도 있고 밖에도 있고요, 업무 자산도 사내망에도 있고 클라우드에도 있고 파편화되기 시작한거에요. 보안 입장에서 보면 혼돈의 카오스죠.</description>
+        <pubDate>Thu, 23 Jun 2022 19:58:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/06/23/secure-service-edge.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/06/23/secure-service-edge.html</guid>
+        
+        <category>blog</category>
+        
+        <category>security</category>
+        
+        <category>보안</category>
+        
+        <category>보안서비스엣지</category>
+        
+        <category>SSE</category>
+        
+        <category>제로트러스트</category>
+        
+        <category>ZTNA</category>
+        
+        
+      </item>
     
       <item>
         <title>eBPF와 libbpf</title>
@@ -182,30 +206,6 @@
         <category>cloud-first</category>
         
         <category>politics</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요</title>
-        <description>정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. `iptales -L -nv`로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?</description>
-        <pubDate>Sat, 18 Apr 2020 09:15:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html</guid>
-        
-        <category>blog</category>
-        
-        <category>policy routing</category>
-        
-        <category>NAT</category>
-        
-        <category>iptables</category>
-        
-        <category>linux</category>
-        
-        <category>transparenty proxy</category>
-        
-        <category>perl</category>
         
         
       </item>
