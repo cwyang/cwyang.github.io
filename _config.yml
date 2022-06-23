@@ -9,7 +9,7 @@ plugins:
 # Site settings
 title: 양철웅의 DX 이야기
 description: > # this means to ignore newlines until "email:"
-  short essays on DX, AI, and cloud
+  short essays on DX, cyber security, and cloud
 url: "http://cwyang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cwyang
 github_username:  cwyang
@@ -61,3 +61,7 @@ defaults:
             path: "[g|n]*.html"
     values:
             sitemap: false
+exclude:
+  - play/
+  - vendor/
+  - docs/
