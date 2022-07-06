@@ -6,8 +6,8 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 Jul 2022 11:48:31 +0900</pubDate>
-    <lastBuildDate>Wed, 06 Jul 2022 11:48:31 +0900</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2022 12:28:59 +0900</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2022 12:28:59 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -30,20 +30,21 @@
 &lt;hr /&gt;
 
 &lt;p&gt;신규 서비스 TLS 엔드포인트를 만들때에는 TLS1.2 이상으로 지정하도록 해야하고요,
-기존 서비스 엔드포인트에 대해서도 취약한 TLS버젼에 어떻게 대처할 지 고민이 필요하겠지요?&lt;/p&gt;
+기존 서비스 엔드포인트에 대해서도 취약한 TLS버젼에 어떻게 대처할 지 고민이 필요하겠지요?
+구형 앱이나 프로그램에서 AWS 접속을 할 때 문제 없도록 확인도 해 주셔야겠고요.&lt;/p&gt;
 
 &lt;p&gt;감사합니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bin/openssl s_client -connect ncloud.apigw.ntruss.com:443 -tls1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bin/openssl s_client -connect dynamodb.us-west-2.amazonaws.com:443 -tls1
 CONNECTED(00000003)
-depth=3 C = GB, ST = Greater Manchester, L = Salford, O = Comodo CA Limited, CN = AAA Certificate Services
-verify error:num=19:self signed certificate in certificate chain
+depth=3 C = US, ST = Arizona, L = Scottsdale, O = &quot;Starfield Technologies, Inc.&quot;, CN = Starfield Services Root Certificate Authority - G2
+verify error:num=20:unable to get local issuer certificate
 ...
 중략
 ...
 SSL-Session:
-Protocol  : TLSv1
-Cipher    : ECDHE-RSA-RC4-SHA
+    Protocol  : TLSv1
+    Cipher    : ECDHE-RSA-AES128-SHA
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Jul 2022 08:58:00 +0900</pubDate>
