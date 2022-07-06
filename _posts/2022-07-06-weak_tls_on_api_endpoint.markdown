@@ -33,14 +33,14 @@ AWS에서는 서비스 마이그레이션을 위해 클라우드트레일에서 
 감사합니다.
 
 ```
-$ bin/openssl s_client -connect ncloud.apigw.ntruss.com:443 -tls1
+$ bin/openssl s_client -connect dynamodb.us-west-2.amazonaws.com:443 -tls1
 CONNECTED(00000003)
-depth=3 C = GB, ST = Greater Manchester, L = Salford, O = Comodo CA Limited, CN = AAA Certificate Services
-verify error:num=19:self signed certificate in certificate chain
+depth=3 C = US, ST = Arizona, L = Scottsdale, O = "Starfield Technologies, Inc.", CN = Starfield Services Root Certificate Authority - G2
+verify error:num=20:unable to get local issuer certificate
 ...
 중략
 ...
 SSL-Session:
-Protocol  : TLSv1
-Cipher    : ECDHE-RSA-RC4-SHA
+    Protocol  : TLSv1
+    Cipher    : ECDHE-RSA-AES128-SHA
 ```
