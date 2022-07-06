@@ -6,22 +6,19 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 Jul 2022 11:36:45 +0900</pubDate>
-    <lastBuildDate>Wed, 06 Jul 2022 11:36:45 +0900</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2022 11:48:31 +0900</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2022 11:48:31 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
         <title>API endpoint들의 취약한 TLS 버젼</title>
-        <description>&lt;p&gt;내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식을 접하여, TLS 버젼 이야기 짧게 드립니다.
-https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/&quot;&gt;내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식&lt;/a&gt;을 접하여, TLS 버젼 이야기 짧게 드립니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/unlocked.jpg&quot; alt=&quot;TLS 1.0, 1.1은 아주 취약해요!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다.
-https://datatracker.ietf.org/doc/rfc8996/&lt;/p&gt;
+&lt;p&gt;TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 &lt;a href=&quot;https://datatracker.ietf.org/doc/rfc8996/&quot;&gt;IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;이 때 AWS는 FIPS 엔드포인트에서 TLS1.2 미만을 지원중지하였습니다.
-https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-fips-endpoints/&lt;/p&gt;
+&lt;p&gt;이 때 &lt;a href=&quot;https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-fips-endpoints/&quot;&gt;AWS는 FIPS 엔드포인트에서 TLS1.2 미만을 지원중지&lt;/a&gt;하였습니다.&lt;/p&gt;
 
 &lt;p&gt;그리고 내년 6월부로 모든 AWS API에서 TLS1.2 미만을 지원중지하는 것입니다.&lt;/p&gt;
 
