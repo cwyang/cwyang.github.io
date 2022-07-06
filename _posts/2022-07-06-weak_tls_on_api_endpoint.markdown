@@ -9,16 +9,13 @@ excerpt: TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인�
 toc: true
 header-img: /assets/images/unlocked.jpg
 ---
-내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식을 접하여, TLS 버젼 이야기 짧게 드립니다.
-https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/
+[내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식](https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/)을 접하여, TLS 버젼 이야기 짧게 드립니다.
 
 ![TLS 1.0, 1.1은 아주 취약해요!]({{ site.url }}/assets/images/unlocked.jpg)
 
-TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다.
-https://datatracker.ietf.org/doc/rfc8996/
+TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 [IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다](https://datatracker.ietf.org/doc/rfc8996/).
 
-이 때 AWS는 FIPS 엔드포인트에서 TLS1.2 미만을 지원중지하였습니다.
-https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-fips-endpoints/
+이 때 [AWS는 FIPS 엔드포인트에서 TLS1.2 미만을 지원중지](https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-fips-endpoints/)하였습니다.
 
 그리고 내년 6월부로 모든 AWS API에서 TLS1.2 미만을 지원중지하는 것입니다.
 
