@@ -6,9 +6,61 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Jun 2022 20:12:00 +0900</pubDate>
-    <lastBuildDate>Thu, 23 Jun 2022 20:12:00 +0900</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2022 11:36:45 +0900</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2022 11:36:45 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>API endpoint들의 취약한 TLS 버젼</title>
+        <description>&lt;p&gt;내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식을 접하여, TLS 버젼 이야기 짧게 드립니다.
+https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/unlocked.jpg&quot; alt=&quot;TLS 1.0, 1.1은 아주 취약해요!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다.
+https://datatracker.ietf.org/doc/rfc8996/&lt;/p&gt;
+
+&lt;p&gt;이 때 AWS는 FIPS 엔드포인트에서 TLS1.2 미만을 지원중지하였습니다.
+https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-fips-endpoints/&lt;/p&gt;
+
+&lt;p&gt;그리고 내년 6월부로 모든 AWS API에서 TLS1.2 미만을 지원중지하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;AWS에서는 서비스 마이그레이션을 위해 클라우드트레일에서 접속 TLS 버젼을 확인하고 취약한 TLS1.0, 1.1을 사용하면 해당 클라이언트를 업데이트하도록 권장하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;브라우저벤더들이 (MS, Google, Apple, Mozilla) 2020~2021년에 걸쳐서 해당 버젼 지원을 중지하였기 때문에 TLS1.2 이상으로 통신을 강제하여도 대부분 문제가 없겠으나
+레거시/커스텀 소프트웨어가 TLS통신을 할 경우 취약한 버젼으로 연결이 맺어질 수 있어 보안에 문제가 있는 것입니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;신규 서비스 TLS 엔드포인트를 만들때에는 TLS1.2 이상으로 지정하도록 해야하고요,
+기존 서비스 엔드포인트에 대해서도 취약한 TLS버젼에 어떻게 대처할 지 고민이 필요하겠지요?&lt;/p&gt;
+
+&lt;p&gt;감사합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bin/openssl s_client -connect ncloud.apigw.ntruss.com:443 -tls1
+CONNECTED(00000003)
+depth=3 C = GB, ST = Greater Manchester, L = Salford, O = Comodo CA Limited, CN = AAA Certificate Services
+verify error:num=19:self signed certificate in certificate chain
+...
+중략
+...
+SSL-Session:
+Protocol  : TLSv1
+Cipher    : ECDHE-RSA-RC4-SHA
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 06 Jul 2022 08:58:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</guid>
+        
+        <category>blog</category>
+        
+        <category>ssl</category>
+        
+        <category>tls</category>
+        
+        
+      </item>
     
       <item>
         <title>비대면 시대의 보안기술 - 보안 서비스 엣지</title>
@@ -689,34 +741,6 @@ Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 �
         <category>code-sign</category>
         
         <category>notarization</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>클라우드 퍼스트 단상</title>
-        <description>&lt;p&gt;클라우드 퍼스트 단상&lt;/p&gt;
-
-&lt;p&gt;코로나로 인해 점심식사를 배달주문하여 먹고 있다.
-배달의 민족덕분에 여러가지 메뉴를 질리지 않게 돌려가면서 먹고 있다. 예전같았으면 계속 중국집에 계속 배달했겠지. 예전보다 음식값이 비싸다고 느끼지만 그게  배달의 민족때문인지 물가가 올라서 그런건지는 잘 모르겠다. 소비자 입장에서 배달의 민족은 좋은 서비스 맞다.&lt;/p&gt;
-
-&lt;p&gt;세상에 공짜가 어디있겠나. 누군가는 손해를 봐야한다. 경쟁력이 없는 음식점은 안간다. 코로나로 안가고 맛이 덜하여 주문을 안한다. 저 멀리 위치한 맛집에 대해 그냥 장사잘되서 좋겠구나 라고 생각하고 있었지만 이제 그 집으로 손님들이 다 가버렸다. 높은 수수료는 사회 문제까지 되고 있다.&lt;/p&gt;
-
-&lt;p&gt;아무도 내 편을 들어주는 사람이 없다. 적기조례, 자동차가 다니는 세상에 말은 사라지는게 당연하다고 한다. 손님들은 편하고 선택권이 많아지니 이런 시대의 흐름을 좋아한다. 좀 비싸지는건 당연하다고 생각하며 돈을 지불하는데 돈은 플랫폼업체들이 가지고 간다.&lt;/p&gt;
-
-&lt;p&gt;미국은 이미 10년전에 클라우드 퍼스트 전략을 발표했다. 우리 정부도 클라우드 퍼스트. 많은 기업들도 디지털 트랜스포메이션이라는 기치 아래 클라우드로 가고 있다. 클라우드로 가면 탄력적인 운영으로 인해 IT 비용은 줄어들고 자원이 효율화된다. 클라우드가 아닐때  100으로 운영되고 있었던 것이 클라우드로 가면 10으로 줄어들 수 있겠다. 그런데.. 90%의 효율화 달성은 90%의 시장 감소를 수반하지 않을까? 감소된 시장이 다른 곳에서 그만큼 생겨날까? 생겨난다면 누가 그것을 가지고 가게 될까…&lt;/p&gt;
-
-&lt;p&gt;산업혁명 후 마차를 몰던 마부들이 마주한 세계는 고도의 산업발전시기였다. 클라우드 퍼스트로 인해 변화될 시장에서 기존의 IT기업들이 마주할 현실은 무엇일까? 기회의 땅이 기다리고 있을까, 아니면 메마른 땅이 기다리고 있을까.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 05 Dec 2020 20:17:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html</guid>
-        
-        <category>blog</category>
-        
-        <category>cloud-first</category>
-        
-        <category>politics</category>
         
         
       </item>

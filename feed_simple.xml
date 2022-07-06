@@ -6,9 +6,25 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Jun 2022 20:12:00 +0900</pubDate>
-    <lastBuildDate>Thu, 23 Jun 2022 20:12:00 +0900</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2022 11:36:45 +0900</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2022 11:36:45 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>API endpoint들의 취약한 TLS 버젼</title>
+        <description>TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다.</description>
+        <pubDate>Wed, 06 Jul 2022 08:58:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</guid>
+        
+        <category>blog</category>
+        
+        <category>ssl</category>
+        
+        <category>tls</category>
+        
+        
+      </item>
     
       <item>
         <title>비대면 시대의 보안기술 - 보안 서비스 엣지</title>
@@ -190,22 +206,6 @@
         <category>code-sign</category>
         
         <category>notarization</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>클라우드 퍼스트 단상</title>
-        <description>미국은 이미 10년전에 클라우드 퍼스트 전략을 발표했다. 우리 정부도 클라우드 퍼스트. 많은 기업들도 디지털 트랜스포메이션이라는 기치 아래 클라우드로 가고 있다... 세상에 공짜가 어디있겠나. 누군가는 손해를 봐야한다.</description>
-        <pubDate>Sat, 05 Dec 2020 20:17:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html</guid>
-        
-        <category>blog</category>
-        
-        <category>cloud-first</category>
-        
-        <category>politics</category>
         
         
       </item>

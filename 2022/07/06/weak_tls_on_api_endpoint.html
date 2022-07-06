@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>이번 Log4J 자바취약점 요약</title>
-  <meta name="description" content="이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다." />
+  <title>API endpoint들의 취약한 TLS 버젼</title>
+  <meta name="description" content="TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,27 +17,27 @@
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
-    <meta name="twitter:title" content="이번 Log4J 자바취약점 요약" />
+    <meta name="twitter:title" content="API endpoint들의 취약한 TLS 버젼" />
     <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
-    <meta name="twitter:description"  content="이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다." />
+    <meta name="twitter:description"  content="TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다." />
     
   
   
   <meta property="og:site_name" content="양철웅의 DX 이야기" />
-  <meta property="og:title" content="이번 Log4J 자바취약점 요약"/>
+  <meta property="og:title" content="API endpoint들의 취약한 TLS 버젼"/>
   
-  <meta property="og:description" content="이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다." />
+  <meta property="og:description" content="TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다." />
   
-  <meta property="og:image" content="http://cwyang.github.io/assets/images/log4j_imperva.jpg" />
-  <meta property="og:url" content="http://cwyang.github.io/2021/12/14/cve-2021-44228.html" />
+  <meta property="og:image" content="http://cwyang.github.io/assets/images/unlocked.jpg" />
+  <meta property="og:url" content="http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html" />
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2021-12-14T12:08:00+09:00">
+  <meta property="article:published_time" content="2022-07-06T08:58:00+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://cwyang.github.io/2021/12/14/cve-2021-44228.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -103,22 +103,22 @@
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">
-              이번 Log4J 자바취약점 요약
+              API endpoint들의 취약한 TLS 버젼
               
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://cwyang.github.io/2021/12/14/cve-2021-44228.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%EC%9D%B4%EB%B2%88+Log4J+%EC%9E%90%EB%B0%94%EC%B7%A8%EC%95%BD%EC%A0%90+%EC%9A%94%EC%95%BD&amp;u=http://cwyang.github.io/2021/12/14/cve-2021-44228"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=API+endpoint%EB%93%A4%EC%9D%98+%EC%B7%A8%EC%95%BD%ED%95%9C+TLS+%EB%B2%84%EC%A0%BC&amp;u=http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=%EC%9D%B4%EB%B2%88+Log4J+%EC%9E%90%EB%B0%94%EC%B7%A8%EC%95%BD%EC%A0%90+%EC%9A%94%EC%95%BD&amp;url=http://cwyang.github.io/2021/12/14/cve-2021-44228"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=API+endpoint%EB%93%A4%EC%9D%98+%EC%B7%A8%EC%95%BD%ED%95%9C+TLS+%EB%B2%84%EC%A0%BC&amp;url=http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -129,7 +129,7 @@
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
               on
-              <time datetime="2021-12-14T12:08:00+09:00">14 Dec 2021</time>
+              <time datetime="2022-07-06T08:58:00+09:00">06 Jul 2022</time>
             </div>
           </div>
         </div>
@@ -143,55 +143,66 @@
           </div>
           <a name="topofpage"></a>
           <ul id="toc" class="section-nav">
-</ul><p>이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다.</p>
+</ul><p>내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식을 접하여, TLS 버젼 이야기 짧게 드립니다.
+https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/</p>
 
-<p>무엇인가?<br>
-➡️자바관련 무엇인가 패키지에 구멍이 있어서 해커가 원격커맨드를 실행시킬 수가 있다. 랜섬웨어라던가 랜섬웨어라던가..</p>
+<p><img src="http://cwyang.github.io/assets/images/unlocked.jpg" alt="TLS 1.0, 1.1은 아주 취약해요!"></p>
 
-<p>좀더 자세히.<br>
-➡️취약한 부분이 관리를 위한 로깅 모듈이다. 해커가 브라우저에 특정 메세지를 집어넣고, 그것이 서버에서 로깅(기록)이 되는 순간 원격 커맨드가 실행된다.</p>
+<p>TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다.
+https://datatracker.ietf.org/doc/rfc8996/</p>
 
-<p>어떻게 막나?<br>
-➡️취약한 부분을 패치하면 원격 커맨드가 실행안된다. 또는 방화벽(웹방화벽)단에서 원격 커맨드를 실행하도록 하는 패턴을 막는다.</p>
+<p>이 때 AWS는 FIPS 엔드포인트에서 TLS1.2 미만을 지원중지하였습니다.
+https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-fips-endpoints/</p>
 
-<p>심각한가?<br>
-➡️그렇다. 인터넷의 많은 부분이 자바로 이루어져있기 때문이다. 그리고 재현방법이 너무 쉽다. imperva의 아래 그림 참조. 13시간만에 100만건 이상의 공격이 있다고..</p>
+<p>그리고 내년 6월부로 모든 AWS API에서 TLS1.2 미만을 지원중지하는 것입니다.</p>
 
-<p>패치하면 된다며?<br>
-➡️모든 서버 관리팀들이 FAANG네카라쿠배는 아니잖아요. 관리 안되는 서버들 많이 있는거 아시면서..</p>
+<p>AWS에서는 서비스 마이그레이션을 위해 클라우드트레일에서 접속 TLS 버젼을 확인하고 취약한 TLS1.0, 1.1을 사용하면 해당 클라이언트를 업데이트하도록 권장하고 있습니다.</p>
 
-<p>급 회사광고<br>
-➡️수산아이앤티 웹방화벽 <a href="https://www.soosanint.com/contents.php?con_id=solution4">https://www.soosanint.com/contents.php?con_id=solution4</a></p>
+<p>브라우저벤더들이 (MS, Google, Apple, Mozilla) 2020~2021년에 걸쳐서 해당 버젼 지원을 중지하였기 때문에 TLS1.2 이상으로 통신을 강제하여도 대부분 문제가 없겠으나
+레거시/커스텀 소프트웨어가 TLS통신을 할 경우 취약한 버젼으로 연결이 맺어질 수 있어 보안에 문제가 있는 것입니다.</p>
 
-<p><img src="http://cwyang.github.io/assets/images/log4j_imperva.jpg" alt="재현이 쉬워 전파가 빠르다. (source: imperva)"></p>
+<hr>
+
+<p>신규 서비스 TLS 엔드포인트를 만들때에는 TLS1.2 이상으로 지정하도록 해야하고요,
+기존 서비스 엔드포인트에 대해서도 취약한 TLS버젼에 어떻게 대처할 지 고민이 필요하겠지요?</p>
+
+<p>감사합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bin/openssl s_client -connect ncloud.apigw.ntruss.com:443 -tls1
+CONNECTED(00000003)
+depth=3 C = GB, ST = Greater Manchester, L = Salford, O = Comodo CA Limited, CN = AAA Certificate Services
+verify error:num=19:self signed certificate in certificate chain
+...
+중략
+...
+SSL-Session:
+Protocol  : TLSv1
+Cipher    : ECDHE-RSA-RC4-SHA
+</code></pre></div></div>
 
           <p class="tags">
             
               <a href="/tags#blog-ref">blog</a>
             
-              <a href="/tags#vulnerability-ref">vulnerability</a>
+              <a href="/tags#ssl-ref">ssl</a>
             
-              <a href="/tags#log4j-ref">log4j</a>
-            
-              <a href="/tags#java-ref">java</a>
-            
-              <a href="/tags#jndi-ref">jndi</a>
+              <a href="/tags#tls-ref">tls</a>
             
           </p>
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://cwyang.github.io/2021/12/14/cve-2021-44228.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%EC%9D%B4%EB%B2%88+Log4J+%EC%9E%90%EB%B0%94%EC%B7%A8%EC%95%BD%EC%A0%90+%EC%9A%94%EC%95%BD&amp;u=http://cwyang.github.io/2021/12/14/cve-2021-44228"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=API+endpoint%EB%93%A4%EC%9D%98+%EC%B7%A8%EC%95%BD%ED%95%9C+TLS+%EB%B2%84%EC%A0%BC&amp;u=http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%EC%9D%B4%EB%B2%88+Log4J+%EC%9E%90%EB%B0%94%EC%B7%A8%EC%95%BD%EC%A0%90+%EC%9A%94%EC%95%BD&amp;url=http://cwyang.github.io/2021/12/14/cve-2021-44228"
+                <a class="icon-twitter" href="http://twitter.com/share?text=API+endpoint%EB%93%A4%EC%9D%98+%EC%B7%A8%EC%95%BD%ED%95%9C+TLS+%EB%B2%84%EC%A0%BC&amp;url=http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -207,7 +218,7 @@
               <h4>양철웅</h4>
               <p class="bio">Chul-Woong Yang</p>
               <hr>
-              <p class="published">Published <time datetime="2021-12-14 12:08">14 Dec 2021</time></p>
+              <p class="published">Published <time datetime="2022-07-06 08:58">06 Jul 2022</time></p>
             </section>
           </div>
 
@@ -224,7 +235,7 @@
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://cwyang.github.io/2021/12/14/cve-2021-44228.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -235,18 +246,11 @@
 
     <aside class="read-next">
       
-        <a class="read-next-story no-cover" href="/2022/01/03/tinyman-gets-attack.html">
-          <section class="post">
-            <h2>디파이의 위험</h2>
-            <p>2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고 신년 첫날 알고랜드 디파이 LP풀에 $30를 예치해보았는데......</p>
-          </section>
-        </a>
       
-      
-        <a class="read-next-story prev no-cover" href="/2021/02/04/ces-2021.html">
+        <a class="read-next-story prev no-cover" href="/2022/06/23/secure-service-edge.html">
           <section class="post">
-            <h2>인간이 중요해진 시대 - CES 2021</h2>
-            <p>2021년. 무엇보다 인간의 생활이 중요해진 시대.</p>
+            <h2>비대면 시대의 보안기술 - 보안 서비스 엣지</h2>
+            <p>오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를...</p>
           </section>
         </a>
       
