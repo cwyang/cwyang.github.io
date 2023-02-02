@@ -4,10 +4,10 @@
     <title>양철웅의 DX 이야기</title>
     <description>short essays on DX, cyber security, and cloud
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 02 Feb 2023 21:50:03 +0900</pubDate>
-    <lastBuildDate>Thu, 02 Feb 2023 21:50:03 +0900</lastBuildDate>
+    <link>http://cwyang.github.io/</link>
+    <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 02 Feb 2023 22:14:46 +0900</pubDate>
+    <lastBuildDate>Thu, 02 Feb 2023 22:14:46 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -17,7 +17,7 @@ LastPass는 클라우드 스토리지에 패스워드들을 저장하고 있었�
 2022년 8월에 유출된 정보를 통해 이번에 패스워드들이 유출되었다고 해요.
 패스워드는 &lt;a href=&quot;Password-Based Key Derivation Function 2&quot;&gt;PKBDF2&lt;/a&gt;(https://en.wikipedia.org/wiki/PBKDF2)&lt;sup&gt;&lt;a href=&quot;#footnode1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;로 암호화되어 있었어요. 즉 해시만이 저장되어 있었는데요. 이게 안전하지 않다는 이야기가 많습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/password.jpg&quot; alt=&quot;패스워드 과연 안전한가?&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/password.jpg&quot; alt=&quot;패스워드 과연 안전한가?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;보안을 위해 40 비트, 64 비트 키는 안전하지 않다. 128 비트 이상을 사용하라는 이야기 들어보셨을텐데요,
 일반적인 사용자들의 패스워드는 40 비트 정도의 엔트로피를 가진다고 합니다.
@@ -50,8 +50,8 @@ LastPass의 주장은 PBKDF2를 100,100번 이터레이션한다는 것이지만
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 02 Feb 2023 21:30:00 +0900</pubDate>
-        <link>http://localhost:4000/2023/02/02/security-of-the-password-mangagers.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/02/security-of-the-password-mangagers.html</guid>
+        <link>http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html</guid>
         
         <category>blog</category>
         
@@ -70,7 +70,7 @@ LastPass의 주장은 PBKDF2를 100,100번 이터레이션한다는 것이지만
         <title>API endpoint들의 취약한 TLS 버젼</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/&quot;&gt;내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식&lt;/a&gt;을 접하여, TLS 버젼 이야기 짧게 드립니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/unlocked.jpg&quot; alt=&quot;TLS 1.0, 1.1은 아주 취약해요!&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/unlocked.jpg&quot; alt=&quot;TLS 1.0, 1.1은 아주 취약해요!&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 &lt;a href=&quot;https://datatracker.ietf.org/doc/rfc8996/&quot;&gt;IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다&lt;/a&gt;.&lt;/p&gt;
 
@@ -104,8 +104,8 @@ SSL-Session:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Jul 2022 08:58:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/07/06/weak_tls_on_api_endpoint.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/07/06/weak_tls_on_api_endpoint.html</guid>
+        <link>http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</guid>
         
         <category>blog</category>
         
@@ -120,11 +120,11 @@ SSL-Session:
         <title>비대면 시대의 보안기술 - 보안 서비스 엣지</title>
         <description>&lt;p&gt;오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 자세한 내용은 링크해드리는 &lt;a href=&quot;https://www.itfind.or.kr/WZIN/jugidong/2051/file1834924209108887227-2051(2022.06.22)-23.pdf&quot;&gt;주간기술동향 2051호&lt;/a&gt; 안의 보안 서비스 엣지 소개글에서 읽어보실 수 있어요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse-unsplash.jpg&quot; alt=&quot;하이브리드 워크 시대의 정보 보안은 어떻게?&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse-unsplash.jpg&quot; alt=&quot;하이브리드 워크 시대의 정보 보안은 어떻게?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;사용자들의 근처에 엣지를 두어 통신경로를 짧게해서 빠른 서비스를 제공하는 것이 CDN이라면, 마찬가지로 사용자들의 근처에 엣지를 두고, 모든 통신을 엣지를 거치게 하면서 엣지에서 사용자 인증 및 인가, 트래픽 검사, 악성코드 다운로드 차단, 정보 유출 방지 등 보안 기능을 수행하도록 하는 것이 SSE (Secure Service Edge)입니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse1.png&quot; alt=&quot;SSE와 SASE의 구성&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse1.png&quot; alt=&quot;SSE와 SASE의 구성&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 그림이 클라우드 시대에는 맞지 않게 되었어요.&lt;/p&gt;
 
@@ -132,11 +132,11 @@ SSL-Session:
 
 &lt;p&gt;사내망으로 일단 트래픽을 유도한 다음에 보안을 수행 후 외부 자산 접근시에는 다시 외부로 내보내는 그림도 충분히 생각해 볼 수 있습니다. 하지만 전송경로가 매우 길어지겠죠. 그래서 엣지에서 하면 되겠네 라고 이야기하고 있는 것이에요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse3.png&quot; alt=&quot;(좌): 혼돈의 카오스 (우):엣지에서 제로트러스트&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse3.png&quot; alt=&quot;(좌): 혼돈의 카오스 (우):엣지에서 제로트러스트&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2019년 가트너에서 CDN과 같이 네트워크 성능도 빠르게 하고, 보안 기능도 수행하는 SASE (새시, Secure Access Service Edge)라는 모델을 제시하였고요, 2021년에는 네트워크랑 보안이랑 굳이 다 할 필요 있느냐, 보안만 수행하는 엣지도 충분히 가치있다 하면서 SASE에서 Access를 빼버린 SSE(Secure Service Edge) 모델을 클라우드 보안의 필수 기술로 제시했어요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse2.png&quot; alt=&quot;가트너 클라우드 보안 하이프 사이클&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse2.png&quot; alt=&quot;가트너 클라우드 보안 하이프 사이클&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2022년 가트너는 SSE에 대한 시장 정의, 전망 및 유력 참여자를 기술한 매직 쿼드런트 보고서를 출판하면서
 여러 보안 기능을 사용해야만 하는 고객들은 여러 솔루션을 개별적으로 운영하는 것보다는 통합관리를 선호한다고 하였습니다.&lt;/p&gt;
@@ -153,8 +153,8 @@ SSL-Session:
 &lt;p&gt;감사합니다.&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Jun 2022 19:58:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/06/23/secure-service-edge.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/06/23/secure-service-edge.html</guid>
+        <link>http://cwyang.github.io/2022/06/23/secure-service-edge.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/06/23/secure-service-edge.html</guid>
         
         <category>blog</category>
         
@@ -176,7 +176,7 @@ SSL-Session:
       <item>
         <title>eBPF와 libbpf</title>
         <description>&lt;h2 id=&quot;ebpf&quot;&gt;eBPF&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/eBPF.png&quot; alt=&quot;eBPF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/eBPF.png&quot; alt=&quot;eBPF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://ebpf.io/&quot;&gt;eBPF&lt;/a&gt;는 커널의 여러 부분에서 프로그래밍을 쉽고 안전하게 할 수 있게 해 준다.&lt;/p&gt;
 
@@ -241,8 +241,8 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 11 Mar 2022 09:36:43 +0900</pubDate>
-        <link>http://localhost:4000/2022/03/11/libxdp.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/03/11/libxdp.html</guid>
+        <link>http://cwyang.github.io/2022/03/11/libxdp.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/03/11/libxdp.html</guid>
         
         <category>blog</category>
         
@@ -263,7 +263,7 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 
 &lt;p&gt;창업가의 답 - 성호철, 임경업&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/entrepreneurs.png&quot; alt=&quot;창업가의 답&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/entrepreneurs.png&quot; alt=&quot;창업가의 답&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-라스트-무버가-1등이-된-당근마켓&quot;&gt;1. 라스트 무버가 1등이 된 당근마켓.&lt;/h2&gt;
 &lt;p&gt;목표는 맘카페 (지역 커뮤니티 마케팅), 교차로(지역광고).&lt;/p&gt;
 
@@ -371,8 +371,8 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 &lt;p&gt;어디서 어떻게 만나더라도 창업 멤버들은 생의 한 순간을 같이 불태웠던 동료라는 것을.&lt;/p&gt;
 </description>
         <pubDate>Tue, 15 Feb 2022 01:53:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/02/15/some-enterpreneurs.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/15/some-enterpreneurs.html</guid>
+        <link>http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</guid>
         
         <category>blog</category>
         
@@ -402,10 +402,10 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 &lt;p&gt;NFT 거래는 이론적으로는 분산형으로 일어날 수 있지만, 대부분 편의상 거래소에서 이루어진다. NFT 자산의 탐색(explore/browse), 경매, 매매등을 제공하기 때문이다. 사용자의 트랜잭션은 블럭체인 지갑을 매개체로 이루어진다. 해당 NFT 거래소와 거래가 가능한 블럭체인 지갑을 이용해야하며, 해당 블럭체인 지갑에서 금액을 지불하고, 블럭체인 지갑으로 NFT를 받는 형식이다.&lt;/p&gt;
 
 &lt;p&gt;OpenSea에서 제공하는 블럭체인 지갑은 아래와 같다. 이들 중 가장 널리 사용되는 메타마스크의 예를 들어 어떠한 보안 위협이 있는지 살펴보자.
-&lt;img src=&quot;http://localhost:4000/assets/images/NFT_wallets_opensea.png&quot; alt=&quot;Opensea에서 지원하는 블럭체인 지갑들&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://cwyang.github.io/assets/images/NFT_wallets_opensea.png&quot; alt=&quot;Opensea에서 지원하는 블럭체인 지갑들&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;메타마스크-보안-이슈&quot;&gt;메타마스크 보안 이슈&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/NFT_metamask.png&quot; alt=&quot;메타마스크 지갑&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/NFT_metamask.png&quot; alt=&quot;메타마스크 지갑&quot; /&gt;
 메타마스크는 크롬 브라우저 플러그인형태이며, 블록체인 트랜잭션이 필요한 비밀키(및 공개키 쌍)을 관리한다. NFT/가상화폐 서비스가 비밀키가 필요한 작업을 해야할 때 메타마스크에 작업을 요청하고, 메타마스크는 web3.js API를 이용하여 브라우저캐시에 저장된 비밀키를 접근하게 된다.&lt;/p&gt;
 
 &lt;p&gt;브라우저캐시에는 사용자의 비밀키가 패스워드로 암호화 되어 저장되어 있다.&lt;/p&gt;
@@ -428,8 +428,8 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 또한 비밀키 관리를 하드웨어 지갑이나 HW Trusted Environment에 위임하여 안전성을 높일 수 있다.&lt;/p&gt;
 </description>
         <pubDate>Wed, 05 Jan 2022 15:13:17 +0900</pubDate>
-        <link>http://localhost:4000/2022/01/05/nft_metamask.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/01/05/nft_metamask.html</guid>
+        <link>http://cwyang.github.io/2022/01/05/nft_metamask.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/01/05/nft_metamask.html</guid>
         
         <category>blog</category>
         
@@ -454,19 +454,19 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
 
 &lt;p&gt;예를 들면 100원짜리와 1원짜리를 합쳐서 101원씩 인출해야하는데
 100원짜리 2개씩 인출할 수 있었던 것 같다.
-&lt;img src=&quot;http://localhost:4000/assets/images/tinyman3.jpg&quot; alt=&quot;알립니다: 망했어요. 털렸어요.&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://cwyang.github.io/assets/images/tinyman3.jpg&quot; alt=&quot;알립니다: 망했어요. 털렸어요.&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그 결과로 LP pool의 대부분이 탈취되어,
 나의 자산도 &lt;strong&gt;$30&lt;/strong&gt;에서 &lt;strong&gt;$0.16&lt;/strong&gt;으로 &lt;strong&gt;1/200&lt;/strong&gt;토막이 나버렸다.
-&lt;img src=&quot;http://localhost:4000/assets/images/tinyman1.jpg&quot; alt=&quot;$60이 되라고 $30을 넣었는데 (나 부자되나..)&quot; /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/tinyman2.jpg&quot; alt=&quot;$0.16이 되어 1/200토막이 나버렸다. (이게뭐야!!!)&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://cwyang.github.io/assets/images/tinyman1.jpg&quot; alt=&quot;$60이 되라고 $30을 넣었는데 (나 부자되나..)&quot; /&gt;
+&lt;img src=&quot;http://cwyang.github.io/assets/images/tinyman2.jpg&quot; alt=&quot;$0.16이 되어 1/200토막이 나버렸다. (이게뭐야!!!)&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;블럭체인/NFT는 자산이 움직이는 세계이고, 이 세계에서는 사이버 보안이 매우 중요하다.. 
 는 것을 온 몸 바쳐서 경험한 새해 벽두.&lt;/p&gt;
 </description>
         <pubDate>Mon, 03 Jan 2022 15:45:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/01/03/tinyman-gets-attack.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/01/03/tinyman-gets-attack.html</guid>
+        <link>http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html</guid>
         
         <category>blog</category>
         
@@ -505,11 +505,11 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
 &lt;p&gt;급 회사광고&lt;br /&gt;
 ➡️수산아이앤티 웹방화벽 &lt;a href=&quot;https://www.soosanint.com/contents.php?con_id=solution4&quot;&gt;https://www.soosanint.com/contents.php?con_id=solution4&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/log4j_imperva.jpg&quot; alt=&quot;재현이 쉬워 전파가 빠르다. (source: imperva)&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/log4j_imperva.jpg&quot; alt=&quot;재현이 쉬워 전파가 빠르다. (source: imperva)&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 14 Dec 2021 12:08:00 +0900</pubDate>
-        <link>http://localhost:4000/2021/12/14/cve-2021-44228.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/12/14/cve-2021-44228.html</guid>
+        <link>http://cwyang.github.io/2021/12/14/cve-2021-44228.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2021/12/14/cve-2021-44228.html</guid>
         
         <category>blog</category>
         
@@ -539,7 +539,7 @@ CES 2021의 주제는 &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;2021년. 무엇보다 인간의 생활이 중요해진 시대.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/life-is-on-lg-ces2021.png&quot; alt=&quot;당연했던 것들이 추억이 되어버린 시대&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/life-is-on-lg-ces2021.png&quot; alt=&quot;당연했던 것들이 추억이 되어버린 시대&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;또한 “디지털 대항해시대” → 데이터를 바탕으로 클라우드에서 새로운 비즈니스 영역을 찾아라.&lt;/p&gt;
 
@@ -572,8 +572,8 @@ CES 2021의 주제는 &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 </description>
         <pubDate>Thu, 04 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2021/02/04/ces-2021.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/02/04/ces-2021.html</guid>
+        <link>http://cwyang.github.io/2021/02/04/ces-2021.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2021/02/04/ces-2021.html</guid>
         
         <category>blog</category>
         
@@ -649,11 +649,11 @@ Creating harbor-jobservice ...
 
 &lt;p&gt;레지스트리 메뉴에서 새 엔드포인트를 생성한다&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/harbor/harbor01.png&quot; alt=&quot;엔드포인트 생성&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor01.png&quot; alt=&quot;엔드포인트 생성&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그 다음에는 프로젝트 메뉴에서 프락시 캐시 타입의 프로젝트를 생성한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/harbor/harbor02.png&quot; alt=&quot;프락시 캐시 프로직트  생성&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor02.png&quot; alt=&quot;프락시 캐시 프로직트  생성&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;설정된-주소로-컨테이너-이미지-가져오기&quot;&gt;설정된 주소로 컨테이너 이미지 가져오기&lt;/h2&gt;
 &lt;p&gt;이제 됐다. 사용하기 위해서는 이미지 URL 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;harbor_server_name&amp;gt;/&amp;lt;proxy_project_name&amp;gt;/&lt;/code&gt;을 붙여주어야한다. 그리고 toplevel 이미지를 당기려면 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;library&lt;/code&gt; path를 붙여준다.&lt;/p&gt;
@@ -679,15 +679,15 @@ Creating harbor-jobservice ...
 
 &lt;p&gt;이후 콘솔을 확인하면 아래와 같이 캐시된 것을 알 수 있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/harbor/harbor03.png&quot; alt=&quot;저장된 컨테이너 이미지들&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/harbor/harbor03.png&quot; alt=&quot;저장된 컨테이너 이미지들&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;기본적으로 캐시된 이미지는 7일간 유효하다. 설치시에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--with-trivy&lt;/code&gt; 옵션을 주면 저장 이미지에 대해서 취약점 스캐닝을 하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;trivy&lt;/code&gt;가 같이 설치된다.&lt;/p&gt;
 
 &lt;p&gt;이제 파드 매니페스트 파일에서 이미지 레지스트리주소를 하버 주소로 바꾸고 사용하도록 하자.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jan 2021 15:02:41 +0900</pubDate>
-        <link>http://localhost:4000/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</guid>
+        <link>http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</guid>
         
         <category>blog</category>
         
