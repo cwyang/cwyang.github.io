@@ -1,3 +1,0 @@
-#!/bin/bash
-bundle exec jekyll build
-./node_modules/.bin/gulp deploy
