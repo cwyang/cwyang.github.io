@@ -69,4 +69,5 @@ exclude:
   - Gemfile*
   - gulpfile.js
   - package.json
+  - package-lock.json
   - run
