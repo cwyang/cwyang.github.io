@@ -6,9 +6,27 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Feb 2023 00:21:39 +0900</pubDate>
-    <lastBuildDate>Fri, 03 Feb 2023 00:21:39 +0900</lastBuildDate>
+    <pubDate>Fri, 03 Feb 2023 23:14:33 +0900</pubDate>
+    <lastBuildDate>Fri, 03 Feb 2023 23:14:33 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>HAProxy, 그리고 OpenSSL3 성능</title>
+        <description>OpenSSL 3.0의 큰 설계방향은 개발의 편의성을 위해서 모듈화/추상화를 만들어 넣은 건데, 반대급부로 성능이 많이 떨어졌습니다. 모듈이 복잡해지면 공유자원 사용을 위한 락이 많이 사용되는 경향이 있기 때문에, 스레드(코어)가 많아질수록 CPU 락 경합때문에 발생하는 성능 저하 현상이 문제가 됩니다.</description>
+        <pubDate>Fri, 03 Feb 2023 20:00:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/02/03/slow-openssl-3.0.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/03/slow-openssl-3.0.html</guid>
+        
+        <category>blog</category>
+        
+        <category>ssl</category>
+        
+        <category>openssl</category>
+        
+        <category>haproxy</category>
+        
+        
+      </item>
     
       <item>
         <title>패스워드 매니저의 위험성과 클라우드 보안</title>
@@ -178,30 +196,6 @@
         <category>ces</category>
         
         <category>digital transformation</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>도커허브 이미지 풀 제약을 하버로 해결하기</title>
-        <description>도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해 6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.</description>
-        <pubDate>Wed, 20 Jan 2021 15:02:41 +0900</pubDate>
-        <link>http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html</guid>
-        
-        <category>blog</category>
-        
-        <category>docker</category>
-        
-        <category>dockerhub</category>
-        
-        <category>harbor</category>
-        
-        <category>container</category>
-        
-        <category>k8s</category>
-        
-        <category>kubernetes</category>
         
         
       </item>
