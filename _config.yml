@@ -65,6 +65,7 @@ exclude:
   - play/
   - vendor/
   - docs/
+  - node_modules/
   - Gemfile*
   - gulpfile.js
   - package.json
