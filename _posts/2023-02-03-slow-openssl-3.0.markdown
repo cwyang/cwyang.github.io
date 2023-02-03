@@ -17,7 +17,7 @@ header-img: /assets/images/OpenSSL_logo.png
 
 사실 HA-Proxy는 이미 성능이 충분히 좋아서 최대 스레드를 저렇게 늘릴 까닭은 별로 없습니다... SSL 처리를 위해서가 아니라면요.
 
-![OpenSSL]({{ site.url }}/assets/images/OpenSSL_logo.jpg)
+![OpenSSL]({{ site.url }}/assets/images/OpenSSL_logo.png)
 
 문제는 HAProxy가 사용하고 있는 OpenSSL 3.0이 그렇게 성능이 좋지가 않다는 겁니다.
 OpenSSL 3.0의 큰 설계방향은 개발의 편의성을 위해서 모듈화/추상화를 만들어 넣은 건데, 반대급부로 성능이 많이 떨어졌습니다.
