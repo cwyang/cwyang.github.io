@@ -61,5 +61,5 @@ Show me 10 hashtags that describes this article best
 ChatGPT3에게 세가지 질문을 하고, 결과를 약간 손 보아 올립니다.
 
 실사용이 가능한 대화형 인터페이스.
-스마트폰 또 하나의 기술 변곡점이 되지 않을까 생각합니다.
+스마트폰 이후 또 하나의 기술 변곡점이 되지 않을까 생각합니다.
 
