@@ -6,9 +6,39 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Feb 2023 23:27:41 +0900</pubDate>
-    <lastBuildDate>Fri, 03 Feb 2023 23:27:41 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Feb 2023 20:03:46 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Feb 2023 20:03:46 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>ChatGPT-3가 설명하는 ChatGPT-3</title>
+        <description>안녕하세요! 오늘은 OpenAI에서 개발한 최신 언어 모델, ChatGPT-3에 대해 이야기해볼께요. GPT (Generative Pretrained Transformer) 구조의 세 번째 버전인 ChatGPT-3은 NLP (Natural Language Processing) 세계를 휩쓸었습니다. 이 고급 언어 모델은 다양한 인터넷 텍스트로 교육되었기 때문에, 놀랍도록 정확하게 인간처럼 텍스트를 생성합니다.</description>
+        <pubDate>Tue, 07 Feb 2023 20:00:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html</guid>
+        
+        <category>ChatGPT3</category>
+        
+        <category>NLP</category>
+        
+        <category>ArtificialIntelligence</category>
+        
+        <category>CuttingEdgeTechnology</category>
+        
+        <category>Research</category>
+        
+        <category>Business</category>
+        
+        <category>AI</category>
+        
+        <category>MachineLearning</category>
+        
+        <category>Innovation</category>
+        
+        <category>TechnologyTrends</category>
+        
+        
+      </item>
     
       <item>
         <title>HAProxy, 그리고 OpenSSL3 성능</title>
@@ -180,22 +210,6 @@
         <category>java</category>
         
         <category>jndi</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>인간이 중요해진 시대 - CES 2021</title>
-        <description>2021년. 무엇보다 인간의 생활이 중요해진 시대.</description>
-        <pubDate>Thu, 04 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2021/02/04/ces-2021.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2021/02/04/ces-2021.html</guid>
-        
-        <category>blog</category>
-        
-        <category>ces</category>
-        
-        <category>digital transformation</category>
         
         
       </item>

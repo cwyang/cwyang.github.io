@@ -6,9 +6,94 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Feb 2023 23:27:41 +0900</pubDate>
-    <lastBuildDate>Fri, 03 Feb 2023 23:27:41 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Feb 2023 20:03:46 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Feb 2023 20:03:46 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>ChatGPT-3가 설명하는 ChatGPT-3</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+Introduce &lt;a href=&quot;https://en.wikipedia.org/wiki/ChatGPT&quot;&gt;ChatGPT-3&lt;/a&gt; in style of blog writing.&lt;/p&gt;
+&lt;p /&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+Hello everyone! Today, we’ll be talking about the latest language model from OpenAI, ChatGPT-3. As the third iteration of the original GPT (Generative Pretrained Transformer) architecture, ChatGPT-3 has taken the world of NLP (Natural Language Processing) by storm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt3.jpg&quot; alt=&quot;ChatGPT-3, the game changer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This state-of-the-art model has been trained on a massive amount of diverse internet text, allowing it to generate human-like text with remarkable accuracy. From answering questions to translating languages, summarizing long texts, and performing other language-related tasks, ChatGPT-3 has shown unparalleled proficiency in its field.&lt;/p&gt;
+
+&lt;p&gt;With its cutting-edge capabilities, ChatGPT-3 has set new standards in the NLP community and has been making waves in both academic and commercial applications. Whether you’re a researcher, a business owner, or just someone who’s curious about AI and NLP, ChatGPT-3 is a name that you should definitely keep an eye on.&lt;/p&gt;
+
+&lt;p&gt;So, without further ado, let’s dive into the world of ChatGPT-3 and see what makes this model truly special.&lt;/p&gt;
+&lt;p /&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+Translate the answer into Korean&lt;/p&gt;
+&lt;p /&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+안녕하세요! 오늘은 OpenAI에서 개발한 최신 언어 모델, &lt;a href=&quot;https://ko.wikipedia.org/wiki/ChatGPT&quot;&gt;ChatGPT-3&lt;/a&gt;에 대해 이야기해볼께요.
+GPT (Generative Pretrained Transformer) 구조의 세 번째 버전인
+ChatGPT-3은 NLP (Natural Language Processing) 세계를 휩쓸었습니다.&lt;/p&gt;
+
+&lt;p&gt;이 고급 언어 모델은 다양한 인터넷 텍스트로 교육되었기 때문에,
+놀랍도록 정확하게 인간처럼 텍스트를 생성합니다.
+질문에 답하기, 언어 번역, 긴 텍스트 요약, 기타 언어 관련 작업까지,
+ChatGPT-3은 자신의 분야에서 대단한 전문성을 보여주고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;최첨단 기능들로, ChatGPT-3은 NLP 커뮤니티에서 새로운 표준을 설정하였으며,
+학술적인 뿐만 아니라 상업적인 응용도에서도 큰 파장을 일으키고 있습니다.
+연구원, 사업가, 또는 AI와 NLP에 관심이 있는 사람이라면,
+ChatGPT-3은 확실히 주의깊게 지켜봐야합니다.&lt;/p&gt;
+
+&lt;p&gt;자, 더 망설이지 마시고, ChatGPT-3의 세계로 함께 들어갑시다.
+그리고 이 모델이 가지는 진정하게 특별한 점이 무엇인지 알아보아요.&lt;/p&gt;
+&lt;p /&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+Show me 10 hashtags that describes this article best&lt;/p&gt;
+&lt;p /&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+#ChatGPT3 #NLP #ArtificialIntelligence #CuttingEdgeTechnology #Research
+#Business #AI #MachineLearning #Innovation #TechnologyTrends&lt;/p&gt;
+&lt;p /&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;ChatGPT3에게 세가지 질문을 하고, 결과를 약간 손 보아 올립니다.&lt;/p&gt;
+
+&lt;p&gt;실사용이 가능한 대화형 인터페이스.
+스마트폰 또 하나의 기술 변곡점이 되지 않을까 생각합니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 07 Feb 2023 20:00:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html</guid>
+        
+        <category>ChatGPT3</category>
+        
+        <category>NLP</category>
+        
+        <category>ArtificialIntelligence</category>
+        
+        <category>CuttingEdgeTechnology</category>
+        
+        <category>Research</category>
+        
+        <category>Business</category>
+        
+        <category>AI</category>
+        
+        <category>MachineLearning</category>
+        
+        <category>Innovation</category>
+        
+        <category>TechnologyTrends</category>
+        
+        
+      </item>
     
       <item>
         <title>HAProxy, 그리고 OpenSSL3 성능</title>
@@ -52,7 +137,7 @@ OpenSSL 3.0의 큰 설계방향은 개발의 편의성을 위해서 모듈화/�
         <description>&lt;p&gt;&lt;a href=&quot;https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/&quot;&gt;2022년 12월 LastPass의 패스워드들이 유출되었습니다.&lt;/a&gt;
 LastPass는 클라우드 스토리지에 패스워드들을 저장하고 있었는데
 2022년 8월에 유출된 정보를 통해 이번에 패스워드들이 유출되었다고 해요.
-패스워드는 &lt;a href=&quot;Password-Based Key Derivation Function 2&quot;&gt;PKBDF2&lt;/a&gt;(https://en.wikipedia.org/wiki/PBKDF2)&lt;sup&gt;&lt;a href=&quot;#footnode1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;로 암호화되어 있었어요. 즉 해시만이 저장되어 있었는데요. 이게 안전하지 않다는 이야기가 많습니다.&lt;/p&gt;
+패스워드는 &lt;a href=&quot;Password-Based Key Derivation Function 2&quot;&gt;PKBDF2&lt;/a&gt;(https://en.wikipedia.org/wiki/PBKDF2)&lt;sup&gt;&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;로 암호화되어 있었어요. 즉 해시만이 저장되어 있었는데요. 이게 안전하지 않다는 이야기가 많습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/password.jpg&quot; alt=&quot;패스워드 과연 안전한가?&quot; /&gt;&lt;/p&gt;
 
@@ -557,66 +642,6 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
         <category>java</category>
         
         <category>jndi</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>인간이 중요해진 시대 - CES 2021</title>
-        <description>&lt;p&gt;오늘 CES2021에 대한 강연을 듣고 생각을 정리하여 봅니다. 기업의 눈이 아닌 사람의 눈으로 우리 시대의 변화를 바라보라는 메세지를 받은 강연이었습니다. 좋은 강연을 마련해주신 회사와 발표해주신 이용덕교수님께 감사드립니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;CES 2020의 주제가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;기술의 급변 + AI war + 비즈니스 영역붕괴 + 미래 경험의 가치&lt;/code&gt;였다면,
-CES 2021의 주제는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;언택트 + 홈코노미 + ESG&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;이는 100% COVID-19가 가지고 온 라이프스타일의 파괴적 변화때문.&lt;/p&gt;
-
-&lt;p&gt;뉴노멀의 등장. 베터 노멀 Better Normal (LG의 캐치프레이즈)의 추구. 일(Work)이 바뀌고 (onoff mix), 교육이 바뀐다. (정신적 치유/학습의 질)&lt;/p&gt;
-
-&lt;p&gt;2021년. 무엇보다 인간의 생활이 중요해진 시대.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/life-is-on-lg-ces2021.png&quot; alt=&quot;당연했던 것들이 추억이 되어버린 시대&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;또한 “디지털 대항해시대” → 데이터를 바탕으로 클라우드에서 새로운 비즈니스 영역을 찾아라.&lt;/p&gt;
-
-&lt;p&gt;언택트로 인해 “체험”이 없는 세계.
-그 결과로
-“스토리 텔링”이 중요해진다.
-스토리가 체험을 대신할 수는 없지만, 스토리가 있으면 관심과 신뢰를 전달할 수 있기 때문.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Trend: 이커머스, 원격진료, 스트리밍 비디오, 원격 교육&lt;/li&gt;
-  &lt;li&gt;Tool: AI, RPA, NLP, 클라우드&lt;/li&gt;
-  &lt;li&gt;테크놀러지의 구분이 없이 모든것이 변화하는 디지털 트랜스포메이션에서 토털 트랜스포메이션의 시대.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;사람 관점에서의 몇가지 기술들&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;LIFE = CONNECT + CARE + COMFORT&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bQd2J-53PTU&quot;&gt;삼성의 “Better Normal for All”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Y-7coIGK7IM&quot;&gt;LG의 “Life is ON”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=z4rSG8f8N00&quot;&gt;AI-pet: MOFLIN. AI Model학습→Cloud→배포&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=m9AL266C0lc&quot;&gt;삼성 휴대폰 업사이클링 &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bNSCIuHKhro&quot;&gt;Shower Power: 수력발전 스피커 &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OWVy_bq8VFI&quot;&gt;AI 스킨케어: 아모레 립스틱 색 추천, 맞춤형 토너 &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Yj0R1RgyIx4&quot;&gt;LG의 버추얼 아바타 레아 &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;필립스 바이오스티커&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;p.s. 행사자체 면에서는 줄어든 관객(적은 관심), 교류 부족, 체험 불가, 확인 불가, 지루한 진행.
-내년의 CES는 이 위기를 극복할 수 있을 것인지?&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 04 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2021/02/04/ces-2021.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2021/02/04/ces-2021.html</guid>
-        
-        <category>blog</category>
-        
-        <category>ces</category>
-        
-        <category>digital transformation</category>
         
         
       </item>
