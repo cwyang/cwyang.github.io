@@ -12,7 +12,7 @@ header-img: /assets/images/password.jpg
 [2022년 12월 LastPass의 패스워드들이 유출되었습니다.](https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/)
 LastPass는 클라우드 스토리지에 패스워드들을 저장하고 있었는데
 2022년 8월에 유출된 정보를 통해 이번에 패스워드들이 유출되었다고 해요.
-패스워드는 [PKBDF2](Password-Based Key Derivation Function 2)(https://en.wikipedia.org/wiki/PBKDF2)<sup>[1](#footnode1)</sup>로 암호화되어 있었어요. 즉 해시만이 저장되어 있었는데요. 이게 안전하지 않다는 이야기가 많습니다.
+패스워드는 [PKBDF2](Password-Based Key Derivation Function 2)(https://en.wikipedia.org/wiki/PBKDF2)<sup>[1](#footnote1)</sup>로 암호화되어 있었어요. 즉 해시만이 저장되어 있었는데요. 이게 안전하지 않다는 이야기가 많습니다.
 
 ![패스워드 과연 안전한가?]({{ site.url }}/assets/images/password.jpg)
 
