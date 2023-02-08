@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1675767994807508028" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1675870969420385054" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
@@ -146,6 +146,37 @@
     
 
     <div class="cf frame">
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name">
+                <a href="/2023/02/08/Azure-VNET-routing.html" itemprop="url">
+                  Azure VNET 라우팅
+                  
+                </a>
+              </h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다.
+AWS의 VPC (Virtual Private Cloud)에 대응한다.
+VNET에 할당된 주소범위(CIDR)를 구분하여 서브넷을 만들고, 서브넷간의 라우팅이 가능하다.
+VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여러 VNET을 연결(peering)하여 구성이 가능하다.
+이러면 VPC사이에서도 라우팅이 가능하다.
+
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="08 February 2023">08 February 2023</time>
+<!--
+              <i class="nf nf-fa-comment" aria-hidden="true"></i>
+              
+                <span class="fb-comments-count" data-href="http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html"></span>
+              
+-->
+            </div>
+          </div>
+        </article>
       
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
@@ -501,31 +532,6 @@
           </div>
         </article>
       
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name">
-                <a href="/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html" itemprop="url">
-                  한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요
-                  
-                </a>
-              </h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. `iptales -L -nv`로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="18 April 2020">18 April 2020</time>
-<!--
-              <i class="nf nf-fa-comment" aria-hidden="true"></i>
-              
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html"></span>
-              
--->
-            </div>
-          </div>
-        </article>
-      
     </div>
 
     <nav class="pagination" role="navigation">
@@ -556,7 +562,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1675767994807508028"></script>
+<script type="text/javascript" src="/assets/js/index.js?1675870969420385054"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

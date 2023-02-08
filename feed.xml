@@ -6,9 +6,70 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Feb 2023 20:06:34 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Feb 2023 20:06:34 +0900</lastBuildDate>
+    <pubDate>Thu, 09 Feb 2023 00:42:49 +0900</pubDate>
+    <lastBuildDate>Thu, 09 Feb 2023 00:42:49 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>Azure VNET 라우팅</title>
+        <description>&lt;p&gt;Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다.
+AWS의 VPC (Virtual Private Cloud)에 대응한다.
+VNET에 할당된 주소범위(CIDR)를 구분하여 서브넷을 만들고, 서브넷간의 라우팅이 가능하다.
+VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여러 VNET을 연결(peering)하여 구성이 가능하다.
+이러면 VPC사이에서도 라우팅이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;라우팅 테이블은 서브넷마다 부여된다.
+서브넷이란 원래 L2도메인, 즉 같은 네트워크상에서는 라우팅이 필요없이 목적지로 연결되는 의미인데
+클라우드에서는 그렇지 않으며 단순히 VNET을 세분화한 네트워크 영역이다.
+L2 도메인과 유사하게 동작하기 위해서 라우팅 테이블에
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;서브넷 CIDR --&amp;gt; VNET&lt;/code&gt; 이라는 라우팅을 넣어야 한다.
+편의를 위해 라우팅 테이블 생성시에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VPC CIDR --&amp;gt; VNET&lt;/code&gt; 항목이 기본적으로 등록된다.&lt;/p&gt;
+
+&lt;p&gt;클라우드 네트워크 구현에 따라 서브넷이 L2도메인일 수도 있겠으나,
+만약 라우팅 엔트리가 필요없이 서브넷간의 통신이 된다면
+해당 클라우드의 네트워크가 SDN이 아닌 종래의 네트워크 구조에 기반하기 때문일 것이다.
+복잡하고 큰 네트워크를 구성하기 위해서는 SDN구성이 좋고,
+SDN구성에서는 서버들이 L2가 아닌 오버레이 L3로 연결되어있다.&lt;/p&gt;
+
+&lt;p&gt;Azure 의 라우팅 목적지 타입으로는
+(1) 로컬 VNET안의 서버로 보내기 위한 &lt;em&gt;VNET&lt;/em&gt;
+(2) 인터넷 영역, 즉 인터넷 게이트웨이로 보내기 위한 &lt;em&gt;Internet&lt;/em&gt;
+(3) 통신을 차단하기 위한 &lt;em&gt;Drop&lt;/em&gt;
+(4) 연결된 다른 VNET으로 보내기 위한 &lt;em&gt;VNET Peering&lt;/em&gt;
+(5) 연결된 다른 네트워크 (BGP나 VPN)로 보내기 위한 &lt;em&gt;VNET Gateway&lt;/em&gt;
+(6) 허용된 특정 클라우드 서비스로 보내기 위한 &lt;em&gt;VNETServiceEndpoint&lt;/em&gt; 가 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/azure-routing-example.png&quot; alt=&quot;Azure 라우팅 구성예&amp;lt;br&amp;gt;https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Azure는 사용자가 서브넷 라우팅을 생성하는 기능을 제공하는데 이를 UDR (User-Defined Routing) 이라고 한다.
+정적static 라우팅, 커스텀 라우팅 모두 동일한 의미이다.
+UDR에서는 침입탐지 시스템 등의 보안장비를 연동하기 위한 &lt;em&gt;Virtual Appliance&lt;/em&gt; 라우팅 목적지를 제공한다.&lt;/p&gt;
+
+&lt;p&gt;등록된 서브넷 라우팅 엔트리에 대해 &lt;em&gt;Longest Prefix Match&lt;/em&gt;를 이용하여 라우팅을 결정한다.
+주소매칭이 동일한 경우 (1) UDR (2) BGP (3) 시스템라우팅 순서로 우선한다.
+다만 BGP라우트는 VNET, VNET Peering, VNETServiceEndpoint보다 우선순위가 낮다.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 08 Feb 2023 20:00:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html</guid>
+        
+        <category>CloudNetwork</category>
+        
+        <category>Azure</category>
+        
+        <category>VNET</category>
+        
+        <category>Subnet</category>
+        
+        <category>UDR</category>
+        
+        <category>VPC</category>
+        
+        <category>L2-domain</category>
+        
+        
+      </item>
     
       <item>
         <title>ChatGPT-3가 설명하는 ChatGPT-3</title>
@@ -601,47 +662,6 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
         <category>exploit</category>
         
         <category>security</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>이번 Log4J 자바취약점 요약</title>
-        <description>&lt;p&gt;이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다.&lt;/p&gt;
-
-&lt;p&gt;무엇인가?&lt;br /&gt;
-➡️자바관련 무엇인가 패키지에 구멍이 있어서 해커가 원격커맨드를 실행시킬 수가 있다. 랜섬웨어라던가 랜섬웨어라던가..&lt;/p&gt;
-
-&lt;p&gt;좀더 자세히.&lt;br /&gt;
-➡️취약한 부분이 관리를 위한 로깅 모듈이다. 해커가 브라우저에 특정 메세지를 집어넣고, 그것이 서버에서 로깅(기록)이 되는 순간 원격 커맨드가 실행된다.&lt;/p&gt;
-
-&lt;p&gt;어떻게 막나?&lt;br /&gt;
-➡️취약한 부분을 패치하면 원격 커맨드가 실행안된다. 또는 방화벽(웹방화벽)단에서 원격 커맨드를 실행하도록 하는 패턴을 막는다.&lt;/p&gt;
-
-&lt;p&gt;심각한가?&lt;br /&gt;
-➡️그렇다. 인터넷의 많은 부분이 자바로 이루어져있기 때문이다. 그리고 재현방법이 너무 쉽다. imperva의 아래 그림 참조. 13시간만에 100만건 이상의 공격이 있다고..&lt;/p&gt;
-
-&lt;p&gt;패치하면 된다며?&lt;br /&gt;
-➡️모든 서버 관리팀들이 FAANG네카라쿠배는 아니잖아요. 관리 안되는 서버들 많이 있는거 아시면서..&lt;/p&gt;
-
-&lt;p&gt;급 회사광고&lt;br /&gt;
-➡️수산아이앤티 웹방화벽 &lt;a href=&quot;https://www.soosanint.com/contents.php?con_id=solution4&quot;&gt;https://www.soosanint.com/contents.php?con_id=solution4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/log4j_imperva.jpg&quot; alt=&quot;재현이 쉬워 전파가 빠르다. (source: imperva)&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Dec 2021 12:08:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2021/12/14/cve-2021-44228.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2021/12/14/cve-2021-44228.html</guid>
-        
-        <category>blog</category>
-        
-        <category>vulnerability</category>
-        
-        <category>log4j</category>
-        
-        <category>java</category>
-        
-        <category>jndi</category>
         
         
       </item>

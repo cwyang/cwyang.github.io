@@ -6,9 +6,39 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Feb 2023 20:06:34 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Feb 2023 20:06:34 +0900</lastBuildDate>
+    <pubDate>Thu, 09 Feb 2023 00:42:49 +0900</pubDate>
+    <lastBuildDate>Thu, 09 Feb 2023 00:42:49 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>Azure VNET 라우팅</title>
+        <description>&lt;p&gt;Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다.
+AWS의 VPC (Virtual Private Cloud)에 대응한다.
+VNET에 할당된 주소범위(CIDR)를 구분하여 서브넷을 만들고, 서브넷간의 라우팅이 가능하다.
+VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여러 VNET을 연결(peering)하여 구성이 가능하다.
+이러면 VPC사이에서도 라우팅이 가능하다.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 08 Feb 2023 20:00:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html</guid>
+        
+        <category>CloudNetwork</category>
+        
+        <category>Azure</category>
+        
+        <category>VNET</category>
+        
+        <category>Subnet</category>
+        
+        <category>UDR</category>
+        
+        <category>VPC</category>
+        
+        <category>L2-domain</category>
+        
+        
+      </item>
     
       <item>
         <title>ChatGPT-3가 설명하는 ChatGPT-3</title>
@@ -190,26 +220,6 @@
         <category>exploit</category>
         
         <category>security</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>이번 Log4J 자바취약점 요약</title>
-        <description>이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다.</description>
-        <pubDate>Tue, 14 Dec 2021 12:08:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2021/12/14/cve-2021-44228.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2021/12/14/cve-2021-44228.html</guid>
-        
-        <category>blog</category>
-        
-        <category>vulnerability</category>
-        
-        <category>log4j</category>
-        
-        <category>java</category>
-        
-        <category>jndi</category>
         
         
       </item>
