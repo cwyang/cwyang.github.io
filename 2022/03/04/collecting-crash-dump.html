@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>크래시 덤프 수집</title>
+  <meta name="description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cwyang" />
+    <meta name="twitter:title" content="크래시 덤프 수집" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+    
+    <meta name="twitter:description"  content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+    
+  
+  
+  <meta property="og:site_name" content="양철웅의 DX 이야기" />
+  <meta property="og:title" content="크래시 덤프 수집"/>
+  
+  <meta property="og:description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+  
+  <meta property="og:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+  <meta property="og:url" content="http://localhost:4000/2022/03/04/collecting-crash-dump.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2022-03-04T16:14:00+09:00">
+
+  <meta property="fb:app_id" content="596017104565491" />
+  <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+
+  <link rel="canonical" href="http://localhost:4000/2022/03/04/collecting-crash-dump.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1676207938087438300" />
+  <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+
+  <script>
+    var _mailChimpUrl = "";
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.12&appId=596017104565491";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
+<meta name="naver-site-verification" content="c162847e57c5d356ce72f4c9b9e81bd5d57de196" />
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              크래시 덤프 수집
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share pull-right">
+                <div class="fb-like" data-href="http://localhost:4000/2022/03/04/collecting-crash-dump.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                
+                  
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;u=http://localhost:4000/2022/03/04/collecting-crash-dump"
+                      onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                    </a>
+                  
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;url=http://localhost:4000/2022/03/04/collecting-crash-dump"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+              </section>
+              
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
+              on
+              <time datetime="2022-03-04T16:14:00+09:00">04 Mar 2022</time>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#크래시덤프coredump-확보-방안">크래시덤프(coredump) 확보 방안</a></li>
+</ul><p>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,<br>
+일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.<br>
+프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..</p>
+
+<h1 id="크래시덤프coredump-확보-방안">
+<a class="anchor" href="#%ED%81%AC%EB%9E%98%EC%8B%9C%EB%8D%A4%ED%94%84coredump-%ED%99%95%EB%B3%B4-%EB%B0%A9%EC%95%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>크래시덤프(coredump) 확보 방안</h1>
+
+<p>아래 내용은 C binary 기준이다.</p>
+
+<ol>
+  <li>ulimit -c unlimted<br>
+로 코어를 생성을 활성화 한 이후 장애가 나면 코어를 보내주거나 해당 기계에 접속해서 gdb를 이용하여 크래시 덤프를 분석한다.</li>
+  <li>libsegfault.so<br>
+<code class="language-plaintext highlighter-rouge">whereis libSegFault.so</code> 하면 gcc toolchain에 동봉된 libsegfault.so의 위치를 알 수 있다.<br>
+프로그램을 실행시킬 때 <code class="language-plaintext highlighter-rouge">env SEGFAULT_SIGNALS="abrt segv" LD_PRELOAD=${LIBSEGV_LOC} ./test</code> 과 같이 하면 장애가 발생할 경우 stderr로 stack trace가 출력된다. 이를 전달받아 크래시 상황을 분석한다.</li>
+  <li>sentry와 같은 크래시 덤프 수집 서비스를 사용<br>
+<a href="https://sentry.io/">https://sentry.io/</a> 와 같이 크래시 및 성능 분석 서비스를 제공하는 서비스를 이용한다.<br>
+아래와 같이 sdk의 api들을 호출하고 프로그램을 실행하면 장애 발생 내용을 대시보드에서 모아서 볼 수 있고 유료 플랜을 이용하면 slack notification를 받을 수 있다.</li>
+</ol>
+
+<p>테스트 소스: <a href="https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump">https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sentry_options_t *options = sentry_options_new();
+    sentry_options_set_release(options, "my-test-project@0.0.1");
+    sentry_options_set_symbolize_stacktraces(options, 1);
+    sentry_options_set_environment(options, "development");
+    sentry_options_set_release(options, "test-example-release");
+    sentry_options_add_attachment(options, "./Makefile");
+</code></pre></div></div>
+
+<p><img src="https://blog.kakaocdn.net/dn/wYEPf/btruXY7cohH/HXrErpKExKzT7Naq9sFYFk/img.png" alt=""></p>
+
+          <p class="tags">
+            
+              <a href="/tags#blog-ref">blog</a>
+            
+              <a href="/tags#diary-ref">diary</a>
+            
+              <a href="/tags#tip-ref">tip</a>
+            
+              <a href="/tags#crashdump-ref">crashdump</a>
+            
+              <a href="/tags#libsegfault-ref">libsegfault</a>
+            
+              <a href="/tags#sentry-ref">sentry</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="http://localhost:4000/2022/03/04/collecting-crash-dump.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;u=http://localhost:4000/2022/03/04/collecting-crash-dump"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;url=http://localhost:4000/2022/03/04/collecting-crash-dump"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>양철웅</h4>
+              <p class="bio">Chul-Woong Yang</p>
+              <hr>
+              <p class="published">Published <time datetime="2022-03-04 16:14">04 Mar 2022</time></p>
+            </section>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
+              
+            </footer>
+          </div>
+        </div>
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="http://localhost:4000/2022/03/04/collecting-crash-dump.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+        <a class="read-next-story no-cover" href="/2022/03/11/libxdp.html">
+          <section class="post">
+            <h2>eBPF와 libbpf</h2>
+            <p>eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹...</p>
+          </section>
+        </a>
+      
+      
+        <a class="read-next-story prev no-cover" href="/2022/03/04/git-submodule.html">
+          <section class="post">
+            <h2>git submodule</h2>
+            <p>parent project에서 child project를 git submodule로 사용할 때, child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는...</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">양철웅의 DX 이야기</a> © 2023</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1676207938087438300"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>

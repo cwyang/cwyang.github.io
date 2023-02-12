@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Linux QoS Box Design</title>
+  <meta name="description" content="1st draft, 3 November 2010양 철 웅  (cwyang)cwyang.tistory.com풍문에 의하면 리눅스Linux 기반의 QoS는 안정적이라고 하고, 그 연유로 제품화도 많이 되었다고 한다. 리눅스 기반의 QoS시스템은 어떻게 만드는가.QoS란 서비스를 이용하는 특정 QoS 클래스에 대해서 서비스 품질을 제어하는 것이다. 네트워크..." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@cwyang" />
+    <meta name="twitter:title" content="Linux QoS Box Design" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+    
+    <meta name="twitter:description"  content="1st draft, 3 November 2010양 철 웅  (cwyang)cwyang.tistory.com풍문에 의하면 리눅스Linux 기반의 QoS는 안정적이라고 하고, 그 연유로 제품화도 많이 되었다고 한다. 리눅스 기반의 QoS시스템은 어떻게 만드는가.QoS란 서비스를 이용하는 특정 QoS 클래스에 대해서 서비스 품질을 제어하는 것이다. 네트워크..." />
+    
+  
+  
+  <meta property="og:site_name" content="양철웅의 DX 이야기" />
+  <meta property="og:title" content="Linux QoS Box Design"/>
+  
+  <meta property="og:description" content="1st draft, 3 November 2010양 철 웅  (cwyang)cwyang.tistory.com풍문에 의하면 리눅스Linux 기반의 QoS는 안정적이라고 하고, 그 연유로 제품화도 많이 되었다고 한다. 리눅스 기반의 QoS시스템은 어떻게 만드는가.QoS란 서비스를 이용하는 특정 QoS 클래스에 대해서 서비스 품질을 제어하는 것이다. 네트워크..." />
+  
+  <meta property="og:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+  <meta property="og:url" content="http://localhost:4000/2010/11/03/linux-qos-box-design.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2010-11-03T21:16:00+09:00">
+
+  <meta property="fb:app_id" content="596017104565491" />
+  <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+
+  <link rel="canonical" href="http://localhost:4000/2010/11/03/linux-qos-box-design.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1676207938087438300" />
+  <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+
+  <script>
+    var _mailChimpUrl = "";
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6183151-15', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.12&appId=596017104565491";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
+<meta name="naver-site-verification" content="c162847e57c5d356ce72f4c9b9e81bd5d57de196" />
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              Linux QoS Box Design
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share pull-right">
+                <div class="fb-like" data-href="http://localhost:4000/2010/11/03/linux-qos-box-design.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                
+                  
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Linux+QoS+Box+Design&amp;u=http://localhost:4000/2010/11/03/linux-qos-box-design"
+                      onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                    </a>
+                  
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=Linux+QoS+Box+Design&amp;url=http://localhost:4000/2010/11/03/linux-qos-box-design"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                    <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+              </section>
+              
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
+              on
+              <time datetime="2010-11-03T21:16:00+09:00">03 Nov 2010</time>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>1st draft, 3 November 2010<br />
+양 철 웅  (cwyang)<br />
+cwyang.tistory.com</p>
+
+<p>풍문에 의하면 리눅스Linux 기반의 QoS는 안정적이라고 하고, 그 연유로 제품화도 많이 되었다고 한다. 리눅스 기반의 QoS시스템은 어떻게 만드는가.</p>
+
+<p>QoS란 서비스를 이용하는 특정 QoS 클래스에 대해서 서비스 품질을 제어하는 것이다. 네트워크 상의 서비스 품질은 결국 대역폭bandwidth이므로, 특정 QoS클래스에 대해 최대 대역폭을 제한하거나 최소 대역폭을 보장해주는 역할을 해야한다. 여기서 QoS 클래스란 동일한 사용품질로 묶을 수 있는 집합이다. 예를 들면, “영업부에 대해서는 최대 5Mbps 만을 허용한다” 라는 영업부 클래스를 생각할 수 있다. 아니면 “YouTube 서비스에 대해서는 최대 10Mbps를 허용하나, 웹 사용으로 인해 병목이 생길 경우에는 가장 낮은 우선순위를 가진다” 와 같은 YouTube 클래스를 생각할 수 있다. 언뜻 생각하면 단순할 수도 있겠으나, 그리 단순하지만은 않은 두 가지 기술적 측면이 존재한다. (1) 네트워크 패킷이 어떤 QoS 클래스에 속하는 지를 판단하는 기술. (2) QoS 클래스에 대해 어떻게 대역폭을 제어할 것인가. 또한 클래스가 계층화되어 복잡한 구조를 가지게 될 때 그를 어떻게 관리할 것인가.</p>
+
+<p>다행히도 이 두 가지에 대해 리눅스는 이미 해답을 가지고 있다.</p>
+
+<p>첫 번째로, 리눅스에는 넷필터netfilter라는 이름의 패킷에 대한 논리적 제어 시스템이 존재한다. 패킷이 시스템에 들어와 커널, 혹은 어플리케이션으로 전달되는 일련의 과정을 거쳐 외부로 다시 나가거나 파기되기까지의 과정을 몇 단계로 구분하여, 각 단계마다 일정 조건에 부합하면 설정된 액션action을 하도록 한다. 넷필터는 OSI 모델의 각 레이어 별 조건을 지원한다. 즉, MAC주소를 비교하거나 (Layer 2),  IP주소를 비교하거나 (Layer 3), TCP의 특정 포트를 비교하거나 (Layer 4) 할 수 있다. 리눅스 표준은 아니지만</p>
+
+<p><a href="http://l7-filter.sourceforge.net/">http://l7-filter.sourceforge.net/</a>의
+ l7-filter 프로젝트, 혹은
+<a href="https://docs.google.com/document/edit?id=1qPN4HibRCRjcLPeIoMfe_3njDJiFMOBA0Fd_qG9JD5E&amp;hl=ja">http://www.ipp2p.org</a>의
+IPP2P 프로젝트를 이용하면 HTTP, FTP등의 특정 어플리케이션인지 혹은 BitTorrent, eDonkey등의 P2P인지를 감지해서 (Layer 7) 그를 조건으로 이용할 수 있다.</p>
+
+<p>이를 이용하여 네트워크 패킷이 어떤 QoS 클래스에 속하는 지를 판단할 수 있다. 넷필터는 패킷을 구분할 수 있는 mark라는 액션을 지원한다. [1]에서 발췌한 아래의 예를 보면, 넷필터를 이용해서 bittorrent 프로토콜을 감지하였으면 해당 패킷에 ‘5’라는 mark를, ftp프로토콜이고 192.168.1.100 IP주소로 송신되는 패킷이면 ‘6’이라는 mark를 부여한다. 패킷마다 그에 해당하는 클래스를 가리키는 mark를 부여할 수가 있는 것이다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># iptables -t mangle -A POSTROUTING -m layer7 --l7proto bittorrent -j MARK --set-mark 5  </span>
+<span class="c"># iptables -t mangle -A POSTROUTING -m layter7 --l7proto ftp -d 192.168.1.100 -j MARK --set-mark 6  </span>
+</code></pre></div></div>
+
+<p>두 번째. 리눅스는 TCP연결에 대해 대역폭을 제어하는 메카니즘 (리눅스 QoS라고 칭하겠다) 역시 탑재하고 있다. 커널 설정시 상응하는 옵션을 활성화 함으로서 사용할 수 있으며 tc라는 명령어를 이용하여 그를 제어할 수 있다. 리눅스 QoS는 [2]와 같이 별도의 장문의 HOWTO가 존재할 정도로 복잡하지만, 중요한 것은 QoS 클래스의 등록 및 각 클래스에 대한 조건과 제어설정이 가능하다는 것이다.</p>
+
+<p>tc class 명령어를 이용하여 클래스를 지정할 때에는  클래스에 대한 대역폭 설정, 가중치, 우선순위 등을 설정할 수 있다. 설정된 클래스에다가 tc filter를 이용하여 패킷을 연결해주는 것이다. tc filter에서는 어떤한 조건을 이용할 것인지를 설정할 수 있으며, ip주소등의 기본적인 조건은 넷필터의 도움 없이 리눅스 QoS만 가지고도 가능하다. 하지만 전단에서 넷필터가 강화된 조건으로 패킷 mark를 부여하면 QoS단에서 tc filter의 handle 옵션을 이용해서 해당 mark를 검출, 특정 클래스로써 처리할 수 있다.</p>
+
+<p>리눅스에서 넷필터와 QoS가 이미 구현되어 있다는 것은 리눅스 기반의 QoS박스를 쉽게 만들 수 있다는 이야기다. 차려진 밥상에 숟갈을 얻는 격이기 때문에, 리눅스에서 제공하고 있는 기능 이상을 생각한다면 난관에 봉착할 것이다. 하지만 제품으로써 동작할 수 있는 최소한의 것들은 이미 다 차려져 있다고 생각하면 된다.</p>
+
+<p>그 러면 남은 것은 무엇인가. 필요로 하는 QoS기능을 기획하고 알맞은 적절한 설정 및 UI를 만들고 그에 따라 넷필터와 QoS를 적용하도록 어플리케이션 로직을 만들면 된다. 하지만 성능 면에 민감한 경우라면 꼭 성능 평가를 해야 한다. 1Gbps를 지원한다고 하는 상용 QoS박스들이 QoS클래스 여럿이 들어가게 되면 500Mbps도 제대로 처리하지 못한다는 주장도 있다[3]. 성능 평가의 경우에는 대역폭 이외에도 레이턴시latency가 늘어나는지도 검토해야 한다.</p>
+
+<h2 id="참고문헌">참고문헌</h2>
+
+<p>[1] Lucian Gheorghe, Designing and Implementing Linux Firewalls and QoS using netfilter, iprout2, nat, and l7-filter, 2006, packt publishing<br />
+[2] Bert Hubert, Linux Advanced Routing and Traffic Control Howto,
+<a href="http://lartc.org/">http://lartc.org/</a>
+[3] Delbert Terry, How to Choose Right Bandwidth Management Solutions, myqos.net,
+<a href="http://www.articlesbase.com/networks-articles/how-to-choose-right-bandwidth-management-solutions-3470695.html">http://www.articlesbase.com/networks-articles/how-to-choose-right-bandwidth-management-solutions-3470695.html</a></p>
+
+          <p class="tags">
+            
+              <a href="/tags#blog-ref">blog</a>
+            
+              <a href="/tags#linux-ref">linux</a>
+            
+              <a href="/tags#qos-ref">QOS</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="http://localhost:4000/2010/11/03/linux-qos-box-design.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Linux+QoS+Box+Design&amp;u=http://localhost:4000/2010/11/03/linux-qos-box-design"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Linux+QoS+Box+Design&amp;url=http://localhost:4000/2010/11/03/linux-qos-box-design"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>양철웅</h4>
+              <p class="bio">Chul-Woong Yang</p>
+              <hr>
+              <p class="published">Published <time datetime="2010-11-03 21:16">03 Nov 2010</time></p>
+            </section>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
+              
+            </footer>
+          </div>
+        </div>
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="http://localhost:4000/2010/11/03/linux-qos-box-design.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+        <a class="read-next-story no-cover" href="/2010/11/04/top-down-vs-bottom-up-development.html">
+          <section class="post">
+            <h2>Top-Down 개발 vs Bottom-up 개발</h2>
+            <p>개발의 방식을 굳이 구별하자면 다음과 같이 구별할 수 있다. 하나는 “사용방식, 요구사항”이 먼저 존재하여 그것을...</p>
+          </section>
+        </a>
+      
+      
+        <a class="read-next-story prev no-cover" href="/2010/11/02/regarding-network-software-robustness.html">
+          <section class="post">
+            <h2>Regarding Network Software Robustness</h2>
+            <p>1st draft: 2 November 2010 양 철 웅  (cwyang) cwyang.tistory.com 이 글에서는 네트워크 소프트웨어의 안정성을...</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">양철웅의 DX 이야기</a> © 2023</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1676207938087438300"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>

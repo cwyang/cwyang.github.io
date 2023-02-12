@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
     <meta name="twitter:title" content="양철웅의 DX 이야기" />
-    <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
     
     <meta name="twitter:description" content="short essays on DX, cyber security, and cloud" />
     
@@ -30,20 +30,20 @@
   
   <meta property="og:description" content="short essays on DX, cyber security, and cloud" />
   
-  <meta property="og:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
-  <meta property="og:url" content="http://cwyang.github.io/page2/" />
+  <meta property="og:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+  <meta property="og:url" content="http://localhost:4000/page2/" />
   <meta property="og:type" content="article" />
   
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://cwyang.github.io/page2/"/>
+  <link rel="canonical" href="http://localhost:4000/page2/"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1675870969420385054" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1676207938087438300" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
@@ -96,7 +96,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://cwyang.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
 <meta name="naver-site-verification" content="c162847e57c5d356ce72f4c9b9e81bd5d57de196" />
 <!-- header end -->
 
@@ -113,7 +113,7 @@
 
 <header class="blog-header">
     
-      <a class="blog-logo" href="http://cwyang.github.io" style="background-image: url('/assets/images/cwyang2016.jpg')">양철웅의 DX 이야기</a>
+      <a class="blog-logo" href="http://localhost:4000" style="background-image: url('/assets/images/cwyang2016.jpg')">양철웅의 DX 이야기</a>
     
     <h1 class="blog-title">양철웅의 DX 이야기</h1>
     <h2 class="blog-description">short essays on DX, cyber security, and cloud
@@ -151,6 +151,85 @@
           <div class="article-item">
             <header class="post-header">
               <h2 class="post-title" itemprop="name">
+                <a href="/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html" itemprop="url">
+                  도커허브 이미지 풀 제약을 하버로 해결하기
+                  
+                </a>
+              </h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해 6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="20 January 2021">20 January 2021</time>
+<!--
+              <i class="nf nf-fa-comment" aria-hidden="true"></i>
+              
+                <span class="fb-comments-count" data-href="http://localhost:4000/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html"></span>
+              
+-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name">
+                <a href="/2020/12/09/osx-codesign-notarization.html" itemprop="url">
+                  맥OS 앱 코드사인 및 공증하기
+                  
+                </a>
+              </h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.
+앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이
+사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다.
+
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="09 December 2020">09 December 2020</time>
+<!--
+              <i class="nf nf-fa-comment" aria-hidden="true"></i>
+              
+                <span class="fb-comments-count" data-href="http://localhost:4000/2020/12/09/osx-codesign-notarization.html"></span>
+              
+-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name">
+                <a href="/2020/12/05/what-does-cloud-computing-bring-to-us.html" itemprop="url">
+                  클라우드 퍼스트 단상
+                  
+                </a>
+              </h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>미국은 이미 10년전에 클라우드 퍼스트 전략을 발표했다. 우리 정부도 클라우드 퍼스트. 많은 기업들도 디지털 트랜스포메이션이라는 기치 아래 클라우드로 가고 있다... 세상에 공짜가 어디있겠나. 누군가는 손해를 봐야한다.</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="05 December 2020">05 December 2020</time>
+<!--
+              <i class="nf nf-fa-comment" aria-hidden="true"></i>
+              
+                <span class="fb-comments-count" data-href="http://localhost:4000/2020/12/05/what-does-cloud-computing-bring-to-us.html"></span>
+              
+-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name">
                 <a href="/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html" itemprop="url">
                   한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요
                   
@@ -165,7 +244,32 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html"></span>
+              
+-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name">
+                <a href="/2019/12/19/openssl-3.0.html" itemprop="url">
+                  OpenSSL 3.0
+                  
+                </a>
+              </h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>벌써 연말이다. 2020년에는 OpenSSL 3.0이 발표 예정이다. OpenSSL 1.1.1 작업을 한 지도 얼마 안되었는데...</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="19 December 2019">19 December 2019</time>
+<!--
+              <i class="nf nf-fa-comment" aria-hidden="true"></i>
+              
+                <span class="fb-comments-count" data-href="http://localhost:4000/2019/12/19/openssl-3.0.html"></span>
               
 -->
             </div>
@@ -190,7 +294,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2019/06/12/guan_zhong.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2019/06/12/guan_zhong.html"></span>
               
 -->
             </div>
@@ -215,7 +319,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2018/10/12/ovs-docker-centos7-environment.html"></span>
               
 -->
             </div>
@@ -240,7 +344,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2018/09/24/cloudflare-does-esni.html"></span>
               
 -->
             </div>
@@ -265,7 +369,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2018/07/02/different-escaping-the-competitive-herd.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2018/07/02/different-escaping-the-competitive-herd.html"></span>
               
 -->
             </div>
@@ -290,7 +394,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2018/06/01/internet-filtering.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2018/06/01/internet-filtering.html"></span>
               
 -->
             </div>
@@ -315,7 +419,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2018/04/05/omg-wildcard-cert-co-kr.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2018/04/05/omg-wildcard-cert-co-kr.html"></span>
               
 -->
             </div>
@@ -340,7 +444,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2018/03/28/is-https-really-safe.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2018/03/28/is-https-really-safe.html"></span>
               
 -->
             </div>
@@ -365,7 +469,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2018/03/24/if_https_usage_becomes_100_percent.html"></span>
               
 -->
             </div>
@@ -392,7 +496,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2017/12/30/why-tls-1-3-isnt-in-browsers.html"></span>
               
 -->
             </div>
@@ -421,7 +525,7 @@
 <!--
               <i class="nf nf-fa-comment" aria-hidden="true"></i>
               
-                <span class="fb-comments-count" data-href="http://cwyang.github.io/2017/07/04/welcome-to-jekyll.html"></span>
+                <span class="fb-comments-count" data-href="http://localhost:4000/2017/07/04/welcome-to-jekyll.html"></span>
               
 -->
             </div>
@@ -432,7 +536,9 @@
 
     <nav class="pagination" role="navigation">
       
-      <span class="page-number">Page 2 of 2</span>
+        <a class="newer-posts" href="/page3">&larr; Older posts</a>
+      
+      <span class="page-number">Page 2 of 4</span>
       
         
           <a class="older-posts" href="/">Newer posts &rarr;</a>
@@ -460,7 +566,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1675870969420385054"></script>
+<script type="text/javascript" src="/assets/js/index.js?1676207938087438300"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
