@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
     <meta name="twitter:title" content="Azure VNET 라우팅" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+    <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
     <meta name="twitter:description"  content="Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다.AWS의 VPC (Virtual Private Cloud)에 대응한다.VNET에 할당된 주소범위(CIDR)를 구분하여 서브넷을 만들고, 서브넷간의 라우팅이 가능하다.VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여러 VNET을 연결(peering)하여 구성이..." />
     
@@ -29,20 +29,20 @@
   
   <meta property="og:description" content="Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다.AWS의 VPC (Virtual Private Cloud)에 대응한다.VNET에 할당된 주소범위(CIDR)를 구분하여 서브넷을 만들고, 서브넷간의 라우팅이 가능하다.VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여러 VNET을 연결(peering)하여 구성이..." />
   
-  <meta property="og:image" content="http://localhost:4000/assets/images/azure-routing-example.png" />
-  <meta property="og:url" content="http://localhost:4000/2023/02/08/Azure-VNET-routing.html" />
+  <meta property="og:image" content="http://cwyang.github.io/assets/images/azure-routing-example.png" />
+  <meta property="og:url" content="http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2023-02-08T20:00:00+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://localhost:4000/2023/02/08/Azure-VNET-routing.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1676207938087438300" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1676514676633700800" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
@@ -93,7 +93,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
+<a href="http://cwyang.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
 <meta name="naver-site-verification" content="c162847e57c5d356ce72f4c9b9e81bd5d57de196" />
 <!-- header end -->
 
@@ -108,17 +108,17 @@
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://localhost:4000/2023/02/08/Azure-VNET-routing.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;u=http://localhost:4000/2023/02/08/Azure-VNET-routing"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;u=http://cwyang.github.io/2023/02/08/Azure-VNET-routing"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;url=http://localhost:4000/2023/02/08/Azure-VNET-routing"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;url=http://cwyang.github.io/2023/02/08/Azure-VNET-routing"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -170,7 +170,7 @@ SDN구성에서는 서버들이 L2가 아닌 오버레이 L3로 연결되어있�
 (5) 연결된 다른 네트워크 (BGP나 VPN)로 보내기 위한 <em>VNET Gateway</em>
 (6) 허용된 특정 클라우드 서비스로 보내기 위한 <em>VNETServiceEndpoint</em> 가 있다.</p>
 
-<p><img src="http://localhost:4000/assets/images/azure-routing-example.png" alt="Azure 라우팅 구성예&lt;br&gt;https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview"></p>
+<p><img src="http://cwyang.github.io/assets/images/azure-routing-example.png" alt="Azure 라우팅 구성예&lt;br&gt;https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview"></p>
 
 <p>Azure는 사용자가 서브넷 라우팅을 생성하는 기능을 제공하는데 이를 UDR (User-Defined Routing) 이라고 한다.
 정적static 라우팅, 커스텀 라우팅 모두 동일한 의미이다.
@@ -201,17 +201,17 @@ UDR에서는 침입탐지 시스템 등의 보안장비를 연동하기 위한 <
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://localhost:4000/2023/02/08/Azure-VNET-routing.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;u=http://localhost:4000/2023/02/08/Azure-VNET-routing"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;u=http://cwyang.github.io/2023/02/08/Azure-VNET-routing"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;url=http://localhost:4000/2023/02/08/Azure-VNET-routing"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;url=http://cwyang.github.io/2023/02/08/Azure-VNET-routing"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -244,7 +244,7 @@ UDR에서는 침입탐지 시스템 등의 보안장비를 연동하기 위한 <
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://localhost:4000/2023/02/08/Azure-VNET-routing.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -270,7 +270,7 @@ UDR에서는 침입탐지 시스템 등의 보안장비를 연동하기 위한 <
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1676207938087438300"></script>
+<script type="text/javascript" src="/assets/js/index.js?1676514676633700800"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

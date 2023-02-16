@@ -4,10 +4,10 @@
     <title>양철웅의 DX 이야기</title>
     <description>short essays on DX, cyber security, and cloud
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 12 Feb 2023 22:18:58 +0900</pubDate>
-    <lastBuildDate>Sun, 12 Feb 2023 22:18:58 +0900</lastBuildDate>
+    <link>http://cwyang.github.io/</link>
+    <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 16 Feb 2023 11:31:16 +0900</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2023 11:31:16 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -39,7 +39,7 @@ SDN구성에서는 서버들이 L2가 아닌 오버레이 L3로 연결되어있�
 (5) 연결된 다른 네트워크 (BGP나 VPN)로 보내기 위한 &lt;em&gt;VNET Gateway&lt;/em&gt;
 (6) 허용된 특정 클라우드 서비스로 보내기 위한 &lt;em&gt;VNETServiceEndpoint&lt;/em&gt; 가 있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/azure-routing-example.png&quot; alt=&quot;Azure 라우팅 구성예&amp;lt;br&amp;gt;https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/azure-routing-example.png&quot; alt=&quot;Azure 라우팅 구성예&amp;lt;br&amp;gt;https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Azure는 사용자가 서브넷 라우팅을 생성하는 기능을 제공하는데 이를 UDR (User-Defined Routing) 이라고 한다.
 정적static 라우팅, 커스텀 라우팅 모두 동일한 의미이다.
@@ -51,8 +51,8 @@ UDR에서는 침입탐지 시스템 등의 보안장비를 연동하기 위한 &
 
 </description>
         <pubDate>Wed, 08 Feb 2023 20:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2023/02/08/Azure-VNET-routing.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/08/Azure-VNET-routing.html</guid>
+        <link>http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html</guid>
         
         <category>CloudNetwork</category>
         
@@ -73,14 +73,14 @@ UDR에서는 침입탐지 시스템 등의 보안장비를 연동하기 위한 &
     
       <item>
         <title>ChatGPT-3가 설명하는 ChatGPT-3</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
 Introduce &lt;a href=&quot;https://en.wikipedia.org/wiki/ChatGPT&quot;&gt;ChatGPT-3&lt;/a&gt; in style of blog writing.&lt;/p&gt;
 &lt;p /&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
 Hello everyone! Today, we’ll be talking about the latest language model from OpenAI, ChatGPT-3. As the third iteration of the original GPT (Generative Pretrained Transformer) architecture, ChatGPT-3 has taken the world of NLP (Natural Language Processing) by storm.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/chatgpt3.jpg&quot; alt=&quot;ChatGPT-3, the game changer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt3.jpg&quot; alt=&quot;ChatGPT-3, the game changer&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This state-of-the-art model has been trained on a massive amount of diverse internet text, allowing it to generate human-like text with remarkable accuracy. From answering questions to translating languages, summarizing long texts, and performing other language-related tasks, ChatGPT-3 has shown unparalleled proficiency in its field.&lt;/p&gt;
 
@@ -89,11 +89,11 @@ Hello everyone! Today, we’ll be talking about the latest language model from O
 &lt;p&gt;So, without further ado, let’s dive into the world of ChatGPT-3 and see what makes this model truly special.&lt;/p&gt;
 &lt;p /&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
 Translate the answer into Korean&lt;/p&gt;
 &lt;p /&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
 안녕하세요! 오늘은 OpenAI에서 개발한 최신 언어 모델, &lt;a href=&quot;https://ko.wikipedia.org/wiki/ChatGPT&quot;&gt;ChatGPT-3&lt;/a&gt;에 대해 이야기해볼께요.
 GPT (Generative Pretrained Transformer) 구조의 세 번째 버전인
 ChatGPT-3은 NLP (Natural Language Processing) 세계를 휩쓸었습니다.&lt;/p&gt;
@@ -112,11 +112,11 @@ ChatGPT-3은 확실히 주의깊게 지켜봐야합니다.&lt;/p&gt;
 그리고 이 모델이 가지는 진정하게 특별한 점이 무엇인지 알아보아요.&lt;/p&gt;
 &lt;p /&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/cwyang-q.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
 Show me 10 hashtags that describes this article best&lt;/p&gt;
 &lt;p /&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/chatgpt-a.jpg&quot; alt=&quot;&quot; style=&quot;float: left&quot; /&gt;
 #ChatGPT3 #NLP #ArtificialIntelligence #CuttingEdgeTechnology #Research
 #Business #AI #MachineLearning #Innovation #TechnologyTrends&lt;/p&gt;
 &lt;p /&gt;
@@ -130,8 +130,8 @@ Show me 10 hashtags that describes this article best&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 07 Feb 2023 20:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2023/02/07/what-is-chatgpt3.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/07/what-is-chatgpt3.html</guid>
+        <link>http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html</guid>
         
         <category>ChatGPT3</category>
         
@@ -168,7 +168,7 @@ Show me 10 hashtags that describes this article best&lt;/p&gt;
 
 &lt;p&gt;사실 HA-Proxy는 이미 성능이 충분히 좋아서 최대 스레드를 저렇게 늘릴 까닭은 별로 없습니다… SSL 처리를 위해서가 아니라면요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/OpenSSL_logo.png&quot; alt=&quot;OpenSSL&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/OpenSSL_logo.png&quot; alt=&quot;OpenSSL&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;문제는 HAProxy가 사용하고 있는 OpenSSL 3.0이 그렇게 성능이 좋지가 않다는 겁니다.
 OpenSSL 3.0의 큰 설계방향은 개발의 편의성을 위해서 모듈화/추상화를 만들어 넣은 건데, 반대급부로 성능이 많이 떨어졌습니다.
@@ -179,8 +179,8 @@ OpenSSL 3.0의 큰 설계방향은 개발의 편의성을 위해서 모듈화/�
 
 </description>
         <pubDate>Fri, 03 Feb 2023 20:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2023/02/03/slow-openssl-3.0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/03/slow-openssl-3.0.html</guid>
+        <link>http://cwyang.github.io/2023/02/03/slow-openssl-3.0.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/03/slow-openssl-3.0.html</guid>
         
         <category>blog</category>
         
@@ -200,7 +200,7 @@ LastPass는 클라우드 스토리지에 패스워드들을 저장하고 있었�
 2022년 8월에 유출된 정보를 통해 이번에 패스워드들이 유출되었다고 해요.
 패스워드는 &lt;a href=&quot;Password-Based Key Derivation Function 2&quot;&gt;PKBDF2&lt;/a&gt;(https://en.wikipedia.org/wiki/PBKDF2)&lt;sup&gt;&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;로 암호화되어 있었어요. 즉 해시만이 저장되어 있었는데요. 이게 안전하지 않다는 이야기가 많습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/password.jpg&quot; alt=&quot;패스워드 과연 안전한가?&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/password.jpg&quot; alt=&quot;패스워드 과연 안전한가?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;보안을 위해 40 비트, 64 비트 키는 안전하지 않다. 128 비트 이상을 사용하라는 이야기 들어보셨을텐데요,
 일반적인 사용자들의 패스워드는 40 비트 정도의 엔트로피를 가진다고 합니다.
@@ -233,8 +233,8 @@ LastPass의 주장은 PBKDF2를 100,100번 이터레이션한다는 것이지만
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 02 Feb 2023 21:30:00 +0900</pubDate>
-        <link>http://localhost:4000/2023/02/02/security-of-the-password-mangagers.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/02/security-of-the-password-mangagers.html</guid>
+        <link>http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html</guid>
         
         <category>blog</category>
         
@@ -253,7 +253,7 @@ LastPass의 주장은 PBKDF2를 100,100번 이터레이션한다는 것이지만
         <title>API endpoint들의 취약한 TLS 버젼</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/&quot;&gt;내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식&lt;/a&gt;을 접하여, TLS 버젼 이야기 짧게 드립니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/unlocked.jpg&quot; alt=&quot;TLS 1.0, 1.1은 아주 취약해요!&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/unlocked.jpg&quot; alt=&quot;TLS 1.0, 1.1은 아주 취약해요!&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 &lt;a href=&quot;https://datatracker.ietf.org/doc/rfc8996/&quot;&gt;IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다&lt;/a&gt;.&lt;/p&gt;
 
@@ -287,8 +287,8 @@ SSL-Session:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Jul 2022 08:58:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/07/06/weak_tls_on_api_endpoint.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/07/06/weak_tls_on_api_endpoint.html</guid>
+        <link>http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</guid>
         
         <category>blog</category>
         
@@ -303,11 +303,11 @@ SSL-Session:
         <title>비대면 시대의 보안기술 - 보안 서비스 엣지</title>
         <description>&lt;p&gt;오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 자세한 내용은 링크해드리는 &lt;a href=&quot;https://www.itfind.or.kr/WZIN/jugidong/2051/file1834924209108887227-2051(2022.06.22)-23.pdf&quot;&gt;주간기술동향 2051호&lt;/a&gt; 안의 보안 서비스 엣지 소개글에서 읽어보실 수 있어요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse-unsplash.jpg&quot; alt=&quot;하이브리드 워크 시대의 정보 보안은 어떻게?&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse-unsplash.jpg&quot; alt=&quot;하이브리드 워크 시대의 정보 보안은 어떻게?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;사용자들의 근처에 엣지를 두어 통신경로를 짧게해서 빠른 서비스를 제공하는 것이 CDN이라면, 마찬가지로 사용자들의 근처에 엣지를 두고, 모든 통신을 엣지를 거치게 하면서 엣지에서 사용자 인증 및 인가, 트래픽 검사, 악성코드 다운로드 차단, 정보 유출 방지 등 보안 기능을 수행하도록 하는 것이 SSE (Secure Service Edge)입니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse1.png&quot; alt=&quot;SSE와 SASE의 구성&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse1.png&quot; alt=&quot;SSE와 SASE의 구성&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 그림이 클라우드 시대에는 맞지 않게 되었어요.&lt;/p&gt;
 
@@ -315,11 +315,11 @@ SSL-Session:
 
 &lt;p&gt;사내망으로 일단 트래픽을 유도한 다음에 보안을 수행 후 외부 자산 접근시에는 다시 외부로 내보내는 그림도 충분히 생각해 볼 수 있습니다. 하지만 전송경로가 매우 길어지겠죠. 그래서 엣지에서 하면 되겠네 라고 이야기하고 있는 것이에요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse3.png&quot; alt=&quot;(좌): 혼돈의 카오스 (우):엣지에서 제로트러스트&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse3.png&quot; alt=&quot;(좌): 혼돈의 카오스 (우):엣지에서 제로트러스트&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2019년 가트너에서 CDN과 같이 네트워크 성능도 빠르게 하고, 보안 기능도 수행하는 SASE (새시, Secure Access Service Edge)라는 모델을 제시하였고요, 2021년에는 네트워크랑 보안이랑 굳이 다 할 필요 있느냐, 보안만 수행하는 엣지도 충분히 가치있다 하면서 SASE에서 Access를 빼버린 SSE(Secure Service Edge) 모델을 클라우드 보안의 필수 기술로 제시했어요.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sse2.png&quot; alt=&quot;가트너 클라우드 보안 하이프 사이클&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/sse2.png&quot; alt=&quot;가트너 클라우드 보안 하이프 사이클&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2022년 가트너는 SSE에 대한 시장 정의, 전망 및 유력 참여자를 기술한 매직 쿼드런트 보고서를 출판하면서
 여러 보안 기능을 사용해야만 하는 고객들은 여러 솔루션을 개별적으로 운영하는 것보다는 통합관리를 선호한다고 하였습니다.&lt;/p&gt;
@@ -336,8 +336,8 @@ SSL-Session:
 &lt;p&gt;감사합니다.&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Jun 2022 19:58:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/06/23/secure-service-edge.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/06/23/secure-service-edge.html</guid>
+        <link>http://cwyang.github.io/2022/06/23/secure-service-edge.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/06/23/secure-service-edge.html</guid>
         
         <category>blog</category>
         
@@ -359,7 +359,7 @@ SSL-Session:
       <item>
         <title>eBPF와 libbpf</title>
         <description>&lt;h2 id=&quot;ebpf&quot;&gt;eBPF&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/eBPF.png&quot; alt=&quot;eBPF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/eBPF.png&quot; alt=&quot;eBPF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://ebpf.io/&quot;&gt;eBPF&lt;/a&gt;는 커널의 여러 부분에서 프로그래밍을 쉽고 안전하게 할 수 있게 해 준다.&lt;/p&gt;
 
@@ -424,8 +424,8 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 11 Mar 2022 09:36:43 +0900</pubDate>
-        <link>http://localhost:4000/2022/03/11/libxdp.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/03/11/libxdp.html</guid>
+        <link>http://cwyang.github.io/2022/03/11/libxdp.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/03/11/libxdp.html</guid>
         
         <category>blog</category>
         
@@ -474,8 +474,8 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 &lt;p&gt;&lt;img src=&quot;https://blog.kakaocdn.net/dn/wYEPf/btruXY7cohH/HXrErpKExKzT7Naq9sFYFk/img.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 04 Mar 2022 16:14:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/03/04/collecting-crash-dump.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/03/04/collecting-crash-dump.html</guid>
+        <link>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/03/04/collecting-crash-dump.html</guid>
         
         <category>blog</category>
         
@@ -500,8 +500,8 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 &lt;p&gt;이 때에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git submodule init&lt;/code&gt;를 실행하여 로컬의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;child&lt;/code&gt;가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parent&lt;/code&gt;에서 요구하는 버젼으로 업데이트한 후 사용하면 됨.&lt;/p&gt;
 </description>
         <pubDate>Fri, 04 Mar 2022 15:54:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/03/04/git-submodule.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/03/04/git-submodule.html</guid>
+        <link>http://cwyang.github.io/2022/03/04/git-submodule.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/03/04/git-submodule.html</guid>
         
         <category>blog</category>
         
@@ -522,7 +522,7 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 
 &lt;p&gt;창업가의 답 - 성호철, 임경업&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/entrepreneurs.png&quot; alt=&quot;창업가의 답&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/entrepreneurs.png&quot; alt=&quot;창업가의 답&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-라스트-무버가-1등이-된-당근마켓&quot;&gt;1. 라스트 무버가 1등이 된 당근마켓.&lt;/h2&gt;
 &lt;p&gt;목표는 맘카페 (지역 커뮤니티 마케팅), 교차로(지역광고).&lt;/p&gt;
 
@@ -630,8 +630,8 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 &lt;p&gt;어디서 어떻게 만나더라도 창업 멤버들은 생의 한 순간을 같이 불태웠던 동료라는 것을.&lt;/p&gt;
 </description>
         <pubDate>Tue, 15 Feb 2022 01:53:00 +0900</pubDate>
-        <link>http://localhost:4000/2022/02/15/some-enterpreneurs.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/15/some-enterpreneurs.html</guid>
+        <link>http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</guid>
         
         <category>blog</category>
         

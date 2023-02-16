@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
     <meta name="twitter:title" content="SSL_read()와 read()는 같은가요?" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+    <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
     <meta name="twitter:description"  content="네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은 경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데, 이 경우 SSL_read()와 read()의 차이점을 알아야한다." />
     
@@ -29,20 +29,20 @@
   
   <meta property="og:description" content="네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은 경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데, 이 경우 SSL_read()와 read()의 차이점을 알아야한다." />
   
-  <meta property="og:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
-  <meta property="og:url" content="http://localhost:4000/2009/10/21/SSL-read-vs-read.html" />
+  <meta property="og:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
+  <meta property="og:url" content="http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2009-10-21T14:48:00+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://localhost:4000/2009/10/21/SSL-read-vs-read.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1676207938087438300" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1676514676633700800" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
@@ -93,7 +93,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
+<a href="http://cwyang.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
 <meta name="naver-site-verification" content="c162847e57c5d356ce72f4c9b9e81bd5d57de196" />
 <!-- header end -->
 
@@ -108,17 +108,17 @@
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://localhost:4000/2009/10/21/SSL-read-vs-read.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;u=http://localhost:4000/2009/10/21/SSL-read-vs-read"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;u=http://cwyang.github.io/2009/10/21/SSL-read-vs-read"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;url=http://localhost:4000/2009/10/21/SSL-read-vs-read"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;url=http://cwyang.github.io/2009/10/21/SSL-read-vs-read"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -181,17 +181,17 @@
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://localhost:4000/2009/10/21/SSL-read-vs-read.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;u=http://localhost:4000/2009/10/21/SSL-read-vs-read"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;u=http://cwyang.github.io/2009/10/21/SSL-read-vs-read"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;url=http://localhost:4000/2009/10/21/SSL-read-vs-read"
+                <a class="icon-twitter" href="http://twitter.com/share?text=SSL_read%28%29%EC%99%80+read%28%29%EB%8A%94+%EA%B0%99%EC%9D%80%EA%B0%80%EC%9A%94%3F&amp;url=http://cwyang.github.io/2009/10/21/SSL-read-vs-read"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -224,7 +224,7 @@
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://localhost:4000/2009/10/21/SSL-read-vs-read.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -257,7 +257,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1676207938087438300"></script>
+<script type="text/javascript" src="/assets/js/index.js?1676514676633700800"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

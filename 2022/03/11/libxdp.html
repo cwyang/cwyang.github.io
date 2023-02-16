@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
     <meta name="twitter:title" content="eBPF와 libbpf" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+    <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
     <meta name="twitter:description"  content="eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹 포인트를 제공하고 있기 때문에 종래의 top, iostat, vmstat, perf등보다 상세한 시스템 모니터링을 위해 사용할 수 있다. 넷플릭스 SRE팀의 브렌단 그렉이 eBPF를 이용한 여러가지 도구를 만들어 발표한 이후 SR..." />
     
@@ -29,20 +29,20 @@
   
   <meta property="og:description" content="eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹 포인트를 제공하고 있기 때문에 종래의 top, iostat, vmstat, perf등보다 상세한 시스템 모니터링을 위해 사용할 수 있다. 넷플릭스 SRE팀의 브렌단 그렉이 eBPF를 이용한 여러가지 도구를 만들어 발표한 이후 SR..." />
   
-  <meta property="og:image" content="http://localhost:4000/assets/images/eBPF.png" />
-  <meta property="og:url" content="http://localhost:4000/2022/03/11/libxdp.html" />
+  <meta property="og:image" content="http://cwyang.github.io/assets/images/eBPF.png" />
+  <meta property="og:url" content="http://cwyang.github.io/2022/03/11/libxdp.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2022-03-11T09:36:43+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://localhost:4000/2022/03/11/libxdp.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2022/03/11/libxdp.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1676207938087438300" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1676514676633700800" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
@@ -93,7 +93,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
+<a href="http://cwyang.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
 <meta name="naver-site-verification" content="c162847e57c5d356ce72f4c9b9e81bd5d57de196" />
 <!-- header end -->
 
@@ -108,17 +108,17 @@
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://localhost:4000/2022/03/11/libxdp.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2022/03/11/libxdp.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=eBPF%EC%99%80+libbpf&amp;u=http://localhost:4000/2022/03/11/libxdp"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=eBPF%EC%99%80+libbpf&amp;u=http://cwyang.github.io/2022/03/11/libxdp"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=eBPF%EC%99%80+libbpf&amp;url=http://localhost:4000/2022/03/11/libxdp"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=eBPF%EC%99%80+libbpf&amp;url=http://cwyang.github.io/2022/03/11/libxdp"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -150,7 +150,7 @@
 <li class="toc-entry toc-h2"><a href="#참고">참고</a></li>
 </ul><h2 id="ebpf">
 <a class="anchor" href="#ebpf" aria-hidden="true"><span class="octicon octicon-link"></span></a>eBPF</h2>
-<p><img src="http://localhost:4000/assets/images/eBPF.png" alt="eBPF"></p>
+<p><img src="http://cwyang.github.io/assets/images/eBPF.png" alt="eBPF"></p>
 
 <p><a href="https://ebpf.io/">eBPF</a>는 커널의 여러 부분에서 프로그래밍을 쉽고 안전하게 할 수 있게 해 준다.</p>
 
@@ -234,17 +234,17 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://localhost:4000/2022/03/11/libxdp.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2022/03/11/libxdp.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=eBPF%EC%99%80+libbpf&amp;u=http://localhost:4000/2022/03/11/libxdp"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=eBPF%EC%99%80+libbpf&amp;u=http://cwyang.github.io/2022/03/11/libxdp"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=eBPF%EC%99%80+libbpf&amp;url=http://localhost:4000/2022/03/11/libxdp"
+                <a class="icon-twitter" href="http://twitter.com/share?text=eBPF%EC%99%80+libbpf&amp;url=http://cwyang.github.io/2022/03/11/libxdp"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -277,7 +277,7 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://localhost:4000/2022/03/11/libxdp.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2022/03/11/libxdp.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -310,7 +310,7 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1676207938087438300"></script>
+<script type="text/javascript" src="/assets/js/index.js?1676514676633700800"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

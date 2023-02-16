@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
     <meta name="twitter:title" content="Haskell의 폴드(Fold)란 무엇인가요" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
+    <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
     <meta name="twitter:description"  content="폴드는 reduce라고도 불리우는 연산자로써 리스트의 각 요소에 대해 연산을 수행하여 하나의 결과값을 반환한다. Map & reduce 처럼 map과 같이 흔히 일컬어 지는, 함수형 프로그래밍 방식의 좌청룡 우백호 중의 하나인데, 사실 map 역시도 폴드로 정의가 가능하므로 폴드가 좀 더 파워풀 한 연산자이다." />
     
@@ -29,20 +29,20 @@
   
   <meta property="og:description" content="폴드는 reduce라고도 불리우는 연산자로써 리스트의 각 요소에 대해 연산을 수행하여 하나의 결과값을 반환한다. Map & reduce 처럼 map과 같이 흔히 일컬어 지는, 함수형 프로그래밍 방식의 좌청룡 우백호 중의 하나인데, 사실 map 역시도 폴드로 정의가 가능하므로 폴드가 좀 더 파워풀 한 연산자이다." />
   
-  <meta property="og:image" content="http://localhost:4000/assets/images/cwyang2016.jpg" />
-  <meta property="og:url" content="http://localhost:4000/2009/02/17/what-is-fold-in-haskell.html" />
+  <meta property="og:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
+  <meta property="og:url" content="http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2009-02-17T09:39:00+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://localhost:4000/2009/02/17/what-is-fold-in-haskell.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1676207938087438300" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1676514676633700800" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
@@ -93,7 +93,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
+<a href="http://cwyang.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/cwyang2016.jpg)"></span></a>
 <meta name="naver-site-verification" content="c162847e57c5d356ce72f4c9b9e81bd5d57de196" />
 <!-- header end -->
 
@@ -108,17 +108,17 @@
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://localhost:4000/2009/02/17/what-is-fold-in-haskell.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;u=http://localhost:4000/2009/02/17/what-is-fold-in-haskell"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;u=http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;url=http://localhost:4000/2009/02/17/what-is-fold-in-haskell"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;url=http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -204,17 +204,17 @@
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://localhost:4000/2009/02/17/what-is-fold-in-haskell.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;u=http://localhost:4000/2009/02/17/what-is-fold-in-haskell"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;u=http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;url=http://localhost:4000/2009/02/17/what-is-fold-in-haskell"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Haskell%EC%9D%98+%ED%8F%B4%EB%93%9C%28Fold%29%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94&amp;url=http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -247,7 +247,7 @@
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://localhost:4000/2009/02/17/what-is-fold-in-haskell.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -280,7 +280,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1676207938087438300"></script>
+<script type="text/javascript" src="/assets/js/index.js?1676514676633700800"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
