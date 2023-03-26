@@ -6,9 +6,122 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 16 Feb 2023 11:41:51 +0900</pubDate>
-    <lastBuildDate>Thu, 16 Feb 2023 11:41:51 +0900</lastBuildDate>
-    <generator>Jekyll v3.9.2</generator>
+    <pubDate>Sun, 26 Mar 2023 09:47:08 +0900</pubDate>
+    <lastBuildDate>Sun, 26 Mar 2023 09:47:08 +0900</lastBuildDate>
+    <generator>Jekyll v3.9.3</generator>
+    
+      <item>
+        <title>Linux Settings in 2023</title>
+        <description>&lt;p&gt;잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다.
+랩탑에 설치하는 것은 처음이다. 윈도우와 최대한 유사하게 꾸며보기로 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;확인할-것들--개선필요사항&quot;&gt;확인할 것들 / 개선필요사항&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;BIOS sleep state: linux(s3) sleep vs windows modern sleep
+    &lt;ul&gt;
+      &lt;li&gt;modern standby가 더 신속하지만 power를 많이 먹는다고 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;기본-환경&quot;&gt;기본 환경&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Thinkpad X1 Carbon Gen9&lt;/li&gt;
+  &lt;li&gt;Mint Linux 21.1 (2022년 12월 출시)&lt;/li&gt;
+  &lt;li&gt;파티션: base(60G), swap(16G), home(100G)&lt;/li&gt;
+  &lt;li&gt;부트로더: on hdd. windows bootmgr와 별도로 구성&lt;/li&gt;
+  &lt;li&gt;한글: fcitx (기본)
+    &lt;ul&gt;
+      &lt;li&gt;한영전환: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+Space&lt;/code&gt;(기본), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+Space&lt;/code&gt; (추가)&lt;/li&gt;
+      &lt;li&gt;사용하다보면 힌트윈도우가 떠서 거슬릴때가 있는데, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+Alt+P&lt;/code&gt;로 비활성화 가능&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;블루투스, 사운드, 웹캠 기본 정상작동&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;핫키설정&quot;&gt;핫키설정&lt;/h3&gt;
+&lt;p&gt;Setting » Keyboard » Shortcut 에서 지정한다. 윈도우와 유사하게 설정&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Run Dialog: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super+R&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Home Folder: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super+E&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Web Browser: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super+C&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Terminal: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super+T&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Setting: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super+I&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Lock Device: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super+L&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Push Tile: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super+DIR&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Move Tile to Other Monitor: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shft+Super+DIR&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Screenshot to Clipboard: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+Super+S&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;ACPI성능프로파일: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fn+L&lt;/code&gt; (low) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fn+M&lt;/code&gt; (mid), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fn+H&lt;/code&gt; (high perf)
+    &lt;ul&gt;
+      &lt;li&gt;확인: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cat /sys/firmware/acpi/platform_profile&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;설치-앱&quot;&gt;설치 앱&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Google Chrome&lt;/li&gt;
+  &lt;li&gt;Virtual Box&lt;/li&gt;
+  &lt;li&gt;VS Code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;웹앱&quot;&gt;웹앱&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;특정 웹 브라우저를 앱과 같이 등록할 수가 있다. 웹 메신저등에 활용가능하다.
+실행중이 아니면 알림을 못받는 문제, 알림뱃지등이 없는 한계가 있지만 아쉬운대로 사용한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webapp-manager&lt;/code&gt; 등록후 taskbar고정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;가상환경&quot;&gt;가상환경&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;default vagrant 가 vbox 7.x을 지원하지 않아 vbox 6.0을 설치하여 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;네트워크&quot;&gt;네트워크&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;태스크바에 네트워크 추가
+    &lt;ul&gt;
+      &lt;li&gt;Setting » Startup Application » Add Network&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;VPN
+    &lt;ul&gt;
+      &lt;li&gt;openconnect vpn을 사용한다.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt install network-manager-openconnect network-manager-openconnect-gnome&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;설치 이후 Setting » Network » Add VPN&lt;/li&gt;
+      &lt;li&gt;vpn typ 설정 후 게이트웨이를 지정&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resolvectl --status&lt;/code&gt;로 vpn0에서 DNS 설정이 되어 있는지 확인한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;프린터&quot;&gt;프린터&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sindoh D400 linux driver
+    &lt;ul&gt;
+      &lt;li&gt;generic PCL6&lt;/li&gt;
+      &lt;li&gt;https://hamonikr.org/board_practice/4537#comment_73416&lt;/li&gt;
+      &lt;li&gt;https://acehyuk.tistory.com/351&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 26 Mar 2023 09:24:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/03/26/linux-settings.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/03/26/linux-settings.html</guid>
+        
+        <category>linux</category>
+        
+        <category>settings</category>
+        
+        <category>mint</category>
+        
+        <category>ubuntu</category>
+        
+        <category>thinkpad</category>
+        
+        
+      </item>
     
       <item>
         <title>Azure VNET 라우팅</title>
@@ -512,132 +625,6 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
         <category>git</category>
         
         <category>submodule</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>창업가의 답</title>
-        <description>&lt;p&gt;좋은책 추천받아 읽었습니다.&lt;/p&gt;
-
-&lt;p&gt;창업가의 답 - 성호철, 임경업&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/entrepreneurs.png&quot; alt=&quot;창업가의 답&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-라스트-무버가-1등이-된-당근마켓&quot;&gt;1. 라스트 무버가 1등이 된 당근마켓.&lt;/h2&gt;
-&lt;p&gt;목표는 맘카페 (지역 커뮤니티 마케팅), 교차로(지역광고).&lt;/p&gt;
-
-&lt;p&gt;2021.4 MAU 1500만. 국내 평균 침투율 60% (전체 타깃 대비 이용자수).&lt;/p&gt;
-
-&lt;p&gt;앱은 자주 쓰지 않으면 살아남지 못한다. 이용자는 앱을 자꾸 지운다.
-판교장터 앱은 2주만에 개발했다.&lt;/p&gt;
-
-&lt;h2 id=&quot;2-철저한-상업적-접근의-웹소설-래디쉬&quot;&gt;2. 철저한 상업적 접근의 웹소설 래디쉬&lt;/h2&gt;
-&lt;p&gt;사업을 하나 고르면 7년은 해야하는데 좋아하는 일을 해야한다. 비전이나 모티베이션이 없으면 버틸 수가 없다.&lt;/p&gt;
-
-&lt;p&gt;혁신은 너 자신이 하는 것이다. 자문 쇼핑을 다니지 말라.
-집단창작. A/B 테스트를 통한 구성.&lt;/p&gt;
-
-&lt;h2 id=&quot;3-전국의-사장님들을-위한-솔루션-한국신용데이터&quot;&gt;3. 전국의 사장님들을 위한 솔루션 한국신용데이터&lt;/h2&gt;
-&lt;p&gt;한국의 자영업자 절반, 생활밀접업종의 70%가 캐시노트의 가맹점.&lt;/p&gt;
-
-&lt;p&gt;현장 영업으로는 고객확보가 불가능했던 상황 → 페이스북광고 &amp;amp; 입소문.&lt;/p&gt;
-
-&lt;p&gt;자영업자의 pain point 카드매출정산관리에서 시작 데이터 분석을 통해 여러 pain point를 계속 해결 → 벌판에 깃발꽂음 → 그러나 아직도 “첫날”일 뿐.&lt;/p&gt;
-
-&lt;h2 id=&quot;4-카카오에는-창업dna가-있나&quot;&gt;4. 카카오에는 창업DNA가 있나?&lt;/h2&gt;
-&lt;p&gt;카카오에는 유난히 창업가가 많다.&lt;/p&gt;
-
-&lt;h2 id=&quot;5-예측가능한-중소가구배송-오늘의-집&quot;&gt;5. 예측가능한 중소가구배송 오늘의 집&lt;/h2&gt;
-&lt;p&gt;항상 10년뒤에도 변하지 않을 고객가치를 생각하라.&lt;/p&gt;
-
-&lt;p&gt;“어떻게 오늘에 이르렀나?” — “그만두지 않았을 뿐입니다”&lt;/p&gt;
-
-&lt;p&gt;“스타벅스커피를 한번 마셔봐야 자판기랑 차이를 알고 에어비앤비를 써봐야 좋은줄을 알게된다”&lt;/p&gt;
-
-&lt;p&gt;“스타트업은 망할때까지 망할 것 같다”&lt;/p&gt;
-
-&lt;p&gt;스타트업은 동료가 중요하다. — 너 내 동료가 돼라.&lt;/p&gt;
-
-&lt;h2 id=&quot;6-직장꿀팁-고품질-유료-텍스트-퍼블리&quot;&gt;6. 직장꿀팁 고품질 유료 텍스트 퍼블리&lt;/h2&gt;
-
-&lt;p&gt;스타트업은 가설을 실험하는 조직이다. 스타트업 비전에는 유효기간이 있다.&lt;/p&gt;
-
-&lt;p&gt;래디쉬에이어 이재웅이 창업권유 — “완전히 속았어요”&lt;/p&gt;
-
-&lt;p&gt;비타민에서 페인킬러로 피벗. 진통제는 안먹으면 죽는다.&lt;/p&gt;
-
-&lt;p&gt;오늘도 우리가 만드는 서비스가 누군가의 인생을 돕고 있구나. 사업할 맛이 나죠.&lt;/p&gt;
-
-&lt;h2 id=&quot;7-제주창업후-본토확장-캐플릭스&quot;&gt;7. 제주창업후 본토확장 캐플릭스&lt;/h2&gt;
-&lt;p&gt;렌트카 시장에서 중소기업을 모아 대기업과 경쟁시킨다. 야놀자가 모텔에 하듯.&lt;/p&gt;
-
-&lt;p&gt;공공과 연관된 아이템은 불확실성이 너무 크더라.&lt;/p&gt;
-
-&lt;p&gt;살기위해 노동했으며, 지식기업으로 탈피후 꾸준히 노력하였다.&lt;/p&gt;
-
-&lt;h2 id=&quot;8-김봉진은-왜-구주에-소액을-투자하는가&quot;&gt;8. 김봉진은 왜 구주에 소액을 투자하는가&lt;/h2&gt;
-&lt;p&gt;시리즈D 창업가도 전세자금때문에 고생하더라. 반지하에 사는 이유가 초심을 잃기 때문이 아니라 그냥 돈이 없어서더라.&lt;/p&gt;
-
-&lt;h2 id=&quot;9-완전한-기술중심의-문제-해결-뤼이드&quot;&gt;9. 완전한 기술중심의 문제 해결 뤼이드&lt;/h2&gt;
-&lt;p&gt;맞춤형 교육 어댑티브 러닝도 진짜 AI가 아니었다.&lt;/p&gt;
-
-&lt;p&gt;넷플릭스는 사용자의 상태가 천천히 변하나 교육은 학습에 따라 사용자의 상태가 수시로 바뀐다&lt;/p&gt;
-
-&lt;p&gt;퍼스트 무버가 살아남으면 강력해진다. 정주영. 돌아올 다리를 불태워라.&lt;/p&gt;
-
-&lt;h2 id=&quot;10-보이지-않는-고릴라와-독점의-법칙-런드리고&quot;&gt;10. 보이지 않는 고릴라와 독점의 법칙 런드리고&lt;/h2&gt;
-&lt;p&gt;도둑도 빨래는 안훔쳐가네? 비대면 빨래서비스가 가능하겠군!&lt;/p&gt;
-
-&lt;p&gt;세탁업의 본질? → 양방향 → 편의가 중요 → 신뢰가 더중요 → 업의 본질인 세탁을 내재화 → 원가가 문제 → 스케일과 기술로 접근 → 세탁비교로 고객에게 증명&lt;/p&gt;
-
-&lt;h2 id=&quot;11-러닝화의-나이키와-푸드트럭의-고피자&quot;&gt;11. 러닝화의 나이키와 푸드트럭의 고피자&lt;/h2&gt;
-&lt;p&gt;피자가 좋아서 피자사업을 했다&lt;/p&gt;
-
-&lt;p&gt;가설검증을 위해 푸드트럭에서 2년간 피자를 굽다.&lt;/p&gt;
-
-&lt;p&gt;스타트업에도 조직문화가 안맞아서 창업결정 (싱가포르에서 대학다님)&lt;/p&gt;
-
-&lt;p&gt;custom 도우 + 화덕개발 + AI 토핑 가이드 w/ 딥러닝 → 인건비 절감 + 균일한 맛 유지&lt;/p&gt;
-
-&lt;h2 id=&quot;12-우승-아니면-감독-교체라는-양키즈-스타일-창업-강남언니&quot;&gt;12. 우승 아니면 감독 교체라는 양키즈 스타일 창업 강남언니&lt;/h2&gt;
-&lt;p&gt;배는 항구에 정박해 있을때 가장 안전하지만 그게 배의 존재 이유는 아니야.&lt;/p&gt;
-
-&lt;p&gt;모두에게 사랑받으려다 누구에게도 사랑받지 못해. 꼭 필요한 사람에게 간절하게 잊혀지지 않는 서비스를 하자.&lt;/p&gt;
-
-&lt;p&gt;의사였지만, 암·고혈압·당뇨·갑상선에 차례로 도전했고 차례로 실패했다.&lt;/p&gt;
-
-&lt;p&gt;얼마나 큰 시장에 도전하는냐보다 우리가 풀수 있는 문제인가가 중요했다.&lt;/p&gt;
-
-&lt;p&gt;영원히 성장하고 싶다. j자 커브를 위해 자율과 몰두를 소중히하다.&lt;/p&gt;
-
-&lt;p&gt;10x 철학. 구글이 하는 일은 어떤것보다 10배 더 위대하고 나으고 빨라야한다.&lt;/p&gt;
-
-&lt;p&gt;5등이냐? 공부시간을 늘려라. 100등이냐? 자율과 몰두하라.&lt;/p&gt;
-
-&lt;h2 id=&quot;13-theres-no-silver-bullet-손에-피를-묻혀라-정육각&quot;&gt;13. There’s no silver bullet. 손에 피를 묻혀라 정육각&lt;/h2&gt;
-&lt;p&gt;세절과 배송을 묶어 맛을 지킨다.&lt;/p&gt;
-
-&lt;p&gt;정육업계의 Zara.&lt;/p&gt;
-
-&lt;p&gt;네이버 스마트스토어도 농민이 쓰기는 불편해.&lt;/p&gt;
-
-&lt;h2 id=&quot;14-주변에-한-명쯤-있는-박식한-친구-뉴닉&quot;&gt;14. 주변에 한 명쯤 있는 박식한 친구 뉴닉&lt;/h2&gt;
-&lt;p&gt;요즘 세대들은 뉴스도 그냥 콘텐츠. 텍스트를 따라가기는 어렵다. 관심사도 파편화. 일회성소비.&lt;/p&gt;
-
-&lt;p&gt;젊은 세대들에게 많이 노출이 된 이슈.&lt;/p&gt;
-
-&lt;h2 id=&quot;에필로그&quot;&gt;에필로그.&lt;/h2&gt;
-&lt;p&gt;어디서 어떻게 만나더라도 창업 멤버들은 생의 한 순간을 같이 불태웠던 동료라는 것을.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 15 Feb 2022 01:53:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</guid>
-        
-        <category>blog</category>
-        
-        <category>book</category>
-        
-        <category>enterpreneurs</category>
         
         
       </item>

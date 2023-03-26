@@ -6,9 +6,32 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 16 Feb 2023 11:41:51 +0900</pubDate>
-    <lastBuildDate>Thu, 16 Feb 2023 11:41:51 +0900</lastBuildDate>
-    <generator>Jekyll v3.9.2</generator>
+    <pubDate>Sun, 26 Mar 2023 09:47:08 +0900</pubDate>
+    <lastBuildDate>Sun, 26 Mar 2023 09:47:08 +0900</lastBuildDate>
+    <generator>Jekyll v3.9.3</generator>
+    
+      <item>
+        <title>Linux Settings in 2023</title>
+        <description>&lt;p&gt;잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다.
+랩탑에 설치하는 것은 처음이다. 윈도우와 최대한 유사하게 꾸며보기로 한다.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 26 Mar 2023 09:24:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/03/26/linux-settings.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/03/26/linux-settings.html</guid>
+        
+        <category>linux</category>
+        
+        <category>settings</category>
+        
+        <category>mint</category>
+        
+        <category>ubuntu</category>
+        
+        <category>thinkpad</category>
+        
+        
+      </item>
     
       <item>
         <title>Azure VNET 라우팅</title>
@@ -213,22 +236,6 @@ VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여�
         <category>git</category>
         
         <category>submodule</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>창업가의 답</title>
-        <description>스타트업은 망할때까지 망할 것 같다.. 스타트업은 동료가 중요하다. 너 내 동료가 돼라.</description>
-        <pubDate>Tue, 15 Feb 2022 01:53:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2022/02/15/some-enterpreneurs.html</guid>
-        
-        <category>blog</category>
-        
-        <category>book</category>
-        
-        <category>enterpreneurs</category>
         
         
       </item>
