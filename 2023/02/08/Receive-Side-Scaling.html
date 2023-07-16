@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>디파이의 위험</title>
-  <meta name="description" content="2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고 신년 첫날 알고랜드 디파이 LP풀에 $30를 예치해보았는데..." />
+  <title>Azure VNET 라우팅</title>
+  <meta name="description" content="RSS에 대해서 다시 자료를 보고 있는데10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.아 세월의 무상함이여.." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,27 +17,27 @@
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
-    <meta name="twitter:title" content="디파이의 위험" />
+    <meta name="twitter:title" content="Azure VNET 라우팅" />
     <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
-    <meta name="twitter:description"  content="2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고 신년 첫날 알고랜드 디파이 LP풀에 $30를 예치해보았는데..." />
+    <meta name="twitter:description"  content="RSS에 대해서 다시 자료를 보고 있는데10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.아 세월의 무상함이여.." />
     
   
   
   <meta property="og:site_name" content="양철웅의 DX 이야기" />
-  <meta property="og:title" content="디파이의 위험"/>
+  <meta property="og:title" content="Azure VNET 라우팅"/>
   
-  <meta property="og:description" content="2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고 신년 첫날 알고랜드 디파이 LP풀에 $30를 예치해보았는데..." />
+  <meta property="og:description" content="RSS에 대해서 다시 자료를 보고 있는데10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.아 세월의 무상함이여.." />
   
-  <meta property="og:image" content="http://cwyang.github.io/assets/images/tinyman3.jpg" />
-  <meta property="og:url" content="http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html" />
+  <meta property="og:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
+  <meta property="og:url" content="http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html" />
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2022-01-03T15:45:00+09:00">
+  <meta property="article:published_time" content="2023-02-08T20:00:00+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -103,22 +103,22 @@
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">
-              디파이의 위험
+              Azure VNET 라우팅
               
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%EB%94%94%ED%8C%8C%EC%9D%B4%EC%9D%98+%EC%9C%84%ED%97%98&amp;u=http://cwyang.github.io/2022/01/03/tinyman-gets-attack"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;u=http://cwyang.github.io/2023/02/08/Receive-Side-Scaling"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=%EB%94%94%ED%8C%8C%EC%9D%B4%EC%9D%98+%EC%9C%84%ED%97%98&amp;url=http://cwyang.github.io/2022/01/03/tinyman-gets-attack"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;url=http://cwyang.github.io/2023/02/08/Receive-Side-Scaling"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -129,7 +129,7 @@
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
               on
-              <time datetime="2022-01-03T15:45:00+09:00">03 Jan 2022</time>
+              <time datetime="2023-02-08T20:00:00+09:00">08 Feb 2023</time>
             </div>
           </div>
         </div>
@@ -142,56 +142,60 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <ul id="toc" class="section-nav">
-</ul><p>2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고
-신년 첫날 알고랜드 디파이 서비스인 <a href="https://tinyman.org">tinyman.org</a>의 LP풀에 $30를 예치해보았는데…</p>
+          <p>RSS에 대해서 다시 자료를 보고 있는데
+<a href="/2010/06/10/multiqueue-nic.html">10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.</a>
+아 세월의 무상함이여..</p>
 
-<p>그 다음날인 1월 2일 smart contract exploit 공격이 있었다.
-대부분의 LP풀은 자산 가격이 다른 두 개의 토큰을 쌍으로 예치하는 방식인데,
-smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰을 인출하는 게 아니고
-같은 종류의 토큰을 인출할 수 있었다고 한다.</p>
+<p>각설하고, 여러 자료들을 바탕으로 RSS에 대해서 정리한다.</p>
+<ul>
+  <li><a href="https://www.kernel.org/doc/Documentation/networking/scaling.txt">Scaling in the Linux Networking Stack</a></li>
+</ul>
 
-<p>예를 들면 100원짜리와 1원짜리를 합쳐서 101원씩 인출해야하는데
-100원짜리 2개씩 인출할 수 있었던 것 같다.
-<img src="http://cwyang.github.io/assets/images/tinyman3.jpg" alt="알립니다: 망했어요. 털렸어요."></p>
+<h2 id="rss">RSS</h2>
 
-<p>그 결과로 LP pool의 대부분이 탈취되어,
-나의 자산도 <strong>$30</strong>에서 <strong>$0.16</strong>으로 <strong>1/200</strong>토막이 나버렸다.
-<img src="http://cwyang.github.io/assets/images/tinyman1.jpg" alt="$60이 되라고 $30을 넣었는데 (나 부자되나..)">
-<img src="http://cwyang.github.io/assets/images/tinyman2.jpg" alt="$0.16이 되어 1/200토막이 나버렸다. (이게뭐야!!!)"></p>
+<p>패킷스트림을 분산하지 않고 처리하기는 어려운 시대가 되었다.
+네트워크 인터페이스 카드(NIC)이 패킷을 메모리로 전달할 때,
+큐를 여러개 두고 패킷을 분산하되 동일한 플로우에 대해서는 동일한 큐로 전달한다.
+이를 Receive Side Scaling (RSS)라고 지칭한다.</p>
 
-<p>블럭체인/NFT는 자산이 움직이는 세계이고, 이 세계에서는 사이버 보안이 매우 중요하다.. 
-는 것을 온 몸 바쳐서 경험한 새해 벽두.</p>
+<p>보편적인 하드웨어 구현방법은 4-tuple (src/dst IP/port)에 대하여 128bucket 해시를 적용하고
+해시 버켓에 대응되는 큐로 패킷을 전송하는 것이다.
+주로 Toeplitz 해시값의 아래 7bit를 사용한다.</p>
+
+<p>지능형 NIC은 단순 해시가 아닌 계산에 의한 큐 지정 기능을 지원하기도 한다.
+<code class="language-plaintext highlighter-rouge">ethtool --config-ntuple</code> 을 참조한다.</p>
+
+<p>Linux 커널에서 드라이버 구동시 num_queue를 지정할 수 있다.
+CPU, 아니면 최소한 각 메모리 도메인마다 하나의 rx queue를 설정하는 것이 보통이다.</p>
+
+<h2 id="vpp">VPP</h2>
+
 
           <p class="tags">
             
-              <a href="/tags#blog-ref">blog</a>
+              <a href="/tags#rss-ref">RSS</a>
             
-              <a href="/tags#defi-ref">defi</a>
+              <a href="/tags#receive-side-scaling-ref">Receive Side Scaling</a>
             
-              <a href="/tags#algorand-ref">algorand</a>
+              <a href="/tags#performance-ref">performance</a>
             
-              <a href="/tags#tinyman-ref">tinyman</a>
-            
-              <a href="/tags#exploit-ref">exploit</a>
-            
-              <a href="/tags#security-ref">security</a>
+              <a href="/tags#multiqueue-ref">multiqueue</a>
             
           </p>
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%EB%94%94%ED%8C%8C%EC%9D%B4%EC%9D%98+%EC%9C%84%ED%97%98&amp;u=http://cwyang.github.io/2022/01/03/tinyman-gets-attack"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;u=http://cwyang.github.io/2023/02/08/Receive-Side-Scaling"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%EB%94%94%ED%8C%8C%EC%9D%B4%EC%9D%98+%EC%9C%84%ED%97%98&amp;url=http://cwyang.github.io/2022/01/03/tinyman-gets-attack"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Azure+VNET+%EB%9D%BC%EC%9A%B0%ED%8C%85&amp;url=http://cwyang.github.io/2023/02/08/Receive-Side-Scaling"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -207,7 +211,7 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
               <h4>양철웅</h4>
               <p class="bio">Chul-Woong Yang</p>
               <hr>
-              <p class="published">Published <time datetime="2022-01-03 15:45">03 Jan 2022</time></p>
+              <p class="published">Published <time datetime="2023-02-08 20:00">08 Feb 2023</time></p>
             </section>
           </div>
 
@@ -224,7 +228,7 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -235,18 +239,18 @@ smart contract의 헛점을 이용하여 LP풀에서 서로 다른 쌍의 토큰
 
     <aside class="read-next">
       
-        <a class="read-next-story no-cover" href="/2022/01/05/nft_metamask.html">
+        <a class="read-next-story no-cover" href="/2023/03/26/linux-settings.html">
           <section class="post">
-            <h2>블럭체인 지갑과 NFT</h2>
-            <p>메타마스크는 브라우저캐시에 사용자의 비밀키를 패스워드로 암호화 하여 저장한다. 사용자가 메타마스크를 사용함에 있어서 관리해야하는 정보는 두...</p>
+            <h2>Linux Settings in 2023</h2>
+            <p>잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다. 랩탑에 설치하는 것은 처음이다. 윈도우와 최대한 유사하게 꾸며보기로...</p>
           </section>
         </a>
       
       
-        <a class="read-next-story prev no-cover" href="/2021/12/14/cve-2021-44228.html">
+        <a class="read-next-story prev no-cover" href="/2023/02/08/Azure-VNET-routing.html">
           <section class="post">
-            <h2>이번 Log4J 자바취약점 요약</h2>
-            <p>이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다.</p>
+            <h2>Azure VNET 라우팅</h2>
+            <p>Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다. AWS의 VPC (Virtual Private Cloud)에 대응한다. VNET에 할당된 주소범위(CIDR)를...</p>
           </section>
         </a>
       

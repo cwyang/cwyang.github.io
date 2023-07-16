@@ -6,9 +6,9 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 26 Mar 2023 09:47:08 +0900</pubDate>
-    <lastBuildDate>Sun, 26 Mar 2023 09:47:08 +0900</lastBuildDate>
-    <generator>Jekyll v3.9.3</generator>
+    <pubDate>Sun, 16 Jul 2023 10:30:36 +0900</pubDate>
+    <lastBuildDate>Sun, 16 Jul 2023 10:30:36 +0900</lastBuildDate>
+    <generator>Jekyll v3.9.2</generator>
     
       <item>
         <title>Linux Settings in 2023</title>
@@ -119,6 +119,52 @@
         <category>ubuntu</category>
         
         <category>thinkpad</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Azure VNET 라우팅</title>
+        <description>&lt;p&gt;RSS에 대해서 다시 자료를 보고 있는데
+&lt;a href=&quot;/2010/06/10/multiqueue-nic.html&quot;&gt;10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.&lt;/a&gt;
+아 세월의 무상함이여..&lt;/p&gt;
+
+&lt;p&gt;각설하고, 여러 자료들을 바탕으로 RSS에 대해서 정리한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kernel.org/doc/Documentation/networking/scaling.txt&quot;&gt;Scaling in the Linux Networking Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;rss&quot;&gt;RSS&lt;/h2&gt;
+
+&lt;p&gt;패킷스트림을 분산하지 않고 처리하기는 어려운 시대가 되었다.
+네트워크 인터페이스 카드(NIC)이 패킷을 메모리로 전달할 때,
+큐를 여러개 두고 패킷을 분산하되 동일한 플로우에 대해서는 동일한 큐로 전달한다.
+이를 Receive Side Scaling (RSS)라고 지칭한다.&lt;/p&gt;
+
+&lt;p&gt;보편적인 하드웨어 구현방법은 4-tuple (src/dst IP/port)에 대하여 128bucket 해시를 적용하고
+해시 버켓에 대응되는 큐로 패킷을 전송하는 것이다.
+주로 Toeplitz 해시값의 아래 7bit를 사용한다.&lt;/p&gt;
+
+&lt;p&gt;지능형 NIC은 단순 해시가 아닌 계산에 의한 큐 지정 기능을 지원하기도 한다.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ethtool --config-ntuple&lt;/code&gt; 을 참조한다.&lt;/p&gt;
+
+&lt;p&gt;Linux 커널에서 드라이버 구동시 num_queue를 지정할 수 있다.
+CPU, 아니면 최소한 각 메모리 도메인마다 하나의 rx queue를 설정하는 것이 보통이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;vpp&quot;&gt;VPP&lt;/h2&gt;
+
+</description>
+        <pubDate>Wed, 08 Feb 2023 20:00:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html</guid>
+        
+        <category>RSS</category>
+        
+        <category>Receive Side Scaling</category>
+        
+        <category>performance</category>
+        
+        <category>multiqueue</category>
         
         
       </item>
@@ -601,30 +647,6 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
         <category>libsegfault</category>
         
         <category>sentry</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>git submodule</title>
-        <description>&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parent&lt;/code&gt; project에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;child&lt;/code&gt; project를 git submodule로 사용할 때,&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;child&lt;/code&gt;의 hash를 바꾼 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parent&lt;/code&gt;를 체크아웃해도 로컬 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;child&lt;/code&gt;는 변하지 않는다.&lt;/p&gt;
-
-&lt;p&gt;이 때에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git submodule init&lt;/code&gt;를 실행하여 로컬의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;child&lt;/code&gt;가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parent&lt;/code&gt;에서 요구하는 버젼으로 업데이트한 후 사용하면 됨.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 04 Mar 2022 15:54:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2022/03/04/git-submodule.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2022/03/04/git-submodule.html</guid>
-        
-        <category>blog</category>
-        
-        <category>diary</category>
-        
-        <category>tip</category>
-        
-        <category>git</category>
-        
-        <category>submodule</category>
         
         
       </item>
