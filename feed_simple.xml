@@ -6,9 +6,31 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 16 Jul 2023 10:30:36 +0900</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2023 10:30:36 +0900</lastBuildDate>
+    <pubDate>Sun, 16 Jul 2023 19:32:07 +0900</pubDate>
+    <lastBuildDate>Sun, 16 Jul 2023 19:32:07 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>UDP 에코 서버</title>
+        <description>UDP는 connectionless이기에 TCP와 달리 데이터 주고받을 때에 고려해야 할 다음과 같은 경우들이 있다. 보낸 요청에 대해서 다른 IP로부터 응답이 돌아오는 경우, 서버가 IP주소를 여러개 가지고 있을 때, 받은 요청에 대해 응답을 할 IP를 결정하는 경우</description>
+        <pubDate>Sun, 16 Jul 2023 19:02:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2023/07/16/UDP-echo-server.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2023/07/16/UDP-echo-server.html</guid>
+        
+        <category>Unix</category>
+        
+        <category>socket</category>
+        
+        <category>UDP</category>
+        
+        <category>echo server</category>
+        
+        <category>python</category>
+        
+        <category>IP_PKTINFO</category>
+        
+        
+      </item>
     
       <item>
         <title>Linux Settings in 2023</title>
@@ -209,32 +231,6 @@ VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여�
         <category>xdp</category>
         
         <category>libbpf</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>크래시 덤프 수집</title>
-        <description>&lt;p&gt;만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,&lt;br /&gt;
-일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.&lt;br /&gt;
-프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 04 Mar 2022 16:14:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2022/03/04/collecting-crash-dump.html</guid>
-        
-        <category>blog</category>
-        
-        <category>diary</category>
-        
-        <category>tip</category>
-        
-        <category>crashdump</category>
-        
-        <category>libsegfault</category>
-        
-        <category>sentry</category>
         
         
       </item>
