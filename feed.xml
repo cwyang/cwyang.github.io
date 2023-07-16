@@ -6,8 +6,8 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 16 Jul 2023 19:32:07 +0900</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2023 19:32:07 +0900</lastBuildDate>
+    <pubDate>Sun, 16 Jul 2023 20:18:43 +0900</pubDate>
+    <lastBuildDate>Sun, 16 Jul 2023 20:18:43 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -235,52 +235,6 @@ UDP의 경우 자신이 여러 IP주소를 가지고 있고, 모든 IP 주소를
         <category>ubuntu</category>
         
         <category>thinkpad</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Azure VNET 라우팅</title>
-        <description>&lt;p&gt;RSS에 대해서 다시 자료를 보고 있는데
-&lt;a href=&quot;/2010/06/10/multiqueue-nic.html&quot;&gt;10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.&lt;/a&gt;
-아 세월의 무상함이여..&lt;/p&gt;
-
-&lt;p&gt;각설하고, 여러 자료들을 바탕으로 RSS에 대해서 정리한다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.kernel.org/doc/Documentation/networking/scaling.txt&quot;&gt;Scaling in the Linux Networking Stack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;rss&quot;&gt;RSS&lt;/h2&gt;
-
-&lt;p&gt;패킷스트림을 분산하지 않고 처리하기는 어려운 시대가 되었다.
-네트워크 인터페이스 카드(NIC)이 패킷을 메모리로 전달할 때,
-큐를 여러개 두고 패킷을 분산하되 동일한 플로우에 대해서는 동일한 큐로 전달한다.
-이를 Receive Side Scaling (RSS)라고 지칭한다.&lt;/p&gt;
-
-&lt;p&gt;보편적인 하드웨어 구현방법은 4-tuple (src/dst IP/port)에 대하여 128bucket 해시를 적용하고
-해시 버켓에 대응되는 큐로 패킷을 전송하는 것이다.
-주로 Toeplitz 해시값의 아래 7bit를 사용한다.&lt;/p&gt;
-
-&lt;p&gt;지능형 NIC은 단순 해시가 아닌 계산에 의한 큐 지정 기능을 지원하기도 한다.
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ethtool --config-ntuple&lt;/code&gt; 을 참조한다.&lt;/p&gt;
-
-&lt;p&gt;Linux 커널에서 드라이버 구동시 num_queue를 지정할 수 있다.
-CPU, 아니면 최소한 각 메모리 도메인마다 하나의 rx queue를 설정하는 것이 보통이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;vpp&quot;&gt;VPP&lt;/h2&gt;
-
-</description>
-        <pubDate>Wed, 08 Feb 2023 20:00:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2023/02/08/Receive-Side-Scaling.html</guid>
-        
-        <category>RSS</category>
-        
-        <category>Receive Side Scaling</category>
-        
-        <category>performance</category>
-        
-        <category>multiqueue</category>
         
         
       </item>
@@ -711,6 +665,58 @@ libbpf는 해당 정보를 이용해서 타겟 호스트의 커널에 맞도로 
         <category>xdp</category>
         
         <category>libbpf</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>크래시 덤프 수집</title>
+        <description>&lt;p&gt;만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,&lt;br /&gt;
+일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.&lt;br /&gt;
+프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..&lt;/p&gt;
+
+&lt;h1 id=&quot;크래시덤프coredump-확보-방안&quot;&gt;크래시덤프(coredump) 확보 방안&lt;/h1&gt;
+
+&lt;p&gt;아래 내용은 C binary 기준이다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ulimit -c unlimted&lt;br /&gt;
+로 코어를 생성을 활성화 한 이후 장애가 나면 코어를 보내주거나 해당 기계에 접속해서 gdb를 이용하여 크래시 덤프를 분석한다.&lt;/li&gt;
+  &lt;li&gt;libsegfault.so&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;whereis libSegFault.so&lt;/code&gt; 하면 gcc toolchain에 동봉된 libsegfault.so의 위치를 알 수 있다.&lt;br /&gt;
+프로그램을 실행시킬 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env SEGFAULT_SIGNALS=&quot;abrt segv&quot; LD_PRELOAD=${LIBSEGV_LOC} ./test&lt;/code&gt; 과 같이 하면 장애가 발생할 경우 stderr로 stack trace가 출력된다. 이를 전달받아 크래시 상황을 분석한다.&lt;/li&gt;
+  &lt;li&gt;sentry와 같은 크래시 덤프 수집 서비스를 사용&lt;br /&gt;
+&lt;a href=&quot;https://sentry.io/&quot;&gt;https://sentry.io/&lt;/a&gt; 와 같이 크래시 및 성능 분석 서비스를 제공하는 서비스를 이용한다.&lt;br /&gt;
+아래와 같이 sdk의 api들을 호출하고 프로그램을 실행하면 장애 발생 내용을 대시보드에서 모아서 볼 수 있고 유료 플랜을 이용하면 slack notification를 받을 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;테스트 소스: &lt;a href=&quot;https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump&quot;&gt;https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    sentry_options_t *options = sentry_options_new();
+    sentry_options_set_release(options, &quot;my-test-project@0.0.1&quot;);
+    sentry_options_set_symbolize_stacktraces(options, 1);
+    sentry_options_set_environment(options, &quot;development&quot;);
+    sentry_options_set_release(options, &quot;test-example-release&quot;);
+    sentry_options_add_attachment(options, &quot;./Makefile&quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.kakaocdn.net/dn/wYEPf/btruXY7cohH/HXrErpKExKzT7Naq9sFYFk/img.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 04 Mar 2022 16:14:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2022/03/04/collecting-crash-dump.html</guid>
+        
+        <category>blog</category>
+        
+        <category>diary</category>
+        
+        <category>tip</category>
+        
+        <category>crashdump</category>
+        
+        <category>libsegfault</category>
+        
+        <category>sentry</category>
         
         
       </item>
