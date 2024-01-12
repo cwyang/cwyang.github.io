@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>크래시 덤프 수집</title>
-  <meta name="description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+  <title>gRPC 들여다보기</title>
+  <meta name="description" content="그동안 데이터플레인 개발만 하고 있었는데 이제 컨트롤플레인 개발을 할 필요가 있어서 gRPC에 대해서 들여다보았다. 꼭 gRPC를 사용하겠다는 결정을 하기는 이르지만 etcd 등 클라우드 네이티브 환경에서는 gRPC를 많이 사용하니까 `gRPC가 바이너리, 양방향 통신을 지원하는 언어 무관 RPC 프레임워크다` 라는 것 보다는 조금 자세히 알 필요가 있다." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,27 +17,27 @@
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
-    <meta name="twitter:title" content="크래시 덤프 수집" />
+    <meta name="twitter:title" content="gRPC 들여다보기" />
     <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
-    <meta name="twitter:description"  content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+    <meta name="twitter:description"  content="그동안 데이터플레인 개발만 하고 있었는데 이제 컨트롤플레인 개발을 할 필요가 있어서 gRPC에 대해서 들여다보았다. 꼭 gRPC를 사용하겠다는 결정을 하기는 이르지만 etcd 등 클라우드 네이티브 환경에서는 gRPC를 많이 사용하니까 `gRPC가 바이너리, 양방향 통신을 지원하는 언어 무관 RPC 프레임워크다` 라는 것 보다는 조금 자세히 알 필요가 있다." />
     
   
   
   <meta property="og:site_name" content="양철웅의 DX 이야기" />
-  <meta property="og:title" content="크래시 덤프 수집"/>
+  <meta property="og:title" content="gRPC 들여다보기"/>
   
-  <meta property="og:description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+  <meta property="og:description" content="그동안 데이터플레인 개발만 하고 있었는데 이제 컨트롤플레인 개발을 할 필요가 있어서 gRPC에 대해서 들여다보았다. 꼭 gRPC를 사용하겠다는 결정을 하기는 이르지만 etcd 등 클라우드 네이티브 환경에서는 gRPC를 많이 사용하니까 `gRPC가 바이너리, 양방향 통신을 지원하는 언어 무관 RPC 프레임워크다` 라는 것 보다는 조금 자세히 알 필요가 있다." />
   
   <meta property="og:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
-  <meta property="og:url" content="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" />
+  <meta property="og:url" content="http://cwyang.github.io/2023/11/12/grpc.html" />
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2022-03-04T16:14:00+09:00">
+  <meta property="article:published_time" content="2023-11-12T10:20:00+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2023/11/12/grpc.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -103,22 +103,22 @@
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">
-              크래시 덤프 수집
+              gRPC 들여다보기
               
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2023/11/12/grpc.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;u=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=gRPC+%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0&amp;u=http://cwyang.github.io/2023/11/12/grpc"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;url=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=gRPC+%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0&amp;url=http://cwyang.github.io/2023/11/12/grpc"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -129,7 +129,7 @@
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
               on
-              <time datetime="2022-03-04T16:14:00+09:00">04 Mar 2022</time>
+              <time datetime="2023-11-12T10:20:00+09:00">12 Nov 2023</time>
             </div>
           </div>
         </div>
@@ -142,69 +142,32 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#크래시덤프coredump-확보-방안">크래시덤프(coredump) 확보 방안</a></li>
-</ul><p>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,<br>
-일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.<br>
-프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..</p>
+          <p>그동안 데이터플레인 개발만 하고 있었는데
+이제 컨트롤플레인 개발을 할 필요가 있어서 gRPC에 대해서 들여다보았다.
+꼭 gRPC를 사용하겠다는 결정을 하기는 이르지만 etcd 등 클라우드 네이티브
+환경에서는 gRPC를 많이 사용하니까 <code class="language-plaintext highlighter-rouge">gRPC가 바이너리, 양방향 통신을 지원하는
+언어 무관 RPC 프레임워크다</code> 라는 것 보다는 조금 자세히 알 필요가 있다.</p>
 
-<h1 id="크래시덤프coredump-확보-방안">
-<a class="anchor" href="#%ED%81%AC%EB%9E%98%EC%8B%9C%EB%8D%A4%ED%94%84coredump-%ED%99%95%EB%B3%B4-%EB%B0%A9%EC%95%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>크래시덤프(coredump) 확보 방안</h1>
-
-<p>아래 내용은 C binary 기준이다.</p>
-
-<ol>
-  <li>ulimit -c unlimted<br>
-로 코어를 생성을 활성화 한 이후 장애가 나면 코어를 보내주거나 해당 기계에 접속해서 gdb를 이용하여 크래시 덤프를 분석한다.</li>
-  <li>libsegfault.so<br>
-<code class="language-plaintext highlighter-rouge">whereis libSegFault.so</code> 하면 gcc toolchain에 동봉된 libsegfault.so의 위치를 알 수 있다.<br>
-프로그램을 실행시킬 때 <code class="language-plaintext highlighter-rouge">env SEGFAULT_SIGNALS="abrt segv" LD_PRELOAD=${LIBSEGV_LOC} ./test</code> 과 같이 하면 장애가 발생할 경우 stderr로 stack trace가 출력된다. 이를 전달받아 크래시 상황을 분석한다.</li>
-  <li>sentry와 같은 크래시 덤프 수집 서비스를 사용<br>
-<a href="https://sentry.io/">https://sentry.io/</a> 와 같이 크래시 및 성능 분석 서비스를 제공하는 서비스를 이용한다.<br>
-아래와 같이 sdk의 api들을 호출하고 프로그램을 실행하면 장애 발생 내용을 대시보드에서 모아서 볼 수 있고 유료 플랜을 이용하면 slack notification를 받을 수 있다.</li>
-</ol>
-
-<p>테스트 소스: <a href="https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump">https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump</a></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sentry_options_t *options = sentry_options_new();
-    sentry_options_set_release(options, "my-test-project@0.0.1");
-    sentry_options_set_symbolize_stacktraces(options, 1);
-    sentry_options_set_environment(options, "development");
-    sentry_options_set_release(options, "test-example-release");
-    sentry_options_add_attachment(options, "./Makefile");
-</code></pre></div></div>
-
-<p><img src="https://blog.kakaocdn.net/dn/wYEPf/btruXY7cohH/HXrErpKExKzT7Naq9sFYFk/img.png" alt=""></p>
 
           <p class="tags">
             
-              <a href="/tags#blog-ref">blog</a>
-            
-              <a href="/tags#diary-ref">diary</a>
-            
-              <a href="/tags#tip-ref">tip</a>
-            
-              <a href="/tags#crashdump-ref">crashdump</a>
-            
-              <a href="/tags#libsegfault-ref">libsegfault</a>
-            
-              <a href="/tags#sentry-ref">sentry</a>
+              <a href="/tags#grpc-ref">gRPC</a>
             
           </p>
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2023/11/12/grpc.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;u=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=gRPC+%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0&amp;u=http://cwyang.github.io/2023/11/12/grpc"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;url=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                <a class="icon-twitter" href="http://twitter.com/share?text=gRPC+%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0&amp;url=http://cwyang.github.io/2023/11/12/grpc"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -220,7 +183,7 @@
               <h4>양철웅</h4>
               <p class="bio">Chul-Woong Yang</p>
               <hr>
-              <p class="published">Published <time datetime="2022-03-04 16:14">04 Mar 2022</time></p>
+              <p class="published">Published <time datetime="2023-11-12 10:20">12 Nov 2023</time></p>
             </section>
           </div>
 
@@ -237,7 +200,7 @@
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2023/11/12/grpc.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -248,18 +211,21 @@
 
     <aside class="read-next">
       
-        <a class="read-next-story no-cover" href="/2022/03/11/libxdp.html">
+        <a class="read-next-story no-cover" href="/2024/01/12/http2-rapid-reset.html">
           <section class="post">
-            <h2>eBPF와 libbpf</h2>
-            <p>eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹...</p>
+            <h2>HTTP/2 Rapid Reset DoS공격</h2>
+            <p>HTTP/2 프로토콜을 이용한 서비스거부공격(DoS)에 대한 대처가 필요하다.</p>
           </section>
         </a>
       
       
-        <a class="read-next-story prev no-cover" href="/2022/03/04/git-submodule.html">
+        <a class="read-next-story prev no-cover" href="/2023/09/04/linux-routing.html">
           <section class="post">
-            <h2>git submodule</h2>
-            <p>parent project에서 child project를 git submodule로 사용할 때, child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는...</p>
+            <h2>Linux 라우팅</h2>
+            <p>라우팅은 패킷을 전달할때 패킷을 내보낼때
+어느 인터페이스로 어느 Next-hop 주소로 보낼지를 결정한다.
+
+</p>
           </section>
         </a>
       

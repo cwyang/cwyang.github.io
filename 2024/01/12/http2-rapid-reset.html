@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>크래시 덤프 수집</title>
-  <meta name="description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+  <title>HTTP/2 Rapid Reset DoS공격</title>
+  <meta name="description" content="HTTP/2 프로토콜을 이용한 서비스거부공격(DoS)에 대한 대처가 필요하다." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,27 +17,27 @@
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@cwyang" />
-    <meta name="twitter:title" content="크래시 덤프 수집" />
+    <meta name="twitter:title" content="HTTP/2 Rapid Reset DoS공격" />
     <meta name="twitter:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
     
-    <meta name="twitter:description"  content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+    <meta name="twitter:description"  content="HTTP/2 프로토콜을 이용한 서비스거부공격(DoS)에 대한 대처가 필요하다." />
     
   
   
   <meta property="og:site_name" content="양철웅의 DX 이야기" />
-  <meta property="og:title" content="크래시 덤프 수집"/>
+  <meta property="og:title" content="HTTP/2 Rapid Reset DoS공격"/>
   
-  <meta property="og:description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가.." />
+  <meta property="og:description" content="HTTP/2 프로토콜을 이용한 서비스거부공격(DoS)에 대한 대처가 필요하다." />
   
   <meta property="og:image" content="http://cwyang.github.io/assets/images/cwyang2016.jpg" />
-  <meta property="og:url" content="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" />
+  <meta property="og:url" content="http://cwyang.github.io/2024/01/12/http2-rapid-reset.html" />
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2022-03-04T16:14:00+09:00">
+  <meta property="article:published_time" content="2024-01-12T19:00:03+09:00">
 
   <meta property="fb:app_id" content="596017104565491" />
   <meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
 
-  <link rel="canonical" href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html"/>
+  <link rel="canonical" href="http://cwyang.github.io/2024/01/12/http2-rapid-reset.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -103,22 +103,22 @@
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">
-              크래시 덤프 수집
+              HTTP/2 Rapid Reset DoS공격
               
             </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="http://cwyang.github.io/2024/01/12/http2-rapid-reset.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 
                   
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;u=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=HTTP%2F2+Rapid+Reset+DoS%EA%B3%B5%EA%B2%A9&amp;u=http://cwyang.github.io/2024/01/12/http2-rapid-reset"
                       onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                     <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                     </a>
                   
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;url=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=HTTP%2F2+Rapid+Reset+DoS%EA%B3%B5%EA%B2%A9&amp;url=http://cwyang.github.io/2024/01/12/http2-rapid-reset"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                     <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -129,7 +129,7 @@
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">cwyang</h4>
               on
-              <time datetime="2022-03-04T16:14:00+09:00">04 Mar 2022</time>
+              <time datetime="2024-01-12T19:00:03+09:00">12 Jan 2024</time>
             </div>
           </div>
         </div>
@@ -143,68 +143,62 @@
           </div>
           <a name="topofpage"></a>
           <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#크래시덤프coredump-확보-방안">크래시덤프(coredump) 확보 방안</a></li>
-</ul><p>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,<br>
-일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.<br>
-프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..</p>
+</ul><p>HTTP/2 프로토콜을 이용한 서비스거부공격(DoS)에 대한 대처가 필요하다.</p>
 
-<h1 id="크래시덤프coredump-확보-방안">
-<a class="anchor" href="#%ED%81%AC%EB%9E%98%EC%8B%9C%EB%8D%A4%ED%94%84coredump-%ED%99%95%EB%B3%B4-%EB%B0%A9%EC%95%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>크래시덤프(coredump) 확보 방안</h1>
+<p>통신구간이 암호화되어 프라이버시는 좋아졌지만 보안장비를 우회한 네트워크 침투가 용이해진 것 처럼
+HTTP/1에서 HTTP/2로 프로토콜 성능이 개선됨에 따라 보통 사용자뿐만 아니고 공격자의 전송성능이 올라가서
+DoS가 쉽게 되었다.</p>
 
-<p>아래 내용은 C binary 기준이다.</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-44487">CVE-2023-44487</a>은 2023년 10월 10일 발표된 취약점으로 
+HTTP/2 프로토콜에서 공격자가 요청을 보내고 즉시 해당 요청을 끊어 총 요청수 제한을 회피함으로써 
+서비스 거부 공격을 쉽게 할 수 있다는 내용으로 <code class="language-plaintext highlighter-rouge">HTTP/2 Rapid Reset</code> 공격으로 불리운다.</p>
 
-<ol>
-  <li>ulimit -c unlimted<br>
-로 코어를 생성을 활성화 한 이후 장애가 나면 코어를 보내주거나 해당 기계에 접속해서 gdb를 이용하여 크래시 덤프를 분석한다.</li>
-  <li>libsegfault.so<br>
-<code class="language-plaintext highlighter-rouge">whereis libSegFault.so</code> 하면 gcc toolchain에 동봉된 libsegfault.so의 위치를 알 수 있다.<br>
-프로그램을 실행시킬 때 <code class="language-plaintext highlighter-rouge">env SEGFAULT_SIGNALS="abrt segv" LD_PRELOAD=${LIBSEGV_LOC} ./test</code> 과 같이 하면 장애가 발생할 경우 stderr로 stack trace가 출력된다. 이를 전달받아 크래시 상황을 분석한다.</li>
-  <li>sentry와 같은 크래시 덤프 수집 서비스를 사용<br>
-<a href="https://sentry.io/">https://sentry.io/</a> 와 같이 크래시 및 성능 분석 서비스를 제공하는 서비스를 이용한다.<br>
-아래와 같이 sdk의 api들을 호출하고 프로그램을 실행하면 장애 발생 내용을 대시보드에서 모아서 볼 수 있고 유료 플랜을 이용하면 slack notification를 받을 수 있다.</li>
-</ol>
+<p>HTTP/1는 하나의 네트워크 연결에서 요청-응답 사이클로 정보를 전송한다.
+카페에서 줄을 서고, 맨 앞 사람이 주문하면 커피가 나올때까지 해당 줄은 대기한다.
+좀더 빨리 처리하기 위해서 줄을 여러개를 운영하는 것이 HTTP/1.</p>
 
-<p>테스트 소스: <a href="https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump">https://github.com/cwyang/my-blog/tree/master/2022-03-crashdump</a></p>
+<p>HTTP/2는 주문을 받으면 대기표를 준다. 커피를 받는 순서는 주문 순서가 아니고 커피가 제조되서 나오는 순서이다.
+줄 하나에 수백개의 주문을 바리스타에게 전달할 수 있다.
+바리스타가 처리할 수 있는 양은 한정되어 있을 것이므로 주문하는 대로 모두 받다보면 카페는 마비된다.
+그래서 총 대기표의 수를 제한하고, 대기표가 모두 배부되었으면 그때부터는 주문자들은 자신이 주문할 수 있을때까지
+줄에서 기다려야한다. 이것이 HTTP/2.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sentry_options_t *options = sentry_options_new();
-    sentry_options_set_release(options, "my-test-project@0.0.1");
-    sentry_options_set_symbolize_stacktraces(options, 1);
-    sentry_options_set_environment(options, "development");
-    sentry_options_set_release(options, "test-example-release");
-    sentry_options_add_attachment(options, "./Makefile");
-</code></pre></div></div>
+<p>이번 <code class="language-plaintext highlighter-rouge">HTTP/2 Rapid Reset</code> 공격에서는 공격자가 줄을 서고, 주문하고, 바리스타에게 주문이 들어갈때쯤 (굉장히 짧은 시간이므로 주문 하자마자 즉시) 주문을 취소하고 대기표를 반환한다. 총 대기표의 수가 제한되어 있지만 주문을 하자마자 취소하였으니
+제한된 수를 넘지 않고, 착한 캐셔는 계속 주문을 받는다. 공격자가 아닌 일반 고객들은 그들의 줄에서  나오지 않는 커피를 한정없이 기다리게된다.</p>
 
-<p><img src="https://blog.kakaocdn.net/dn/wYEPf/btruXY7cohH/HXrErpKExKzT7Naq9sFYFk/img.png" alt=""></p>
+<p>HTTP/3도 표준이 된 지금 HTTP/2는 이미 안정화상태이고 많은 웹 서버, WAS서버등에서 기본적으로 활성화하고 있다.
+따라서 nginx, apache는 물론이고, <a href="https://tomcat.apache.org/security-11.html">tomcat</a>, <a href="https://github.com/grpc/grpc-go/security/advisories/GHSA-m425-mq94-257g">go-grpc</a>등, 대중에 노출된 서버라면 
+이번 공격에 대해서 취약점이 해결된 버젼으로 업그레이드 하는 것이 필요하다.</p>
 
           <p class="tags">
             
               <a href="/tags#blog-ref">blog</a>
             
-              <a href="/tags#diary-ref">diary</a>
+              <a href="/tags#security-ref">security</a>
             
-              <a href="/tags#tip-ref">tip</a>
+              <a href="/tags#dos-ref">DoS</a>
             
-              <a href="/tags#crashdump-ref">crashdump</a>
+              <a href="/tags#ddos-ref">DDoS</a>
             
-              <a href="/tags#libsegfault-ref">libsegfault</a>
+              <a href="/tags#http-2-ref">HTTP/2</a>
             
-              <a href="/tags#sentry-ref">sentry</a>
+              <a href="/tags#grpc-ref">gRPC</a>
             
           </p>
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://cwyang.github.io/2024/01/12/http2-rapid-reset.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;u=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=HTTP%2F2+Rapid+Reset+DoS%EA%B3%B5%EA%B2%A9&amp;u=http://cwyang.github.io/2024/01/12/http2-rapid-reset"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
               
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%ED%81%AC%EB%9E%98%EC%8B%9C+%EB%8D%A4%ED%94%84+%EC%88%98%EC%A7%91&amp;url=http://cwyang.github.io/2022/03/04/collecting-crash-dump"
+                <a class="icon-twitter" href="http://twitter.com/share?text=HTTP%2F2+Rapid+Reset+DoS%EA%B3%B5%EA%B2%A9&amp;url=http://cwyang.github.io/2024/01/12/http2-rapid-reset"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -220,7 +214,7 @@
               <h4>양철웅</h4>
               <p class="bio">Chul-Woong Yang</p>
               <hr>
-              <p class="published">Published <time datetime="2022-03-04 16:14">04 Mar 2022</time></p>
+              <p class="published">Published <time datetime="2024-01-12 19:00">12 Jan 2024</time></p>
             </section>
           </div>
 
@@ -237,7 +231,7 @@
          
         <div class="fb-comments-wrapper">
           
-            <div class="fb-comments" data-href="http://cwyang.github.io/2022/03/04/collecting-crash-dump.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+            <div class="fb-comments" data-href="http://cwyang.github.io/2024/01/12/http2-rapid-reset.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
         </div>
         
@@ -248,18 +242,11 @@
 
     <aside class="read-next">
       
-        <a class="read-next-story no-cover" href="/2022/03/11/libxdp.html">
-          <section class="post">
-            <h2>eBPF와 libbpf</h2>
-            <p>eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹...</p>
-          </section>
-        </a>
       
-      
-        <a class="read-next-story prev no-cover" href="/2022/03/04/git-submodule.html">
+        <a class="read-next-story prev no-cover" href="/2023/11/12/grpc.html">
           <section class="post">
-            <h2>git submodule</h2>
-            <p>parent project에서 child project를 git submodule로 사용할 때, child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는...</p>
+            <h2>gRPC 들여다보기</h2>
+            <p>그동안 데이터플레인 개발만 하고 있었는데 이제 컨트롤플레인 개발을 할 필요가 있어서 gRPC에 대해서 들여다보았다. 꼭...</p>
           </section>
         </a>
       
