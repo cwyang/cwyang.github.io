@@ -6,9 +6,83 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Jan 2024 19:08:24 +0900</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2024 19:08:24 +0900</lastBuildDate>
+    <pubDate>Wed, 31 Jan 2024 19:36:35 +0900</pubDate>
+    <lastBuildDate>Wed, 31 Jan 2024 19:36:35 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>MTU와 MSS</title>
+        <description>&lt;p&gt;라우터, 방화벽을 다루다보면 MTU와 MSS 두 단어를 흔히 접하게 된다.
+비슷한 의미를 가지고 있기에 헷갈리고 있어 이 기회에 정리한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;mtu-maximum-transmission-unit&quot;&gt;MTU: Maximum Transmission Unit&lt;/h2&gt;
+&lt;p&gt;MTU는 NIC의 특성이고, 해당 NIC에서 전송될 수 있는 PDU(protocol data unit)의 최대값을 나타낸다.
+따라서 헤더와 데이터를 포함한 전체 패킷의 크기이다.&lt;/p&gt;
+
+&lt;p&gt;MSS보다 하위 개념이고, TCP만이 아닌 모든 네트워크 프로토콜에 관련된다.&lt;/p&gt;
+
+&lt;p&gt;일반적으로 이더넷의 MTU는 1500바이트이다.
+그 이상의 크기를 전송하기 위해서는 패킷을 분할(fragmentation)하여 전송해야한다.
+통신성능향상을 위해 MTU를 그 이상으로 키운것이 점보프레임이다. (대개 9000바이트)&lt;/p&gt;
+
+&lt;p&gt;여러 패킷으로 분할해서 보내는 경우 헤더들이 여러 패킷에 존재하므로 낭비이고,
+여러 패킷을 보내기 위해 NIC가 일을 더 많이 하며,
+IP패킷이 쪼개지므로 경로환경에 따라서 쪼개진 패킷이 전송되지 못하는 경우 전송 장애가 일어난다.&lt;/p&gt;
+
+&lt;h3 id=&quot;path-mtu-discovery&quot;&gt;Path MTU Discovery&lt;/h3&gt;
+&lt;p&gt;ICMP를 통해 엔드포인트간의 통신구간의 MTU의 최소값을 찾는 작업이다.
+찾으면 그 값을 사용할 수 있는데… 못찾을 수도 있고, 해당 결과를 100%신뢰할 수 없다.&lt;/p&gt;
+
+&lt;h2 id=&quot;mss-maximum-segment-size&quot;&gt;MSS: Maximum Segment Size&lt;/h2&gt;
+&lt;p&gt;MSS는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TCP&lt;/code&gt;가 한번에 전송할 수 있는 페이로드의 최대값이다. TCP헤더, IP헤더등을 포함하지 않는다.&lt;/p&gt;
+
+&lt;p&gt;보통 다음과 같이 계산된다&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;MSS_TCP = MTU - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IP헤더사이즈&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TCP헤더사이즈&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;1500 - 40 = 1460&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;MSS를 넘어 전송하고자 할 경우  패킷이 MTU크기를 넘어서므로 fragmentation이 발생한다.
+MSS는 TCP handshake 과정에서 협의된다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;클라이언트가 TCP 초기 협상과정에서 SYN패킷을 통해 MSS 옵션을 전달한다&lt;/li&gt;
+  &lt;li&gt;서버는 SYN/ACK패킷을 통해 서버의 MSS옵션을 전달한다.&lt;/li&gt;
+  &lt;li&gt;연결 후 보통 두 MSS의 최소값으로 통신한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mss-for-ipsec&quot;&gt;MSS for IPSec&lt;/h3&gt;
+&lt;p&gt;IPSec은 암호화 전송을 위한 추가적인 오버헤드가 필요하다. MSS에 그를 반영함으로써, IP 패킷 분할을 막을 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;IPSec 오버헤드 = &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESP header&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESP trailer&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AH&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;MSS_IPSEC = MTU - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IPSec오버헤드&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IP헤더사이즈&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TCP헤더사이즈&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mss-clamping&quot;&gt;MSS clamping&lt;/h3&gt;
+&lt;p&gt;그런데 TCP 핸드셰이크를 수행하는 엔드포인트들은 중간에 MSS조정이 일어나야하는지 알 수 없다.
+IPSec의 경우도 중간의 장비가 개입하여 암호화 헤더를 추가 하는 것이므로,
+MSS의 조정 역시 해당 장비가 수행해주어야한다.&lt;/p&gt;
+
+&lt;p&gt;MSS clamping이란 엔드포인트간의 TCP handshake시에 지정된 값으로 MSS값을 고정하는 것으로, 엔드포인트에 투명하게 중간의 장비에서 수행한다.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 31 Jan 2024 19:06:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2024/01/31/mtu-and-mss.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2024/01/31/mtu-and-mss.html</guid>
+        
+        <category>blog</category>
+        
+        <category>network</category>
+        
+        <category>mtu</category>
+        
+        <category>mss</category>
+        
+        <category>mss-clamping</category>
+        
+        <category>TCP</category>
+        
+        
+      </item>
     
       <item>
         <title>HTTP/2 Rapid Reset DoS공격</title>
@@ -572,56 +646,6 @@ LastPass의 주장은 PBKDF2를 100,100번 이터레이션한다는 것이지만
         <category>password</category>
         
         <category>pbkdf2</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>API endpoint들의 취약한 TLS 버젼</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-endpoints/&quot;&gt;내년 6월부터 모든 AWS API에서 TLS1.2 미만을 지원중지한다는 소식&lt;/a&gt;을 접하여, TLS 버젼 이야기 짧게 드립니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cwyang.github.io/assets/images/unlocked.jpg&quot; alt=&quot;TLS 1.0, 1.1은 아주 취약해요!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 &lt;a href=&quot;https://datatracker.ietf.org/doc/rfc8996/&quot;&gt;IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;이 때 &lt;a href=&quot;https://aws.amazon.com/ko/blogs/security/tls-1-2-required-for-aws-fips-endpoints/&quot;&gt;AWS는 FIPS 엔드포인트에서 TLS1.2 미만을 지원중지&lt;/a&gt;하였습니다.&lt;/p&gt;
-
-&lt;p&gt;그리고 내년 6월부로 모든 AWS API에서 TLS1.2 미만을 지원중지하는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;AWS에서는 서비스 마이그레이션을 위해 클라우드트레일에서 접속 TLS 버젼을 확인하고 취약한 TLS1.0, 1.1을 사용하면 해당 클라이언트를 업데이트하도록 권장하고 있습니다.&lt;/p&gt;
-
-&lt;p&gt;브라우저벤더들이 (MS, Google, Apple, Mozilla) 2020~2021년에 걸쳐서 해당 버젼 지원을 중지하였기 때문에 TLS1.2 이상으로 통신을 강제하여도 대부분 문제가 없겠으나
-레거시/커스텀 소프트웨어가 TLS통신을 할 경우 취약한 버젼으로 연결이 맺어질 수 있어 보안에 문제가 있는 것입니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;신규 서비스 TLS 엔드포인트를 만들때에는 TLS1.2 이상으로 지정하도록 해야하고요,
-기존 서비스 엔드포인트에 대해서도 취약한 TLS버젼에 어떻게 대처할 지 고민이 필요하겠지요?
-구형 앱이나 프로그램에서 AWS 접속을 할 때 문제 없도록 확인도 해 주셔야겠고요.&lt;/p&gt;
-
-&lt;p&gt;감사합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bin/openssl s_client -connect dynamodb.us-west-2.amazonaws.com:443 -tls1
-CONNECTED(00000003)
-depth=3 C = US, ST = Arizona, L = Scottsdale, O = &quot;Starfield Technologies, Inc.&quot;, CN = Starfield Services Root Certificate Authority - G2
-verify error:num=20:unable to get local issuer certificate
-...
-중략
-...
-SSL-Session:
-    Protocol  : TLSv1
-    Cipher    : ECDHE-RSA-AES128-SHA
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Wed, 06 Jul 2022 08:58:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</guid>
-        
-        <category>blog</category>
-        
-        <category>ssl</category>
-        
-        <category>tls</category>
         
         
       </item>

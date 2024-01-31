@@ -6,9 +6,34 @@
 </description>
     <link>http://cwyang.github.io/</link>
     <atom:link href="http://cwyang.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Jan 2024 19:08:24 +0900</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2024 19:08:24 +0900</lastBuildDate>
+    <pubDate>Wed, 31 Jan 2024 19:36:35 +0900</pubDate>
+    <lastBuildDate>Wed, 31 Jan 2024 19:36:35 +0900</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
+    
+      <item>
+        <title>MTU와 MSS</title>
+        <description>&lt;p&gt;라우터, 방화벽을 다루다보면 MTU와 MSS 두 단어를 흔히 접하게 된다.
+비슷한 의미를 가지고 있기에 헷갈리고 있어 이 기회에 정리한다.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 31 Jan 2024 19:06:00 +0900</pubDate>
+        <link>http://cwyang.github.io/2024/01/31/mtu-and-mss.html</link>
+        <guid isPermaLink="true">http://cwyang.github.io/2024/01/31/mtu-and-mss.html</guid>
+        
+        <category>blog</category>
+        
+        <category>network</category>
+        
+        <category>mtu</category>
+        
+        <category>mss</category>
+        
+        <category>mss-clamping</category>
+        
+        <category>TCP</category>
+        
+        
+      </item>
     
       <item>
         <title>HTTP/2 Rapid Reset DoS공격</title>
@@ -200,22 +225,6 @@ VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여�
         <category>password</category>
         
         <category>pbkdf2</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>API endpoint들의 취약한 TLS 버젼</title>
-        <description>TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다.</description>
-        <pubDate>Wed, 06 Jul 2022 08:58:00 +0900</pubDate>
-        <link>http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</link>
-        <guid isPermaLink="true">http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html</guid>
-        
-        <category>blog</category>
-        
-        <category>ssl</category>
-        
-        <category>tls</category>
         
         
       </item>
