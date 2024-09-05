@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2023-07-16T19:02:00Z"
-excerpt: UDP는 connectionless이기에 TCP와 달리 데이터 주고받을 때에 고려해야 할 다음과 같은 경우들이 있다. 보낸 요청에
+summary: UDP는 connectionless이기에 TCP와 달리 데이터 주고받을 때에 고려해야 할 다음과 같은 경우들이 있다. 보낸 요청에
   대해서 다른 IP로부터 응답이 돌아오는 경우, 서버가 IP주소를 여러개 가지고 있을 때, 받은 요청에 대해 응답을 할 IP를 결정하는 경우
 tags:
 - Unix

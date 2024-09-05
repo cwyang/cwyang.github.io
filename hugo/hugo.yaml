@@ -1,7 +1,7 @@
 baseURL: http://cwyang.github.io
 disablePathToLower: true
 languageCode: en-us
-title: 양철웅의 DX 이야기
+title: 생각하고 쓰고 만들자! 퇴근 후 이야기
 theme: simple
 permalinks:
   page:

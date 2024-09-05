@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2022-02-15T01:53:00Z"
-excerpt: 스타트업은 망할때까지 망할 것 같다.. 스타트업은 동료가 중요하다. 너 내 동료가 돼라.
+summary: 스타트업은 망할때까지 망할 것 같다.. 스타트업은 동료가 중요하다. 너 내 동료가 돼라.
 header-img: /assets/images/entrepreneurs.png
 tags:
 - blog

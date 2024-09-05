@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2009-01-23T10:20:00Z"
-excerpt: 개발에 있어서는 Silver Bullet이 있다고 생각하는 고로, 여러 programming language를 탐험하는 편인데, 올해의
+summary: 개발에 있어서는 Silver Bullet이 있다고 생각하는 고로, 여러 programming language를 탐험하는 편인데, 올해의
   Language는 Haskell. (C -> C++ -> Java -> Ruby -> Erlang -> Lisp -> Haskell)
 header-img: /assets/images/book-prog-in-haskell.png
 tags:

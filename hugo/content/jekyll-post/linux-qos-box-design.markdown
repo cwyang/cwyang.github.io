@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-11-03T21:16:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - linux

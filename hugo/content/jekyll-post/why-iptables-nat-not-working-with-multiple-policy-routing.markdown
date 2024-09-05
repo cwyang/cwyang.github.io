@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2020-04-18T09:15:00Z"
-excerpt: 정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. `iptales -L -nv`로 패킷 카운트를
+summary: 정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. `iptales -L -nv`로 패킷 카운트를
   보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?
 tags:
 - blog

@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2022-01-03T15:45:00Z"
-excerpt: 2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고 신년 첫날 알고랜드 디파이 LP풀에 $30를 예치해보았는데...
+summary: 2022년을 맞이하여 새로운 분야인 NFT/디파이/블럭체인을 공부해볼까 마음을 먹고 신년 첫날 알고랜드 디파이 LP풀에 $30를 예치해보았는데...
 header-img: /assets/images/tinyman3.jpg
 tags:
 - blog

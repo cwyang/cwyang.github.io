@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2018-07-02T12:00:00Z"
-excerpt: 지난 주말에 책 한권을 읽었습니다. 경영 서적인 <디퍼런트> 입니다. 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는
+summary: 지난 주말에 책 한권을 읽었습니다. 경영 서적인 <디퍼런트> 입니다. 성숙된 시장에서는 소비자는 회사가 아닌 카테고리만을 기억한다는
   점이 인상적이었기에 짧게 책을 소개해드릴께요.
 header-img: /assets/images/different-becoming-herd.jpg
 tags:

@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2024-01-12T19:00:03Z"
-excerpt: HTTP/2 프로토콜을 이용한 서비스거부공격(DoS)에 대한 대처가 필요하다.
+summary: HTTP/2 프로토콜을 이용한 서비스거부공격(DoS)에 대한 대처가 필요하다.
 tags:
 - blog
 - security

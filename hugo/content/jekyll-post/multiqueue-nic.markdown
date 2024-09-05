@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-06-10T18:46:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - performance

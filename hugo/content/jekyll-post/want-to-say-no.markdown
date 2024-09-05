@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-04-21T18:05:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - software development

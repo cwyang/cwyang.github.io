@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2020-12-09T18:12:00Z"
-excerpt: null
+summary: null
 header-img: /assets/images/osx_gatekeeper_bad.png
 tags:
 - blog

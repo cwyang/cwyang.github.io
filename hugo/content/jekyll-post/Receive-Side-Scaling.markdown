@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2023-02-22T20:00:00Z"
-excerpt: null
+summary: null
 tags:
 - RSS
 - Receive Side Scaling

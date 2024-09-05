@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2021-02-04T00:00:00Z"
-excerpt: 2021년. 무엇보다 인간의 생활이 중요해진 시대.
+summary: 2021년. 무엇보다 인간의 생활이 중요해진 시대.
 header-img: /assets/images/life-is-on-lg-ces2021.png
 tags:
 - blog

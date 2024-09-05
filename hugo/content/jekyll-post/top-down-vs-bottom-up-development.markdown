@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-11-04T11:59:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - bottom up

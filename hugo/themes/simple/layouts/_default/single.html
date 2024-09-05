@@ -1,10 +1,23 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+<div class="article">
+  <h1>{{ .Title }}
+    <div class="normal">
+      <div class="when">
+	{{ $dateHuman := .Date | time.Format "Monday, January 2, 2006" }}
+        Posted on {{ $dateHuman }}.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
 
   {{ .Content }}
+</div>  
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

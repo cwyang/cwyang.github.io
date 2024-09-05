@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2011-08-19T16:22:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - diary

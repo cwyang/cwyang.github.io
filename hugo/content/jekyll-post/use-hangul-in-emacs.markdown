@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2013-04-09T10:50:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - emacs

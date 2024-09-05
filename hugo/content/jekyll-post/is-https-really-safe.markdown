@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2018-03-28T17:15:00Z"
-excerpt: 주소창에 녹색 자물쇠가 보이면 안전하다구?
+summary: 주소창에 녹색 자물쇠가 보이면 안전하다구?
 header-img: /assets/images/life-of-pix-free-stock-photos-spain-door-padlock2.jpg
 tags:
 - blog

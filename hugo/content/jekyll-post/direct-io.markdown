@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-07-09T22:40:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - direct io

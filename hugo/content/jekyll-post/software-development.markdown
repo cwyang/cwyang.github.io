@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-03-17T21:59:00Z"
-excerpt: 회사에서 개발하고 있는 product의 codebase가 점점 커지다보니 '품질'이 이슈로 떠올랐다. '성능'과 '기능' 그리고 '초고속
+summary: 회사에서 개발하고 있는 product의 codebase가 점점 커지다보니 '품질'이 이슈로 떠올랐다. '성능'과 '기능' 그리고 '초고속
   개발'이 전부였던 몇해 전을 생각하면 격세지감을 느끼게 된다.
 tags:
 - blog

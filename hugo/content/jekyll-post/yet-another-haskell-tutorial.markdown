@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2009-02-01T02:17:00Z"
-excerpt: Hal Daum ́e III의 Yet Another Haskell Tutoriall을 읽고 있다.
+summary: Hal Daum ́e III의 Yet Another Haskell Tutoriall을 읽고 있다.
 header-img: /assets/images/book-prog-in-haskell.png
 tags:
 - diary

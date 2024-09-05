@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2023-02-08T20:00:00Z"
-excerpt: null
+summary: null
 header-img: /assets/images/azure-routing-example.png
 tags:
 - CloudNetwork

@@ -17,6 +17,13 @@ img.resizable {
     max-width: 100%;
     height: auto;
 }
+.article img {
+    max-width:640px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .pad {
     padding-top: 1em;
     padding-bottom: 1em;

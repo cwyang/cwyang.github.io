@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-07-09T22:36:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - connection tracking

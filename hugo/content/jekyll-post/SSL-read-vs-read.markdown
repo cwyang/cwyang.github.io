@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2009-10-21T14:48:00Z"
-excerpt: 네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은
+summary: 네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은
   경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데,
   이 경우 SSL_read()와 read()의 차이점을 알아야한다.
 tags:

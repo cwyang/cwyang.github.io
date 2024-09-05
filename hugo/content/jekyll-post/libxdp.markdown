@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2022-03-11T09:36:43Z"
-excerpt: eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹 포인트를
+summary: eBPF를 꼭 커널 프로그래머들만 사용해야하는가? 꼭 그렇지많은 않다. 커널의 주요 실행 포인트들에서 eBPF를 위한 후킹 포인트를
   제공하고 있기 때문에 종래의 top, iostat, vmstat, perf등보다 상세한 시스템 모니터링을 위해 사용할 수 있다. 넷플릭스 SRE팀의
   브렌단 그렉이 eBPF를 이용한 여러가지 도구를 만들어 발표한 이후 SRE, 데브옵스 직무로부터 많은 관심을 받고 있다.
 header-img: /assets/images/eBPF.png

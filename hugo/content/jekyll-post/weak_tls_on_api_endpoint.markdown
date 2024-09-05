@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2022-07-06T08:58:00Z"
-excerpt: TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에
+summary: TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에
   못질을 하였습니다.
 header-img: /assets/images/unlocked.jpg
 tags:

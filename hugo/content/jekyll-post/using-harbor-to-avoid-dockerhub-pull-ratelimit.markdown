@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2021-01-20T15:02:41Z"
-excerpt: 도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해
+summary: 도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해
   6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.
 header-img: /assets/images/harbor/harbor03.png
 tags:

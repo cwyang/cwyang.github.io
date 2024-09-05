@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2011-09-26T17:24:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - erlang

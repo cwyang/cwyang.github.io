@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2019-12-19T11:33:00Z"
-excerpt: 벌써 연말이다. 2020년에는 OpenSSL 3.0이 발표 예정이다. OpenSSL 1.1.1 작업을 한 지도 얼마 안되었는데...
+summary: 벌써 연말이다. 2020년에는 OpenSSL 3.0이 발표 예정이다. OpenSSL 1.1.1 작업을 한 지도 얼마 안되었는데...
 header-img: /assets/images/openssl30-component.png
 tags:
 - blog

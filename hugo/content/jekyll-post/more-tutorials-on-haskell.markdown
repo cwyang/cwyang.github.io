@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2009-02-02T20:53:00Z"
-excerpt: Understanding Monad, for real과 You could have invented Monads! (And maybe
+summary: Understanding Monad, for real과 You could have invented Monads! (And maybe
   you already have.), 두 튜토리얼을 더 읽었다.
 tags:
 - diary

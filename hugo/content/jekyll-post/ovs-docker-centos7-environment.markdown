@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2018-10-12T14:38:00Z"
-excerpt: centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로
+summary: centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로
   하였습니다.
 header-img: /assets/images/animals.jpg
 tags:

@@ -2,7 +2,7 @@
 author: cwyang
 comments: true
 date: "2010-07-10T23:21:00Z"
-excerpt: null
+summary: null
 tags:
 - blog
 - development
