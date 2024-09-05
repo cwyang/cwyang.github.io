@@ -6,7 +6,7 @@ theme: simple
 permalinks:
   page:
     jekyll-post: /:year/:month/:day/:filename.html
-    post: /:slugorfilename
+    posts: /:slugorfilename
 markup:
   goldmark:
     parser:
@@ -15,3 +15,4 @@ markup:
         title: true
 params:
   custom_css: ["css/custom.css"]
+summaryLength: 10

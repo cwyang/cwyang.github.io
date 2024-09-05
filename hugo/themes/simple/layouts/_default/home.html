@@ -1,7 +1,14 @@
 {{ define "main" }}
-  {{ .Content }}
+{{ .Content }}
+<div class="main">
+<ul class="toc">
   {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+<li><a href="{{ .RelPermalink }}" class="">{{ .LinkTitle }}</a></li>
+<span class="toc-when">{{ .Date.Format "January 2006" }}</span>
+<div class="toc-summary">
     {{ .Summary }}
-  {{ end }}
+</div>
+{{ end }}
+</ul>
+</div>
 {{ end }}
