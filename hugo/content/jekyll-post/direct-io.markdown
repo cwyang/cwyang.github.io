@@ -1,0 +1,20 @@
+---
+author: cwyang
+comments: true
+date: "2010-07-09T22:40:00Z"
+excerpt: null
+tags:
+- blog
+- direct io
+title: Direct IO란?
+toc: false
+---
+Linux에서 Direct IO는 page cache를 통하지 않고 memory와 IO device사이에 직접 데이터를 송수신하는것이다. Linux의 page cache 메카니즘이 마음에 안들 경우 사용하는 용도이다. 이러한 경우 대개 성능이 중시되므로 구현에 있어서 DMA를 이용하도록 되어 있을 터이고, 그렇기 때문에 메모리 옵셋, 사이즈, 그리고 IO device의 target address에 대해 page alignment 제약이 존재한다. 이 사항은 표준이 정해져 있는 것도 아니기 때문에 사용하는 커널, 파일시스템에 따라 다르게 동작할 수 있다. 예를 들면 page aligment 제약은 커널 2.6전에는 pagesize로 align되어야했으나, 2.6부터는 512 byte단위로만 align되어있으면 된다고.  
+
+target IO device는 상식적으로 block device여야 되겠으나, Non-allocating IO operation (i.e. Non allocating write)일경우는 file I/O의 경우도 무방하다[1]. [1]에 의하면 Allocating write의 경우 normal IO로 fallback된다고 하였으나, kernel 2.6.30에, ext3위에서 테스트한 결과로는 page cache를 거치지 않고 write가 일어난다. (200MB짜리 화일을 반복해서 만드는 테스트 프로그램으로, /proc/meminfo를 관찰하여 dirty page가 늘어나지 않는것을 확인하였다.) 2.6.20역시 마찬가지.  
+
+DB등을 만드는 경우가 아니면 page cache를 skip할 까닭을 생각해 내는 것은 쉽지 않다. 그러나 가끔 vm이 춤을 추고, 그래서 시스템 성능이 널뛰는 경우를 만나게 될 경우라면 direct io를 생각해볼 만 하다.
+
+[1] ext4 wiki, [Clarifying Direct IO's Semantics](http://ext4.wiki.kernel.org/index.php/Clarifying_Direct_IO%27s_Semantics), http://ext4.wiki.kernel.org/index.php/Clarifying_Direct_IO's_Semantics
+
+[2] phlow(altistory), [Linux Direct IO의 이해](http://altistory.net/333), http://altistory.net/333

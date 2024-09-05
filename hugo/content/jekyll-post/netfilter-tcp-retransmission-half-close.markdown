@@ -1,0 +1,37 @@
+---
+author: cwyang
+comments: true
+date: "2010-07-09T22:36:00Z"
+excerpt: null
+tags:
+- blog
+- connection tracking
+- half close
+- netfilter
+- sysadmin
+- tcp retransmission
+title: Netfilter, TCP retransmission, half close등의 이용에 대한 오늘의 이야기
+toc: false
+---
+**Netfilter와 connection tracking**: Linux에서는 netfilter의 connection tracking모듈을 이용하여 세션별 TCP/IP 상태를 추적, 그를 이용할 수가 있다. 당연히 세션에 대한 connection정보 엔트리가 잘 유지되어야하는데, 정보엔트리가 유실되는 상황도 존재한다. 그는 TCP/IP상태별로 timer가 유지되어 두어 일정 시간이 경과하면 connection정보 엔트리가 사라지기 때문이다. SYN attack을 감안하면 SYN 관련 상태는 되도록 작게 유지하는게 좋을 것이다. 그래서 SYN_SENT, SYN_RECV상태의 timeout은 작게 설정된다. ESTABLISHED상태, 즉 데이터 통신이 진행되는 동안은 안정적으로 유지되어야하므로 timeout이 비교적 크게 설정된다. 기타 종료상태들에 대해서는 적절히 작은 값으로 설정된다. connection 정보 엔트리는 시스템의 메모리 리소스를 점유하기 때문에 정상작동을 한다는 가정하에 최대한 적게 유지할 수록 좋다.  
+  
+**TCP retransmission**: TCP는 기본적으로 송신 데이터가 잘 수신되었다는 응답(ACK)을 기대한다. ACK이 주어진 시간안에 오지 않으면 네트워크 경로상의 미지의 문제로 해당 패킷이 유실되었다고 감안하여 동일 패킷을 재전송한다. 등간격으로 송신하기 보다는 처음에는 짧은간격, 그리고 계속 실패할 경우 점점 시간간격을 늘려가면서 재송신하고, 시스템에 정해진 한계가 모두 실패하면 해당 송신을 실패처리한다. 자세한 사항은 TCP/IP Illustrated vol.1 Chap 21을 참조하라.  
+  - 전형적인 TCP구현에서 재전송 딜레이는 64sec이 한계이지만 최근의 Linux는 120초가 최대값이다. 이 경우 1, 3, 6, 12, 24, 48, 96, 120, 120, 120, … 이런식으로 재전송을 시도한다. ESTABLISHED상태에서의 재전송 시도회수는 sysctl값 net.ipv4.tcp_retries2 에 의해 결정되고 기본값은 15이다. 따라서 이 경우라면 TCP 재전송은 초기 시도부터 계산하여 1050초 경과시점까지 시도하게 된다.  
+  
+그러면 여기에서 알 수 있는것은, netfilter의 connection 정보 엔트리는 정해진 시간이 지나는동안 패킷의 전송을 보지 못하면 사라지는데, 동시에 TCP retransmission 메카니즘은 정해진 시간이 지나는 동안 패킷의 전송을 보지 못하면 다시 재전송을 시도한다는 것이다. 그러면 다음의 사실을 알 수 있다.  
+> "netfilter의 각 단계별 timeout보다 최대 retransmission timeout이 작으면 해당 netfilter의 단계에 속하는 connection정보 엔트리가 사라질 수 있다."  
+일반적으로 (max retransmission timeout보다) 긴 값을 적어두는 ESTABLISHED상태는 논외로 하고 각 단계별로 살펴보자. 그리고 이 때 connection 정보 엔트리가 사라지면 통신에 장애가 생긴다고 생각하자.
+
+1.  SYN_SENT: SYN_SENT의 경우는 connection 정보 엔트리가 사라져도, retransmission될 경우 다시 SYN_SENT상태가 되므로 timeout값을 자유로해도 무관하다.
+2.  SYN_RECV: SYN Flooding때문에 일반적으로 매우 짧은 값으로 둔다. SYN을 받은 상태를 유지하면 시스템 리소스(메모리)가 소모되기 때문이다. 이 경우, SYN/ACK에 대한 ACK을 시간내에 받지 못하면 해당 connection 정보 엔트리는 없어지며, 통신에 장애가 생긴다. 이것은 양날의 검이기 때문에 DoS방지냐 connection 정보 엔트리 유지냐를 선택해야 한다.
+3.  LAST_ACK:  passive close의 경우이다. connection정보 엔트리가 사라지면 통신에 장애가 생기나, 이미 종료단계이기 때문에 그 피해가 적은 편이다.
+4.  FIN_WAIT: active close의 경우이다. connection정보 엔트리가 사라지면 통신에 장애가 생기나, 이미 종료단계이기 때문에 그 피해가 적은 편이다. 그러나 active_close가 delay되면 반대편 peer에서는 close를 하염없이 기다리게 된다는 점에서 passive_close보다 더 중요하다.
+5.  CLOSE_WAIT: half_close의 경우이다. Half close란 peer가 "자 이제 나는 데이터를 받기만 하고 보내지는 않겠다"라고 말하면서 다른 Peer에게 FIN을 보낸 상태. 그 전까지의 상태가 ESTABLISHED였다면 half close의 FIN을 받은 경우는 CLOSE_WAIT상태가, 보낸 경우는 FIN_WAIT가 된다. 사실 어플리케이션 입장에서는 half close를 안하고 계속 ESTABLISHED상태로 마지막까지 유지해도 무관하지만, half close를 하는 이유는 로직상 더 이상 데이터를 보낼 필요가 없다면 그 소켓을 shundown(1)함으로써 half close를 해 놓으면 혹시 로직오류로 인해 해당 소켓에의 write() 호출을 하는경우 그것이 실패함으로써 안정적 검토를 할 수 있기 때문이다. 이 상태에서는 데이터 전송이 일어난다는 사실이 중요하다.
+6.  TIME_WAIT: active close의 경우이다.  TCP 상태 전이도에 의하면 이 경우는 connection 정보 엔트리의 타임아웃과 무관해야 할 것 같은데 실험해보면 그렇지 않다. 구현에 따라 동시종료인 CLOSING단계로써 ACK을 기다리는 역할도 하는 것이 아닐까 생각된다.
+7.  CLOSE: 이것의 역할은 잘 모른다.
+
+이를 바탕으로 서버를 설정해본다면 SYN_RECV는 DoS의 이유로 짧게, CLOSE_WAIT와 FIN_WAIT는 비교적 길게 설정하는것이 좋다고 생각하며, SYN_RECV, LAST_ACK, TIME_WAIT의 작은 설정값으로 인해 connection 정보 엔트리가 사라지는 효과는 감수해야되지 않을까 생각한다.  
+  
+싫다. 엔트리는 반드시 보존되어야 한다… 라는 사람은 모든 단계의 timeout을 RTO_MAX, 121초 이상으로 설정하면 되겠다.  
+  
+그런데 지금 모든 timeout을 121초 이상으로 설정했는데,  엔트리가 조금씩은 사라지고 있다. 왜 그렇지...

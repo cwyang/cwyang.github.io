@@ -1,0 +1,17 @@
+baseURL: http://cwyang.github.io
+disablePathToLower: true
+languageCode: en-us
+title: 양철웅의 DX 이야기
+theme: simple
+permalinks:
+  page:
+    jekyll-post: /:year/:month/:day/:filename.html
+    post: /:slugorfilename
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
+params:
+  custom_css: ["css/custom.css"]
