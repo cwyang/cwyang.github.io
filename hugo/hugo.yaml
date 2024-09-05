@@ -1,7 +1,7 @@
 baseURL: http://cwyang.github.io
 disablePathToLower: true
 languageCode: en-us
-title: 생각하고 쓰고 만들자! 퇴근 후 이야기
+title: A Tale That Wasn't Left
 theme: simple
 permalinks:
   page:
