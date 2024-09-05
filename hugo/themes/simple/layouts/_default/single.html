@@ -18,6 +18,7 @@
   </style>
 
   {{ .Content }}
-</div>  
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+</div>
+<hr>
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

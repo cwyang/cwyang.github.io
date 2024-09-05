@@ -40,11 +40,11 @@ a.back {
 }
 .header {
     height: 1.25em;
-    background-color: #dff;
+    background-color: #ddff;
     margin: 0;
     padding: 0.1em 0.1em 0.2em;
     border-top: 1px solid black;
-    border-bottom: 1px solid #8ff;
+    border-bottom: 1px solid #88ff;
 }
 .header h3 {
     margin: 0;
@@ -274,3 +274,9 @@ sub {
 @media only screen and (min-width: 640px) and (max-width: 767px) { .main { width: 580px; } }
 @media only screen and (min-width: 480px) and (max-width: 639px) { .main { width: 420px; } }
 @media only screen and (max-width: 479px) { .main { width: 300px; } }
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}

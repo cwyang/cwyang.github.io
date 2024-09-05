@@ -16,3 +16,5 @@ markup:
 params:
   custom_css: ["css/custom.css"]
 summaryLength: 10
+taxonomies:
+  tag: "tags"

@@ -1,11 +1,26 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
-  {{ range .Pages }}
-  HHH   <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+<div class="main">
+  <ul class="toc">
+      {{ range .Pages }}
+
+      
+<li><a href="{{ .RelPermalink }}" class="">{{ .LinkTitle }}</a>
+<span class="toc-when">{{ .Date.Format "January 2006" }}</span>
+<div class="toc-summary">
+{{ with .Scratch.Get "excerpt" }}
+  {{ . }}
+{{ else }}
+  {{ .Summary | plainify | truncate 80}}
 {{ end }}
-  <div>
-    page content
-    </div>
+</div>
+{{ end }}
+<li class="toc toc-header copyright"> © {{ now.Year }} Chul-Woong Yang. All rights reserved.
+<br>
+<a href="/feed.atom">Atom / RSS</a></li>
+  </ul>
+</div>
+{{ end }}
+
+

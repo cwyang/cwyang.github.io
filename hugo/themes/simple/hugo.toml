@@ -9,7 +9,7 @@ weight = 10
 
 [[menus.main]]
 name = 'Tags'
-pageRef = '/tags'
+pageRef = '/tags/'
 weight = 30
 
 [module]
