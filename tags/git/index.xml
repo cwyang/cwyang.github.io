@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/git/</link>
+    <link>https://cwyang.github.io/tags/git/</link>
     <description>Recent content in git on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Mar 2022 15:54:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git submodule</title>
-      <link>http://cwyang.github.io/2022/03/04/git-submodule.html/</link>
+      <link>https://cwyang.github.io/2022/03/04/git-submodule.html/</link>
       <pubDate>Fri, 04 Mar 2022 15:54:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2022/03/04/git-submodule.html/</guid>
+      <guid>https://cwyang.github.io/2022/03/04/git-submodule.html/</guid>
       <description>parent project에서 child project를 git submodule로 사용할 때,&#xA;child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는 변하지 않는다.</description>
     </item>
   </channel>

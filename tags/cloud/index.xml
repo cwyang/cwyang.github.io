@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cloud on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/cloud/</link>
+    <link>https://cwyang.github.io/tags/cloud/</link>
     <description>Recent content in cloud on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Feb 2023 21:30:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>패스워드 매니저의 위험성과 클라우드 보안</title>
-      <link>http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/</link>
+      <link>https://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/</link>
       <pubDate>Thu, 02 Feb 2023 21:30:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/</guid>
+      <guid>https://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/</guid>
       <description>일반적인 사용자들의 패스워드는 40 비트 정도의 엔트로피를 가진다고 합니다. 40 비트 키는 매우 취약하다는 이야기 많이 들어보셨을거에요. 랜덤하게 만들어도 72 비트 이상가기가 어렵다고 하는데요. 그래서 PBKDF2를 반복(iteration)해서 적용하여 안전한 키를 만듭니다.</description>
     </item>
   </channel>

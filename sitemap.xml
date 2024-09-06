@@ -2,651 +2,651 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://cwyang.github.io/tags/blog/</loc>
+    <loc>https://cwyang.github.io/tags/blog/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/hugo/</loc>
+    <loc>https://cwyang.github.io/tags/hugo/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/posts/</loc>
+    <loc>https://cwyang.github.io/posts/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/</loc>
+    <loc>https://cwyang.github.io/tags/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/welcome-to-hugo/</loc>
+    <loc>https://cwyang.github.io/welcome-to-hugo/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/%EC%82%BD%EC%A7%88/</loc>
+    <loc>https://cwyang.github.io/tags/%EC%82%BD%EC%A7%88/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/jekyll-post/</loc>
+    <loc>https://cwyang.github.io/jekyll-post/</loc>
     <lastmod>2024-01-31T19:06:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/mss/</loc>
+    <loc>https://cwyang.github.io/tags/mss/</loc>
     <lastmod>2024-01-31T19:06:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/mss-clamping/</loc>
+    <loc>https://cwyang.github.io/tags/mss-clamping/</loc>
     <lastmod>2024-01-31T19:06:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/mtu/</loc>
+    <loc>https://cwyang.github.io/tags/mtu/</loc>
     <lastmod>2024-01-31T19:06:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2024/01/31/mtu-and-mss.html/</loc>
+    <loc>https://cwyang.github.io/2024/01/31/mtu-and-mss.html/</loc>
     <lastmod>2024-01-31T19:06:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/network/</loc>
+    <loc>https://cwyang.github.io/tags/network/</loc>
     <lastmod>2024-01-31T19:06:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/TCP/</loc>
+    <loc>https://cwyang.github.io/tags/TCP/</loc>
     <lastmod>2024-01-31T19:06:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/DDoS/</loc>
+    <loc>https://cwyang.github.io/tags/DDoS/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/DoS/</loc>
+    <loc>https://cwyang.github.io/tags/DoS/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/gRPC/</loc>
+    <loc>https://cwyang.github.io/tags/gRPC/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2024/01/12/http2-rapid-reset.html/</loc>
+    <loc>https://cwyang.github.io/2024/01/12/http2-rapid-reset.html/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/security/</loc>
+    <loc>https://cwyang.github.io/tags/security/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/echo-server/</loc>
+    <loc>https://cwyang.github.io/tags/echo-server/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/IP_PKTINFO/</loc>
+    <loc>https://cwyang.github.io/tags/IP_PKTINFO/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/python/</loc>
+    <loc>https://cwyang.github.io/tags/python/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/socket/</loc>
+    <loc>https://cwyang.github.io/tags/socket/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/UDP/</loc>
+    <loc>https://cwyang.github.io/tags/UDP/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2023/07/16/UDP-echo-server.html/</loc>
+    <loc>https://cwyang.github.io/2023/07/16/UDP-echo-server.html/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/Unix/</loc>
+    <loc>https://cwyang.github.io/tags/Unix/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/linux/</loc>
+    <loc>https://cwyang.github.io/tags/linux/</loc>
     <lastmod>2023-03-26T09:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2023/03/26/linux-settings.html/</loc>
+    <loc>https://cwyang.github.io/2023/03/26/linux-settings.html/</loc>
     <lastmod>2023-03-26T09:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/mint/</loc>
+    <loc>https://cwyang.github.io/tags/mint/</loc>
     <lastmod>2023-03-26T09:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/settings/</loc>
+    <loc>https://cwyang.github.io/tags/settings/</loc>
     <lastmod>2023-03-26T09:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/thinkpad/</loc>
+    <loc>https://cwyang.github.io/tags/thinkpad/</loc>
     <lastmod>2023-03-26T09:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ubuntu/</loc>
+    <loc>https://cwyang.github.io/tags/ubuntu/</loc>
     <lastmod>2023-03-26T09:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/multiqueue/</loc>
+    <loc>https://cwyang.github.io/tags/multiqueue/</loc>
     <lastmod>2023-02-22T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/performance/</loc>
+    <loc>https://cwyang.github.io/tags/performance/</loc>
     <lastmod>2023-02-22T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/Receive-Side-Scaling/</loc>
+    <loc>https://cwyang.github.io/tags/Receive-Side-Scaling/</loc>
     <lastmod>2023-02-22T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</loc>
+    <loc>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</loc>
     <lastmod>2023-02-22T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/RSS/</loc>
+    <loc>https://cwyang.github.io/tags/RSS/</loc>
     <lastmod>2023-02-22T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/Azure/</loc>
+    <loc>https://cwyang.github.io/tags/Azure/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</loc>
+    <loc>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/CloudNetwork/</loc>
+    <loc>https://cwyang.github.io/tags/CloudNetwork/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/L2-domain/</loc>
+    <loc>https://cwyang.github.io/tags/L2-domain/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/Subnet/</loc>
+    <loc>https://cwyang.github.io/tags/Subnet/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/UDR/</loc>
+    <loc>https://cwyang.github.io/tags/UDR/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/VNET/</loc>
+    <loc>https://cwyang.github.io/tags/VNET/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/VPC/</loc>
+    <loc>https://cwyang.github.io/tags/VPC/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/AI/</loc>
+    <loc>https://cwyang.github.io/tags/AI/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ArtificialIntelligence/</loc>
+    <loc>https://cwyang.github.io/tags/ArtificialIntelligence/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/Business/</loc>
+    <loc>https://cwyang.github.io/tags/Business/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html/</loc>
+    <loc>https://cwyang.github.io/2023/02/07/what-is-chatgpt3.html/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ChatGPT3/</loc>
+    <loc>https://cwyang.github.io/tags/ChatGPT3/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/CuttingEdgeTechnology/</loc>
+    <loc>https://cwyang.github.io/tags/CuttingEdgeTechnology/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/Innovation/</loc>
+    <loc>https://cwyang.github.io/tags/Innovation/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/MachineLearning/</loc>
+    <loc>https://cwyang.github.io/tags/MachineLearning/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/NLP/</loc>
+    <loc>https://cwyang.github.io/tags/NLP/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/Research/</loc>
+    <loc>https://cwyang.github.io/tags/Research/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/TechnologyTrends/</loc>
+    <loc>https://cwyang.github.io/tags/TechnologyTrends/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/haproxy/</loc>
+    <loc>https://cwyang.github.io/tags/haproxy/</loc>
     <lastmod>2023-02-03T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2023/02/03/slow-openssl-3.0.html/</loc>
+    <loc>https://cwyang.github.io/2023/02/03/slow-openssl-3.0.html/</loc>
     <lastmod>2023-02-03T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/openssl/</loc>
+    <loc>https://cwyang.github.io/tags/openssl/</loc>
     <lastmod>2023-02-03T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ssl/</loc>
+    <loc>https://cwyang.github.io/tags/ssl/</loc>
     <lastmod>2023-02-03T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/cloud/</loc>
+    <loc>https://cwyang.github.io/tags/cloud/</loc>
     <lastmod>2023-02-02T21:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/password/</loc>
+    <loc>https://cwyang.github.io/tags/password/</loc>
     <lastmod>2023-02-02T21:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/pbkdf2/</loc>
+    <loc>https://cwyang.github.io/tags/pbkdf2/</loc>
     <lastmod>2023-02-02T21:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/</loc>
+    <loc>https://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/</loc>
     <lastmod>2023-02-02T21:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/</loc>
+    <loc>https://cwyang.github.io/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html/</loc>
+    <loc>https://cwyang.github.io/2022/07/06/weak_tls_on_api_endpoint.html/</loc>
     <lastmod>2022-07-06T08:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/tls/</loc>
+    <loc>https://cwyang.github.io/tags/tls/</loc>
     <lastmod>2022-07-06T08:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/SSE/</loc>
+    <loc>https://cwyang.github.io/tags/SSE/</loc>
     <lastmod>2022-06-23T19:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ZTNA/</loc>
+    <loc>https://cwyang.github.io/tags/ZTNA/</loc>
     <lastmod>2022-06-23T19:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/%EB%B3%B4%EC%95%88/</loc>
+    <loc>https://cwyang.github.io/tags/%EB%B3%B4%EC%95%88/</loc>
     <lastmod>2022-06-23T19:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/%EB%B3%B4%EC%95%88%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%A3%EC%A7%80/</loc>
+    <loc>https://cwyang.github.io/tags/%EB%B3%B4%EC%95%88%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%A3%EC%A7%80/</loc>
     <lastmod>2022-06-23T19:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/06/23/secure-service-edge.html/</loc>
+    <loc>https://cwyang.github.io/2022/06/23/secure-service-edge.html/</loc>
     <lastmod>2022-06-23T19:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/%EC%A0%9C%EB%A1%9C%ED%8A%B8%EB%9F%AC%EC%8A%A4%ED%8A%B8/</loc>
+    <loc>https://cwyang.github.io/tags/%EC%A0%9C%EB%A1%9C%ED%8A%B8%EB%9F%AC%EC%8A%A4%ED%8A%B8/</loc>
     <lastmod>2022-06-23T19:58:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ebpf/</loc>
+    <loc>https://cwyang.github.io/tags/ebpf/</loc>
     <lastmod>2022-03-11T09:36:43+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/03/11/libxdp.html/</loc>
+    <loc>https://cwyang.github.io/2022/03/11/libxdp.html/</loc>
     <lastmod>2022-03-11T09:36:43+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/libbpf/</loc>
+    <loc>https://cwyang.github.io/tags/libbpf/</loc>
     <lastmod>2022-03-11T09:36:43+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/sre/</loc>
+    <loc>https://cwyang.github.io/tags/sre/</loc>
     <lastmod>2022-03-11T09:36:43+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/xdp/</loc>
+    <loc>https://cwyang.github.io/tags/xdp/</loc>
     <lastmod>2022-03-11T09:36:43+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/crashdump/</loc>
+    <loc>https://cwyang.github.io/tags/crashdump/</loc>
     <lastmod>2022-03-04T16:14:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/diary/</loc>
+    <loc>https://cwyang.github.io/tags/diary/</loc>
     <lastmod>2022-03-04T16:14:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/libsegfault/</loc>
+    <loc>https://cwyang.github.io/tags/libsegfault/</loc>
     <lastmod>2022-03-04T16:14:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/sentry/</loc>
+    <loc>https://cwyang.github.io/tags/sentry/</loc>
     <lastmod>2022-03-04T16:14:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/tip/</loc>
+    <loc>https://cwyang.github.io/tags/tip/</loc>
     <lastmod>2022-03-04T16:14:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</loc>
+    <loc>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</loc>
     <lastmod>2022-03-04T16:14:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/git/</loc>
+    <loc>https://cwyang.github.io/tags/git/</loc>
     <lastmod>2022-03-04T15:54:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/03/04/git-submodule.html/</loc>
+    <loc>https://cwyang.github.io/2022/03/04/git-submodule.html/</loc>
     <lastmod>2022-03-04T15:54:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/submodule/</loc>
+    <loc>https://cwyang.github.io/tags/submodule/</loc>
     <lastmod>2022-03-04T15:54:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/book/</loc>
+    <loc>https://cwyang.github.io/tags/book/</loc>
     <lastmod>2022-02-15T01:53:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/enterpreneurs/</loc>
+    <loc>https://cwyang.github.io/tags/enterpreneurs/</loc>
     <lastmod>2022-02-15T01:53:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/02/15/some-enterpreneurs.html/</loc>
+    <loc>https://cwyang.github.io/2022/02/15/some-enterpreneurs.html/</loc>
     <lastmod>2022-02-15T01:53:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/blockchain/</loc>
+    <loc>https://cwyang.github.io/tags/blockchain/</loc>
     <lastmod>2022-01-05T15:13:17+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/metamask/</loc>
+    <loc>https://cwyang.github.io/tags/metamask/</loc>
     <lastmod>2022-01-05T15:13:17+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/nft/</loc>
+    <loc>https://cwyang.github.io/tags/nft/</loc>
     <lastmod>2022-01-05T15:13:17+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/01/05/nft_metamask.html/</loc>
+    <loc>https://cwyang.github.io/2022/01/05/nft_metamask.html/</loc>
     <lastmod>2022-01-05T15:13:17+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/algorand/</loc>
+    <loc>https://cwyang.github.io/tags/algorand/</loc>
     <lastmod>2022-01-03T15:45:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/defi/</loc>
+    <loc>https://cwyang.github.io/tags/defi/</loc>
     <lastmod>2022-01-03T15:45:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/exploit/</loc>
+    <loc>https://cwyang.github.io/tags/exploit/</loc>
     <lastmod>2022-01-03T15:45:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/tinyman/</loc>
+    <loc>https://cwyang.github.io/tags/tinyman/</loc>
     <lastmod>2022-01-03T15:45:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2022/01/03/tinyman-gets-attack.html/</loc>
+    <loc>https://cwyang.github.io/2022/01/03/tinyman-gets-attack.html/</loc>
     <lastmod>2022-01-03T15:45:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/java/</loc>
+    <loc>https://cwyang.github.io/tags/java/</loc>
     <lastmod>2021-12-14T12:08:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/jndi/</loc>
+    <loc>https://cwyang.github.io/tags/jndi/</loc>
     <lastmod>2021-12-14T12:08:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/log4j/</loc>
+    <loc>https://cwyang.github.io/tags/log4j/</loc>
     <lastmod>2021-12-14T12:08:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/vulnerability/</loc>
+    <loc>https://cwyang.github.io/tags/vulnerability/</loc>
     <lastmod>2021-12-14T12:08:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2021/12/14/cve-2021-44228.html/</loc>
+    <loc>https://cwyang.github.io/2021/12/14/cve-2021-44228.html/</loc>
     <lastmod>2021-12-14T12:08:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/emacs/</loc>
+    <loc>https://cwyang.github.io/tags/emacs/</loc>
     <lastmod>2021-11-04T16:59:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2021/11/04/python-dev-environment-setup.html/</loc>
+    <loc>https://cwyang.github.io/2021/11/04/python-dev-environment-setup.html/</loc>
     <lastmod>2021-11-04T16:59:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ces/</loc>
+    <loc>https://cwyang.github.io/tags/ces/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/digital-transformation/</loc>
+    <loc>https://cwyang.github.io/tags/digital-transformation/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2021/02/04/ces-2021.html/</loc>
+    <loc>https://cwyang.github.io/2021/02/04/ces-2021.html/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/container/</loc>
+    <loc>https://cwyang.github.io/tags/container/</loc>
     <lastmod>2021-01-20T15:02:41+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/docker/</loc>
+    <loc>https://cwyang.github.io/tags/docker/</loc>
     <lastmod>2021-01-20T15:02:41+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/dockerhub/</loc>
+    <loc>https://cwyang.github.io/tags/dockerhub/</loc>
     <lastmod>2021-01-20T15:02:41+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/harbor/</loc>
+    <loc>https://cwyang.github.io/tags/harbor/</loc>
     <lastmod>2021-01-20T15:02:41+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/k8s/</loc>
+    <loc>https://cwyang.github.io/tags/k8s/</loc>
     <lastmod>2021-01-20T15:02:41+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/kubernetes/</loc>
+    <loc>https://cwyang.github.io/tags/kubernetes/</loc>
     <lastmod>2021-01-20T15:02:41+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/</loc>
+    <loc>https://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/</loc>
     <lastmod>2021-01-20T15:02:41+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/code-sign/</loc>
+    <loc>https://cwyang.github.io/tags/code-sign/</loc>
     <lastmod>2020-12-09T18:12:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/macos/</loc>
+    <loc>https://cwyang.github.io/tags/macos/</loc>
     <lastmod>2020-12-09T18:12:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/notarization/</loc>
+    <loc>https://cwyang.github.io/tags/notarization/</loc>
     <lastmod>2020-12-09T18:12:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/osx/</loc>
+    <loc>https://cwyang.github.io/tags/osx/</loc>
     <lastmod>2020-12-09T18:12:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html/</loc>
+    <loc>https://cwyang.github.io/2020/12/09/osx-codesign-notarization.html/</loc>
     <lastmod>2020-12-09T18:12:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/cloud-first/</loc>
+    <loc>https://cwyang.github.io/tags/cloud-first/</loc>
     <lastmod>2020-12-05T20:17:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/politics/</loc>
+    <loc>https://cwyang.github.io/tags/politics/</loc>
     <lastmod>2020-12-05T20:17:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html/</loc>
+    <loc>https://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html/</loc>
     <lastmod>2020-12-05T20:17:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/iptables/</loc>
+    <loc>https://cwyang.github.io/tags/iptables/</loc>
     <lastmod>2020-04-18T09:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/NAT/</loc>
+    <loc>https://cwyang.github.io/tags/NAT/</loc>
     <lastmod>2020-04-18T09:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/perl/</loc>
+    <loc>https://cwyang.github.io/tags/perl/</loc>
     <lastmod>2020-04-18T09:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/policy-routing/</loc>
+    <loc>https://cwyang.github.io/tags/policy-routing/</loc>
     <lastmod>2020-04-18T09:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/transparenty-proxy/</loc>
+    <loc>https://cwyang.github.io/tags/transparenty-proxy/</loc>
     <lastmod>2020-04-18T09:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</loc>
+    <loc>https://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</loc>
     <lastmod>2020-04-18T09:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2019/12/19/openssl-3.0.html/</loc>
+    <loc>https://cwyang.github.io/2019/12/19/openssl-3.0.html/</loc>
     <lastmod>2019-12-19T11:33:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/history/</loc>
+    <loc>https://cwyang.github.io/tags/history/</loc>
     <lastmod>2019-06-12T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2019/06/12/guan_zhong.html/</loc>
+    <loc>https://cwyang.github.io/2019/06/12/guan_zhong.html/</loc>
     <lastmod>2019-06-12T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/centos/</loc>
+    <loc>https://cwyang.github.io/tags/centos/</loc>
     <lastmod>2018-10-12T14:38:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/ovs/</loc>
+    <loc>https://cwyang.github.io/tags/ovs/</loc>
     <lastmod>2018-10-12T14:38:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</loc>
+    <loc>https://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</loc>
     <lastmod>2018-10-12T14:38:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/vagrant/</loc>
+    <loc>https://cwyang.github.io/tags/vagrant/</loc>
     <lastmod>2018-10-12T14:38:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html/</loc>
+    <loc>https://cwyang.github.io/2018/09/24/cloudflare-does-esni.html/</loc>
     <lastmod>2018-09-24T09:40:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/filtering/</loc>
+    <loc>https://cwyang.github.io/tags/filtering/</loc>
     <lastmod>2018-09-24T09:40:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/sni/</loc>
+    <loc>https://cwyang.github.io/tags/sni/</loc>
     <lastmod>2018-09-24T09:40:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/different/</loc>
+    <loc>https://cwyang.github.io/tags/different/</loc>
     <lastmod>2018-07-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/management/</loc>
+    <loc>https://cwyang.github.io/tags/management/</loc>
     <lastmod>2018-07-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/strategy/</loc>
+    <loc>https://cwyang.github.io/tags/strategy/</loc>
     <lastmod>2018-07-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2018/07/02/different-escaping-the-competitive-herd.html/</loc>
+    <loc>https://cwyang.github.io/2018/07/02/different-escaping-the-competitive-herd.html/</loc>
     <lastmod>2018-07-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/dns/</loc>
+    <loc>https://cwyang.github.io/tags/dns/</loc>
     <lastmod>2018-06-01T15:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/web-filtering/</loc>
+    <loc>https://cwyang.github.io/tags/web-filtering/</loc>
     <lastmod>2018-06-01T15:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/work/</loc>
+    <loc>https://cwyang.github.io/tags/work/</loc>
     <lastmod>2018-06-01T15:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2018/06/01/internet-filtering.html/</loc>
+    <loc>https://cwyang.github.io/2018/06/01/internet-filtering.html/</loc>
     <lastmod>2018-06-01T15:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2018/04/05/omg-wildcard-cert-co-kr.html/</loc>
+    <loc>https://cwyang.github.io/2018/04/05/omg-wildcard-cert-co-kr.html/</loc>
     <lastmod>2018-04-05T09:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/certificate-transparency/</loc>
+    <loc>https://cwyang.github.io/tags/certificate-transparency/</loc>
     <lastmod>2018-04-05T09:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/GPKI/</loc>
+    <loc>https://cwyang.github.io/tags/GPKI/</loc>
     <lastmod>2018-04-05T09:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/https/</loc>
+    <loc>https://cwyang.github.io/tags/https/</loc>
     <lastmod>2018-03-28T17:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2018/03/28/is-https-really-safe.html/</loc>
+    <loc>https://cwyang.github.io/2018/03/28/is-https-really-safe.html/</loc>
     <lastmod>2018-03-28T17:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/interception/</loc>
+    <loc>https://cwyang.github.io/tags/interception/</loc>
     <lastmod>2018-03-28T17:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html/</loc>
+    <loc>https://cwyang.github.io/2018/03/24/if_https_usage_becomes_100_percent.html/</loc>
     <lastmod>2018-03-24T10:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html/</loc>
+    <loc>https://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html/</loc>
     <lastmod>2017-12-30T00:15:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/jekyll/</loc>
+    <loc>https://cwyang.github.io/tags/jekyll/</loc>
     <lastmod>2017-07-04T19:57:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</loc>
+    <loc>https://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</loc>
     <lastmod>2017-07-04T19:57:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</loc>
+    <loc>https://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</loc>
     <lastmod>2013-04-09T10:50:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/</loc>
+    <loc>https://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/</loc>
     <lastmod>2013-04-09T10:50:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/beep/</loc>
+    <loc>https://cwyang.github.io/tags/beep/</loc>
     <lastmod>2013-03-26T11:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/bell/</loc>
+    <loc>https://cwyang.github.io/tags/bell/</loc>
     <lastmod>2013-03-26T11:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</loc>
+    <loc>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</loc>
     <lastmod>2013-03-26T11:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/xkbset/</loc>
+    <loc>https://cwyang.github.io/tags/xkbset/</loc>
     <lastmod>2013-03-26T11:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/erlang/</loc>
+    <loc>https://cwyang.github.io/tags/erlang/</loc>
     <lastmod>2011-09-26T17:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2011/09/26/erlang-noproc-error.html/</loc>
+    <loc>https://cwyang.github.io/2011/09/26/erlang-noproc-error.html/</loc>
     <lastmod>2011-09-26T17:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/noproc/</loc>
+    <loc>https://cwyang.github.io/tags/noproc/</loc>
     <lastmod>2011-09-26T17:24:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/firefox/</loc>
+    <loc>https://cwyang.github.io/tags/firefox/</loc>
     <lastmod>2011-08-19T16:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/haskell/</loc>
+    <loc>https://cwyang.github.io/tags/haskell/</loc>
     <lastmod>2011-08-19T16:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/rebar/</loc>
+    <loc>https://cwyang.github.io/tags/rebar/</loc>
     <lastmod>2011-08-19T16:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/scim/</loc>
+    <loc>https://cwyang.github.io/tags/scim/</loc>
     <lastmod>2011-08-19T16:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/xmobar/</loc>
+    <loc>https://cwyang.github.io/tags/xmobar/</loc>
     <lastmod>2011-08-19T16:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/xmonad/</loc>
+    <loc>https://cwyang.github.io/tags/xmonad/</loc>
     <lastmod>2011-08-19T16:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</loc>
+    <loc>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</loc>
     <lastmod>2011-08-19T16:22:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/bottom-up/</loc>
+    <loc>https://cwyang.github.io/tags/bottom-up/</loc>
     <lastmod>2010-11-04T11:59:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/top-down/</loc>
+    <loc>https://cwyang.github.io/tags/top-down/</loc>
     <lastmod>2010-11-04T11:59:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</loc>
+    <loc>https://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</loc>
     <lastmod>2010-11-04T11:59:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C/</loc>
+    <loc>https://cwyang.github.io/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C/</loc>
     <lastmod>2010-11-04T11:59:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</loc>
+    <loc>https://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</loc>
     <lastmod>2010-11-03T21:16:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/QOS/</loc>
+    <loc>https://cwyang.github.io/tags/QOS/</loc>
     <lastmod>2010-11-03T21:16:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/measurement/</loc>
+    <loc>https://cwyang.github.io/tags/measurement/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/monitoring/</loc>
+    <loc>https://cwyang.github.io/tags/monitoring/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/quality/</loc>
+    <loc>https://cwyang.github.io/tags/quality/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</loc>
+    <loc>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/robustness/</loc>
+    <loc>https://cwyang.github.io/tags/robustness/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/software/</loc>
+    <loc>https://cwyang.github.io/tags/software/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/software-development/</loc>
+    <loc>https://cwyang.github.io/tags/software-development/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/test/</loc>
+    <loc>https://cwyang.github.io/tags/test/</loc>
     <lastmod>2010-11-02T16:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/debugging/</loc>
+    <loc>https://cwyang.github.io/tags/debugging/</loc>
     <lastmod>2010-07-10T23:21:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/development/</loc>
+    <loc>https://cwyang.github.io/tags/development/</loc>
     <lastmod>2010-07-10T23:21:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/GDB/</loc>
+    <loc>https://cwyang.github.io/tags/GDB/</loc>
     <lastmod>2010-07-10T23:21:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</loc>
+    <loc>https://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</loc>
     <lastmod>2010-07-10T23:21:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/direct-io/</loc>
+    <loc>https://cwyang.github.io/tags/direct-io/</loc>
     <lastmod>2010-07-09T22:40:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/07/09/direct-io.html/</loc>
+    <loc>https://cwyang.github.io/2010/07/09/direct-io.html/</loc>
     <lastmod>2010-07-09T22:40:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/connection-tracking/</loc>
+    <loc>https://cwyang.github.io/tags/connection-tracking/</loc>
     <lastmod>2010-07-09T22:36:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/half-close/</loc>
+    <loc>https://cwyang.github.io/tags/half-close/</loc>
     <lastmod>2010-07-09T22:36:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/netfilter/</loc>
+    <loc>https://cwyang.github.io/tags/netfilter/</loc>
     <lastmod>2010-07-09T22:36:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/07/09/netfilter-tcp-retransmission-half-close.html/</loc>
+    <loc>https://cwyang.github.io/2010/07/09/netfilter-tcp-retransmission-half-close.html/</loc>
     <lastmod>2010-07-09T22:36:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/sysadmin/</loc>
+    <loc>https://cwyang.github.io/tags/sysadmin/</loc>
     <lastmod>2010-07-09T22:36:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/tcp-retransmission/</loc>
+    <loc>https://cwyang.github.io/tags/tcp-retransmission/</loc>
     <lastmod>2010-07-09T22:36:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/06/10/multiqueue-nic.html/</loc>
+    <loc>https://cwyang.github.io/2010/06/10/multiqueue-nic.html/</loc>
     <lastmod>2010-06-10T18:46:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/04/21/want-to-say-no.html/</loc>
+    <loc>https://cwyang.github.io/2010/04/21/want-to-say-no.html/</loc>
     <lastmod>2010-04-21T18:05:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/04/06/code-then-prey.html/</loc>
+    <loc>https://cwyang.github.io/2010/04/06/code-then-prey.html/</loc>
     <lastmod>2010-04-06T22:09:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/03/17/software-development.html/</loc>
+    <loc>https://cwyang.github.io/2010/03/17/software-development.html/</loc>
     <lastmod>2010-03-17T21:59:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/beer/</loc>
+    <loc>https://cwyang.github.io/tags/beer/</loc>
     <lastmod>2010-03-12T20:17:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2010/03/12/new-blog.html/</loc>
+    <loc>https://cwyang.github.io/2010/03/12/new-blog.html/</loc>
     <lastmod>2010-03-12T20:17:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/programming/</loc>
+    <loc>https://cwyang.github.io/tags/programming/</loc>
     <lastmod>2009-10-21T14:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</loc>
+    <loc>https://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</loc>
     <lastmod>2009-10-21T14:48:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/fp/</loc>
+    <loc>https://cwyang.github.io/tags/fp/</loc>
     <lastmod>2009-04-01T10:32:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</loc>
+    <loc>https://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</loc>
     <lastmod>2009-04-01T10:32:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/fold/</loc>
+    <loc>https://cwyang.github.io/tags/fold/</loc>
     <lastmod>2009-02-17T09:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</loc>
+    <loc>https://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</loc>
     <lastmod>2009-02-17T09:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/monad/</loc>
+    <loc>https://cwyang.github.io/tags/monad/</loc>
     <lastmod>2009-02-02T20:53:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</loc>
+    <loc>https://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</loc>
     <lastmod>2009-02-02T20:53:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</loc>
+    <loc>https://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</loc>
     <lastmod>2009-02-01T02:17:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/2009/01/23/programming-in-haskell.html/</loc>
+    <loc>https://cwyang.github.io/2009/01/23/programming-in-haskell.html/</loc>
     <lastmod>2009-01-23T10:20:00+00:00</lastmod>
   </url><url>
-    <loc>http://cwyang.github.io/tags/HTTP/2/</loc>
+    <loc>https://cwyang.github.io/tags/HTTP/2/</loc>
   </url>
 </urlset>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>java on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/java/</link>
+    <link>https://cwyang.github.io/tags/java/</link>
     <description>Recent content in java on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Dec 2021 12:08:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>이번 Log4J 자바취약점 요약</title>
-      <link>http://cwyang.github.io/2021/12/14/cve-2021-44228.html/</link>
+      <link>https://cwyang.github.io/2021/12/14/cve-2021-44228.html/</link>
       <pubDate>Tue, 14 Dec 2021 12:08:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2021/12/14/cve-2021-44228.html/</guid>
+      <guid>https://cwyang.github.io/2021/12/14/cve-2021-44228.html/</guid>
       <description>이번 자바취약점 CVE-2021-44228에 대해 짧게 씁니다.</description>
     </item>
   </channel>

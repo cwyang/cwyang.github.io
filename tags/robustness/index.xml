@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>robustness on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/robustness/</link>
+    <link>https://cwyang.github.io/tags/robustness/</link>
     <description>Recent content in robustness on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Nov 2010 16:48:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/robustness/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/robustness/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Regarding Network Software Robustness</title>
-      <link>http://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</link>
+      <link>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</guid>
+      <guid>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</guid>
       <description>1st draft: 2 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
     </item>
   </channel>

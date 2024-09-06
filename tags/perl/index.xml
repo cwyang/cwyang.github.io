@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>perl on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/perl/</link>
+    <link>https://cwyang.github.io/tags/perl/</link>
     <description>Recent content in perl on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Apr 2020 09:15:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요</title>
-      <link>http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</link>
+      <link>https://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</link>
       <pubDate>Sat, 18 Apr 2020 09:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</guid>
+      <guid>https://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</guid>
       <description>정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. &lt;code&gt;iptales -L -nv&lt;/code&gt;로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sentry on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/sentry/</link>
+    <link>https://cwyang.github.io/tags/sentry/</link>
     <description>Recent content in sentry on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Mar 2022 16:14:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/sentry/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/sentry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>크래시 덤프 수집</title>
-      <link>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</link>
+      <link>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</guid>
+      <guid>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</guid>
       <description>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,</description>
     </item>
   </channel>

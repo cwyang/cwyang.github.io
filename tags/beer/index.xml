@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>beer on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/beer/</link>
+    <link>https://cwyang.github.io/tags/beer/</link>
     <description>Recent content in beer on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Mar 2010 20:17:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/beer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/beer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>블로그를 시작하였습니다.</title>
-      <link>http://cwyang.github.io/2010/03/12/new-blog.html/</link>
+      <link>https://cwyang.github.io/2010/03/12/new-blog.html/</link>
       <pubDate>Fri, 12 Mar 2010 20:17:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2010/03/12/new-blog.html/</guid>
+      <guid>https://cwyang.github.io/2010/03/12/new-blog.html/</guid>
       <description>블로그를 시작하였습니다. 신변잡기 이야기들을 써보려고 하는데 소프트웨어 개발이 직업인 지라 주로 프로그래밍 및 관련 이야기들로 채워지지 않을까 싶습니다. 블로그 프로필에 적어넣은, 제가 좋아하는 먼 옛날부터 전해지던 이야기를 시작으로 이야기를 써 내려 가보도록 하죠.</description>
     </item>
   </channel>

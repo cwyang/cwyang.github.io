@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>performance on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/performance/</link>
+    <link>https://cwyang.github.io/tags/performance/</link>
     <description>Recent content in performance on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Feb 2023 20:00:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/performance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Receive Side Scaling</title>
-      <link>http://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</link>
+      <link>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</guid>
+      <guid>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</guid>
       <description>RSS에 대해서 다시 자료를 보고 있는데 10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.</description>
     </item>
     <item>
       <title>Multiqueue NIC</title>
-      <link>http://cwyang.github.io/2010/06/10/multiqueue-nic.html/</link>
+      <link>https://cwyang.github.io/2010/06/10/multiqueue-nic.html/</link>
       <pubDate>Thu, 10 Jun 2010 18:46:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2010/06/10/multiqueue-nic.html/</guid>
+      <guid>https://cwyang.github.io/2010/06/10/multiqueue-nic.html/</guid>
       <description>10Gbps NIC이 나오게 되면서 Single-core로는 그만한 대역폭을 내기가 어렵게 되었고, 그래서 제안된 것이 multiqueue NIC이다.</description>
     </item>
   </channel>

@@ -2,1095 +2,1095 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/</link>
+    <link>https://cwyang.github.io/tags/</link>
     <description>Recent content in Tags on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Sep 2024 02:39:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blog</title>
-      <link>http://cwyang.github.io/tags/blog/</link>
+      <link>https://cwyang.github.io/tags/blog/</link>
       <pubDate>Thu, 05 Sep 2024 02:39:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/blog/</guid>
+      <guid>https://cwyang.github.io/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>hugo</title>
-      <link>http://cwyang.github.io/tags/hugo/</link>
+      <link>https://cwyang.github.io/tags/hugo/</link>
       <pubDate>Thu, 05 Sep 2024 02:39:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/hugo/</guid>
+      <guid>https://cwyang.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>삽질</title>
-      <link>http://cwyang.github.io/tags/%EC%82%BD%EC%A7%88/</link>
+      <link>https://cwyang.github.io/tags/%EC%82%BD%EC%A7%88/</link>
       <pubDate>Thu, 05 Sep 2024 02:39:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/%EC%82%BD%EC%A7%88/</guid>
+      <guid>https://cwyang.github.io/tags/%EC%82%BD%EC%A7%88/</guid>
       <description></description>
     </item>
     <item>
       <title>mss</title>
-      <link>http://cwyang.github.io/tags/mss/</link>
+      <link>https://cwyang.github.io/tags/mss/</link>
       <pubDate>Wed, 31 Jan 2024 19:06:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/mss/</guid>
+      <guid>https://cwyang.github.io/tags/mss/</guid>
       <description></description>
     </item>
     <item>
       <title>mss-clamping</title>
-      <link>http://cwyang.github.io/tags/mss-clamping/</link>
+      <link>https://cwyang.github.io/tags/mss-clamping/</link>
       <pubDate>Wed, 31 Jan 2024 19:06:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/mss-clamping/</guid>
+      <guid>https://cwyang.github.io/tags/mss-clamping/</guid>
       <description></description>
     </item>
     <item>
       <title>mtu</title>
-      <link>http://cwyang.github.io/tags/mtu/</link>
+      <link>https://cwyang.github.io/tags/mtu/</link>
       <pubDate>Wed, 31 Jan 2024 19:06:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/mtu/</guid>
+      <guid>https://cwyang.github.io/tags/mtu/</guid>
       <description></description>
     </item>
     <item>
       <title>network</title>
-      <link>http://cwyang.github.io/tags/network/</link>
+      <link>https://cwyang.github.io/tags/network/</link>
       <pubDate>Wed, 31 Jan 2024 19:06:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/network/</guid>
+      <guid>https://cwyang.github.io/tags/network/</guid>
       <description></description>
     </item>
     <item>
       <title>TCP</title>
-      <link>http://cwyang.github.io/tags/TCP/</link>
+      <link>https://cwyang.github.io/tags/TCP/</link>
       <pubDate>Wed, 31 Jan 2024 19:06:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/TCP/</guid>
+      <guid>https://cwyang.github.io/tags/TCP/</guid>
       <description></description>
     </item>
     <item>
       <title>DDoS</title>
-      <link>http://cwyang.github.io/tags/DDoS/</link>
+      <link>https://cwyang.github.io/tags/DDoS/</link>
       <pubDate>Fri, 12 Jan 2024 19:00:03 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/DDoS/</guid>
+      <guid>https://cwyang.github.io/tags/DDoS/</guid>
       <description></description>
     </item>
     <item>
       <title>DoS</title>
-      <link>http://cwyang.github.io/tags/DoS/</link>
+      <link>https://cwyang.github.io/tags/DoS/</link>
       <pubDate>Fri, 12 Jan 2024 19:00:03 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/DoS/</guid>
+      <guid>https://cwyang.github.io/tags/DoS/</guid>
       <description></description>
     </item>
     <item>
       <title>gRPC</title>
-      <link>http://cwyang.github.io/tags/gRPC/</link>
+      <link>https://cwyang.github.io/tags/gRPC/</link>
       <pubDate>Fri, 12 Jan 2024 19:00:03 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/gRPC/</guid>
+      <guid>https://cwyang.github.io/tags/gRPC/</guid>
       <description></description>
     </item>
     <item>
       <title>security</title>
-      <link>http://cwyang.github.io/tags/security/</link>
+      <link>https://cwyang.github.io/tags/security/</link>
       <pubDate>Fri, 12 Jan 2024 19:00:03 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/security/</guid>
+      <guid>https://cwyang.github.io/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>echo server</title>
-      <link>http://cwyang.github.io/tags/echo-server/</link>
+      <link>https://cwyang.github.io/tags/echo-server/</link>
       <pubDate>Sun, 16 Jul 2023 19:02:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/echo-server/</guid>
+      <guid>https://cwyang.github.io/tags/echo-server/</guid>
       <description></description>
     </item>
     <item>
       <title>IP_PKTINFO</title>
-      <link>http://cwyang.github.io/tags/IP_PKTINFO/</link>
+      <link>https://cwyang.github.io/tags/IP_PKTINFO/</link>
       <pubDate>Sun, 16 Jul 2023 19:02:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/IP_PKTINFO/</guid>
+      <guid>https://cwyang.github.io/tags/IP_PKTINFO/</guid>
       <description></description>
     </item>
     <item>
       <title>python</title>
-      <link>http://cwyang.github.io/tags/python/</link>
+      <link>https://cwyang.github.io/tags/python/</link>
       <pubDate>Sun, 16 Jul 2023 19:02:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/python/</guid>
+      <guid>https://cwyang.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>socket</title>
-      <link>http://cwyang.github.io/tags/socket/</link>
+      <link>https://cwyang.github.io/tags/socket/</link>
       <pubDate>Sun, 16 Jul 2023 19:02:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/socket/</guid>
+      <guid>https://cwyang.github.io/tags/socket/</guid>
       <description></description>
     </item>
     <item>
       <title>UDP</title>
-      <link>http://cwyang.github.io/tags/UDP/</link>
+      <link>https://cwyang.github.io/tags/UDP/</link>
       <pubDate>Sun, 16 Jul 2023 19:02:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/UDP/</guid>
+      <guid>https://cwyang.github.io/tags/UDP/</guid>
       <description></description>
     </item>
     <item>
       <title>Unix</title>
-      <link>http://cwyang.github.io/tags/Unix/</link>
+      <link>https://cwyang.github.io/tags/Unix/</link>
       <pubDate>Sun, 16 Jul 2023 19:02:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/Unix/</guid>
+      <guid>https://cwyang.github.io/tags/Unix/</guid>
       <description></description>
     </item>
     <item>
       <title>linux</title>
-      <link>http://cwyang.github.io/tags/linux/</link>
+      <link>https://cwyang.github.io/tags/linux/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/linux/</guid>
+      <guid>https://cwyang.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>mint</title>
-      <link>http://cwyang.github.io/tags/mint/</link>
+      <link>https://cwyang.github.io/tags/mint/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/mint/</guid>
+      <guid>https://cwyang.github.io/tags/mint/</guid>
       <description></description>
     </item>
     <item>
       <title>settings</title>
-      <link>http://cwyang.github.io/tags/settings/</link>
+      <link>https://cwyang.github.io/tags/settings/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/settings/</guid>
+      <guid>https://cwyang.github.io/tags/settings/</guid>
       <description></description>
     </item>
     <item>
       <title>thinkpad</title>
-      <link>http://cwyang.github.io/tags/thinkpad/</link>
+      <link>https://cwyang.github.io/tags/thinkpad/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/thinkpad/</guid>
+      <guid>https://cwyang.github.io/tags/thinkpad/</guid>
       <description></description>
     </item>
     <item>
       <title>ubuntu</title>
-      <link>http://cwyang.github.io/tags/ubuntu/</link>
+      <link>https://cwyang.github.io/tags/ubuntu/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ubuntu/</guid>
+      <guid>https://cwyang.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     <item>
       <title>multiqueue</title>
-      <link>http://cwyang.github.io/tags/multiqueue/</link>
+      <link>https://cwyang.github.io/tags/multiqueue/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/multiqueue/</guid>
+      <guid>https://cwyang.github.io/tags/multiqueue/</guid>
       <description></description>
     </item>
     <item>
       <title>performance</title>
-      <link>http://cwyang.github.io/tags/performance/</link>
+      <link>https://cwyang.github.io/tags/performance/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/performance/</guid>
+      <guid>https://cwyang.github.io/tags/performance/</guid>
       <description></description>
     </item>
     <item>
       <title>Receive Side Scaling</title>
-      <link>http://cwyang.github.io/tags/Receive-Side-Scaling/</link>
+      <link>https://cwyang.github.io/tags/Receive-Side-Scaling/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/Receive-Side-Scaling/</guid>
+      <guid>https://cwyang.github.io/tags/Receive-Side-Scaling/</guid>
       <description></description>
     </item>
     <item>
       <title>RSS</title>
-      <link>http://cwyang.github.io/tags/RSS/</link>
+      <link>https://cwyang.github.io/tags/RSS/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/RSS/</guid>
+      <guid>https://cwyang.github.io/tags/RSS/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure</title>
-      <link>http://cwyang.github.io/tags/Azure/</link>
+      <link>https://cwyang.github.io/tags/Azure/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/Azure/</guid>
+      <guid>https://cwyang.github.io/tags/Azure/</guid>
       <description></description>
     </item>
     <item>
       <title>CloudNetwork</title>
-      <link>http://cwyang.github.io/tags/CloudNetwork/</link>
+      <link>https://cwyang.github.io/tags/CloudNetwork/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/CloudNetwork/</guid>
+      <guid>https://cwyang.github.io/tags/CloudNetwork/</guid>
       <description></description>
     </item>
     <item>
       <title>L2-domain</title>
-      <link>http://cwyang.github.io/tags/L2-domain/</link>
+      <link>https://cwyang.github.io/tags/L2-domain/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/L2-domain/</guid>
+      <guid>https://cwyang.github.io/tags/L2-domain/</guid>
       <description></description>
     </item>
     <item>
       <title>Subnet</title>
-      <link>http://cwyang.github.io/tags/Subnet/</link>
+      <link>https://cwyang.github.io/tags/Subnet/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/Subnet/</guid>
+      <guid>https://cwyang.github.io/tags/Subnet/</guid>
       <description></description>
     </item>
     <item>
       <title>UDR</title>
-      <link>http://cwyang.github.io/tags/UDR/</link>
+      <link>https://cwyang.github.io/tags/UDR/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/UDR/</guid>
+      <guid>https://cwyang.github.io/tags/UDR/</guid>
       <description></description>
     </item>
     <item>
       <title>VNET</title>
-      <link>http://cwyang.github.io/tags/VNET/</link>
+      <link>https://cwyang.github.io/tags/VNET/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/VNET/</guid>
+      <guid>https://cwyang.github.io/tags/VNET/</guid>
       <description></description>
     </item>
     <item>
       <title>VPC</title>
-      <link>http://cwyang.github.io/tags/VPC/</link>
+      <link>https://cwyang.github.io/tags/VPC/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/VPC/</guid>
+      <guid>https://cwyang.github.io/tags/VPC/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>http://cwyang.github.io/tags/AI/</link>
+      <link>https://cwyang.github.io/tags/AI/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/AI/</guid>
+      <guid>https://cwyang.github.io/tags/AI/</guid>
       <description></description>
     </item>
     <item>
       <title>ArtificialIntelligence</title>
-      <link>http://cwyang.github.io/tags/ArtificialIntelligence/</link>
+      <link>https://cwyang.github.io/tags/ArtificialIntelligence/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ArtificialIntelligence/</guid>
+      <guid>https://cwyang.github.io/tags/ArtificialIntelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Business</title>
-      <link>http://cwyang.github.io/tags/Business/</link>
+      <link>https://cwyang.github.io/tags/Business/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/Business/</guid>
+      <guid>https://cwyang.github.io/tags/Business/</guid>
       <description></description>
     </item>
     <item>
       <title>ChatGPT3</title>
-      <link>http://cwyang.github.io/tags/ChatGPT3/</link>
+      <link>https://cwyang.github.io/tags/ChatGPT3/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ChatGPT3/</guid>
+      <guid>https://cwyang.github.io/tags/ChatGPT3/</guid>
       <description></description>
     </item>
     <item>
       <title>CuttingEdgeTechnology</title>
-      <link>http://cwyang.github.io/tags/CuttingEdgeTechnology/</link>
+      <link>https://cwyang.github.io/tags/CuttingEdgeTechnology/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/CuttingEdgeTechnology/</guid>
+      <guid>https://cwyang.github.io/tags/CuttingEdgeTechnology/</guid>
       <description></description>
     </item>
     <item>
       <title>Innovation</title>
-      <link>http://cwyang.github.io/tags/Innovation/</link>
+      <link>https://cwyang.github.io/tags/Innovation/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/Innovation/</guid>
+      <guid>https://cwyang.github.io/tags/Innovation/</guid>
       <description></description>
     </item>
     <item>
       <title>MachineLearning</title>
-      <link>http://cwyang.github.io/tags/MachineLearning/</link>
+      <link>https://cwyang.github.io/tags/MachineLearning/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/MachineLearning/</guid>
+      <guid>https://cwyang.github.io/tags/MachineLearning/</guid>
       <description></description>
     </item>
     <item>
       <title>NLP</title>
-      <link>http://cwyang.github.io/tags/NLP/</link>
+      <link>https://cwyang.github.io/tags/NLP/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/NLP/</guid>
+      <guid>https://cwyang.github.io/tags/NLP/</guid>
       <description></description>
     </item>
     <item>
       <title>Research</title>
-      <link>http://cwyang.github.io/tags/Research/</link>
+      <link>https://cwyang.github.io/tags/Research/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/Research/</guid>
+      <guid>https://cwyang.github.io/tags/Research/</guid>
       <description></description>
     </item>
     <item>
       <title>TechnologyTrends</title>
-      <link>http://cwyang.github.io/tags/TechnologyTrends/</link>
+      <link>https://cwyang.github.io/tags/TechnologyTrends/</link>
       <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/TechnologyTrends/</guid>
+      <guid>https://cwyang.github.io/tags/TechnologyTrends/</guid>
       <description></description>
     </item>
     <item>
       <title>haproxy</title>
-      <link>http://cwyang.github.io/tags/haproxy/</link>
+      <link>https://cwyang.github.io/tags/haproxy/</link>
       <pubDate>Fri, 03 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/haproxy/</guid>
+      <guid>https://cwyang.github.io/tags/haproxy/</guid>
       <description></description>
     </item>
     <item>
       <title>openssl</title>
-      <link>http://cwyang.github.io/tags/openssl/</link>
+      <link>https://cwyang.github.io/tags/openssl/</link>
       <pubDate>Fri, 03 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/openssl/</guid>
+      <guid>https://cwyang.github.io/tags/openssl/</guid>
       <description></description>
     </item>
     <item>
       <title>ssl</title>
-      <link>http://cwyang.github.io/tags/ssl/</link>
+      <link>https://cwyang.github.io/tags/ssl/</link>
       <pubDate>Fri, 03 Feb 2023 20:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ssl/</guid>
+      <guid>https://cwyang.github.io/tags/ssl/</guid>
       <description></description>
     </item>
     <item>
       <title>cloud</title>
-      <link>http://cwyang.github.io/tags/cloud/</link>
+      <link>https://cwyang.github.io/tags/cloud/</link>
       <pubDate>Thu, 02 Feb 2023 21:30:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/cloud/</guid>
+      <guid>https://cwyang.github.io/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>password</title>
-      <link>http://cwyang.github.io/tags/password/</link>
+      <link>https://cwyang.github.io/tags/password/</link>
       <pubDate>Thu, 02 Feb 2023 21:30:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/password/</guid>
+      <guid>https://cwyang.github.io/tags/password/</guid>
       <description></description>
     </item>
     <item>
       <title>pbkdf2</title>
-      <link>http://cwyang.github.io/tags/pbkdf2/</link>
+      <link>https://cwyang.github.io/tags/pbkdf2/</link>
       <pubDate>Thu, 02 Feb 2023 21:30:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/pbkdf2/</guid>
+      <guid>https://cwyang.github.io/tags/pbkdf2/</guid>
       <description></description>
     </item>
     <item>
       <title>tls</title>
-      <link>http://cwyang.github.io/tags/tls/</link>
+      <link>https://cwyang.github.io/tags/tls/</link>
       <pubDate>Wed, 06 Jul 2022 08:58:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/tls/</guid>
+      <guid>https://cwyang.github.io/tags/tls/</guid>
       <description></description>
     </item>
     <item>
       <title>SSE</title>
-      <link>http://cwyang.github.io/tags/SSE/</link>
+      <link>https://cwyang.github.io/tags/SSE/</link>
       <pubDate>Thu, 23 Jun 2022 19:58:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/SSE/</guid>
+      <guid>https://cwyang.github.io/tags/SSE/</guid>
       <description></description>
     </item>
     <item>
       <title>ZTNA</title>
-      <link>http://cwyang.github.io/tags/ZTNA/</link>
+      <link>https://cwyang.github.io/tags/ZTNA/</link>
       <pubDate>Thu, 23 Jun 2022 19:58:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ZTNA/</guid>
+      <guid>https://cwyang.github.io/tags/ZTNA/</guid>
       <description></description>
     </item>
     <item>
       <title>보안</title>
-      <link>http://cwyang.github.io/tags/%EB%B3%B4%EC%95%88/</link>
+      <link>https://cwyang.github.io/tags/%EB%B3%B4%EC%95%88/</link>
       <pubDate>Thu, 23 Jun 2022 19:58:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/%EB%B3%B4%EC%95%88/</guid>
+      <guid>https://cwyang.github.io/tags/%EB%B3%B4%EC%95%88/</guid>
       <description></description>
     </item>
     <item>
       <title>보안서비스엣지</title>
-      <link>http://cwyang.github.io/tags/%EB%B3%B4%EC%95%88%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%A3%EC%A7%80/</link>
+      <link>https://cwyang.github.io/tags/%EB%B3%B4%EC%95%88%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%A3%EC%A7%80/</link>
       <pubDate>Thu, 23 Jun 2022 19:58:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/%EB%B3%B4%EC%95%88%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%A3%EC%A7%80/</guid>
+      <guid>https://cwyang.github.io/tags/%EB%B3%B4%EC%95%88%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%A3%EC%A7%80/</guid>
       <description></description>
     </item>
     <item>
       <title>제로트러스트</title>
-      <link>http://cwyang.github.io/tags/%EC%A0%9C%EB%A1%9C%ED%8A%B8%EB%9F%AC%EC%8A%A4%ED%8A%B8/</link>
+      <link>https://cwyang.github.io/tags/%EC%A0%9C%EB%A1%9C%ED%8A%B8%EB%9F%AC%EC%8A%A4%ED%8A%B8/</link>
       <pubDate>Thu, 23 Jun 2022 19:58:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/%EC%A0%9C%EB%A1%9C%ED%8A%B8%EB%9F%AC%EC%8A%A4%ED%8A%B8/</guid>
+      <guid>https://cwyang.github.io/tags/%EC%A0%9C%EB%A1%9C%ED%8A%B8%EB%9F%AC%EC%8A%A4%ED%8A%B8/</guid>
       <description></description>
     </item>
     <item>
       <title>ebpf</title>
-      <link>http://cwyang.github.io/tags/ebpf/</link>
+      <link>https://cwyang.github.io/tags/ebpf/</link>
       <pubDate>Fri, 11 Mar 2022 09:36:43 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ebpf/</guid>
+      <guid>https://cwyang.github.io/tags/ebpf/</guid>
       <description></description>
     </item>
     <item>
       <title>libbpf</title>
-      <link>http://cwyang.github.io/tags/libbpf/</link>
+      <link>https://cwyang.github.io/tags/libbpf/</link>
       <pubDate>Fri, 11 Mar 2022 09:36:43 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/libbpf/</guid>
+      <guid>https://cwyang.github.io/tags/libbpf/</guid>
       <description></description>
     </item>
     <item>
       <title>sre</title>
-      <link>http://cwyang.github.io/tags/sre/</link>
+      <link>https://cwyang.github.io/tags/sre/</link>
       <pubDate>Fri, 11 Mar 2022 09:36:43 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/sre/</guid>
+      <guid>https://cwyang.github.io/tags/sre/</guid>
       <description></description>
     </item>
     <item>
       <title>xdp</title>
-      <link>http://cwyang.github.io/tags/xdp/</link>
+      <link>https://cwyang.github.io/tags/xdp/</link>
       <pubDate>Fri, 11 Mar 2022 09:36:43 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/xdp/</guid>
+      <guid>https://cwyang.github.io/tags/xdp/</guid>
       <description></description>
     </item>
     <item>
       <title>crashdump</title>
-      <link>http://cwyang.github.io/tags/crashdump/</link>
+      <link>https://cwyang.github.io/tags/crashdump/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/crashdump/</guid>
+      <guid>https://cwyang.github.io/tags/crashdump/</guid>
       <description></description>
     </item>
     <item>
       <title>diary</title>
-      <link>http://cwyang.github.io/tags/diary/</link>
+      <link>https://cwyang.github.io/tags/diary/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/diary/</guid>
+      <guid>https://cwyang.github.io/tags/diary/</guid>
       <description></description>
     </item>
     <item>
       <title>libsegfault</title>
-      <link>http://cwyang.github.io/tags/libsegfault/</link>
+      <link>https://cwyang.github.io/tags/libsegfault/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/libsegfault/</guid>
+      <guid>https://cwyang.github.io/tags/libsegfault/</guid>
       <description></description>
     </item>
     <item>
       <title>sentry</title>
-      <link>http://cwyang.github.io/tags/sentry/</link>
+      <link>https://cwyang.github.io/tags/sentry/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/sentry/</guid>
+      <guid>https://cwyang.github.io/tags/sentry/</guid>
       <description></description>
     </item>
     <item>
       <title>tip</title>
-      <link>http://cwyang.github.io/tags/tip/</link>
+      <link>https://cwyang.github.io/tags/tip/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/tip/</guid>
+      <guid>https://cwyang.github.io/tags/tip/</guid>
       <description></description>
     </item>
     <item>
       <title>git</title>
-      <link>http://cwyang.github.io/tags/git/</link>
+      <link>https://cwyang.github.io/tags/git/</link>
       <pubDate>Fri, 04 Mar 2022 15:54:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/git/</guid>
+      <guid>https://cwyang.github.io/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>submodule</title>
-      <link>http://cwyang.github.io/tags/submodule/</link>
+      <link>https://cwyang.github.io/tags/submodule/</link>
       <pubDate>Fri, 04 Mar 2022 15:54:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/submodule/</guid>
+      <guid>https://cwyang.github.io/tags/submodule/</guid>
       <description></description>
     </item>
     <item>
       <title>book</title>
-      <link>http://cwyang.github.io/tags/book/</link>
+      <link>https://cwyang.github.io/tags/book/</link>
       <pubDate>Tue, 15 Feb 2022 01:53:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/book/</guid>
+      <guid>https://cwyang.github.io/tags/book/</guid>
       <description></description>
     </item>
     <item>
       <title>enterpreneurs</title>
-      <link>http://cwyang.github.io/tags/enterpreneurs/</link>
+      <link>https://cwyang.github.io/tags/enterpreneurs/</link>
       <pubDate>Tue, 15 Feb 2022 01:53:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/enterpreneurs/</guid>
+      <guid>https://cwyang.github.io/tags/enterpreneurs/</guid>
       <description></description>
     </item>
     <item>
       <title>blockchain</title>
-      <link>http://cwyang.github.io/tags/blockchain/</link>
+      <link>https://cwyang.github.io/tags/blockchain/</link>
       <pubDate>Wed, 05 Jan 2022 15:13:17 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/blockchain/</guid>
+      <guid>https://cwyang.github.io/tags/blockchain/</guid>
       <description></description>
     </item>
     <item>
       <title>metamask</title>
-      <link>http://cwyang.github.io/tags/metamask/</link>
+      <link>https://cwyang.github.io/tags/metamask/</link>
       <pubDate>Wed, 05 Jan 2022 15:13:17 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/metamask/</guid>
+      <guid>https://cwyang.github.io/tags/metamask/</guid>
       <description></description>
     </item>
     <item>
       <title>nft</title>
-      <link>http://cwyang.github.io/tags/nft/</link>
+      <link>https://cwyang.github.io/tags/nft/</link>
       <pubDate>Wed, 05 Jan 2022 15:13:17 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/nft/</guid>
+      <guid>https://cwyang.github.io/tags/nft/</guid>
       <description></description>
     </item>
     <item>
       <title>algorand</title>
-      <link>http://cwyang.github.io/tags/algorand/</link>
+      <link>https://cwyang.github.io/tags/algorand/</link>
       <pubDate>Mon, 03 Jan 2022 15:45:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/algorand/</guid>
+      <guid>https://cwyang.github.io/tags/algorand/</guid>
       <description></description>
     </item>
     <item>
       <title>defi</title>
-      <link>http://cwyang.github.io/tags/defi/</link>
+      <link>https://cwyang.github.io/tags/defi/</link>
       <pubDate>Mon, 03 Jan 2022 15:45:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/defi/</guid>
+      <guid>https://cwyang.github.io/tags/defi/</guid>
       <description></description>
     </item>
     <item>
       <title>exploit</title>
-      <link>http://cwyang.github.io/tags/exploit/</link>
+      <link>https://cwyang.github.io/tags/exploit/</link>
       <pubDate>Mon, 03 Jan 2022 15:45:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/exploit/</guid>
+      <guid>https://cwyang.github.io/tags/exploit/</guid>
       <description></description>
     </item>
     <item>
       <title>tinyman</title>
-      <link>http://cwyang.github.io/tags/tinyman/</link>
+      <link>https://cwyang.github.io/tags/tinyman/</link>
       <pubDate>Mon, 03 Jan 2022 15:45:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/tinyman/</guid>
+      <guid>https://cwyang.github.io/tags/tinyman/</guid>
       <description></description>
     </item>
     <item>
       <title>java</title>
-      <link>http://cwyang.github.io/tags/java/</link>
+      <link>https://cwyang.github.io/tags/java/</link>
       <pubDate>Tue, 14 Dec 2021 12:08:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/java/</guid>
+      <guid>https://cwyang.github.io/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>jndi</title>
-      <link>http://cwyang.github.io/tags/jndi/</link>
+      <link>https://cwyang.github.io/tags/jndi/</link>
       <pubDate>Tue, 14 Dec 2021 12:08:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/jndi/</guid>
+      <guid>https://cwyang.github.io/tags/jndi/</guid>
       <description></description>
     </item>
     <item>
       <title>log4j</title>
-      <link>http://cwyang.github.io/tags/log4j/</link>
+      <link>https://cwyang.github.io/tags/log4j/</link>
       <pubDate>Tue, 14 Dec 2021 12:08:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/log4j/</guid>
+      <guid>https://cwyang.github.io/tags/log4j/</guid>
       <description></description>
     </item>
     <item>
       <title>vulnerability</title>
-      <link>http://cwyang.github.io/tags/vulnerability/</link>
+      <link>https://cwyang.github.io/tags/vulnerability/</link>
       <pubDate>Tue, 14 Dec 2021 12:08:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/vulnerability/</guid>
+      <guid>https://cwyang.github.io/tags/vulnerability/</guid>
       <description></description>
     </item>
     <item>
       <title>emacs</title>
-      <link>http://cwyang.github.io/tags/emacs/</link>
+      <link>https://cwyang.github.io/tags/emacs/</link>
       <pubDate>Thu, 04 Nov 2021 16:59:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/emacs/</guid>
+      <guid>https://cwyang.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     <item>
       <title>ces</title>
-      <link>http://cwyang.github.io/tags/ces/</link>
+      <link>https://cwyang.github.io/tags/ces/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ces/</guid>
+      <guid>https://cwyang.github.io/tags/ces/</guid>
       <description></description>
     </item>
     <item>
       <title>digital transformation</title>
-      <link>http://cwyang.github.io/tags/digital-transformation/</link>
+      <link>https://cwyang.github.io/tags/digital-transformation/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/digital-transformation/</guid>
+      <guid>https://cwyang.github.io/tags/digital-transformation/</guid>
       <description></description>
     </item>
     <item>
       <title>container</title>
-      <link>http://cwyang.github.io/tags/container/</link>
+      <link>https://cwyang.github.io/tags/container/</link>
       <pubDate>Wed, 20 Jan 2021 15:02:41 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/container/</guid>
+      <guid>https://cwyang.github.io/tags/container/</guid>
       <description></description>
     </item>
     <item>
       <title>docker</title>
-      <link>http://cwyang.github.io/tags/docker/</link>
+      <link>https://cwyang.github.io/tags/docker/</link>
       <pubDate>Wed, 20 Jan 2021 15:02:41 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/docker/</guid>
+      <guid>https://cwyang.github.io/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>dockerhub</title>
-      <link>http://cwyang.github.io/tags/dockerhub/</link>
+      <link>https://cwyang.github.io/tags/dockerhub/</link>
       <pubDate>Wed, 20 Jan 2021 15:02:41 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/dockerhub/</guid>
+      <guid>https://cwyang.github.io/tags/dockerhub/</guid>
       <description></description>
     </item>
     <item>
       <title>harbor</title>
-      <link>http://cwyang.github.io/tags/harbor/</link>
+      <link>https://cwyang.github.io/tags/harbor/</link>
       <pubDate>Wed, 20 Jan 2021 15:02:41 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/harbor/</guid>
+      <guid>https://cwyang.github.io/tags/harbor/</guid>
       <description></description>
     </item>
     <item>
       <title>k8s</title>
-      <link>http://cwyang.github.io/tags/k8s/</link>
+      <link>https://cwyang.github.io/tags/k8s/</link>
       <pubDate>Wed, 20 Jan 2021 15:02:41 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/k8s/</guid>
+      <guid>https://cwyang.github.io/tags/k8s/</guid>
       <description></description>
     </item>
     <item>
       <title>kubernetes</title>
-      <link>http://cwyang.github.io/tags/kubernetes/</link>
+      <link>https://cwyang.github.io/tags/kubernetes/</link>
       <pubDate>Wed, 20 Jan 2021 15:02:41 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/kubernetes/</guid>
+      <guid>https://cwyang.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>code-sign</title>
-      <link>http://cwyang.github.io/tags/code-sign/</link>
+      <link>https://cwyang.github.io/tags/code-sign/</link>
       <pubDate>Wed, 09 Dec 2020 18:12:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/code-sign/</guid>
+      <guid>https://cwyang.github.io/tags/code-sign/</guid>
       <description></description>
     </item>
     <item>
       <title>macos</title>
-      <link>http://cwyang.github.io/tags/macos/</link>
+      <link>https://cwyang.github.io/tags/macos/</link>
       <pubDate>Wed, 09 Dec 2020 18:12:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/macos/</guid>
+      <guid>https://cwyang.github.io/tags/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>notarization</title>
-      <link>http://cwyang.github.io/tags/notarization/</link>
+      <link>https://cwyang.github.io/tags/notarization/</link>
       <pubDate>Wed, 09 Dec 2020 18:12:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/notarization/</guid>
+      <guid>https://cwyang.github.io/tags/notarization/</guid>
       <description></description>
     </item>
     <item>
       <title>osx</title>
-      <link>http://cwyang.github.io/tags/osx/</link>
+      <link>https://cwyang.github.io/tags/osx/</link>
       <pubDate>Wed, 09 Dec 2020 18:12:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/osx/</guid>
+      <guid>https://cwyang.github.io/tags/osx/</guid>
       <description></description>
     </item>
     <item>
       <title>cloud-first</title>
-      <link>http://cwyang.github.io/tags/cloud-first/</link>
+      <link>https://cwyang.github.io/tags/cloud-first/</link>
       <pubDate>Sat, 05 Dec 2020 20:17:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/cloud-first/</guid>
+      <guid>https://cwyang.github.io/tags/cloud-first/</guid>
       <description></description>
     </item>
     <item>
       <title>politics</title>
-      <link>http://cwyang.github.io/tags/politics/</link>
+      <link>https://cwyang.github.io/tags/politics/</link>
       <pubDate>Sat, 05 Dec 2020 20:17:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/politics/</guid>
+      <guid>https://cwyang.github.io/tags/politics/</guid>
       <description></description>
     </item>
     <item>
       <title>iptables</title>
-      <link>http://cwyang.github.io/tags/iptables/</link>
+      <link>https://cwyang.github.io/tags/iptables/</link>
       <pubDate>Sat, 18 Apr 2020 09:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/iptables/</guid>
+      <guid>https://cwyang.github.io/tags/iptables/</guid>
       <description></description>
     </item>
     <item>
       <title>NAT</title>
-      <link>http://cwyang.github.io/tags/NAT/</link>
+      <link>https://cwyang.github.io/tags/NAT/</link>
       <pubDate>Sat, 18 Apr 2020 09:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/NAT/</guid>
+      <guid>https://cwyang.github.io/tags/NAT/</guid>
       <description></description>
     </item>
     <item>
       <title>perl</title>
-      <link>http://cwyang.github.io/tags/perl/</link>
+      <link>https://cwyang.github.io/tags/perl/</link>
       <pubDate>Sat, 18 Apr 2020 09:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/perl/</guid>
+      <guid>https://cwyang.github.io/tags/perl/</guid>
       <description></description>
     </item>
     <item>
       <title>policy routing</title>
-      <link>http://cwyang.github.io/tags/policy-routing/</link>
+      <link>https://cwyang.github.io/tags/policy-routing/</link>
       <pubDate>Sat, 18 Apr 2020 09:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/policy-routing/</guid>
+      <guid>https://cwyang.github.io/tags/policy-routing/</guid>
       <description></description>
     </item>
     <item>
       <title>transparenty proxy</title>
-      <link>http://cwyang.github.io/tags/transparenty-proxy/</link>
+      <link>https://cwyang.github.io/tags/transparenty-proxy/</link>
       <pubDate>Sat, 18 Apr 2020 09:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/transparenty-proxy/</guid>
+      <guid>https://cwyang.github.io/tags/transparenty-proxy/</guid>
       <description></description>
     </item>
     <item>
       <title>history</title>
-      <link>http://cwyang.github.io/tags/history/</link>
+      <link>https://cwyang.github.io/tags/history/</link>
       <pubDate>Wed, 12 Jun 2019 14:30:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/history/</guid>
+      <guid>https://cwyang.github.io/tags/history/</guid>
       <description></description>
     </item>
     <item>
       <title>centos</title>
-      <link>http://cwyang.github.io/tags/centos/</link>
+      <link>https://cwyang.github.io/tags/centos/</link>
       <pubDate>Fri, 12 Oct 2018 14:38:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/centos/</guid>
+      <guid>https://cwyang.github.io/tags/centos/</guid>
       <description></description>
     </item>
     <item>
       <title>ovs</title>
-      <link>http://cwyang.github.io/tags/ovs/</link>
+      <link>https://cwyang.github.io/tags/ovs/</link>
       <pubDate>Fri, 12 Oct 2018 14:38:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/ovs/</guid>
+      <guid>https://cwyang.github.io/tags/ovs/</guid>
       <description></description>
     </item>
     <item>
       <title>vagrant</title>
-      <link>http://cwyang.github.io/tags/vagrant/</link>
+      <link>https://cwyang.github.io/tags/vagrant/</link>
       <pubDate>Fri, 12 Oct 2018 14:38:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/vagrant/</guid>
+      <guid>https://cwyang.github.io/tags/vagrant/</guid>
       <description></description>
     </item>
     <item>
       <title>filtering</title>
-      <link>http://cwyang.github.io/tags/filtering/</link>
+      <link>https://cwyang.github.io/tags/filtering/</link>
       <pubDate>Mon, 24 Sep 2018 09:40:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/filtering/</guid>
+      <guid>https://cwyang.github.io/tags/filtering/</guid>
       <description></description>
     </item>
     <item>
       <title>sni</title>
-      <link>http://cwyang.github.io/tags/sni/</link>
+      <link>https://cwyang.github.io/tags/sni/</link>
       <pubDate>Mon, 24 Sep 2018 09:40:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/sni/</guid>
+      <guid>https://cwyang.github.io/tags/sni/</guid>
       <description></description>
     </item>
     <item>
       <title>different</title>
-      <link>http://cwyang.github.io/tags/different/</link>
+      <link>https://cwyang.github.io/tags/different/</link>
       <pubDate>Mon, 02 Jul 2018 12:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/different/</guid>
+      <guid>https://cwyang.github.io/tags/different/</guid>
       <description></description>
     </item>
     <item>
       <title>management</title>
-      <link>http://cwyang.github.io/tags/management/</link>
+      <link>https://cwyang.github.io/tags/management/</link>
       <pubDate>Mon, 02 Jul 2018 12:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/management/</guid>
+      <guid>https://cwyang.github.io/tags/management/</guid>
       <description></description>
     </item>
     <item>
       <title>strategy</title>
-      <link>http://cwyang.github.io/tags/strategy/</link>
+      <link>https://cwyang.github.io/tags/strategy/</link>
       <pubDate>Mon, 02 Jul 2018 12:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/strategy/</guid>
+      <guid>https://cwyang.github.io/tags/strategy/</guid>
       <description></description>
     </item>
     <item>
       <title>dns</title>
-      <link>http://cwyang.github.io/tags/dns/</link>
+      <link>https://cwyang.github.io/tags/dns/</link>
       <pubDate>Fri, 01 Jun 2018 15:10:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/dns/</guid>
+      <guid>https://cwyang.github.io/tags/dns/</guid>
       <description></description>
     </item>
     <item>
       <title>web filtering</title>
-      <link>http://cwyang.github.io/tags/web-filtering/</link>
+      <link>https://cwyang.github.io/tags/web-filtering/</link>
       <pubDate>Fri, 01 Jun 2018 15:10:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/web-filtering/</guid>
+      <guid>https://cwyang.github.io/tags/web-filtering/</guid>
       <description></description>
     </item>
     <item>
       <title>work</title>
-      <link>http://cwyang.github.io/tags/work/</link>
+      <link>https://cwyang.github.io/tags/work/</link>
       <pubDate>Fri, 01 Jun 2018 15:10:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/work/</guid>
+      <guid>https://cwyang.github.io/tags/work/</guid>
       <description></description>
     </item>
     <item>
       <title>certificate transparency</title>
-      <link>http://cwyang.github.io/tags/certificate-transparency/</link>
+      <link>https://cwyang.github.io/tags/certificate-transparency/</link>
       <pubDate>Thu, 05 Apr 2018 09:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/certificate-transparency/</guid>
+      <guid>https://cwyang.github.io/tags/certificate-transparency/</guid>
       <description></description>
     </item>
     <item>
       <title>GPKI</title>
-      <link>http://cwyang.github.io/tags/GPKI/</link>
+      <link>https://cwyang.github.io/tags/GPKI/</link>
       <pubDate>Thu, 05 Apr 2018 09:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/GPKI/</guid>
+      <guid>https://cwyang.github.io/tags/GPKI/</guid>
       <description></description>
     </item>
     <item>
       <title>https</title>
-      <link>http://cwyang.github.io/tags/https/</link>
+      <link>https://cwyang.github.io/tags/https/</link>
       <pubDate>Wed, 28 Mar 2018 17:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/https/</guid>
+      <guid>https://cwyang.github.io/tags/https/</guid>
       <description></description>
     </item>
     <item>
       <title>interception</title>
-      <link>http://cwyang.github.io/tags/interception/</link>
+      <link>https://cwyang.github.io/tags/interception/</link>
       <pubDate>Wed, 28 Mar 2018 17:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/interception/</guid>
+      <guid>https://cwyang.github.io/tags/interception/</guid>
       <description></description>
     </item>
     <item>
       <title>jekyll</title>
-      <link>http://cwyang.github.io/tags/jekyll/</link>
+      <link>https://cwyang.github.io/tags/jekyll/</link>
       <pubDate>Tue, 04 Jul 2017 19:57:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/jekyll/</guid>
+      <guid>https://cwyang.github.io/tags/jekyll/</guid>
       <description></description>
     </item>
     <item>
       <title>한글</title>
-      <link>http://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/</link>
+      <link>https://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/</link>
       <pubDate>Tue, 09 Apr 2013 10:50:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/</guid>
+      <guid>https://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/</guid>
       <description></description>
     </item>
     <item>
       <title>beep</title>
-      <link>http://cwyang.github.io/tags/beep/</link>
+      <link>https://cwyang.github.io/tags/beep/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/beep/</guid>
+      <guid>https://cwyang.github.io/tags/beep/</guid>
       <description></description>
     </item>
     <item>
       <title>bell</title>
-      <link>http://cwyang.github.io/tags/bell/</link>
+      <link>https://cwyang.github.io/tags/bell/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/bell/</guid>
+      <guid>https://cwyang.github.io/tags/bell/</guid>
       <description></description>
     </item>
     <item>
       <title>xkbset</title>
-      <link>http://cwyang.github.io/tags/xkbset/</link>
+      <link>https://cwyang.github.io/tags/xkbset/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/xkbset/</guid>
+      <guid>https://cwyang.github.io/tags/xkbset/</guid>
       <description></description>
     </item>
     <item>
       <title>erlang</title>
-      <link>http://cwyang.github.io/tags/erlang/</link>
+      <link>https://cwyang.github.io/tags/erlang/</link>
       <pubDate>Mon, 26 Sep 2011 17:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/erlang/</guid>
+      <guid>https://cwyang.github.io/tags/erlang/</guid>
       <description></description>
     </item>
     <item>
       <title>noproc</title>
-      <link>http://cwyang.github.io/tags/noproc/</link>
+      <link>https://cwyang.github.io/tags/noproc/</link>
       <pubDate>Mon, 26 Sep 2011 17:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/noproc/</guid>
+      <guid>https://cwyang.github.io/tags/noproc/</guid>
       <description></description>
     </item>
     <item>
       <title>firefox</title>
-      <link>http://cwyang.github.io/tags/firefox/</link>
+      <link>https://cwyang.github.io/tags/firefox/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/firefox/</guid>
+      <guid>https://cwyang.github.io/tags/firefox/</guid>
       <description></description>
     </item>
     <item>
       <title>haskell</title>
-      <link>http://cwyang.github.io/tags/haskell/</link>
+      <link>https://cwyang.github.io/tags/haskell/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/haskell/</guid>
+      <guid>https://cwyang.github.io/tags/haskell/</guid>
       <description></description>
     </item>
     <item>
       <title>rebar</title>
-      <link>http://cwyang.github.io/tags/rebar/</link>
+      <link>https://cwyang.github.io/tags/rebar/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/rebar/</guid>
+      <guid>https://cwyang.github.io/tags/rebar/</guid>
       <description></description>
     </item>
     <item>
       <title>scim</title>
-      <link>http://cwyang.github.io/tags/scim/</link>
+      <link>https://cwyang.github.io/tags/scim/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/scim/</guid>
+      <guid>https://cwyang.github.io/tags/scim/</guid>
       <description></description>
     </item>
     <item>
       <title>xmobar</title>
-      <link>http://cwyang.github.io/tags/xmobar/</link>
+      <link>https://cwyang.github.io/tags/xmobar/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/xmobar/</guid>
+      <guid>https://cwyang.github.io/tags/xmobar/</guid>
       <description></description>
     </item>
     <item>
       <title>xmonad</title>
-      <link>http://cwyang.github.io/tags/xmonad/</link>
+      <link>https://cwyang.github.io/tags/xmonad/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/xmonad/</guid>
+      <guid>https://cwyang.github.io/tags/xmonad/</guid>
       <description></description>
     </item>
     <item>
       <title>bottom up</title>
-      <link>http://cwyang.github.io/tags/bottom-up/</link>
+      <link>https://cwyang.github.io/tags/bottom-up/</link>
       <pubDate>Thu, 04 Nov 2010 11:59:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/bottom-up/</guid>
+      <guid>https://cwyang.github.io/tags/bottom-up/</guid>
       <description></description>
     </item>
     <item>
       <title>top down</title>
-      <link>http://cwyang.github.io/tags/top-down/</link>
+      <link>https://cwyang.github.io/tags/top-down/</link>
       <pubDate>Thu, 04 Nov 2010 11:59:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/top-down/</guid>
+      <guid>https://cwyang.github.io/tags/top-down/</guid>
       <description></description>
     </item>
     <item>
       <title>소프트웨어 개발</title>
-      <link>http://cwyang.github.io/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C/</link>
+      <link>https://cwyang.github.io/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C/</link>
       <pubDate>Thu, 04 Nov 2010 11:59:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C/</guid>
+      <guid>https://cwyang.github.io/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C/</guid>
       <description></description>
     </item>
     <item>
       <title>QOS</title>
-      <link>http://cwyang.github.io/tags/QOS/</link>
+      <link>https://cwyang.github.io/tags/QOS/</link>
       <pubDate>Wed, 03 Nov 2010 21:16:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/QOS/</guid>
+      <guid>https://cwyang.github.io/tags/QOS/</guid>
       <description></description>
     </item>
     <item>
       <title>measurement</title>
-      <link>http://cwyang.github.io/tags/measurement/</link>
+      <link>https://cwyang.github.io/tags/measurement/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/measurement/</guid>
+      <guid>https://cwyang.github.io/tags/measurement/</guid>
       <description></description>
     </item>
     <item>
       <title>monitoring</title>
-      <link>http://cwyang.github.io/tags/monitoring/</link>
+      <link>https://cwyang.github.io/tags/monitoring/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/monitoring/</guid>
+      <guid>https://cwyang.github.io/tags/monitoring/</guid>
       <description></description>
     </item>
     <item>
       <title>quality</title>
-      <link>http://cwyang.github.io/tags/quality/</link>
+      <link>https://cwyang.github.io/tags/quality/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/quality/</guid>
+      <guid>https://cwyang.github.io/tags/quality/</guid>
       <description></description>
     </item>
     <item>
       <title>robustness</title>
-      <link>http://cwyang.github.io/tags/robustness/</link>
+      <link>https://cwyang.github.io/tags/robustness/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/robustness/</guid>
+      <guid>https://cwyang.github.io/tags/robustness/</guid>
       <description></description>
     </item>
     <item>
       <title>software</title>
-      <link>http://cwyang.github.io/tags/software/</link>
+      <link>https://cwyang.github.io/tags/software/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/software/</guid>
+      <guid>https://cwyang.github.io/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>software development</title>
-      <link>http://cwyang.github.io/tags/software-development/</link>
+      <link>https://cwyang.github.io/tags/software-development/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/software-development/</guid>
+      <guid>https://cwyang.github.io/tags/software-development/</guid>
       <description></description>
     </item>
     <item>
       <title>test</title>
-      <link>http://cwyang.github.io/tags/test/</link>
+      <link>https://cwyang.github.io/tags/test/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/test/</guid>
+      <guid>https://cwyang.github.io/tags/test/</guid>
       <description></description>
     </item>
     <item>
       <title>debugging</title>
-      <link>http://cwyang.github.io/tags/debugging/</link>
+      <link>https://cwyang.github.io/tags/debugging/</link>
       <pubDate>Sat, 10 Jul 2010 23:21:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/debugging/</guid>
+      <guid>https://cwyang.github.io/tags/debugging/</guid>
       <description></description>
     </item>
     <item>
       <title>development</title>
-      <link>http://cwyang.github.io/tags/development/</link>
+      <link>https://cwyang.github.io/tags/development/</link>
       <pubDate>Sat, 10 Jul 2010 23:21:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/development/</guid>
+      <guid>https://cwyang.github.io/tags/development/</guid>
       <description></description>
     </item>
     <item>
       <title>GDB</title>
-      <link>http://cwyang.github.io/tags/GDB/</link>
+      <link>https://cwyang.github.io/tags/GDB/</link>
       <pubDate>Sat, 10 Jul 2010 23:21:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/GDB/</guid>
+      <guid>https://cwyang.github.io/tags/GDB/</guid>
       <description></description>
     </item>
     <item>
       <title>direct io</title>
-      <link>http://cwyang.github.io/tags/direct-io/</link>
+      <link>https://cwyang.github.io/tags/direct-io/</link>
       <pubDate>Fri, 09 Jul 2010 22:40:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/direct-io/</guid>
+      <guid>https://cwyang.github.io/tags/direct-io/</guid>
       <description></description>
     </item>
     <item>
       <title>connection tracking</title>
-      <link>http://cwyang.github.io/tags/connection-tracking/</link>
+      <link>https://cwyang.github.io/tags/connection-tracking/</link>
       <pubDate>Fri, 09 Jul 2010 22:36:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/connection-tracking/</guid>
+      <guid>https://cwyang.github.io/tags/connection-tracking/</guid>
       <description></description>
     </item>
     <item>
       <title>half close</title>
-      <link>http://cwyang.github.io/tags/half-close/</link>
+      <link>https://cwyang.github.io/tags/half-close/</link>
       <pubDate>Fri, 09 Jul 2010 22:36:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/half-close/</guid>
+      <guid>https://cwyang.github.io/tags/half-close/</guid>
       <description></description>
     </item>
     <item>
       <title>netfilter</title>
-      <link>http://cwyang.github.io/tags/netfilter/</link>
+      <link>https://cwyang.github.io/tags/netfilter/</link>
       <pubDate>Fri, 09 Jul 2010 22:36:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/netfilter/</guid>
+      <guid>https://cwyang.github.io/tags/netfilter/</guid>
       <description></description>
     </item>
     <item>
       <title>sysadmin</title>
-      <link>http://cwyang.github.io/tags/sysadmin/</link>
+      <link>https://cwyang.github.io/tags/sysadmin/</link>
       <pubDate>Fri, 09 Jul 2010 22:36:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/sysadmin/</guid>
+      <guid>https://cwyang.github.io/tags/sysadmin/</guid>
       <description></description>
     </item>
     <item>
       <title>tcp retransmission</title>
-      <link>http://cwyang.github.io/tags/tcp-retransmission/</link>
+      <link>https://cwyang.github.io/tags/tcp-retransmission/</link>
       <pubDate>Fri, 09 Jul 2010 22:36:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/tcp-retransmission/</guid>
+      <guid>https://cwyang.github.io/tags/tcp-retransmission/</guid>
       <description></description>
     </item>
     <item>
       <title>beer</title>
-      <link>http://cwyang.github.io/tags/beer/</link>
+      <link>https://cwyang.github.io/tags/beer/</link>
       <pubDate>Fri, 12 Mar 2010 20:17:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/beer/</guid>
+      <guid>https://cwyang.github.io/tags/beer/</guid>
       <description></description>
     </item>
     <item>
       <title>programming</title>
-      <link>http://cwyang.github.io/tags/programming/</link>
+      <link>https://cwyang.github.io/tags/programming/</link>
       <pubDate>Wed, 21 Oct 2009 14:48:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/programming/</guid>
+      <guid>https://cwyang.github.io/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>fp</title>
-      <link>http://cwyang.github.io/tags/fp/</link>
+      <link>https://cwyang.github.io/tags/fp/</link>
       <pubDate>Wed, 01 Apr 2009 10:32:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/fp/</guid>
+      <guid>https://cwyang.github.io/tags/fp/</guid>
       <description></description>
     </item>
     <item>
       <title>fold</title>
-      <link>http://cwyang.github.io/tags/fold/</link>
+      <link>https://cwyang.github.io/tags/fold/</link>
       <pubDate>Tue, 17 Feb 2009 09:39:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/fold/</guid>
+      <guid>https://cwyang.github.io/tags/fold/</guid>
       <description></description>
     </item>
     <item>
       <title>monad</title>
-      <link>http://cwyang.github.io/tags/monad/</link>
+      <link>https://cwyang.github.io/tags/monad/</link>
       <pubDate>Mon, 02 Feb 2009 20:53:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/monad/</guid>
+      <guid>https://cwyang.github.io/tags/monad/</guid>
       <description></description>
     </item>
     <item>
       <title>HTTP/2</title>
-      <link>http://cwyang.github.io/tags/HTTP/2/</link>
+      <link>https://cwyang.github.io/tags/HTTP/2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/tags/HTTP/2/</guid>
+      <guid>https://cwyang.github.io/tags/HTTP/2/</guid>
       <description></description>
     </item>
   </channel>

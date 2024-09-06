@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/linux/</link>
+    <link>https://cwyang.github.io/tags/linux/</link>
     <description>Recent content in linux on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Mar 2023 09:24:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Settings in 2023</title>
-      <link>http://cwyang.github.io/2023/03/26/linux-settings.html/</link>
+      <link>https://cwyang.github.io/2023/03/26/linux-settings.html/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2023/03/26/linux-settings.html/</guid>
+      <guid>https://cwyang.github.io/2023/03/26/linux-settings.html/</guid>
       <description>잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다. 랩탑에 설치하는 것은 처음이다.</description>
     </item>
     <item>
       <title>한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요</title>
-      <link>http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</link>
+      <link>https://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</link>
       <pubDate>Sat, 18 Apr 2020 09:15:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</guid>
+      <guid>https://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/</guid>
       <description>정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. &lt;code&gt;iptales -L -nv&lt;/code&gt;로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?</description>
     </item>
     <item>
       <title>Linux 시스템 비프 활성화</title>
-      <link>http://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</link>
+      <link>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</guid>
+      <guid>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</guid>
       <description>Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다.</description>
     </item>
     <item>
       <title>Linux QoS Box Design</title>
-      <link>http://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</link>
+      <link>https://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</link>
       <pubDate>Wed, 03 Nov 2010 21:16:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</guid>
+      <guid>https://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</guid>
       <description>1st draft, 3 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
     </item>
   </channel>

@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>haskell on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/haskell/</link>
+    <link>https://cwyang.github.io/tags/haskell/</link>
     <description>Recent content in haskell on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Aug 2011 16:22:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>여러가지 해묵은 문제 해결: Erlang, Firefox, Xmonad, Xmobar, Haskell</title>
-      <link>http://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</link>
+      <link>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</guid>
+      <guid>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</guid>
       <description>어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.</description>
     </item>
     <item>
       <title>RWH 3번째 읽다</title>
-      <link>http://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</link>
+      <link>https://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</link>
       <pubDate>Wed, 01 Apr 2009 10:32:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</guid>
+      <guid>https://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</guid>
       <description>1월부터 읽던 RWH를 이제서야 다 읽었다. 첫번째, 두번째 읽을 때와 마찬가지로 정독으로 시작하여 skimming으로 끝나고 말았다. 그래도 읽을때마다 점점 나아지는 것은 정독으로 이해하는 부분이 점점 많아진다는 점이다.</description>
     </item>
     <item>
       <title>Haskell의 폴드(Fold)란 무엇인가요</title>
-      <link>http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</link>
+      <link>https://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</link>
       <pubDate>Tue, 17 Feb 2009 09:39:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</guid>
+      <guid>https://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</guid>
       <description>폴드는 reduce라고도 불리우는 연산자로써 리스트의 각 요소에 대해 연산을 수행하여 하나의 결과값을 반환한다. Map &amp;amp; reduce 처럼 map과 같이 흔히 일컬어 지는, 함수형 프로그래밍 방식의 좌청룡 우백호 중의 하나인데, 사실 map 역시도 폴드로 정의가 가능하므로 폴드가 좀 더 파워풀 한 연산자이다.</description>
     </item>
     <item>
       <title>More Monad Tutorials</title>
-      <link>http://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</link>
+      <link>https://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</link>
       <pubDate>Mon, 02 Feb 2009 20:53:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</guid>
+      <guid>https://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</guid>
       <description>Understanding Monad, for real과 You could have invented Monads! (And maybe you already have.), 두 튜토리얼을 더 읽었다.</description>
     </item>
     <item>
       <title>Yet Another Haskell Tutorial</title>
-      <link>http://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</link>
+      <link>https://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</link>
       <pubDate>Sun, 01 Feb 2009 02:17:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</guid>
+      <guid>https://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</guid>
       <description>Hal Daum ́e III의 Yet Another Haskell Tutoriall을 읽고 있다.</description>
     </item>
     <item>
       <title>1월 Wrap-up: Programming in Haskell</title>
-      <link>http://cwyang.github.io/2009/01/23/programming-in-haskell.html/</link>
+      <link>https://cwyang.github.io/2009/01/23/programming-in-haskell.html/</link>
       <pubDate>Fri, 23 Jan 2009 10:20:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2009/01/23/programming-in-haskell.html/</guid>
+      <guid>https://cwyang.github.io/2009/01/23/programming-in-haskell.html/</guid>
       <description>개발에 있어서는 Silver Bullet이 있다고 생각하는 고로, 여러 programming language를 탐험하는 편인데, 올해의 Language는 Haskell. (C -&amp;gt; C++ -&amp;gt; Java -&amp;gt; Ruby -&amp;gt; Erlang -&amp;gt; Lisp -&amp;gt; Haskell)</description>
     </item>
   </channel>

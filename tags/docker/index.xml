@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/docker/</link>
+    <link>https://cwyang.github.io/tags/docker/</link>
     <description>Recent content in docker on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jan 2021 15:02:41 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>도커허브 이미지 풀 제약을 하버로 해결하기</title>
-      <link>http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/</link>
+      <link>https://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/</link>
       <pubDate>Wed, 20 Jan 2021 15:02:41 +0000</pubDate>
-      <guid>http://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/</guid>
+      <guid>https://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/</guid>
       <description>도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해 6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.</description>
     </item>
     <item>
       <title>OVS, Docker, CentOS7 환경 만들기</title>
-      <link>http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</link>
+      <link>https://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</link>
       <pubDate>Fri, 12 Oct 2018 14:38:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</guid>
+      <guid>https://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</guid>
       <description>centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blockchain on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/blockchain/</link>
+    <link>https://cwyang.github.io/tags/blockchain/</link>
     <description>Recent content in blockchain on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Jan 2022 15:13:17 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>블럭체인 지갑과 NFT</title>
-      <link>http://cwyang.github.io/2022/01/05/nft_metamask.html/</link>
+      <link>https://cwyang.github.io/2022/01/05/nft_metamask.html/</link>
       <pubDate>Wed, 05 Jan 2022 15:13:17 +0000</pubDate>
-      <guid>http://cwyang.github.io/2022/01/05/nft_metamask.html/</guid>
+      <guid>https://cwyang.github.io/2022/01/05/nft_metamask.html/</guid>
       <description>메타마스크는 브라우저캐시에 사용자의 비밀키를 패스워드로 암호화 하여 저장한다. 사용자가 메타마스크를 사용함에 있어서 관리해야하는 정보는 두 가지이다 (1) 패스워드 - 브라우저 로그인 시에 사용 (2) 비밀 구문 - 새로운 접근 환경 또는 패스워드 분실시 사용. 패스워드는 저장된 비밀키를 복호화 하기 위하여 필요하다. 비밀 구문은 날것의 비밀키를 사람이 저장하기 쉬운 형태로 코드화 한 것이다.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>top down on A Tale That Wasn&#39;t Left</title>
-    <link>http://cwyang.github.io/tags/top-down/</link>
+    <link>https://cwyang.github.io/tags/top-down/</link>
     <description>Recent content in top down on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Nov 2010 11:59:00 +0000</lastBuildDate>
-    <atom:link href="http://cwyang.github.io/tags/top-down/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cwyang.github.io/tags/top-down/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Top-Down 개발 vs Bottom-up 개발</title>
-      <link>http://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</link>
+      <link>https://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</link>
       <pubDate>Thu, 04 Nov 2010 11:59:00 +0000</pubDate>
-      <guid>http://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</guid>
+      <guid>https://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</guid>
       <description>개발의 방식을 굳이 구별하자면 다음과 같이 구별할 수 있다. 하나는 &amp;ldquo;사용방식, 요구사항&amp;quot;이 먼저 존재하여 그것을 구현하는 방법을 고민하는 형식이며, 다른 하나는 &amp;ldquo;기술, 기능&amp;quot;이 먼저 존재한 후 그것을 사용하는 방법을 고민하는 형태이다.</description>
     </item>
   </channel>
