@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="블럭체인 지갑과 NFT"/>
+<meta name="twitter:description" content="메타마스크는 브라우저캐시에 사용자의 비밀키를 패스워드로 암호화 하여 저장한다. 사용자가 메타마스크를 사용함에 있어서 관리해야하는 정보는 두 가지이다 (1) 패스워드 - 브라우저 로그인 시에 사용 (2) 비밀 구문 - 새로운 접근 환경 또는 패스워드 분실시 사용. 패스워드는 저장된 비밀키를 복호화 하기 위하여 필요하다. 비밀 구문은 날것의 비밀키를 사람이 저장하기 쉬운 형태로 코드화 한 것이다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="블럭체인 지갑과 NFT" />
+<meta property="og:description" content="메타마스크는 브라우저캐시에 사용자의 비밀키를 패스워드로 암호화 하여 저장한다. 사용자가 메타마스크를 사용함에 있어서 관리해야하는 정보는 두 가지이다 (1) 패스워드 - 브라우저 로그인 시에 사용 (2) 비밀 구문 - 새로운 접근 환경 또는 패스워드 분실시 사용. 패스워드는 저장된 비밀키를 복호화 하기 위하여 필요하다. 비밀 구문은 날것의 비밀키를 사람이 저장하기 쉬운 형태로 코드화 한 것이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2022/01/05/nft_metamask.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2022-01-05T15:13:17+00:00" />
+<meta property="article:modified_time" content="2022-01-05T15:13:17+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>블럭체인 지갑과 NFT | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>블럭체인 지갑과 NFT
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Wednesday, January 5, 2022.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <h2 id="블럭체인-지갑과-nft">블럭체인 지갑과 NFT</h2>
+<p>NFT나 가상화폐는 디지털 자산이며, 자산의 소유권은 블럭체인상에 저장된다. 자산의 소유자의 비밀키로 자산(의 해시값)을 서명한 내용이 저장되므로 해당 자산에 대한 소유권이 증명된다.
+비밀키를 가지고 있으면 자산 양도가 가능하다. 따라서 비밀키의 보관이 매우 중요하다.</p>
+<p>블럭체인 지갑은 해당 블럭체인에서 사용되는 비밀키를 저장하는 소프트웨어이다. 대표적인 블럭체인 지갑으로서 다음과 같은 제품들이 있다.</p>
+<ul>
+<li>Ethereum: Metamask (<a href="https://metamask.io/)">https://metamask.io/)</a>, Bitski (<a href="https://wallet.bitski.com/">https://wallet.bitski.com/</a>)</li>
+<li>Solana: Phantom (<a href="https://phantom.app/">https://phantom.app/</a>)</li>
+<li>Klayton: Klip (<a href="https://klipwallet.com/">https://klipwallet.com/</a>)</li>
+</ul>
+<h2 id="nft-거래">NFT 거래</h2>
+<p>NFT 거래는 이론적으로는 분산형으로 일어날 수 있지만, 대부분 편의상 거래소에서 이루어진다. NFT 자산의 탐색(explore/browse), 경매, 매매등을 제공하기 때문이다. 사용자의 트랜잭션은 블럭체인 지갑을 매개체로 이루어진다. 해당 NFT 거래소와 거래가 가능한 블럭체인 지갑을 이용해야하며, 해당 블럭체인 지갑에서 금액을 지불하고, 블럭체인 지갑으로 NFT를 받는 형식이다.</p>
+<p>OpenSea에서 제공하는 블럭체인 지갑은 아래와 같다. 이들 중 가장 널리 사용되는 메타마스크의 예를 들어 어떠한 보안 위협이 있는지 살펴보자.
+<img src="/assets/images/NFT_wallets_opensea.png" alt="Opensea에서 지원하는 블럭체인 지갑들"></p>
+<h2 id="메타마스크-보안-이슈">메타마스크 보안 이슈</h2>
+<p><img src="/assets/images/NFT_metamask.png" alt="메타마스크 지갑">
+메타마스크는 크롬 브라우저 플러그인형태이며, 블록체인 트랜잭션이 필요한 비밀키(및 공개키 쌍)을 관리한다. NFT/가상화폐 서비스가 비밀키가 필요한 작업을 해야할 때 메타마스크에 작업을 요청하고, 메타마스크는 web3.js API를 이용하여 브라우저캐시에 저장된 비밀키를 접근하게 된다.</p>
+<p>브라우저캐시에는 사용자의 비밀키가 패스워드로 암호화 되어 저장되어 있다.</p>
+<p>사용자가 메타마스크를 사용함에 있어서 관리해야하는 정보는 두 가지이다</p>
+<ul>
+<li>패스워드: 브라우저 로그인 시에 사용</li>
+<li>비밀 구문: 새로운 접근 환경 또는 패스워드 분실시 사용</li>
+</ul>
+<p>패스워드는 저장된 비밀키를 복호화 하기 위하여 필요하다.
+비밀 구문은 날것의 비밀키를 사람이 저장하기 쉬운 형태로 코드화 한 것이다.</p>
+<p>해커가 패스워드를 입수하면, 해당 메타마스크가 구동되는 PC에 접근하여 비밀키를 알아낸 후 자산을 탈취할 수 있다.
+해커가 비밀구문을 입수하면, 블럭체인은 누구에게나 오픈되어 있으므로 바로 자산을 탈취할 수 있다.</p>
+<h2 id="그러면">그러면?</h2>
+<p>안전한 NFT거래를 위해서는 무엇보다 패스워드와 비밀 구문을 관리하여 유출되지 않도록 한다.
+또한 지갑의 비밀키가 저장된 영역 (브라우저캐시)을 보호해야한다. 암호화된 비밀키를 대상으로 Brute-force 공격이 가능하기 때문이다.
+또한 비밀키 관리를 하드웨어 지갑이나 HW Trusted Environment에 위임하여 안전성을 높일 수 있다.</p>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/blog/">blog</a></li>
+        <li><a href="/tags/blockchain/">blockchain</a></li>
+        <li><a href="/tags/metamask/">metamask</a></li>
+        <li><a href="/tags/nft/">nft</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xkbset on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/xkbset/</link>
+    <description>Recent content in xkbset on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Mar 2013 11:01:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/xkbset/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 시스템 비프 활성화</title>
+      <link>http://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</link>
+      <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</guid>
+      <description>Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다.</description>
+    </item>
+  </channel>
+</rss>

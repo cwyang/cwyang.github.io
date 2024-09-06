@@ -1,0 +1,248 @@
+/*!
+ * Web Fonts from Fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at https://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2023 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Adobe
+ * License URL: https://www.fontspring.com/licenses/adobe/webfont
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-bold-webfont.woff2') format('woff2'),
+         url('minion3-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-bolditalic-webfont.woff2') format('woff2'),
+         url('minion3-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-italic-webfont.woff2') format('woff2'),
+         url('minion3-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-medium-webfont.woff2') format('woff2'),
+         url('minion3-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-mediumitalic-webfont.woff2') format('woff2'),
+         url('minion3-mediumitalic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-regular-webfont.woff2') format('woff2'),
+         url('minion3-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-semibold-webfont.woff2') format('woff2'),
+         url('minion3-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3';
+    src: url('minion3-semibolditalic-webfont.woff2') format('woff2'),
+         url('minion3-semibolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-bold-webfont.woff2') format('woff2'),
+         url('minion3caption-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-bolditalic-webfont.woff2') format('woff2'),
+         url('minion3caption-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-italic-webfont.woff2') format('woff2'),
+         url('minion3caption-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-medium-webfont.woff2') format('woff2'),
+         url('minion3caption-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-mediumitalic-webfont.woff2') format('woff2'),
+         url('minion3caption-mediumitalic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-regular-webfont.woff2') format('woff2'),
+         url('minion3caption-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-semibold-webfont.woff2') format('woff2'),
+         url('minion3caption-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Caption'
+    src: url('minion3caption-semibolditalic-webfont.woff2') format('woff2'),
+         url('minion3caption-semibolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-bold-webfont.woff2') format('woff2'),
+         url('minion3display-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-bolditalic-webfont.woff2') format('woff2'),
+         url('minion3display-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-italic-webfont.woff2') format('woff2'),
+         url('minion3display-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-medium-webfont.woff2') format('woff2'),
+         url('minion3display-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-mediumitalic-webfont.woff2') format('woff2'),
+         url('minion3display-mediumitalic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-regular-webfont.woff2') format('woff2'),
+         url('minion3display-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-semibold-webfont.woff2') format('woff2'),
+         url('minion3display-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Display'
+    src: url('minion3display-semibolditalic-webfont.woff2') format('woff2'),
+         url('minion3display-semibolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-bold-webfont.woff2') format('woff2'),
+         url('minion3subhead-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-bolditalic-webfont.woff2') format('woff2'),
+         url('minion3subhead-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-italic-webfont.woff2') format('woff2'),
+         url('minion3subhead-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-medium-webfont.woff2') format('woff2'),
+         url('minion3subhead-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-mediumitalic-webfont.woff2') format('woff2'),
+         url('minion3subhead-mediumitalic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-regular-webfont.woff2') format('woff2'),
+         url('minion3subhead-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-semibold-webfont.woff2') format('woff2'),
+         url('minion3subhead-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minion 3 Subhead'
+    src: url('minion3subhead-semibolditalic-webfont.woff2') format('woff2'),
+         url('minion3subhead-semibolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}

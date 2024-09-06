@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="Top-Down 개발 vs Bottom-up 개발"/>
+<meta name="twitter:description" content="개발의 방식을 굳이 구별하자면 다음과 같이 구별할 수 있다. 하나는 &ldquo;사용방식, 요구사항&quot;이 먼저 존재하여 그것을 구현하는 방법을 고민하는 형식이며, 다른 하나는 &ldquo;기술, 기능&quot;이 먼저 존재한 후 그것을 사용하는 방법을 고민하는 형태이다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="Top-Down 개발 vs Bottom-up 개발" />
+<meta property="og:description" content="개발의 방식을 굳이 구별하자면 다음과 같이 구별할 수 있다. 하나는 &ldquo;사용방식, 요구사항&quot;이 먼저 존재하여 그것을 구현하는 방법을 고민하는 형식이며, 다른 하나는 &ldquo;기술, 기능&quot;이 먼저 존재한 후 그것을 사용하는 방법을 고민하는 형태이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2010-11-04T11:59:00+00:00" />
+<meta property="article:modified_time" content="2010-11-04T11:59:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>Top-Down 개발 vs Bottom-up 개발 | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>Top-Down 개발 vs Bottom-up 개발
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Thursday, November 4, 2010.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p>개발의 방식을 굳이 구별하자면 다음과 같이 구별할 수 있다. 하나는 &ldquo;사용방식, 요구사항&quot;이 먼저 존재하여 그것을 구현하는 방법을 고민하는 형식이며, 다른 하나는 &ldquo;기술, 기능&quot;이 먼저 존재한 후 그것을 사용하는 방법을 고민하는 형태이다.</p>
+<p>사용에 의해 주도되는 개선, 즉 &ldquo;사용자는 이러이러하게 사용하기를 원해, 그러니 그에 맞는 기능을 만들자&rdquo;,은 기획이 있고 난 후에야만이 설계/개발이 들어갈 수 있다. 이는 Top-Down방식이다.</p>
+<p>기능에 의해 주도되는 개선, 즉 &ldquo;이러한 기능이 있으니 이를 잘 조합해서 사용자에게 제공하자&quot;는 기능을 제공하기 바로 전 까지는 기획없이도 개발을 진행할 수 있다. 즉, Bottom-up방식이다. 기본 기능primitive feature를 파악하여, 그것을 개발자의 통찰로 인해 고수준에서 사용/조합하기 용이한 형태까지를 가공하는 것이다. 그것은 기획자의 몫이 아니고 개발자의 몫.</p>
+<p>개발하고자 하는 아이템의 성격에 따라 이의 구별이 가능하고, 각각 진행방식이 다르므로 아이템의 성격을 먼저 파악하는 것이 중요하다.</p>
+<p>여담이지만, 수동적의 면이 존재하는 Top-Down식의 개발보다는 Bottom-up방식이 개발자에게는 즐거운 방식인 것은 확실.</p>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/blog/">blog</a></li>
+        <li><a href="/tags/bottom-up/">bottom up</a></li>
+        <li><a href="/tags/top-down/">top down</a></li>
+        <li><a href="/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C/">소프트웨어 개발</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

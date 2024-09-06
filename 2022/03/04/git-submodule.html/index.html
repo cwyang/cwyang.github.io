@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="git submodule"/>
+<meta name="twitter:description" content="parent project에서 child project를 git submodule로 사용할 때,
+child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는 변하지 않는다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="git submodule" />
+<meta property="og:description" content="parent project에서 child project를 git submodule로 사용할 때,
+child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는 변하지 않는다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2022/03/04/git-submodule.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2022-03-04T15:54:00+00:00" />
+<meta property="article:modified_time" content="2022-03-04T15:54:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>git submodule | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>git submodule
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Friday, March 4, 2022.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p><code>parent</code> project에서 <code>child</code> project를 git submodule로 사용할 때,<br>
+<code>child</code>의 hash를 바꾼 <code>parent</code>를 체크아웃해도 로컬 <code>child</code>는 변하지 않는다.</p>
+<p>이 때에는 <code>git submodule init</code>를 실행하여 로컬의 <code>child</code>가 <code>parent</code>에서 요구하는 버젼으로 업데이트한 후 사용하면 됨.</p>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/blog/">blog</a></li>
+        <li><a href="/tags/diary/">diary</a></li>
+        <li><a href="/tags/tip/">tip</a></li>
+        <li><a href="/tags/git/">git</a></li>
+        <li><a href="/tags/submodule/">submodule</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

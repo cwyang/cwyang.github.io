@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/programming/</link>
+    <description>Recent content in programming on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Oct 2009 14:48:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSL_read()와 read()는 같은가요?</title>
+      <link>http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</link>
+      <pubDate>Wed, 21 Oct 2009 14:48:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</guid>
+      <description>네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은 경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데, 이 경우 SSL_read()와 read()의 차이점을 알아야한다.</description>
+    </item>
+    <item>
+      <title>RWH 3번째 읽다</title>
+      <link>http://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</link>
+      <pubDate>Wed, 01 Apr 2009 10:32:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2009/04/01/RWH-read-three-times.html/</guid>
+      <description>1월부터 읽던 RWH를 이제서야 다 읽었다. 첫번째, 두번째 읽을 때와 마찬가지로 정독으로 시작하여 skimming으로 끝나고 말았다. 그래도 읽을때마다 점점 나아지는 것은 정독으로 이해하는 부분이 점점 많아진다는 점이다.</description>
+    </item>
+    <item>
+      <title>Haskell의 폴드(Fold)란 무엇인가요</title>
+      <link>http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</link>
+      <pubDate>Tue, 17 Feb 2009 09:39:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2009/02/17/what-is-fold-in-haskell.html/</guid>
+      <description>폴드는 reduce라고도 불리우는 연산자로써 리스트의 각 요소에 대해 연산을 수행하여 하나의 결과값을 반환한다. Map &amp;amp; reduce 처럼 map과 같이 흔히 일컬어 지는, 함수형 프로그래밍 방식의 좌청룡 우백호 중의 하나인데, 사실 map 역시도 폴드로 정의가 가능하므로 폴드가 좀 더 파워풀 한 연산자이다.</description>
+    </item>
+    <item>
+      <title>More Monad Tutorials</title>
+      <link>http://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</link>
+      <pubDate>Mon, 02 Feb 2009 20:53:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2009/02/02/more-tutorials-on-haskell.html/</guid>
+      <description>Understanding Monad, for real과 You could have invented Monads! (And maybe you already have.), 두 튜토리얼을 더 읽었다.</description>
+    </item>
+    <item>
+      <title>Yet Another Haskell Tutorial</title>
+      <link>http://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</link>
+      <pubDate>Sun, 01 Feb 2009 02:17:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2009/02/01/yet-another-haskell-tutorial.html/</guid>
+      <description>Hal Daum ́e III의 Yet Another Haskell Tutoriall을 읽고 있다.</description>
+    </item>
+    <item>
+      <title>1월 Wrap-up: Programming in Haskell</title>
+      <link>http://cwyang.github.io/2009/01/23/programming-in-haskell.html/</link>
+      <pubDate>Fri, 23 Jan 2009 10:20:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2009/01/23/programming-in-haskell.html/</guid>
+      <description>개발에 있어서는 Silver Bullet이 있다고 생각하는 고로, 여러 programming language를 탐험하는 편인데, 올해의 Language는 Haskell. (C -&amp;gt; C++ -&amp;gt; Java -&amp;gt; Ruby -&amp;gt; Erlang -&amp;gt; Lisp -&amp;gt; Haskell)</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="Encrypted SNI"/>
+<meta name="twitter:description" content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="Encrypted SNI" />
+<meta property="og:description" content="얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 암호화 SNI 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 발표를 했네요." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2018/09/24/cloudflare-does-esni.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2018-09-24T09:40:00+00:00" />
+<meta property="article:modified_time" content="2018-09-24T09:40:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>Encrypted SNI | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>Encrypted SNI
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Monday, September 24, 2018.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p>얼마전에 H2O개발자인 Kazuho Oku씨가 IETF hackerthon에서 <a href="https://tools.ietf.org/html/draft-ietf-tls-esni-01">암호화 SNI</a> 구현을 했다는 소식을 들었습니다. 그리고 오늘 Cloudflare에서 모든 서비스에 full support를 한다고 <a href="https://blog.cloudflare.com/encrypted-sni/">발표를 했네요.</a></p>
+<p><img src="/assets/images/esni_cloudflare.png" alt="ESNI"></p>
+<blockquote>
+<p>이제 SNI 차단은 안된다는 것이에요.</p>
+</blockquote>
+<p>정확히 말하면 SNI 차단을 막아주는 환경을 제공하는 사업자가 생겼다라는 것입니다.</p>
+<p>DNS over TLS와 함께 SSL/TLS통신을 쓰면 대부분이 암호화 통신이 되고 있었지만, 유일하게 암호화 되지 않았던 부분이 요청시의 SNI필드 <code>나 www.naver.com에 방문하고 싶어요</code>와 함께 응답시의 인증서필드 <code>알았어요. 우선 www.naver.com인증서를 보낼테니 확인해보세요</code>  였습니다.</p>
+<p>TLS 1.3부터는 인증서도 암호화해서 보냅니다. 그래서 진짜 남은게 요청시의  SNI 필드였는데, 그것도 저 인터넷 드래프트의 구현으로 해결한거죠. 저 인터넷 드래프트는 RFC로 등록이 될 것이라고 생각해요.</p>
+<p>DNS로 퍼블릭 키를 배포하고, 퍼블릭 키를 이용하여 DH (Diffie-Hellman)로 공유키를 만듭니다. DH를 이용하기 때문에 매 세션마다 공유키가 바뀌니까 암호화된 공유키로 원본을 특정할 수가 없구요, 퍼블릭 키를 주기적으로 바꾸게 되면 암호화 메카니즘이 완전히 안전해지는거에요.</p>
+<p>기술은 점점 더 익명화를 지향하는 쪽으로 나아가고 있는 것이 맞는데, 그게 좋은 건지 생각해보게 됩니다.</p>
+<p>&ndash;</p>
+<p>SecureDNS, DNSSec, TLS1.3, Encrypted SNI 환경을 테스트하는 페이지를 <a href="https://www.cloudflare.com/ssl/encrypted-sni/">cloudflare에서 서비스하고 있습니다.</a></p>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/blog/">blog</a></li>
+        <li><a href="/tags/sni/">sni</a></li>
+        <li><a href="/tags/tls/">tls</a></li>
+        <li><a href="/tags/ssl/">ssl</a></li>
+        <li><a href="/tags/filtering/">filtering</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

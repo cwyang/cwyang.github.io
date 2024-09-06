@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="맥OS 앱 코드사인 및 공증하기"/>
+<meta name="twitter:description" content="윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="맥OS 앱 코드사인 및 공증하기" />
+<meta property="og:description" content="윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2020-12-09T18:12:00+00:00" />
+<meta property="article:modified_time" content="2020-12-09T18:12:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>맥OS 앱 코드사인 및 공증하기 | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>맥OS 앱 코드사인 및 공증하기
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Wednesday, December 9, 2020.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p>윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.
+앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이
+사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다.</p>
+<p><img src="/assets/images/osx_gatekeeper_bad.png" alt="앱이 의심스러워 실행을 금지합니다!"></p>
+<p>따라서 앱의 배포를 위해서는 코드사인과 공증 작업이 필요하다.
+Xcode앱인 경우 Xcode에서 대부분 알아서 해 줄 것인데, 수작업으로 작업을 진행해야 할 때도 있다.
+당신(이라고 쓰고 미래의 나 라고 읽자)은 수작업으로 진행해야 하기 때문에 이 글을
+읽고 있으리라.
+자세한 내용은 아래 관련정보에서 얻을 수 있지만, 미래의 나에게 요약하는 의미로
+중요한 것을 별도로 정리한다.
+<a href="https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution">관련정보</a></p>
+<h1 id="코드사인-code-sign">코드사인 (Code-sign)</h1>
+<p>앱에 제작자를 새겨 넣는 작업이다.</p>
+<ol>
+<li>
+<p>맥 개발자 프로그램이 필요하다. 가입한다. (유료. 연간 $99)</p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/">https://developer.apple.com/</a> 에 방문하여 Developer-ID 인증서를 만든다.
+만든 인증서는 다운받아 컴의 Keychain access에 저장한다.
+Keychain access에서 해당 인증서의 Private-key를 찾을 수 없다면 뭔가 잘못된 것.</p>
+</li>
+<li>
+<p>코드사인을 한다.</p>
+<p><code>codesign --options=runtime -s 'Developer ID Application' MyApp.app</code></p>
+</li>
+<li>
+<p>코드사인이 잘 안된다면 앱의 모든 화일을 대상으로 extended attribute를 지우고 다시 시도한다.</p>
+<p><code>find MyApp.app | xargs xattr -xc</code></p>
+</li>
+</ol>
+<h1 id="공증-notarization">공증 (Notarization)</h1>
+<p>코드사인된 앱을 애플에 보내서 기본적인 검사를 진행하고 OK도장을 받는 작업이다.</p>
+<ol>
+<li>Xcode command toolset을 설치한다. <code>xcrun altool</code> 명령어가 성공해야한다.</li>
+<li>다음 명령어를 이용하여 공증을 시도한다. 잘 되었으면 UUID가 반환된다.</li>
+</ol>
+<pre tabindex="0"><code>% xcrun altool --notarize-app
+               --primary-bundle-id &#34;com.example.ote.zip&#34;
+               --username &#34;AC_USERNAME&#34;
+               --password &#34;@keychain:AC_PASSWORD&#34;
+               --asc-provider &lt;ProviderShortname&gt;
+               --file OvernightTextEditor_11.6.8.zip
+</code></pre><ul>
+<li>username: 개발자 ID</li>
+<li>password: 개발자 ID 비밀번호가 <strong>아니고</strong> 앱개발 전용 비밀번호이다. <a href="https://appleid.apple.com">애플아이디 설정페이지</a> 에서 지정하는 앱개발용 암호이다.</li>
+<li>asc-provider: <code>xcrun altool --list-providers -u &quot;AC_USERNAME&quot; -p &quot;@keychain:AC_PASSWORD&quot;</code>을 이용하여 얻어낸 provider id를 사용한다.</li>
+</ul>
+<ol start="3">
+<li>공증 상태를 체크하기 위해서는 아래 명령어를 사용한다.</li>
+</ol>
+<pre tabindex="0"><code>% xcrun altool --notarization-history 0 -u &#34;AC_USERNAME&#34; \
+    -p &#34;@keychain:AC_PASSWORD&#34;
+% xcrun altool --notarization-info \
+    2EFE2717-52EF-43A5-96DC-0797E4CA1041 -u &#34;AC_USERNAME&#34;
+</code></pre><ol start="4">
+<li>공증이 잘 끝났으면 <code>xcrun stapler staple &quot;Overnight TextEditor.app&quot;</code> 명령어를 이용하여 공증 결과를 화일에 첨부한다.</li>
+</ol>
+<p>이제 해당 파일을 웹 서버에 올리고 다운을 받아보자. 다음과 같이 실행할 것인지 물어본다면 성공!</p>
+<p><img src="/assets/images/osx_gatekeeper_ok.png" alt="인터넷에서 받은 앱을 실행하시겠어요?"></p>
+<p>하얗게 불타버린 오늘 하루였다. 커피한잔 사주실분!!!</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/blog/">blog</a></li>
+        <li><a href="/tags/macos/">macos</a></li>
+        <li><a href="/tags/osx/">osx</a></li>
+        <li><a href="/tags/code-sign/">code-sign</a></li>
+        <li><a href="/tags/notarization/">notarization</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

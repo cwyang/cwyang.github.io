@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>한글 on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/</link>
+    <description>Recent content in 한글 on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Apr 2013 10:50:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/%ED%95%9C%EA%B8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>emacs 내장 입력기 사용하기 (XIM 비활성화)</title>
+      <link>http://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</link>
+      <pubDate>Tue, 09 Apr 2013 10:50:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</guid>
+      <description>emacs사용시 IBUS/nabi등의 XIM 외장입력기보다 내장입력기를 사용하는 것이 간단하다. 다음 방법을 사용하여왔는데 OS재설치 이후에 원하는 대로 안 움직였다.</description>
+    </item>
+  </channel>
+</rss>

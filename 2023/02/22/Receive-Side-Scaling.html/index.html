@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="Receive Side Scaling"/>
+<meta name="twitter:description" content="RSS에 대해서 다시 자료를 보고 있는데 10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="Receive Side Scaling" />
+<meta property="og:description" content="RSS에 대해서 다시 자료를 보고 있는데 10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2023-02-22T20:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-22T20:00:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>Receive Side Scaling | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>Receive Side Scaling
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Wednesday, February 22, 2023.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p>RSS에 대해서 다시 자료를 보고 있는데
+<a href="/2010/06/10/multiqueue-nic.html/">10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.</a>
+아 세월의 무상함이여..</p>
+<p>각설하고, 여러 자료들을 바탕으로 RSS에 대해서 정리한다.</p>
+<ul>
+<li><a href="https://www.kernel.org/doc/Documentation/networking/scaling.txt">Scaling in the Linux Networking Stack</a></li>
+</ul>
+<h2 id="rss">RSS</h2>
+<p>패킷스트림을 분산하지 않고 처리하기는 어려운 시대가 되었다.
+네트워크 인터페이스 카드(NIC)이 패킷을 메모리로 전달할 때,
+큐를 여러개 두고 패킷을 분산하되 동일한 플로우에 대해서는 동일한 큐로 전달한다.
+이를 Receive Side Scaling (RSS)라고 지칭한다.</p>
+<p>보편적인 하드웨어 구현방법은 4-tuple (src/dst IP/port)에 대하여 128bucket 해시를 적용하고
+해시 버켓에 대응되는 큐로 패킷을 전송하는 것이다.
+주로 Toeplitz 해시값의 아래 7bit를 사용한다.</p>
+<p>지능형 NIC은 단순 해시가 아닌 계산에 의한 큐 지정 기능을 지원하기도 한다.
+<code>ethtool --config-ntuple</code> 을 참조한다.</p>
+<p>Linux 커널에서 드라이버 구동시 num_queue를 지정할 수 있다.
+CPU, 아니면 최소한 각 메모리 도메인마다 하나의 rx queue를 설정하는 것이 보통이다.</p>
+<h2 id="vpp">VPP</h2>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/RSS/">RSS</a></li>
+        <li><a href="/tags/Receive-Side-Scaling/">Receive Side Scaling</a></li>
+        <li><a href="/tags/performance/">performance</a></li>
+        <li><a href="/tags/multiqueue/">multiqueue</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

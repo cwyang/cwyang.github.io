@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>direct io on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/direct-io/</link>
+    <description>Recent content in direct io on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jul 2010 22:40:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/direct-io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Direct IO란?</title>
+      <link>http://cwyang.github.io/2010/07/09/direct-io.html/</link>
+      <pubDate>Fri, 09 Jul 2010 22:40:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2010/07/09/direct-io.html/</guid>
+      <description>Linux에서 Direct IO는 page cache를 통하지 않고 memory와 IO device사이에 직접 데이터를 송수신하는것이다.</description>
+    </item>
+  </channel>
+</rss>

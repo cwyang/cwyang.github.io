@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="패스워드 매니저의 위험성과 클라우드 보안"/>
+<meta name="twitter:description" content="일반적인 사용자들의 패스워드는 40 비트 정도의 엔트로피를 가진다고 합니다. 40 비트 키는 매우 취약하다는 이야기 많이 들어보셨을거에요. 랜덤하게 만들어도 72 비트 이상가기가 어렵다고 하는데요. 그래서 PBKDF2를 반복(iteration)해서 적용하여 안전한 키를 만듭니다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="패스워드 매니저의 위험성과 클라우드 보안" />
+<meta property="og:description" content="일반적인 사용자들의 패스워드는 40 비트 정도의 엔트로피를 가진다고 합니다. 40 비트 키는 매우 취약하다는 이야기 많이 들어보셨을거에요. 랜덤하게 만들어도 72 비트 이상가기가 어렵다고 하는데요. 그래서 PBKDF2를 반복(iteration)해서 적용하여 안전한 키를 만듭니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2023-02-02T21:30:00+00:00" />
+<meta property="article:modified_time" content="2023-02-02T21:30:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>패스워드 매니저의 위험성과 클라우드 보안 | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>패스워드 매니저의 위험성과 클라우드 보안
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Thursday, February 2, 2023.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p><a href="https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/">2022년 12월 LastPass의 패스워드들이 유출되었습니다.</a>
+LastPass는 클라우드 스토리지에 패스워드들을 저장하고 있었는데
+2022년 8월에 유출된 정보를 통해 이번에 패스워드들이 유출되었다고 해요.
+패스워드는 [PKBDF2](Password-Based Key Derivation Function 2)(<a href="https://en.wikipedia.org/wiki/PBKDF2">https://en.wikipedia.org/wiki/PBKDF2</a>)<!-- raw HTML omitted --><a href="#footnote1">1</a><!-- raw HTML omitted -->로 암호화되어 있었어요. 즉 해시만이 저장되어 있었는데요. 이게 안전하지 않다는 이야기가 많습니다.</p>
+<p><img src="/assets/images/password.jpg" alt="패스워드 과연 안전한가?"></p>
+<p>보안을 위해 40 비트, 64 비트 키는 안전하지 않다. 128 비트 이상을 사용하라는 이야기 들어보셨을텐데요,
+일반적인 사용자들의 패스워드는 40 비트 정도의 엔트로피를 가진다고 합니다.
+40 비트키는 매우 취약하다는 이야기 많이 들어보셨을거에요.
+랜덤하게 만들어도 72 비트 이상가기가 어렵다고 하는데요.
+그래서 PBKDF2를 반복(iteration)해서 적용하여 안전한 키를 만듭니다. 반복할 때마다 패스워드가 강화되는 것이고요,
+<del>+9 집행검이</del> 안전한 키가 나올때까지 계속 강화하는겁니다.</p>
+<p>이번에 키 누출과 함께 나온 이슈가 LastPass가 PBKDF2를 설렁설렁(?) 사용했다는 것입니다.
+LastPass의 주장은 PBKDF2를 100,100번 이터레이션한다는 것이지만 <a href="https://www.reddit.com/r/Lastpass/comments/106p7le/by_default_the_number_of_password_iterations_that/">그렇지 않다는 주장들을 볼 수 있어요.</a>
+약한 패스워드에 대해 강화를 몇번 안돌렸으니 결과도 취약해진거고 그것이 유출된 것입니다.</p>
+<p><a href="https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/2012-linkedin-breach-117-million-emails-and-passwords-stolen-not-6-5m">2012년에 LinkedIn 에서도 1억개 이상의 암호화된 패스워드가 유출되었었는데,</a> 그 암호화 방식이 unsalted SHA1 이어서 문제가 된 적도 있었어요. 같은 패스워드면 암호화된 패스워드도 같았고, 암호화 방식도 취약한 SHA1이었으니 말 다한 것이죠.</p>
+<p>클라우드 스토리지에 고객 정보를 저장할때에는 항상 정보가 유출될 수 있다는 생각을 가지고 고객 데이터를 안전하게 관리해야 합니다.
+공개 클라우드는 제대로 보안 관리가 되지 않으면 훔쳐가세요~하는 것과 마찬가지니까요.</p>
+<ol>
+<li>개인정보는 암호화하고</li>
+<li>암호는 일정수준 이상의 보안강도를 유지하며</li>
+<li>클라우드상의 리소스의 접근권한을 올바르게 관리해야합니다.</li>
+</ol>
+<p>개인으로서는 세상에 절대 안전한 서비스는 없다는 것을 인지하고
+(패스워드 매니저가 털리고 그것이 허술하게 관리될 줄이야 누가 알았겠어요)
+복잡한 암호를 사용해서 기본적으로 높은 엔트로피를 주는 것이 중요하겠습니다.</p>
+<ul>
+<li><!-- raw HTML omitted -->[1]<!-- raw HTML omitted --> <a href="https://datatracker.ietf.org/doc/html/rfc2898">RFC2898</a>에 정의되어있으며, ISO-27001 보안규정을 준수하고 있는, 제대로 사용한다면 안전한 함수입니다.</li>
+</ul>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/blog/">blog</a></li>
+        <li><a href="/tags/cloud/">cloud</a></li>
+        <li><a href="/tags/security/">security</a></li>
+        <li><a href="/tags/password/">password</a></li>
+        <li><a href="/tags/pbkdf2/">pbkdf2</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

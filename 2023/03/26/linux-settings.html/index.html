@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="Linux Settings in 2023"/>
+<meta name="twitter:description" content="잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다. 랩탑에 설치하는 것은 처음이다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="Linux Settings in 2023" />
+<meta property="og:description" content="잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다. 랩탑에 설치하는 것은 처음이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2023/03/26/linux-settings.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2023-03-26T09:24:00+00:00" />
+<meta property="article:modified_time" content="2023-03-26T09:24:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>Linux Settings in 2023 | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>Linux Settings in 2023
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Sunday, March 26, 2023.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p>잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다.
+랩탑에 설치하는 것은 처음이다. 윈도우와 최대한 유사하게 꾸며보기로 한다.</p>
+<h3 id="확인할-것들--개선필요사항">확인할 것들 / 개선필요사항</h3>
+<ul>
+<li>BIOS sleep state: linux(s3) sleep vs windows modern sleep
+<ul>
+<li>modern standby가 더 신속하지만 power를 많이 먹는다고 한다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="기본-환경">기본 환경</h3>
+<ul>
+<li>Thinkpad X1 Carbon Gen9</li>
+<li>Mint Linux 21.1 (2022년 12월 출시)</li>
+<li>파티션: base(60G), swap(16G), home(100G)</li>
+<li>부트로더: on hdd. windows bootmgr와 별도로 구성</li>
+<li>한글: fcitx (기본)
+<ul>
+<li>한영전환: <code>Ctrl+Space</code>(기본), <code>Shift+Space</code> (추가)</li>
+<li>사용하다보면 힌트윈도우가 떠서 거슬릴때가 있는데, <code>Ctrl+Alt+P</code>로 비활성화 가능</li>
+</ul>
+</li>
+<li>블루투스, 사운드, 웹캠 기본 정상작동</li>
+</ul>
+<h3 id="핫키설정">핫키설정</h3>
+<p>Setting &raquo; Keyboard &raquo; Shortcut 에서 지정한다. 윈도우와 유사하게 설정</p>
+<ul>
+<li>Run Dialog: <code>Super+R</code></li>
+<li>Home Folder: <code>Super+E</code></li>
+<li>Web Browser: <code>Super+C</code></li>
+<li>Terminal: <code>Super+T</code></li>
+<li>Setting: <code>Super+I</code></li>
+<li>Lock Device: <code>Super+L</code></li>
+<li>Push Tile: <code>Super+DIR</code></li>
+<li>Move Tile to Other Monitor: <code>Shft+Super+DIR</code></li>
+<li>Screenshot to Clipboard: <code>Shift+Super+S</code></li>
+<li>ACPI성능프로파일: <code>Fn+L</code> (low) <code>Fn+M</code> (mid), <code>Fn+H</code> (high perf)
+<ul>
+<li>확인: <code>cat /sys/firmware/acpi/platform_profile</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="설치-앱">설치 앱</h3>
+<ul>
+<li>Google Chrome</li>
+<li>Virtual Box</li>
+<li>VS Code</li>
+</ul>
+<h3 id="웹앱">웹앱</h3>
+<ul>
+<li>특정 웹 브라우저를 앱과 같이 등록할 수가 있다. 웹 메신저등에 활용가능하다.
+실행중이 아니면 알림을 못받는 문제, 알림뱃지등이 없는 한계가 있지만 아쉬운대로 사용한다.</li>
+<li><code>webapp-manager</code> 등록후 taskbar고정</li>
+</ul>
+<h3 id="가상환경">가상환경</h3>
+<ul>
+<li>default vagrant 가 vbox 7.x을 지원하지 않아 vbox 6.0을 설치하여 사용한다.</li>
+</ul>
+<h3 id="네트워크">네트워크</h3>
+<ul>
+<li>태스크바에 네트워크 추가
+<ul>
+<li>Setting &raquo; Startup Application &raquo; Add Network</li>
+</ul>
+</li>
+<li>VPN
+<ul>
+<li>openconnect vpn을 사용한다.</li>
+<li><code>apt install network-manager-openconnect network-manager-openconnect-gnome</code></li>
+<li>설치 이후 Setting &raquo; Network &raquo; Add VPN</li>
+<li>vpn typ 설정 후 게이트웨이를 지정</li>
+<li><code>resolvectl --status</code>로 vpn0에서 DNS 설정이 되어 있는지 확인한다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="프린터">프린터</h3>
+<ul>
+<li>Sindoh D400 linux driver
+<ul>
+<li>generic PCL6</li>
+<li><a href="https://hamonikr.org/board_practice/4537#comment_73416">https://hamonikr.org/board_practice/4537#comment_73416</a></li>
+<li><a href="https://acehyuk.tistory.com/351">https://acehyuk.tistory.com/351</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/linux/">linux</a></li>
+        <li><a href="/tags/settings/">settings</a></li>
+        <li><a href="/tags/mint/">mint</a></li>
+        <li><a href="/tags/ubuntu/">ubuntu</a></li>
+        <li><a href="/tags/thinkpad/">thinkpad</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

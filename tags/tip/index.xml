@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tip on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/tip/</link>
+    <description>Recent content in tip on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Mar 2022 16:14:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/tip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>크래시 덤프 수집</title>
+      <link>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</link>
+      <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</guid>
+      <description>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,</description>
+    </item>
+    <item>
+      <title>git submodule</title>
+      <link>http://cwyang.github.io/2022/03/04/git-submodule.html/</link>
+      <pubDate>Fri, 04 Mar 2022 15:54:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2022/03/04/git-submodule.html/</guid>
+      <description>parent project에서 child project를 git submodule로 사용할 때,&#xA;child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는 변하지 않는다.</description>
+    </item>
+    <item>
+      <title>emacs 내장 입력기 사용하기 (XIM 비활성화)</title>
+      <link>http://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</link>
+      <pubDate>Tue, 09 Apr 2013 10:50:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</guid>
+      <description>emacs사용시 IBUS/nabi등의 XIM 외장입력기보다 내장입력기를 사용하는 것이 간단하다. 다음 방법을 사용하여왔는데 OS재설치 이후에 원하는 대로 안 움직였다.</description>
+    </item>
+    <item>
+      <title>gdb 팁: 배열, 리스트 쫒아가기</title>
+      <link>http://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</link>
+      <pubDate>Sat, 10 Jul 2010 23:21:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</guid>
+      <description>이 팁을 배운 이후 너무 잘 쓰고 있기에, 배운자의 의무로써 널리 알린다.</description>
+    </item>
+  </channel>
+</rss>

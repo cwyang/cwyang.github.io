@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QOS on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/QOS/</link>
+    <description>Recent content in QOS on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Nov 2010 21:16:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/QOS/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux QoS Box Design</title>
+      <link>http://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</link>
+      <pubDate>Wed, 03 Nov 2010 21:16:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</guid>
+      <description>1st draft, 3 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
+    </item>
+  </channel>
+</rss>

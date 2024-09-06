@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="SSL_read()와 read()는 같은가요?"/>
+<meta name="twitter:description" content="네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은 경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데, 이 경우 SSL_read()와 read()의 차이점을 알아야한다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="SSL_read()와 read()는 같은가요?" />
+<meta property="og:description" content="네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은 경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데, 이 경우 SSL_read()와 read()의 차이점을 알아야한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2009-10-21T14:48:00+00:00" />
+<meta property="article:modified_time" content="2009-10-21T14:48:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>SSL_read()와 read()는 같은가요? | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>SSL_read()와 read()는 같은가요?
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Wednesday, October 21, 2009.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p>네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은 경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데, 이 경우 SSL_read()와 read()의 차이점을 알아야한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">ssize_t</span> <span style="color:#a6e22e">my_read</span>(CONN_t conn, <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>buf, <span style="color:#66d9ef">size_t</span> count)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">is_ssl</span>(conn))
+</span></span><span style="display:flex;"><span>	   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">SSL_read</span>(<span style="color:#a6e22e">get_ssl</span>(conn), buf, count);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>	   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">read</span>(<span style="color:#a6e22e">get_fd</span>(conn), buf, count);
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>SSL_read()는 이리 하여도 무관하나 SSL_write()는 count가 0일 경우의 행동이 결정되어 있지 않다. 즉 그리하여서는 안된다는 것이다. 따라서 SSL_write()는 아래와 같이해야한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">ssize_t</span> <span style="color:#a6e22e">my_write</span>(CONN_t conn, <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>buf, <span style="color:#66d9ef">size_t</span> count)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">is_ssl</span>(conn))
+</span></span><span style="display:flex;"><span>	   <span style="color:#66d9ef">return</span> count <span style="color:#f92672">?</span> <span style="color:#a6e22e">SSL_write</span>(<span style="color:#a6e22e">get_ssl</span>(conn), buf, count) <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>	   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">get_fd</span>(conn), buf, count);
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p>이는 Blocking I/O의 경우이며, Non-blocking I/O일 경우에는 그냥 return value를 반환해서는 안되고, SSL_read(), SSL_write()후 SSL_get_error()를 통해 I/O결과를 검사하여 적절한 처리를 해야 한다. SSL_ERROR_WANT_READ, SSL_ERROR_WANT_WRITE 두가지 경우가 SSL_read(), SSL_write() 각각의 경우 모두 일어날 수 있는데, 이는 각각 해당 fd에 read가 가능해지는경우, write가 가능해지는 경우, 원래의 operation을 다시 호출하라라는 의미이다.</p>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/diary/">diary</a></li>
+        <li><a href="/tags/ssl/">ssl</a></li>
+        <li><a href="/tags/openssl/">openssl</a></li>
+        <li><a href="/tags/programming/">programming</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

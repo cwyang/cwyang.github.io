@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Innovation on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/Innovation/</link>
+    <description>Recent content in Innovation on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Feb 2023 20:00:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/Innovation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatGPT-3가 설명하는 ChatGPT-3</title>
+      <link>http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html/</link>
+      <pubDate>Tue, 07 Feb 2023 20:00:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2023/02/07/what-is-chatgpt3.html/</guid>
+      <description>안녕하세요! 오늘은 OpenAI에서 개발한 최신 언어 모델, ChatGPT-3에 대해 이야기해볼께요. GPT (Generative Pretrained Transformer) 구조의 세 번째 버전인 ChatGPT-3은 NLP (Natural Language Processing) 세계를 휩쓸었습니다. 이 고급 언어 모델은 다양한 인터넷 텍스트로 교육되었기 때문에, 놀랍도록 정확하게 인간처럼 텍스트를 생성합니다.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="Linux QoS Box Design"/>
+<meta name="twitter:description" content="1st draft, 3 November 2010
+양 철 웅 (cwyang)
+cwyang.tistory.com"/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="Linux QoS Box Design" />
+<meta property="og:description" content="1st draft, 3 November 2010
+양 철 웅 (cwyang)
+cwyang.tistory.com" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cwyang.github.io/2010/11/03/linux-qos-box-design.html/" /><meta property="og:image" content="http://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2010-11-03T21:16:00+00:00" />
+<meta property="article:modified_time" content="2010-11-03T21:16:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="http://cwyang.github.io/css/custom.css">
+
+<title>Linux QoS Box Design | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>Linux QoS Box Design
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Wednesday, November 3, 2010.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p>1st draft, 3 November 2010<br>
+양 철 웅  (cwyang)<br>
+cwyang.tistory.com</p>
+<p>풍문에 의하면 리눅스Linux 기반의 QoS는 안정적이라고 하고, 그 연유로 제품화도 많이 되었다고 한다. 리눅스 기반의 QoS시스템은 어떻게 만드는가.</p>
+<p>QoS란 서비스를 이용하는 특정 QoS 클래스에 대해서 서비스 품질을 제어하는 것이다. 네트워크 상의 서비스 품질은 결국 대역폭bandwidth이므로, 특정 QoS클래스에 대해 최대 대역폭을 제한하거나 최소 대역폭을 보장해주는 역할을 해야한다. 여기서 QoS 클래스란 동일한 사용품질로 묶을 수 있는 집합이다. 예를 들면, “영업부에 대해서는 최대 5Mbps 만을 허용한다” 라는 영업부 클래스를 생각할 수 있다. 아니면 “YouTube 서비스에 대해서는 최대 10Mbps를 허용하나, 웹 사용으로 인해 병목이 생길 경우에는 가장 낮은 우선순위를 가진다&quot; 와 같은 YouTube 클래스를 생각할 수 있다. 언뜻 생각하면 단순할 수도 있겠으나, 그리 단순하지만은 않은 두 가지 기술적 측면이 존재한다. (1) 네트워크 패킷이 어떤 QoS 클래스에 속하는 지를 판단하는 기술. (2) QoS 클래스에 대해 어떻게 대역폭을 제어할 것인가. 또한 클래스가 계층화되어 복잡한 구조를 가지게 될 때 그를 어떻게 관리할 것인가.</p>
+<p>다행히도 이 두 가지에 대해 리눅스는 이미 해답을 가지고 있다.</p>
+<p>첫 번째로, 리눅스에는 넷필터netfilter라는 이름의 패킷에 대한 논리적 제어 시스템이 존재한다. 패킷이 시스템에 들어와 커널, 혹은 어플리케이션으로 전달되는 일련의 과정을 거쳐 외부로 다시 나가거나 파기되기까지의 과정을 몇 단계로 구분하여, 각 단계마다 일정 조건에 부합하면 설정된 액션action을 하도록 한다. 넷필터는 OSI 모델의 각 레이어 별 조건을 지원한다. 즉, MAC주소를 비교하거나 (Layer 2),  IP주소를 비교하거나 (Layer 3), TCP의 특정 포트를 비교하거나 (Layer 4) 할 수 있다. 리눅스 표준은 아니지만</p>
+<p><a href="http://l7-filter.sourceforge.net/">http://l7-filter.sourceforge.net/</a>의
+ l7-filter 프로젝트, 혹은
+<a href="https://docs.google.com/document/edit?id=1qPN4HibRCRjcLPeIoMfe_3njDJiFMOBA0Fd_qG9JD5E&amp;hl=ja">http://www.ipp2p.org</a>의
+IPP2P 프로젝트를 이용하면 HTTP, FTP등의 특정 어플리케이션인지 혹은 BitTorrent, eDonkey등의 P2P인지를 감지해서 (Layer 7) 그를 조건으로 이용할 수 있다.</p>
+<p>이를 이용하여 네트워크 패킷이 어떤 QoS 클래스에 속하는 지를 판단할 수 있다. 넷필터는 패킷을 구분할 수 있는 mark라는 액션을 지원한다. [1]에서 발췌한 아래의 예를 보면, 넷필터를 이용해서 bittorrent 프로토콜을 감지하였으면 해당 패킷에 &lsquo;5&rsquo;라는 mark를, ftp프로토콜이고 192.168.1.100 IP주소로 송신되는 패킷이면 &lsquo;6&rsquo;이라는 mark를 부여한다. 패킷마다 그에 해당하는 클래스를 가리키는 mark를 부여할 수가 있는 것이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># iptables -t mangle -A POSTROUTING -m layer7 --l7proto bittorrent -j MARK --set-mark 5  </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># iptables -t mangle -A POSTROUTING -m layter7 --l7proto ftp -d 192.168.1.100 -j MARK --set-mark 6  </span>
+</span></span></code></pre></div><p>두 번째. 리눅스는 TCP연결에 대해 대역폭을 제어하는 메카니즘 (리눅스 QoS라고 칭하겠다) 역시 탑재하고 있다. 커널 설정시 상응하는 옵션을 활성화 함으로서 사용할 수 있으며 tc라는 명령어를 이용하여 그를 제어할 수 있다. 리눅스 QoS는 [2]와 같이 별도의 장문의 HOWTO가 존재할 정도로 복잡하지만, 중요한 것은 QoS 클래스의 등록 및 각 클래스에 대한 조건과 제어설정이 가능하다는 것이다.</p>
+<p>tc class 명령어를 이용하여 클래스를 지정할 때에는  클래스에 대한 대역폭 설정, 가중치, 우선순위 등을 설정할 수 있다. 설정된 클래스에다가 tc filter를 이용하여 패킷을 연결해주는 것이다. tc filter에서는 어떤한 조건을 이용할 것인지를 설정할 수 있으며, ip주소등의 기본적인 조건은 넷필터의 도움 없이 리눅스 QoS만 가지고도 가능하다. 하지만 전단에서 넷필터가 강화된 조건으로 패킷 mark를 부여하면 QoS단에서 tc filter의 handle 옵션을 이용해서 해당 mark를 검출, 특정 클래스로써 처리할 수 있다.</p>
+<p>리눅스에서 넷필터와 QoS가 이미 구현되어 있다는 것은 리눅스 기반의 QoS박스를 쉽게 만들 수 있다는 이야기다. 차려진 밥상에 숟갈을 얻는 격이기 때문에, 리눅스에서 제공하고 있는 기능 이상을 생각한다면 난관에 봉착할 것이다. 하지만 제품으로써 동작할 수 있는 최소한의 것들은 이미 다 차려져 있다고 생각하면 된다.</p>
+<p>그 러면 남은 것은 무엇인가. 필요로 하는 QoS기능을 기획하고 알맞은 적절한 설정 및 UI를 만들고 그에 따라 넷필터와 QoS를 적용하도록 어플리케이션 로직을 만들면 된다. 하지만 성능 면에 민감한 경우라면 꼭 성능 평가를 해야 한다. 1Gbps를 지원한다고 하는 상용 QoS박스들이 QoS클래스 여럿이 들어가게 되면 500Mbps도 제대로 처리하지 못한다는 주장도 있다[3]. 성능 평가의 경우에는 대역폭 이외에도 레이턴시latency가 늘어나는지도 검토해야 한다.</p>
+<h2 id="참고문헌">참고문헌</h2>
+<p>[1] Lucian Gheorghe, Designing and Implementing Linux Firewalls and QoS using netfilter, iprout2, nat, and l7-filter, 2006, packt publishing<br>
+[2] Bert Hubert, Linux Advanced Routing and Traffic Control Howto,
+<a href="http://lartc.org/">http://lartc.org/</a>
+[3] Delbert Terry, How to Choose Right Bandwidth Management Solutions, myqos.net,
+<a href="http://www.articlesbase.com/networks-articles/how-to-choose-right-bandwidth-management-solutions-3470695.html">http://www.articlesbase.com/networks-articles/how-to-choose-right-bandwidth-management-solutions-3470695.html</a></p>
+
+</div>
+<hr>
+
+  <div>
+    <div>tags:</div>
+    <ul>
+        <li><a href="/tags/blog/">blog</a></li>
+        <li><a href="/tags/linux/">linux</a></li>
+        <li><a href="/tags/QOS/">QOS</a></li>
+    </ul>
+  </div>
+
+
+  </div>
+  <footer>
+    
+
+  </footer>
+</body>
+</html>

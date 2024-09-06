@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cloud-first on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/cloud-first/</link>
+    <description>Recent content in cloud-first on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Dec 2020 20:17:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/cloud-first/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>클라우드 퍼스트 단상</title>
+      <link>http://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html/</link>
+      <pubDate>Sat, 05 Dec 2020 20:17:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2020/12/05/what-does-cloud-computing-bring-to-us.html/</guid>
+      <description>미국은 이미 10년전에 클라우드 퍼스트 전략을 발표했다. 우리 정부도 클라우드 퍼스트. 많은 기업들도 디지털 트랜스포메이션이라는 기치 아래 클라우드로 가고 있다&amp;hellip; 세상에 공짜가 어디있겠나. 누군가는 손해를 봐야한다.</description>
+    </item>
+  </channel>
+</rss>

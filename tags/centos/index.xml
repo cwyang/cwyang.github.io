@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/centos/</link>
+    <description>Recent content in centos on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Oct 2018 14:38:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OVS, Docker, CentOS7 환경 만들기</title>
+      <link>http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</link>
+      <pubDate>Fri, 12 Oct 2018 14:38:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2018/10/12/ovs-docker-centos7-environment.html/</guid>
+      <description>centos7기반의 ovs와 docker가 머신이 당분간 계속 필요할 것 같아서,  vagrant를 이용하여 VM을  빌드해보기로 하였습니다.</description>
+    </item>
+  </channel>
+</rss>

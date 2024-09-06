@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thinkpad on A Tale That Wasn&#39;t Left</title>
+    <link>http://cwyang.github.io/tags/thinkpad/</link>
+    <description>Recent content in thinkpad on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Mar 2023 09:24:00 +0000</lastBuildDate>
+    <atom:link href="http://cwyang.github.io/tags/thinkpad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Settings in 2023</title>
+      <link>http://cwyang.github.io/2023/03/26/linux-settings.html/</link>
+      <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
+      <guid>http://cwyang.github.io/2023/03/26/linux-settings.html/</guid>
+      <description>잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다. 랩탑에 설치하는 것은 처음이다.</description>
+    </item>
+  </channel>
+</rss>
