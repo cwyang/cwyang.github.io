@@ -98,6 +98,7 @@ a.back {
     font-size: 300%;
     line-height: 83%;
 }
+@media only screen and (max-width: 550px) { .toc-title { font-size:200%; } }
 .toc-subtitle {
     display: block;
     margin-bottom: 1em;
@@ -316,3 +317,4 @@ hr {
     object-fit: cover;
     float: right;
 }
+@media only screen and (max-width: 550px) { .home-image { width: 100px; height: 100px; } }
