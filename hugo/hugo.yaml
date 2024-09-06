@@ -13,8 +13,27 @@ markup:
       attribute:
         block: true
         title: true
+services:
+  googleAnalytics:
+    ID:: "UA-6183151-15"
+
 params:
+  description: > # this means to ignore newline
+    특별히 주제를 정해 두지 않은 이야기들
+  images:
+    - "/assets/images/go_and_docker.png"
   custom_css: ["css/custom.css"]
+  cover: "/assets/images/background_image.jpg"
+  name: 'cwyang'
+  author: 양철웅
+  author_bio: Chul-Woong Yang
+  author_image: "/assets/images/author.jpg"
+  social:
+    twitter: cwyang
+    github:  cwyang
+    facebook_admin: cwyang89
+  fb_app_id: "596017104565491"
+  naver_site_verification: "cec40b2338ce973c5b5588326daed5c126a0c415"
 summaryLength: 10
 taxonomies:
   tag: "tags"

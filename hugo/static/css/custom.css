@@ -1,8 +1,37 @@
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/MaruBuri/MaruBuri-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/MaruBuri/MaruBuri-Light.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/MaruBuri/MaruBuri-Light.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/MaruBuri/MaruBuri-Light.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/MaruBuri/MaruBuri-Light.ttf') format("truetype");
+    font-display: swap;
+    unicode-range:U+AC00-D7A3;	/* Kor */
+}
+
+@font-face {
+    font-family: 'NotoSerifKR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range:U+AC00-D7A3;	/* Kor */
+}
+@font-face{
+    font-family:'KoPub Batang';
+    font-style:normal;
+    font-weight:300;
+    src:url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubBatang-Light.eot);
+    src:url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubBatang-Light.eot?#iefix) format('embedded-opentype'),url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubBatang-Light.woff) format('woff'),url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubBatang-Light.ttf) format('truetype');
+    unicode-range:U+AC00-D7A3;	/* Kor */
+}
+
 body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    font-family: 'Minion 3', serif;
+    font-family: 'KoPub Batang', 'EB Garamond', serif;
 }
 
 @media print {
@@ -126,16 +155,16 @@ pre {
     margin-right: 4em;
 }
 pre, code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 90%;
 }
 .showcode pre {
     margin: 0;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Fira Code', monospace;
 }
 .showcode-src a {
     color: black;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 90%;
 }
 .showcode-comment {

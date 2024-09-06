@@ -44,3 +44,6 @@ node_modules
 .jekyll-metadata
 
 .publish
+
+# hugo
+hugo/public
