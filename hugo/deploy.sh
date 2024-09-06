@@ -9,7 +9,7 @@ BRANCH="master" # Change this to your target branch
 PUBLIC_DIR="public"
 
 rm -rf $PUBLIC_DIR
-git worktree add $PUBLIC_DIR $BRANCH
+git worktree add -f $PUBLIC_DIR $BRANCH
 
 hugo
 
