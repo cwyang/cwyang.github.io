@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>development on A Tale That Wasn&#39;t Left</title>
+    <title>Development on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/development/</link>
-    <description>Recent content in development on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Development on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Jul 2010 23:21:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</link>
       <pubDate>Sat, 10 Jul 2010 23:21:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</guid>
-      <description>이 팁을 배운 이후 너무 잘 쓰고 있기에, 배운자의 의무로써 널리 알린다.</description>
+      <description>&lt;p&gt;이 팁을 배운 이후 너무 잘 쓰고 있기에, 배운자의 의무로써 널리 알린다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ssl on A Tale That Wasn&#39;t Left</title>
+    <title>Ssl on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/ssl/</link>
-    <description>Recent content in ssl on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ssl on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Feb 2023 20:00:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
@@ -23,6 +23,13 @@
       <description>TLS 1.2 미만 (SSL*, TLS1.0, TLS1.1)은 그 보안취약점으로 인해 IETF가 2021년 3월에 정식으로 관뚜껑에 못질을 하였습니다.</description>
     </item>
     <item>
+      <title>OpenSSL 3.0</title>
+      <link>https://cwyang.github.io/2019/12/19/openssl-3.0.html/</link>
+      <pubDate>Thu, 19 Dec 2019 11:33:00 +0000</pubDate>
+      <guid>https://cwyang.github.io/2019/12/19/openssl-3.0.html/</guid>
+      <description>벌써 연말이다. 2020년에는 OpenSSL 3.0이 발표 예정이다. OpenSSL 1.1.1 작업을 한 지도 얼마 안되었는데&amp;hellip;</description>
+    </item>
+    <item>
       <title>Encrypted SNI</title>
       <link>https://cwyang.github.io/2018/09/24/cloudflare-does-esni.html/</link>
       <pubDate>Mon, 24 Sep 2018 09:40:00 +0000</pubDate>
@@ -35,6 +42,13 @@
       <pubDate>Thu, 05 Apr 2018 09:00:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2018/04/05/omg-wildcard-cert-co-kr.html/</guid>
       <description>식목일입니다. 출근하니 인터넷이 전자정부 와일드카드 인증서때문에 시끌시끌하네요. 인증서는 전 세계를 대상으로하는 주민등록증이라고 할 수 있는데 정부에서 운영을 잘 해주었어야 한다고 생각합니다. 오늘의 사건에 대해서 쉽게 풀어보겠습니다.</description>
+    </item>
+    <item>
+      <title>SSL_read()와 read()는 같은가요?</title>
+      <link>https://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</link>
+      <pubDate>Wed, 21 Oct 2009 14:48:00 +0000</pubDate>
+      <guid>https://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</guid>
+      <description>네트워크 프로그래밍시에 SSL 연결과의 자료전송도 필요하게 되면 SSL_read()와 SSL_write()를 써야하기 마련이다. 많은 경우 SSL연결 뿐만이 아닌 일반 전송도 필요하므로, 프로그래머는 대개 아래와 같이 연결 종류에 무관한 wrapping API를 만들어서 진행하는데, 이 경우 SSL_read()와 read()의 차이점을 알아야한다.</description>
     </item>
   </channel>
 </rss>

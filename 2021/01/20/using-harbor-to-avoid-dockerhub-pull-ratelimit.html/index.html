@@ -16,18 +16,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="도커허브 이미지 풀 제약을 하버로 해결하기"/>
-<meta name="twitter:description" content="도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해 6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다."/>
-<meta name="twitter:site" content="@cwyang"/>
 
-<meta property="og:title" content="도커허브 이미지 풀 제약을 하버로 해결하기" />
-<meta property="og:description" content="도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해 6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/" /><meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
-<meta property="article:published_time" content="2021-01-20T15:02:41+00:00" />
-<meta property="article:modified_time" content="2021-01-20T15:02:41+00:00" />
-<meta property="fb:admins" content="cwyang89" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
+  <meta name="twitter:title" content="도커허브 이미지 풀 제약을 하버로 해결하기">
+  <meta name="twitter:description" content="도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해 6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.">
+      <meta name="twitter:site" content="@cwyang">
+
+<meta property="og:url" content="https://cwyang.github.io/2021/01/20/using-harbor-to-avoid-dockerhub-pull-ratelimit.html/">
+  <meta property="og:site_name" content="A Tale That Wasn&#39;t Left">
+  <meta property="og:title" content="도커허브 이미지 풀 제약을 하버로 해결하기">
+  <meta property="og:description" content="도커허브에서 무료사용자들에 대해 pul rate limit를 부과하기 시작했다. ip별 6시간에 100번, 무료사용자 id하나에 대해 6시간에 200번. 연구소 기계들이 NAT아래에 있다보니 이미지 몇개 당겨오다보면 금방 한계에 부딪히게 되고 만다. 쿠버네티스 파드가 뜨지 않는다.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="jekyll-post">
+    <meta property="article:published_time" content="2021-01-20T15:02:41+00:00">
+    <meta property="article:modified_time" content="2021-01-20T15:02:41+00:00">
+    <meta property="article:tag" content="Blog">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Dockerhub">
+    <meta property="article:tag" content="Harbor">
+    <meta property="article:tag" content="Container">
+    <meta property="article:tag" content="K8s">
+    <meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
+        <meta property="fb:admins" content="cwyang89">
 
 
 <link rel="stylesheet" href="https://cwyang.github.io/css/custom.css">
@@ -50,6 +62,9 @@
     <ul>
     <li>
       <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/categories/">Categories</a>
     </li>
     <li>
       <a href="/tags/">Tags</a>
@@ -155,17 +170,17 @@ Creating harbor-jobservice ...
 </div>
 <hr>
 
+
+
   <div>
-    <div>tags:</div>
-    <ul>
-        <li><a href="/tags/blog/">blog</a></li>
-        <li><a href="/tags/docker/">docker</a></li>
-        <li><a href="/tags/dockerhub/">dockerhub</a></li>
-        <li><a href="/tags/harbor/">harbor</a></li>
-        <li><a href="/tags/container/">container</a></li>
-        <li><a href="/tags/k8s/">k8s</a></li>
-        <li><a href="/tags/kubernetes/">kubernetes</a></li>
-    </ul>
+    Tags:
+        <a href="/tags/blog/ ">Blog</a>, 
+        <a href="/tags/docker/ ">Docker</a>, 
+        <a href="/tags/dockerhub/ ">Dockerhub</a>, 
+        <a href="/tags/harbor/ ">Harbor</a>, 
+        <a href="/tags/container/ ">Container</a>, 
+        <a href="/tags/k8s/ ">K8s</a>, 
+        <a href="/tags/kubernetes/ ">Kubernetes</a>
   </div>
 
 

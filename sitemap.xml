@@ -5,6 +5,12 @@
     <loc>https://cwyang.github.io/tags/blog/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
+    <loc>https://cwyang.github.io/categories/blog/</loc>
+    <lastmod>2024-09-05T02:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/categories/</loc>
+    <lastmod>2024-09-05T02:39:00+00:00</lastmod>
+  </url><url>
     <loc>https://cwyang.github.io/tags/hugo/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
@@ -48,6 +54,9 @@
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/gRPC/</loc>
+    <lastmod>2024-01-12T19:00:03+00:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/tags/HTTP/2/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/2024/01/12/http2-rapid-reset.html/</loc>
@@ -646,7 +655,5 @@
   </url><url>
     <loc>https://cwyang.github.io/2009/01/23/programming-in-haskell.html/</loc>
     <lastmod>2009-01-23T10:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/HTTP/2/</loc>
   </url>
 </urlset>

@@ -16,18 +16,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="크래시 덤프 수집"/>
-<meta name="twitter:description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,"/>
-<meta name="twitter:site" content="@cwyang"/>
 
-<meta property="og:title" content="크래시 덤프 수집" />
-<meta property="og:description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나," />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/" /><meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
-<meta property="article:published_time" content="2022-03-04T16:14:00+00:00" />
-<meta property="article:modified_time" content="2022-03-04T16:14:00+00:00" />
-<meta property="fb:admins" content="cwyang89" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
+  <meta name="twitter:title" content="크래시 덤프 수집">
+  <meta name="twitter:description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,
+일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.
+프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..">
+      <meta name="twitter:site" content="@cwyang">
+
+<meta property="og:url" content="https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/">
+  <meta property="og:site_name" content="A Tale That Wasn&#39;t Left">
+  <meta property="og:title" content="크래시 덤프 수집">
+  <meta property="og:description" content="만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,
+일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.
+프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="jekyll-post">
+    <meta property="article:published_time" content="2022-03-04T16:14:00+00:00">
+    <meta property="article:modified_time" content="2022-03-04T16:14:00+00:00">
+    <meta property="article:tag" content="Blog">
+    <meta property="article:tag" content="Diary">
+    <meta property="article:tag" content="Tip">
+    <meta property="article:tag" content="Crashdump">
+    <meta property="article:tag" content="Libsegfault">
+    <meta property="article:tag" content="Sentry">
+    <meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
+        <meta property="fb:admins" content="cwyang89">
 
 
 <link rel="stylesheet" href="https://cwyang.github.io/css/custom.css">
@@ -50,6 +66,9 @@
     <ul>
     <li>
       <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/categories/">Categories</a>
     </li>
     <li>
       <a href="/tags/">Tags</a>
@@ -107,16 +126,16 @@
 </div>
 <hr>
 
+
+
   <div>
-    <div>tags:</div>
-    <ul>
-        <li><a href="/tags/blog/">blog</a></li>
-        <li><a href="/tags/diary/">diary</a></li>
-        <li><a href="/tags/tip/">tip</a></li>
-        <li><a href="/tags/crashdump/">crashdump</a></li>
-        <li><a href="/tags/libsegfault/">libsegfault</a></li>
-        <li><a href="/tags/sentry/">sentry</a></li>
-    </ul>
+    Tags:
+        <a href="/tags/blog/ ">Blog</a>, 
+        <a href="/tags/diary/ ">Diary</a>, 
+        <a href="/tags/tip/ ">Tip</a>, 
+        <a href="/tags/crashdump/ ">Crashdump</a>, 
+        <a href="/tags/libsegfault/ ">Libsegfault</a>, 
+        <a href="/tags/sentry/ ">Sentry</a>
   </div>
 
 

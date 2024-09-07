@@ -4,7 +4,7 @@
     <title>Subnet on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/Subnet/</link>
     <description>Recent content in Subnet on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Feb 2023 20:00:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/Subnet/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</guid>
-      <description>Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다. AWS의 VPC (Virtual Private Cloud)에 대응한다.</description>
+      <description>&lt;p&gt;Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다.&#xA;AWS의 VPC (Virtual Private Cloud)에 대응한다.&#xA;VNET에 할당된 주소범위(CIDR)를 구분하여 서브넷을 만들고, 서브넷간의 라우팅이 가능하다.&#xA;VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여러 VNET을 연결(peering)하여 구성이 가능하다.&#xA;이러면 VPC사이에서도 라우팅이 가능하다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
