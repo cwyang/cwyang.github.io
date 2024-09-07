@@ -6,6 +6,8 @@ tags:
 - blog
 - hugo
 - 삽질
+categories:
+- blog
 title: Welcome to Hugo
 slug: welcome-to-hugo
 ---

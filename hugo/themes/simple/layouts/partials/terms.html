@@ -9,15 +9,15 @@ For a given taxonomy, renders a list of terms assigned to the page.
 
 {{- $page := .page }}
 {{- $taxonomy := .taxonomy }}
+{{- $label := .laebl }}
 
 {{- with $page.GetTerms $taxonomy }}
   {{- $label := (index . 0).Parent.LinkTitle }}
   <div>
-    <div>{{ $taxonomy }}:</div>
-    <ul>
-      {{- range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{ $label }}:
+      {{- $lastIndex := sub (len .) 1 }}
+      {{- range $index, $term := . }}
+        <a href="{{ $term.RelPermalink }} ">{{ $term.LinkTitle }}</a>{{ if ne $index $lastIndex }}, {{ end }}
       {{- end }}
-    </ul>
   </div>
 {{- end }}

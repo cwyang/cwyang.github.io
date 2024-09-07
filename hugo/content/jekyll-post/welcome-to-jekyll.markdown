@@ -1,5 +1,5 @@
 ---
-categories: jekyll update
+categories: blog
 comments: true
 date: "2017-07-04T19:57:00Z"
 tags:
