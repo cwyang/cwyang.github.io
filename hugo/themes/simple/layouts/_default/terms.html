@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+<div class="main">
+  <ul class="toc">
+    {{ range .Data.Terms.ByCount }}
+    <li><a href="{{ .Page.RelPermalink }}" class="">{{ .Page.LinkTitle }}</a> ({{ .Count }})
+      <span class="toc-when">{{ .Page.Date.Format "January 2006" }}</span>
+      <div class="toc-summary">
+	{{ with .Page.Scratch.Get "excerpt" }}
+	{{ . }}
+	{{ else }}
+	{{ .Page.Summary | plainify | truncate 80}}
+	{{ end }}
+      </div>
+      {{ end }}
+
+<li class="toc toc-header copyright"> © {{ now.Year }} Chul-Woong Yang. All rights reserved.
+<br>
+<a href="/feed.atom">Atom / RSS</a></li>
+  </ul>
+</div>
+{{ end }}
