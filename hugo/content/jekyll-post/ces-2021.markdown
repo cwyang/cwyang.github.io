@@ -8,6 +8,7 @@ tags:
 - blog
 - ces
 - digital transformation
+- dx
 title: 인간이 중요해진 시대 - CES 2021
 toc: true
 ---

@@ -9,7 +9,7 @@ tags:
 - beep
 - bell
 - linux
-- xkbset
+- computer setting
 title: Linux 시스템 비프 활성화
 toc: false
 ---

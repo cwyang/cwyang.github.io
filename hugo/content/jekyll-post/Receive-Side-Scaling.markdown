@@ -4,10 +4,10 @@ comments: true
 date: "2023-02-22T20:00:00Z"
 summary: null
 tags:
-- RSS
-- Receive Side Scaling
+- tech
 - performance
 - multiqueue
+- Receive Side Scaling
 title: Receive Side Scaling
 ---
 RSS에 대해서 다시 자료를 보고 있는데

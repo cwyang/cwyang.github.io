@@ -5,6 +5,7 @@ date: "2010-07-09T22:40:00Z"
 summary: null
 tags:
 - blog
+- tech
 - direct io
 title: Direct IO란?
 toc: false

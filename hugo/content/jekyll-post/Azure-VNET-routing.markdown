@@ -5,13 +5,11 @@ date: "2023-02-08T20:00:00Z"
 summary: null
 header-img: /assets/images/azure-routing-example.png
 tags:
-- CloudNetwork
-- Azure
-- VNET
-- Subnet
-- UDR
-- VPC
-- L2-domain
+- cloud
+- vpc
+- udr
+category:
+- cloud
 title: Azure VNET 라우팅
 toc: true
 ---

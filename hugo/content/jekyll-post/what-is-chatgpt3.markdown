@@ -7,16 +7,8 @@ summary: 안녕하세요! 오늘은 OpenAI에서 개발한 최신 언어 모델,
   세계를 휩쓸었습니다. 이 고급 언어 모델은 다양한 인터넷 텍스트로 교육되었기 때문에, 놀랍도록 정확하게 인간처럼 텍스트를 생성합니다.
 header-img: /assets/images/chatgpt3.jpg
 tags:
-- ChatGPT3
-- NLP
-- ArtificialIntelligence
-- CuttingEdgeTechnology
-- Research
-- Business
+- ChatGPT
 - AI
-- MachineLearning
-- Innovation
-- TechnologyTrends
 title: ChatGPT-3가 설명하는 ChatGPT-3
 toc: true
 ---
