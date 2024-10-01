@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Direct Io on A Tale That Wasn&#39;t Left</title>
+    <title>direct io on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/direct-io/</link>
-    <description>Recent content in Direct Io on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in direct io on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Jul 2010 22:40:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/direct-io/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2010/07/09/direct-io.html/</link>
       <pubDate>Fri, 09 Jul 2010 22:40:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/07/09/direct-io.html/</guid>
-      <description>&lt;p&gt;Linux에서 Direct IO는 page cache를 통하지 않고 memory와 IO device사이에 직접 데이터를 송수신하는것이다. Linux의 page cache 메카니즘이 마음에 안들 경우 사용하는 용도이다. 이러한 경우 대개 성능이 중시되므로 구현에 있어서 DMA를 이용하도록 되어 있을 터이고, 그렇기 때문에 메모리 옵셋, 사이즈, 그리고 IO device의 target address에 대해 page alignment 제약이 존재한다. 이 사항은 표준이 정해져 있는 것도 아니기 때문에 사용하는 커널, 파일시스템에 따라 다르게 동작할 수 있다. 예를 들면 page aligment 제약은 커널 2.6전에는 pagesize로 align되어야했으나, 2.6부터는 512 byte단위로만 align되어있으면 된다고.&lt;/p&gt;</description>
+      <description>Linux에서 Direct IO는 page cache를 통하지 않고 memory와 IO device사이에 직접 데이터를 송수신하는것이다.</description>
     </item>
   </channel>
 </rss>

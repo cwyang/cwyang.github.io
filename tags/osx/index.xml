@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Osx on A Tale That Wasn&#39;t Left</title>
+    <title>osx on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/osx/</link>
-    <description>Recent content in Osx on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in osx on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Dec 2020 18:12:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/osx/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2020/12/09/osx-codesign-notarization.html/</link>
       <pubDate>Wed, 09 Dec 2020 18:12:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2020/12/09/osx-codesign-notarization.html/</guid>
-      <description>&lt;p&gt;윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.&#xA;앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이&#xA;사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다.&lt;/p&gt;</description>
+      <description>윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.</description>
     </item>
   </channel>
 </rss>

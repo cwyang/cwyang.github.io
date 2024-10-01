@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dockerhub on A Tale That Wasn&#39;t Left</title>
+    <title>dockerhub on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/dockerhub/</link>
-    <description>Recent content in Dockerhub on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in dockerhub on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jan 2021 15:02:41 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/dockerhub/index.xml" rel="self" type="application/rss+xml" />

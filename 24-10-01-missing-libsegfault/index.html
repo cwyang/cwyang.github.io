@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="fb:app_id" content="596017104565491" />
+<meta name="naver-site-verification" content="cec40b2338ce973c5b5588326daed5c126a0c415" />
+<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="Missing libSegFault.so"/>
+<meta name="twitter:description" content="https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html
+SEGFAULT_SIGNALS=&quot;all&quot; LD_PRELOAD=/usr/lib/libSetFault.so prog
+위와 같이 프로그램을 실행시키고 해당 프로세스 장애시 로그에 백트레이스를 기록하는 용도로 많이 사용했었던 glibc의 libSegFault가 단종(deprecate)되었다."/>
+<meta name="twitter:site" content="@cwyang"/>
+
+<meta property="og:title" content="Missing libSegFault.so" />
+<meta property="og:description" content="https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html
+SEGFAULT_SIGNALS=&quot;all&quot; LD_PRELOAD=/usr/lib/libSetFault.so prog
+위와 같이 프로그램을 실행시키고 해당 프로세스 장애시 로그에 백트레이스를 기록하는 용도로 많이 사용했었던 glibc의 libSegFault가 단종(deprecate)되었다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cwyang.github.io/24-10-01-missing-libsegfault/" /><meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-10-01T13:28:09+09:00" />
+<meta property="article:modified_time" content="2024-10-01T13:28:09+09:00" />
+<meta property="fb:admins" content="cwyang89" />
+
+
+<link rel="stylesheet" href="https://cwyang.github.io/css/custom.css">
+
+<title>Missing libSegFault.so | A Tale That Wasn&#39;t Left</title>
+
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+  <h3><a href="/">A Tale That Wasn&#39;t Left</a></h3>
+  <h4><a href="https://www.linkedin.com/in/cwyang89/">양철웅</a>의, 특별히 주제를 정해두지 않은 이야기들</h4>
+  <a class="rss" href="/feed.atom">RSS</a>
+</div>
+
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/categories/">Categories</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+
+  </header>
+  <div class=main>
+    
+<div class="article">
+  <h1>Missing libSegFault.so
+    <div class="normal">
+      <div class="when">
+	
+        Posted on Tuesday, October 1, 2024.
+      </div>
+    </div>
+  </h1>
+  <style>
+    blockquote {
+	padding-left: 0.5em;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: #ccf;
+    }
+  </style>
+
+  <p><img src="/assets/images/i_segv.png" alt=""></p>
+<p><a href="https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html">https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html</a></p>
+<p><code>SEGFAULT_SIGNALS=&quot;all&quot; LD_PRELOAD=/usr/lib/libSetFault.so prog</code></p>
+<p>위와 같이 프로그램을 실행시키고 해당 프로세스 장애시 로그에 백트레이스를 기록하는 용도로 많이 사용했었던 glibc의 <a href="https://www.marcusfolkesson.se/blog/libsegfault/">libSegFault</a>가 단종(deprecate)되었다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ubuntu:~$ whereis libSegFault.so
+</span></span><span style="display:flex;"><span>libSegFault.so:
+</span></span></code></pre></div><p>The deprecation commit에서 추천한것은 (1) sigsegv gnulib module (2) libsegfault 두 가지인데 모두 소스코드의 수정이 필요한 방식이기에 항상 적용가능하지는 않다.</p>
+<p>찾아보니 우분투에는 glibc-tools에 libSegFault.so가 살아있었다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ubuntu:~$ apt install glibc-tools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ubuntu:~$ whereis libSegFault.so
+</span></span><span style="display:flex;"><span>libSegFault.so: /usr/lib/x86_64-linux-gnu/libSegFault.so
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Backtrace:
+</span></span><span style="display:flex;"><span>./powerplant<span style="color:#f92672">(</span>+0x606<span style="color:#f92672">)[</span>0x55d2ad5e1606<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>./powerplant<span style="color:#f92672">(</span>+0x628<span style="color:#f92672">)[</span>0x55d2ad5e1628<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>./powerplant<span style="color:#f92672">(</span>+0x639<span style="color:#f92672">)[</span>0x55d2ad5e1639<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/usr/lib/libc.so.6<span style="color:#f92672">(</span>__libc_start_main+0xea<span style="color:#f92672">)[</span>0x7f9852ec6f6a<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>./powerplant<span style="color:#f92672">(</span>+0x51a<span style="color:#f92672">)[</span>0x55d2ad5e151a<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ addr2line -e ./powerplant -a 0x606
+</span></span><span style="display:flex;"><span>    0x0000000000000606
+</span></span><span style="display:flex;"><span>    /tmp/segfault/main.c:3
+</span></span></code></pre></div>
+</div>
+<hr>
+
+  <div>
+    Categories:
+        <a href="/categories/devel/ ">devel</a>
+  </div>
+
+
+  <div>
+    Tags:
+        <a href="/tags/devel/ ">devel</a>, 
+        <a href="/tags/diary/ ">diary</a>, 
+        <a href="/tags/debug/ ">debug</a>
+  </div>
+
+
+  </div>
+  <footer>
+    <p>
+
+  </footer>
+</body>
+</html>

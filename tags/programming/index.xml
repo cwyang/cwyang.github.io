@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on A Tale That Wasn&#39;t Left</title>
+    <title>programming on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/programming/</link>
-    <description>Recent content in Programming on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in programming on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2009 14:48:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jul 2023 19:02:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UDP 에코 서버</title>
+      <link>https://cwyang.github.io/2023/07/16/UDP-echo-server.html/</link>
+      <pubDate>Sun, 16 Jul 2023 19:02:00 +0000</pubDate>
+      <guid>https://cwyang.github.io/2023/07/16/UDP-echo-server.html/</guid>
+      <description>UDP는 connectionless이기에 TCP와 달리 데이터 주고받을 때에 고려해야 할 다음과 같은 경우들이 있다. 보낸 요청에 대해서 다른 IP로부터 응답이 돌아오는 경우, 서버가 IP주소를 여러개 가지고 있을 때, 받은 요청에 대해 응답을 할 IP를 결정하는 경우</description>
+    </item>
     <item>
       <title>SSL_read()와 read()는 같은가요?</title>
       <link>https://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</link>

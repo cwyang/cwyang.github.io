@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jekyll on A Tale That Wasn&#39;t Left</title>
+    <title>jekyll on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/jekyll/</link>
-    <description>Recent content in Jekyll on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in jekyll on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 Jul 2017 19:57:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</link>
       <pubDate>Tue, 04 Jul 2017 19:57:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</guid>
-      <description>&lt;p&gt;금주 연차를 내고 집에서 쉬고 있습니다.&#xA;몸살난 주부의 역할을 체험하고 있으니, 이 옷이 내 몸에 딱 맞는듯합니다.&#xA;이틀째인데 아내에게 벌써 한 소리 듣고 있습니다.&lt;/p&gt;</description>
+      <description>금주 연차를 내고 집에서 쉬고 있습니다. 몸살난 주부의 역할을 체험하고 있으니, 이 옷이 내 몸에 딱 맞는듯합니다.</description>
     </item>
   </channel>
 </rss>

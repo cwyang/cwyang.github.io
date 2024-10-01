@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pbkdf2 on A Tale That Wasn&#39;t Left</title>
+    <title>pbkdf2 on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/pbkdf2/</link>
-    <description>Recent content in Pbkdf2 on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in pbkdf2 on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Feb 2023 21:30:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/pbkdf2/index.xml" rel="self" type="application/rss+xml" />

@@ -16,30 +16,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요"/>
+<meta name="twitter:description" content="정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. iptales -L -nv로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?"/>
+<meta name="twitter:site" content="@cwyang"/>
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
-  <meta name="twitter:title" content="한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요">
-  <meta name="twitter:description" content="정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. iptales -L -nv로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?">
-      <meta name="twitter:site" content="@cwyang">
-
-<meta property="og:url" content="https://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/">
-  <meta property="og:site_name" content="A Tale That Wasn&#39;t Left">
-  <meta property="og:title" content="한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요">
-  <meta property="og:description" content="정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. iptales -L -nv로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="jekyll-post">
-    <meta property="article:published_time" content="2020-04-18T09:15:00+00:00">
-    <meta property="article:modified_time" content="2020-04-18T09:15:00+00:00">
-    <meta property="article:tag" content="Blog">
-    <meta property="article:tag" content="Policy Routing">
-    <meta property="article:tag" content="NAT">
-    <meta property="article:tag" content="Iptables">
-    <meta property="article:tag" content="Linux">
-    <meta property="article:tag" content="Transparenty Proxy">
-    <meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
-        <meta property="fb:admins" content="cwyang89">
+<meta property="og:title" content="한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요" />
+<meta property="og:description" content="정책 라우팅으로 같은 5-tuple 패킷을 iptables에 여러번 보내는 것입니다. iptales -L -nv로 패킷 카운트를 보면 MASQUERADE룰 말고는 다 매치가 되는데 MASQUERADE만 매치가 안되는 이유는 무엇인가요?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cwyang.github.io/2020/04/18/why-iptables-nat-not-working-with-multiple-policy-routing.html/" /><meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2020-04-18T09:15:00+00:00" />
+<meta property="article:modified_time" content="2020-04-18T09:15:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
 
 
 <link rel="stylesheet" href="https://cwyang.github.io/css/custom.css">
@@ -266,13 +254,13 @@ make a packet 6-tuple, including zone,  and be processed at nat table multiple t
 
   <div>
     Tags:
-        <a href="/tags/blog/ ">Blog</a>, 
-        <a href="/tags/policy-routing/ ">Policy Routing</a>, 
+        <a href="/tags/blog/ ">blog</a>, 
+        <a href="/tags/policy-routing/ ">policy routing</a>, 
         <a href="/tags/NAT/ ">NAT</a>, 
-        <a href="/tags/iptables/ ">Iptables</a>, 
-        <a href="/tags/linux/ ">Linux</a>, 
-        <a href="/tags/transparenty-proxy/ ">Transparenty Proxy</a>, 
-        <a href="/tags/perl/ ">Perl</a>
+        <a href="/tags/iptables/ ">iptables</a>, 
+        <a href="/tags/linux/ ">linux</a>, 
+        <a href="/tags/transparenty-proxy/ ">transparenty proxy</a>, 
+        <a href="/tags/perl/ ">perl</a>
   </div>
 
 

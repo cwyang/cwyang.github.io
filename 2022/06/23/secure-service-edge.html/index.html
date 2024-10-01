@@ -16,30 +16,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta name="twitter:title" content="비대면 시대의 보안기술 - 보안 서비스 엣지"/>
+<meta name="twitter:description" content="오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 전통적인 보안 모델이 클라우드 시대에는 맞지 않게 되었어요. 보안을 하려면 검사및 조치를 하는 중앙지점이 필요한데, 사람은 안에도 있고 밖에도 있고요, 업무 자산도 사내망에도 있고 클라우드에도 있고 파편화되기 시작한거에요. 보안 입장에서 보면 혼돈의 카오스죠."/>
+<meta name="twitter:site" content="@cwyang"/>
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
-  <meta name="twitter:title" content="비대면 시대의 보안기술 - 보안 서비스 엣지">
-  <meta name="twitter:description" content="오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 전통적인 보안 모델이 클라우드 시대에는 맞지 않게 되었어요. 보안을 하려면 검사및 조치를 하는 중앙지점이 필요한데, 사람은 안에도 있고 밖에도 있고요, 업무 자산도 사내망에도 있고 클라우드에도 있고 파편화되기 시작한거에요. 보안 입장에서 보면 혼돈의 카오스죠.">
-      <meta name="twitter:site" content="@cwyang">
-
-<meta property="og:url" content="https://cwyang.github.io/2022/06/23/secure-service-edge.html/">
-  <meta property="og:site_name" content="A Tale That Wasn&#39;t Left">
-  <meta property="og:title" content="비대면 시대의 보안기술 - 보안 서비스 엣지">
-  <meta property="og:description" content="오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 전통적인 보안 모델이 클라우드 시대에는 맞지 않게 되었어요. 보안을 하려면 검사및 조치를 하는 중앙지점이 필요한데, 사람은 안에도 있고 밖에도 있고요, 업무 자산도 사내망에도 있고 클라우드에도 있고 파편화되기 시작한거에요. 보안 입장에서 보면 혼돈의 카오스죠.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="jekyll-post">
-    <meta property="article:published_time" content="2022-06-23T19:58:00+00:00">
-    <meta property="article:modified_time" content="2022-06-23T19:58:00+00:00">
-    <meta property="article:tag" content="Blog">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="보안">
-    <meta property="article:tag" content="보안서비스엣지">
-    <meta property="article:tag" content="SSE">
-    <meta property="article:tag" content="제로트러스트">
-    <meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png">
-        <meta property="fb:admins" content="cwyang89">
+<meta property="og:title" content="비대면 시대의 보안기술 - 보안 서비스 엣지" />
+<meta property="og:description" content="오늘은 비대면 시대의 보안기술로 제로트러스트와 함께 이야기 되고 있는 보안 서비스 엣지에 대해서 간단히 소개를 드려볼까 합니다. 사용자와 모든 정보자산이 사내망에 있고, 방화벽으로 내부와 외부를 격리하는 전통적인 보안 모델이 클라우드 시대에는 맞지 않게 되었어요. 보안을 하려면 검사및 조치를 하는 중앙지점이 필요한데, 사람은 안에도 있고 밖에도 있고요, 업무 자산도 사내망에도 있고 클라우드에도 있고 파편화되기 시작한거에요. 보안 입장에서 보면 혼돈의 카오스죠." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cwyang.github.io/2022/06/23/secure-service-edge.html/" /><meta property="og:image" content="https://cwyang.github.io/assets/images/go_and_docker.png" /><meta property="article:section" content="jekyll-post" />
+<meta property="article:published_time" content="2022-06-23T19:58:00+00:00" />
+<meta property="article:modified_time" content="2022-06-23T19:58:00+00:00" />
+<meta property="fb:admins" content="cwyang89" />
 
 
 <link rel="stylesheet" href="https://cwyang.github.io/css/custom.css">
@@ -121,8 +109,8 @@
 
   <div>
     Tags:
-        <a href="/tags/blog/ ">Blog</a>, 
-        <a href="/tags/security/ ">Security</a>, 
+        <a href="/tags/blog/ ">blog</a>, 
+        <a href="/tags/security/ ">security</a>, 
         <a href="/tags/%EB%B3%B4%EC%95%88/ ">보안</a>, 
         <a href="/tags/%EB%B3%B4%EC%95%88%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%A3%EC%A7%80/ ">보안서비스엣지</a>, 
         <a href="/tags/SSE/ ">SSE</a>, 

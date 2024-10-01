@@ -2,22 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cwyang.github.io/categories/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/tags/debug/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/tags/devel/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/categories/devel/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/tags/diary/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/24-10-01-missing-libsegfault/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/posts/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/tags/</loc>
+    <lastmod>2024-10-01T13:28:09+09:00</lastmod>
+  </url><url>
     <loc>https://cwyang.github.io/tags/blog/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/categories/blog/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/categories/</loc>
-    <lastmod>2024-09-05T02:39:00+00:00</lastmod>
-  </url><url>
     <loc>https://cwyang.github.io/tags/hugo/</loc>
-    <lastmod>2024-09-05T02:39:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/posts/</loc>
-    <lastmod>2024-09-05T02:39:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/</loc>
     <lastmod>2024-09-05T02:39:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/welcome-to-hugo/</loc>
@@ -56,22 +71,16 @@
     <loc>https://cwyang.github.io/tags/gRPC/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/HTTP/2/</loc>
-    <lastmod>2024-01-12T19:00:03+00:00</lastmod>
-  </url><url>
     <loc>https://cwyang.github.io/2024/01/12/http2-rapid-reset.html/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/security/</loc>
     <lastmod>2024-01-12T19:00:03+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/echo-server/</loc>
-    <lastmod>2023-07-16T19:02:00+00:00</lastmod>
-  </url><url>
     <loc>https://cwyang.github.io/tags/IP_PKTINFO/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/python/</loc>
+    <loc>https://cwyang.github.io/tags/programming/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/socket/</loc>
@@ -81,9 +90,6 @@
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/2023/07/16/UDP-echo-server.html/</loc>
-    <lastmod>2023-07-16T19:02:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/Unix/</loc>
     <lastmod>2023-07-16T19:02:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/linux/</loc>
@@ -116,64 +122,28 @@
     <loc>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</loc>
     <lastmod>2023-02-22T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/RSS/</loc>
+    <loc>https://cwyang.github.io/tags/tech/</loc>
     <lastmod>2023-02-22T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/Azure/</loc>
-    <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/CloudNetwork/</loc>
+    <loc>https://cwyang.github.io/tags/cloud/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/L2-domain/</loc>
+    <loc>https://cwyang.github.io/tags/udr/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/Subnet/</loc>
-    <lastmod>2023-02-08T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/UDR/</loc>
-    <lastmod>2023-02-08T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/VNET/</loc>
-    <lastmod>2023-02-08T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/VPC/</loc>
+    <loc>https://cwyang.github.io/tags/vpc/</loc>
     <lastmod>2023-02-08T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/AI/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/ArtificialIntelligence/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/Business/</loc>
+    <loc>https://cwyang.github.io/tags/ChatGPT/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/2023/02/07/what-is-chatgpt3.html/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/ChatGPT3/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/CuttingEdgeTechnology/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/Innovation/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/MachineLearning/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/NLP/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/Research/</loc>
-    <lastmod>2023-02-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/TechnologyTrends/</loc>
     <lastmod>2023-02-07T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/haproxy/</loc>
@@ -187,9 +157,6 @@
   </url><url>
     <loc>https://cwyang.github.io/tags/ssl/</loc>
     <lastmod>2023-02-03T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/cloud/</loc>
-    <lastmod>2023-02-02T21:30:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/password/</loc>
     <lastmod>2023-02-02T21:30:00+00:00</lastmod>
@@ -243,9 +210,6 @@
     <lastmod>2022-03-11T09:36:43+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/crashdump/</loc>
-    <lastmod>2022-03-04T16:14:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/diary/</loc>
     <lastmod>2022-03-04T16:14:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/libsegfault/</loc>
@@ -305,12 +269,6 @@
     <loc>https://cwyang.github.io/2022/01/03/tinyman-gets-attack.html/</loc>
     <lastmod>2022-01-03T15:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/java/</loc>
-    <lastmod>2021-12-14T12:08:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cwyang.github.io/tags/jndi/</loc>
-    <lastmod>2021-12-14T12:08:00+00:00</lastmod>
-  </url><url>
     <loc>https://cwyang.github.io/tags/log4j/</loc>
     <lastmod>2021-12-14T12:08:00+00:00</lastmod>
   </url><url>
@@ -323,6 +281,9 @@
     <loc>https://cwyang.github.io/tags/emacs/</loc>
     <lastmod>2021-11-04T16:59:00+00:00</lastmod>
   </url><url>
+    <loc>https://cwyang.github.io/tags/python/</loc>
+    <lastmod>2021-11-04T16:59:00+00:00</lastmod>
+  </url><url>
     <loc>https://cwyang.github.io/2021/11/04/python-dev-environment-setup.html/</loc>
     <lastmod>2021-11-04T16:59:00+00:00</lastmod>
   </url><url>
@@ -330,6 +291,9 @@
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/digital-transformation/</loc>
+    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/tags/dx/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/2021/02/04/ces-2021.html/</loc>
@@ -494,10 +458,10 @@
     <loc>https://cwyang.github.io/tags/bell/</loc>
     <lastmod>2013-03-26T11:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</loc>
+    <loc>https://cwyang.github.io/tags/computer-setting/</loc>
     <lastmod>2013-03-26T11:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/xkbset/</loc>
+    <loc>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</loc>
     <lastmod>2013-03-26T11:01:00+00:00</lastmod>
   </url><url>
     <loc>https://cwyang.github.io/tags/erlang/</loc>
@@ -626,9 +590,6 @@
     <loc>https://cwyang.github.io/2010/03/12/new-blog.html/</loc>
     <lastmod>2010-03-12T20:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://cwyang.github.io/tags/programming/</loc>
-    <lastmod>2009-10-21T14:48:00+00:00</lastmod>
-  </url><url>
     <loc>https://cwyang.github.io/2009/10/21/SSL-read-vs-read.html/</loc>
     <lastmod>2009-10-21T14:48:00+00:00</lastmod>
   </url><url>
@@ -655,5 +616,7 @@
   </url><url>
     <loc>https://cwyang.github.io/2009/01/23/programming-in-haskell.html/</loc>
     <lastmod>2009-01-23T10:20:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cwyang.github.io/tags/HTTP/2/</loc>
   </url>
 </urlset>

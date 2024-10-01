@@ -4,7 +4,7 @@
     <title>GDB on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/GDB/</link>
     <description>Recent content in GDB on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Jul 2010 23:21:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/GDB/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</link>
       <pubDate>Sat, 10 Jul 2010 23:21:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</guid>
-      <description>&lt;p&gt;이 팁을 배운 이후 너무 잘 쓰고 있기에, 배운자의 의무로써 널리 알린다.&lt;/p&gt;</description>
+      <description>이 팁을 배운 이후 너무 잘 쓰고 있기에, 배운자의 의무로써 널리 알린다.</description>
     </item>
   </channel>
 </rss>

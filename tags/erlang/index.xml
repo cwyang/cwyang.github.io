@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Erlang on A Tale That Wasn&#39;t Left</title>
+    <title>erlang on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/erlang/</link>
-    <description>Recent content in Erlang on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in erlang on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Sep 2011 17:24:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/erlang/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://cwyang.github.io/2011/09/26/erlang-noproc-error.html/</link>
       <pubDate>Mon, 26 Sep 2011 17:24:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2011/09/26/erlang-noproc-error.html/</guid>
-      <description>&lt;p&gt;요즘 간단한 프락시 서버를 만들고 있다. 만들기 시작한지는 한달전인데 너무 게으르게 진행을 하다보니 아직도 한참 남은 상태다.&lt;/p&gt;</description>
+      <description>요즘 간단한 프락시 서버를 만들고 있다. 만들기 시작한지는 한달전인데 너무 게으르게 진행을 하다보니 아직도 한참 남은 상태다.</description>
     </item>
     <item>
       <title>여러가지 해묵은 문제 해결: Erlang, Firefox, Xmonad, Xmobar, Haskell</title>
       <link>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</guid>
-      <description>&lt;p&gt;어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.&lt;/p&gt;</description>
+      <description>어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.</description>
     </item>
   </channel>
 </rss>

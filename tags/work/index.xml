@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Work on A Tale That Wasn&#39;t Left</title>
+    <title>work on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/work/</link>
-    <description>Recent content in Work on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in work on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jun 2018 15:10:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/work/index.xml" rel="self" type="application/rss+xml" />
@@ -41,7 +41,7 @@
       <link>https://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html/</link>
       <pubDate>Sat, 30 Dec 2017 00:15:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://blog.cloudflare.com/why-tls-1-3-isnt-in-browsers-yet/&#34;&gt;Cloudflare의 Nick Sullivan씨의 글&lt;/a&gt;을 풀어본 것입니다.&lt;/p&gt;&#xA;&lt;p&gt;현재 TLS1.3은 호환성 이슈가 많다. 보안성 강화와 빠른 속도를 장점으로 가지는 TLS1.3에 대해서 많은 브라우저들이 구현체를 탑재하였지만 대부분 기본적으로 비활성화 되어있다. 그 문제는 TLS 1.3 프로토콜 자체에 있다기 보다는 미들박스, 즉 이미 많이 도입되어 있는 SSL-proxy들이 TLS1.3 통신에 있어 장애요소가 되기 때문이다.&lt;/p&gt;</description>
+      <description>Cloudflare의 Nick Sullivan씨의 글을 풀어본 것입니다.&#xA;현재 TLS1.3은 호환성 이슈가 많다.</description>
     </item>
   </channel>
 </rss>

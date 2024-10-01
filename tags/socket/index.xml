@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Socket on A Tale That Wasn&#39;t Left</title>
+    <title>socket on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/socket/</link>
-    <description>Recent content in Socket on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in socket on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Jul 2023 19:02:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/socket/index.xml" rel="self" type="application/rss+xml" />

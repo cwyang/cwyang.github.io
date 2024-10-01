@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quality on A Tale That Wasn&#39;t Left</title>
+    <title>quality on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/quality/</link>
-    <description>Recent content in Quality on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in quality on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Nov 2010 16:48:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/quality/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</guid>
-      <description>&lt;p&gt;1st draft: 2 November 2010&lt;br&gt;&#xA;양 철 웅  (cwyang)&lt;br&gt;&#xA;cwyang.tistory.com&lt;/p&gt;</description>
+      <description>1st draft: 2 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
     </item>
   </channel>
 </rss>

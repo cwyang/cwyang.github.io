@@ -4,23 +4,30 @@
     <title>Home on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/</link>
     <description>Recent content in Home on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Sep 2024 02:39:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate>
     <atom:link href="https://cwyang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Missing libSegFault.so</title>
+      <link>https://cwyang.github.io/24-10-01-missing-libsegfault/</link>
+      <pubDate>Tue, 01 Oct 2024 13:28:09 +0900</pubDate>
+      <guid>https://cwyang.github.io/24-10-01-missing-libsegfault/</guid>
+      <description>https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html&#xA;SEGFAULT_SIGNALS=&amp;quot;all&amp;quot; LD_PRELOAD=/usr/lib/libSetFault.so prog&#xA;위와 같이 프로그램을 실행시키고 해당 프로세스 장애시 로그에 백트레이스를 기록하는 용도로 많이 사용했었던 glibc의 libSegFault가 단종(deprecate)되었다.</description>
+    </item>
     <item>
       <title>Welcome to Hugo</title>
       <link>https://cwyang.github.io/welcome-to-hugo/</link>
       <pubDate>Thu, 05 Sep 2024 02:39:00 +0000</pubDate>
       <guid>https://cwyang.github.io/welcome-to-hugo/</guid>
-      <description>&lt;p&gt;&lt;code&gt;If it ain&#39;t broke, don&#39;t fix it&lt;/code&gt;은 불변의 진리이나 어느날 괜히 삽을 뜨고 싶을 때가 있다.&lt;/p&gt;</description>
+      <description>If it ain&#39;t broke, don&#39;t fix it은 불변의 진리이나 어느날 괜히 삽을 뜨고 싶을 때가 있다.</description>
     </item>
     <item>
       <title>MTU와 MSS</title>
       <link>https://cwyang.github.io/2024/01/31/mtu-and-mss.html/</link>
       <pubDate>Wed, 31 Jan 2024 19:06:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2024/01/31/mtu-and-mss.html/</guid>
-      <description>&lt;p&gt;라우터, 방화벽을 다루다보면 MTU와 MSS 두 단어를 흔히 접하게 된다.&#xA;비슷한 의미를 가지고 있기에 헷갈리고 있어 이 기회에 정리한다.&lt;/p&gt;</description>
+      <description>라우터, 방화벽을 다루다보면 MTU와 MSS 두 단어를 흔히 접하게 된다. 비슷한 의미를 가지고 있기에 헷갈리고 있어 이 기회에 정리한다.</description>
     </item>
     <item>
       <title>HTTP/2 Rapid Reset DoS공격</title>
@@ -41,21 +48,21 @@
       <link>https://cwyang.github.io/2023/03/26/linux-settings.html/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2023/03/26/linux-settings.html/</guid>
-      <description>&lt;p&gt;잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다.&#xA;랩탑에 설치하는 것은 처음이다. 윈도우와 최대한 유사하게 꾸며보기로 한다.&lt;/p&gt;</description>
+      <description>잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다. 랩탑에 설치하는 것은 처음이다.</description>
     </item>
     <item>
       <title>Receive Side Scaling</title>
       <link>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</guid>
-      <description>&lt;p&gt;RSS에 대해서 다시 자료를 보고 있는데&#xA;&lt;a href=&#34;https://cwyang.github.io/2010/06/10/multiqueue-nic.html/&#34;&gt;10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.&lt;/a&gt;&#xA;아 세월의 무상함이여..&lt;/p&gt;</description>
+      <description>RSS에 대해서 다시 자료를 보고 있는데 10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.</description>
     </item>
     <item>
       <title>Azure VNET 라우팅</title>
       <link>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</link>
       <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</guid>
-      <description>&lt;p&gt;Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다.&#xA;AWS의 VPC (Virtual Private Cloud)에 대응한다.&#xA;VNET에 할당된 주소범위(CIDR)를 구분하여 서브넷을 만들고, 서브넷간의 라우팅이 가능하다.&#xA;VNET은 독립된 네트워크인데 주소범위가 겹치지 않는다면 여러 VNET을 연결(peering)하여 구성이 가능하다.&#xA;이러면 VPC사이에서도 라우팅이 가능하다.&lt;/p&gt;</description>
+      <description>Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다. AWS의 VPC (Virtual Private Cloud)에 대응한다.</description>
     </item>
     <item>
       <title>ChatGPT-3가 설명하는 ChatGPT-3</title>
@@ -104,14 +111,14 @@
       <link>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</guid>
-      <description>&lt;p&gt;만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,&lt;br&gt;&#xA;일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.&lt;br&gt;&#xA;프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..&lt;/p&gt;</description>
+      <description>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,</description>
     </item>
     <item>
       <title>git submodule</title>
       <link>https://cwyang.github.io/2022/03/04/git-submodule.html/</link>
       <pubDate>Fri, 04 Mar 2022 15:54:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2022/03/04/git-submodule.html/</guid>
-      <description>&lt;p&gt;&lt;code&gt;parent&lt;/code&gt; project에서 &lt;code&gt;child&lt;/code&gt; project를 git submodule로 사용할 때,&lt;br&gt;&#xA;&lt;code&gt;child&lt;/code&gt;의 hash를 바꾼 &lt;code&gt;parent&lt;/code&gt;를 체크아웃해도 로컬 &lt;code&gt;child&lt;/code&gt;는 변하지 않는다.&lt;/p&gt;</description>
+      <description>parent project에서 child project를 git submodule로 사용할 때,&#xA;child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는 변하지 않는다.</description>
     </item>
     <item>
       <title>창업가의 답</title>
@@ -146,7 +153,7 @@
       <link>https://cwyang.github.io/2021/11/04/python-dev-environment-setup.html/</link>
       <pubDate>Thu, 04 Nov 2021 16:59:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2021/11/04/python-dev-environment-setup.html/</guid>
-      <description>&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.conda.io/en/latest/miniconda.html&#34;&gt;conda를 설치한다&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;conda venv 셋업&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ conda create -n venv_name&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ conda activate venv_name&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>conda를 설치한다 conda venv 셋업 $ conda create -n venv_name $ conda activate venv_name pip 설치 후 패키지 인스톨 (exp) $ conda install -c conda-forge pip (exp) $ pip install package_name (exp) $ python --version Python 3.</description>
     </item>
     <item>
       <title>인간이 중요해진 시대 - CES 2021</title>
@@ -167,7 +174,7 @@
       <link>https://cwyang.github.io/2020/12/09/osx-codesign-notarization.html/</link>
       <pubDate>Wed, 09 Dec 2020 18:12:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2020/12/09/osx-codesign-notarization.html/</guid>
-      <description>&lt;p&gt;윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.&#xA;앱을 누가 만들었는지를 알 수 없거나 악성 코드 체크가 이루어지지 않는 경우 아래 그림과 같이&#xA;사용자에게 물어보거나, 설정에 따라서 실행을 아예 막아버리기도 한다.&lt;/p&gt;</description>
+      <description>윈도우즈와 마찬가지로 맥 생태계에서도 인터넷으로 다운 받는 앱에 대해서는 보안검증이 이루어진다.</description>
     </item>
     <item>
       <title>클라우드 퍼스트 단상</title>
@@ -251,105 +258,105 @@
       <link>https://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html/</link>
       <pubDate>Sat, 30 Dec 2017 00:15:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2017/12/30/why-tls-1-3-isnt-in-browsers.html/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://blog.cloudflare.com/why-tls-1-3-isnt-in-browsers-yet/&#34;&gt;Cloudflare의 Nick Sullivan씨의 글&lt;/a&gt;을 풀어본 것입니다.&lt;/p&gt;&#xA;&lt;p&gt;현재 TLS1.3은 호환성 이슈가 많다. 보안성 강화와 빠른 속도를 장점으로 가지는 TLS1.3에 대해서 많은 브라우저들이 구현체를 탑재하였지만 대부분 기본적으로 비활성화 되어있다. 그 문제는 TLS 1.3 프로토콜 자체에 있다기 보다는 미들박스, 즉 이미 많이 도입되어 있는 SSL-proxy들이 TLS1.3 통신에 있어 장애요소가 되기 때문이다.&lt;/p&gt;</description>
+      <description>Cloudflare의 Nick Sullivan씨의 글을 풀어본 것입니다.&#xA;현재 TLS1.3은 호환성 이슈가 많다.</description>
     </item>
     <item>
       <title>금주 연차입니다.</title>
       <link>https://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</link>
       <pubDate>Tue, 04 Jul 2017 19:57:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</guid>
-      <description>&lt;p&gt;금주 연차를 내고 집에서 쉬고 있습니다.&#xA;몸살난 주부의 역할을 체험하고 있으니, 이 옷이 내 몸에 딱 맞는듯합니다.&#xA;이틀째인데 아내에게 벌써 한 소리 듣고 있습니다.&lt;/p&gt;</description>
+      <description>금주 연차를 내고 집에서 쉬고 있습니다. 몸살난 주부의 역할을 체험하고 있으니, 이 옷이 내 몸에 딱 맞는듯합니다.</description>
     </item>
     <item>
       <title>emacs 내장 입력기 사용하기 (XIM 비활성화)</title>
       <link>https://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</link>
       <pubDate>Tue, 09 Apr 2013 10:50:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</guid>
-      <description>&lt;p&gt;emacs사용시 IBUS/nabi등의 XIM 외장입력기보다 내장입력기를 사용하는 것이 간단하다. &lt;/p&gt;&#xA;&lt;p&gt;다음 방법을 사용하여왔는데 OS재설치 이후에 원하는 대로 안 움직였다.&lt;/p&gt;</description>
+      <description>emacs사용시 IBUS/nabi등의 XIM 외장입력기보다 내장입력기를 사용하는 것이 간단하다. 다음 방법을 사용하여왔는데 OS재설치 이후에 원하는 대로 안 움직였다.</description>
     </item>
     <item>
       <title>Linux 시스템 비프 활성화</title>
       <link>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</guid>
-      <description>&lt;p&gt;Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다. pacman update시에 의존성 문제로 업데이트가 안되어 의존성을 무시하도록 했더니, 업데이트후 부팅조차 불가한 상태가 되어, ubuntu기반의 mint linux 13으로 새로 설치했다. &lt;/p&gt;</description>
+      <description>Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다.</description>
     </item>
     <item>
       <title>erlang noproc error</title>
       <link>https://cwyang.github.io/2011/09/26/erlang-noproc-error.html/</link>
       <pubDate>Mon, 26 Sep 2011 17:24:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2011/09/26/erlang-noproc-error.html/</guid>
-      <description>&lt;p&gt;요즘 간단한 프락시 서버를 만들고 있다. 만들기 시작한지는 한달전인데 너무 게으르게 진행을 하다보니 아직도 한참 남은 상태다.&lt;/p&gt;</description>
+      <description>요즘 간단한 프락시 서버를 만들고 있다. 만들기 시작한지는 한달전인데 너무 게으르게 진행을 하다보니 아직도 한참 남은 상태다.</description>
     </item>
     <item>
       <title>여러가지 해묵은 문제 해결: Erlang, Firefox, Xmonad, Xmobar, Haskell</title>
       <link>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</guid>
-      <description>&lt;p&gt;어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.&lt;/p&gt;</description>
+      <description>어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.</description>
     </item>
     <item>
       <title>Top-Down 개발 vs Bottom-up 개발</title>
       <link>https://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</link>
       <pubDate>Thu, 04 Nov 2010 11:59:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/11/04/top-down-vs-bottom-up-development.html/</guid>
-      <description>&lt;p&gt;개발의 방식을 굳이 구별하자면 다음과 같이 구별할 수 있다. 하나는 &amp;ldquo;사용방식, 요구사항&amp;quot;이 먼저 존재하여 그것을 구현하는 방법을 고민하는 형식이며, 다른 하나는 &amp;ldquo;기술, 기능&amp;quot;이 먼저 존재한 후 그것을 사용하는 방법을 고민하는 형태이다.&lt;/p&gt;</description>
+      <description>개발의 방식을 굳이 구별하자면 다음과 같이 구별할 수 있다. 하나는 &amp;ldquo;사용방식, 요구사항&amp;quot;이 먼저 존재하여 그것을 구현하는 방법을 고민하는 형식이며, 다른 하나는 &amp;ldquo;기술, 기능&amp;quot;이 먼저 존재한 후 그것을 사용하는 방법을 고민하는 형태이다.</description>
     </item>
     <item>
       <title>Linux QoS Box Design</title>
       <link>https://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</link>
       <pubDate>Wed, 03 Nov 2010 21:16:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</guid>
-      <description>&lt;p&gt;1st draft, 3 November 2010&lt;br&gt;&#xA;양 철 웅  (cwyang)&lt;br&gt;&#xA;cwyang.tistory.com&lt;/p&gt;</description>
+      <description>1st draft, 3 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
     </item>
     <item>
       <title>Regarding Network Software Robustness</title>
       <link>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</guid>
-      <description>&lt;p&gt;1st draft: 2 November 2010&lt;br&gt;&#xA;양 철 웅  (cwyang)&lt;br&gt;&#xA;cwyang.tistory.com&lt;/p&gt;</description>
+      <description>1st draft: 2 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
     </item>
     <item>
       <title>gdb 팁: 배열, 리스트 쫒아가기</title>
       <link>https://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</link>
       <pubDate>Sat, 10 Jul 2010 23:21:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/07/10/gdb-tip-array-list-inspection.html/</guid>
-      <description>&lt;p&gt;이 팁을 배운 이후 너무 잘 쓰고 있기에, 배운자의 의무로써 널리 알린다.&lt;/p&gt;</description>
+      <description>이 팁을 배운 이후 너무 잘 쓰고 있기에, 배운자의 의무로써 널리 알린다.</description>
     </item>
     <item>
       <title>Direct IO란?</title>
       <link>https://cwyang.github.io/2010/07/09/direct-io.html/</link>
       <pubDate>Fri, 09 Jul 2010 22:40:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/07/09/direct-io.html/</guid>
-      <description>&lt;p&gt;Linux에서 Direct IO는 page cache를 통하지 않고 memory와 IO device사이에 직접 데이터를 송수신하는것이다. Linux의 page cache 메카니즘이 마음에 안들 경우 사용하는 용도이다. 이러한 경우 대개 성능이 중시되므로 구현에 있어서 DMA를 이용하도록 되어 있을 터이고, 그렇기 때문에 메모리 옵셋, 사이즈, 그리고 IO device의 target address에 대해 page alignment 제약이 존재한다. 이 사항은 표준이 정해져 있는 것도 아니기 때문에 사용하는 커널, 파일시스템에 따라 다르게 동작할 수 있다. 예를 들면 page aligment 제약은 커널 2.6전에는 pagesize로 align되어야했으나, 2.6부터는 512 byte단위로만 align되어있으면 된다고.&lt;/p&gt;</description>
+      <description>Linux에서 Direct IO는 page cache를 통하지 않고 memory와 IO device사이에 직접 데이터를 송수신하는것이다.</description>
     </item>
     <item>
       <title>Netfilter, TCP retransmission, half close등의 이용에 대한 오늘의 이야기</title>
       <link>https://cwyang.github.io/2010/07/09/netfilter-tcp-retransmission-half-close.html/</link>
       <pubDate>Fri, 09 Jul 2010 22:36:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/07/09/netfilter-tcp-retransmission-half-close.html/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Netfilter와 connection tracking&lt;/strong&gt;: Linux에서는 netfilter의 connection tracking모듈을 이용하여 세션별 TCP/IP 상태를 추적, 그를 이용할 수가 있다. 당연히 세션에 대한 connection정보 엔트리가 잘 유지되어야하는데, 정보엔트리가 유실되는 상황도 존재한다. 그는 TCP/IP상태별로 timer가 유지되어 두어 일정 시간이 경과하면 connection정보 엔트리가 사라지기 때문이다. SYN attack을 감안하면 SYN 관련 상태는 되도록 작게 유지하는게 좋을 것이다. 그래서 SYN_SENT, SYN_RECV상태의 timeout은 작게 설정된다. ESTABLISHED상태, 즉 데이터 통신이 진행되는 동안은 안정적으로 유지되어야하므로 timeout이 비교적 크게 설정된다. 기타 종료상태들에 대해서는 적절히 작은 값으로 설정된다. connection 정보 엔트리는 시스템의 메모리 리소스를 점유하기 때문에 정상작동을 한다는 가정하에 최대한 적게 유지할 수록 좋다.&lt;/p&gt;</description>
+      <description>Netfilter와 connection tracking: Linux에서는 netfilter의 connection tracking모듈을 이용하여 세션별 TCP/IP 상태를 추적, 그를 이용할 수가 있다.</description>
     </item>
     <item>
       <title>Multiqueue NIC</title>
       <link>https://cwyang.github.io/2010/06/10/multiqueue-nic.html/</link>
       <pubDate>Thu, 10 Jun 2010 18:46:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/06/10/multiqueue-nic.html/</guid>
-      <description>&lt;p&gt;10Gbps NIC이 나오게 되면서 Single-core로는 그만한 대역폭을 내기가 어렵게 되었고, 그래서 제안된 것이 multiqueue NIC이다. multiqueue NIC는 각 코어가 고유의 큐와 인터럽트를 할당받는다. RX시에는 NIC가 큐를 골라 (해싱 말고는 방법이 별로 없음) 패킷을 넣어주고, TX시에는 CPU가 큐를 고른다.&lt;/p&gt;</description>
+      <description>10Gbps NIC이 나오게 되면서 Single-core로는 그만한 대역폭을 내기가 어렵게 되었고, 그래서 제안된 것이 multiqueue NIC이다.</description>
     </item>
     <item>
       <title>NO라고 말하고 싶다</title>
       <link>https://cwyang.github.io/2010/04/21/want-to-say-no.html/</link>
       <pubDate>Wed, 21 Apr 2010 18:05:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/04/21/want-to-say-no.html/</guid>
-      <description>&lt;p&gt;회사에서의 일이다. 여느때와 마찬가지로 많은 기능요구가 개발쪽으로 흘러들어오고 있다. 다 나름대로의 대책이 있긴 하지만 고객이 원하는 것과 정확히 일치하지는 않는고로 고객 및 영업에서는 이것 안되면 고객이 등돌린다고 PM (제품 매니저)를 압박하고 PM은 바로 연구소로 압박이 들어온다. 그래서 주요 기능만을 우선하고 나머지는 나름대로의 대책으로 고객을 설득하고자 의견을 냈더니 연구소의 사정은 알고 있지만 그래서는 안된다며 아래와 같은 의견이 돌아온다.&lt;/p&gt;</description>
+      <description>회사에서의 일이다. 여느때와 마찬가지로 많은 기능요구가 개발쪽으로 흘러들어오고 있다. 다 나름대로의 대책이 있긴 하지만 고객이 원하는 것과 정확히 일치하지는 않는고로 고객 및 영업에서는 이것 안되면 고객이 등돌린다고 PM (제품 매니저)를 압박하고 PM은 바로 연구소로 압박이 들어온다.</description>
     </item>
     <item>
       <title>코딩후 기도하기</title>
       <link>https://cwyang.github.io/2010/04/06/code-then-prey.html/</link>
       <pubDate>Tue, 06 Apr 2010 22:09:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/04/06/code-then-prey.html/</guid>
-      <description>&lt;p&gt;오늘도 어김없이 세 시간여 디버깅으로 고생하였다.&lt;/p&gt;&#xA;&lt;p&gt;일찍 들어가서 아이랑 놀거나 맛있는 것을 먹으며 유유로이 시간을 보내고 싶은 것이 사실인데, 왜 맛없는 회사식당밥을 먹고서 머리를 쥐어뜯으며 디버깅에 시간을 보내야 하는가. 그것은 많은 양의 코드가 &amp;ldquo;코딩후 기도하기&amp;quot;라는 접근자세로 만들어져 있기 때문이다. 그리고 그렇게 작성된 코드를 디버깅 하는 데에는 &amp;ldquo;디버깅후 기도하기&amp;quot;가 될 수 밖에 없기 때문이다.&lt;/p&gt;</description>
+      <description>오늘도 어김없이 세 시간여 디버깅으로 고생하였다.&#xA;일찍 들어가서 아이랑 놀거나 맛있는 것을 먹으며 유유로이 시간을 보내고 싶은 것이 사실인데, 왜 맛없는 회사식당밥을 먹고서 머리를 쥐어뜯으며 디버깅에 시간을 보내야 하는가.</description>
     </item>
     <item>
       <title>소프트웨어 개발은 다르다</title>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Software Development on A Tale That Wasn&#39;t Left</title>
+    <title>software development on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/software-development/</link>
-    <description>Recent content in Software Development on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in software development on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Nov 2010 16:48:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</link>
       <pubDate>Tue, 02 Nov 2010 16:48:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/11/02/regarding-network-software-robustness.html/</guid>
-      <description>&lt;p&gt;1st draft: 2 November 2010&lt;br&gt;&#xA;양 철 웅  (cwyang)&lt;br&gt;&#xA;cwyang.tistory.com&lt;/p&gt;</description>
+      <description>1st draft: 2 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
     </item>
     <item>
       <title>NO라고 말하고 싶다</title>
       <link>https://cwyang.github.io/2010/04/21/want-to-say-no.html/</link>
       <pubDate>Wed, 21 Apr 2010 18:05:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/04/21/want-to-say-no.html/</guid>
-      <description>&lt;p&gt;회사에서의 일이다. 여느때와 마찬가지로 많은 기능요구가 개발쪽으로 흘러들어오고 있다. 다 나름대로의 대책이 있긴 하지만 고객이 원하는 것과 정확히 일치하지는 않는고로 고객 및 영업에서는 이것 안되면 고객이 등돌린다고 PM (제품 매니저)를 압박하고 PM은 바로 연구소로 압박이 들어온다. 그래서 주요 기능만을 우선하고 나머지는 나름대로의 대책으로 고객을 설득하고자 의견을 냈더니 연구소의 사정은 알고 있지만 그래서는 안된다며 아래와 같은 의견이 돌아온다.&lt;/p&gt;</description>
+      <description>회사에서의 일이다. 여느때와 마찬가지로 많은 기능요구가 개발쪽으로 흘러들어오고 있다. 다 나름대로의 대책이 있긴 하지만 고객이 원하는 것과 정확히 일치하지는 않는고로 고객 및 영업에서는 이것 안되면 고객이 등돌린다고 PM (제품 매니저)를 압박하고 PM은 바로 연구소로 압박이 들어온다.</description>
     </item>
     <item>
       <title>코딩후 기도하기</title>
       <link>https://cwyang.github.io/2010/04/06/code-then-prey.html/</link>
       <pubDate>Tue, 06 Apr 2010 22:09:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/04/06/code-then-prey.html/</guid>
-      <description>&lt;p&gt;오늘도 어김없이 세 시간여 디버깅으로 고생하였다.&lt;/p&gt;&#xA;&lt;p&gt;일찍 들어가서 아이랑 놀거나 맛있는 것을 먹으며 유유로이 시간을 보내고 싶은 것이 사실인데, 왜 맛없는 회사식당밥을 먹고서 머리를 쥐어뜯으며 디버깅에 시간을 보내야 하는가. 그것은 많은 양의 코드가 &amp;ldquo;코딩후 기도하기&amp;quot;라는 접근자세로 만들어져 있기 때문이다. 그리고 그렇게 작성된 코드를 디버깅 하는 데에는 &amp;ldquo;디버깅후 기도하기&amp;quot;가 될 수 밖에 없기 때문이다.&lt;/p&gt;</description>
+      <description>오늘도 어김없이 세 시간여 디버깅으로 고생하였다.&#xA;일찍 들어가서 아이랑 놀거나 맛있는 것을 먹으며 유유로이 시간을 보내고 싶은 것이 사실인데, 왜 맛없는 회사식당밥을 먹고서 머리를 쥐어뜯으며 디버깅에 시간을 보내야 하는가.</description>
     </item>
     <item>
       <title>소프트웨어 개발은 다르다</title>

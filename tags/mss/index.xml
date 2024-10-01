@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mss on A Tale That Wasn&#39;t Left</title>
+    <title>mss on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/mss/</link>
-    <description>Recent content in Mss on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in mss on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Jan 2024 19:06:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/mss/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2024/01/31/mtu-and-mss.html/</link>
       <pubDate>Wed, 31 Jan 2024 19:06:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2024/01/31/mtu-and-mss.html/</guid>
-      <description>&lt;p&gt;라우터, 방화벽을 다루다보면 MTU와 MSS 두 단어를 흔히 접하게 된다.&#xA;비슷한 의미를 가지고 있기에 헷갈리고 있어 이 기회에 정리한다.&lt;/p&gt;</description>
+      <description>라우터, 방화벽을 다루다보면 MTU와 MSS 두 단어를 흔히 접하게 된다. 비슷한 의미를 가지고 있기에 헷갈리고 있어 이 기회에 정리한다.</description>
     </item>
   </channel>
 </rss>

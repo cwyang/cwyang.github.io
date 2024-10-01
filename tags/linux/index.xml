@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on A Tale That Wasn&#39;t Left</title>
+    <title>linux on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/linux/</link>
-    <description>Recent content in Linux on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in linux on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Mar 2023 09:24:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2023/03/26/linux-settings.html/</link>
       <pubDate>Sun, 26 Mar 2023 09:24:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2023/03/26/linux-settings.html/</guid>
-      <description>&lt;p&gt;잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다.&#xA;랩탑에 설치하는 것은 처음이다. 윈도우와 최대한 유사하게 꾸며보기로 한다.&lt;/p&gt;</description>
+      <description>잠시 사용하던 윈도우에서 다시 리눅스로 돌아가고자 한다. 랩탑에 설치하는 것은 처음이다.</description>
     </item>
     <item>
       <title>한 세션을 여러번 정책 라우팅하니까 NAT가 안돼요</title>
@@ -27,14 +27,14 @@
       <link>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</guid>
-      <description>&lt;p&gt;Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다. pacman update시에 의존성 문제로 업데이트가 안되어 의존성을 무시하도록 했더니, 업데이트후 부팅조차 불가한 상태가 되어, ubuntu기반의 mint linux 13으로 새로 설치했다. &lt;/p&gt;</description>
+      <description>Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다.</description>
     </item>
     <item>
       <title>Linux QoS Box Design</title>
       <link>https://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</link>
       <pubDate>Wed, 03 Nov 2010 21:16:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/11/03/linux-qos-box-design.html/</guid>
-      <description>&lt;p&gt;1st draft, 3 November 2010&lt;br&gt;&#xA;양 철 웅  (cwyang)&lt;br&gt;&#xA;cwyang.tistory.com&lt;/p&gt;</description>
+      <description>1st draft, 3 November 2010&#xA;양 철 웅 (cwyang)&#xA;cwyang.tistory.com</description>
     </item>
   </channel>
 </rss>

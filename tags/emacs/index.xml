@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emacs on A Tale That Wasn&#39;t Left</title>
+    <title>emacs on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/emacs/</link>
-    <description>Recent content in Emacs on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in emacs on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Nov 2021 16:59:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://cwyang.github.io/2021/11/04/python-dev-environment-setup.html/</link>
       <pubDate>Thu, 04 Nov 2021 16:59:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2021/11/04/python-dev-environment-setup.html/</guid>
-      <description>&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.conda.io/en/latest/miniconda.html&#34;&gt;conda를 설치한다&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;conda venv 셋업&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ conda create -n venv_name&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ conda activate venv_name&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>conda를 설치한다 conda venv 셋업 $ conda create -n venv_name $ conda activate venv_name pip 설치 후 패키지 인스톨 (exp) $ conda install -c conda-forge pip (exp) $ pip install package_name (exp) $ python --version Python 3.</description>
     </item>
     <item>
       <title>emacs 내장 입력기 사용하기 (XIM 비활성화)</title>
       <link>https://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</link>
       <pubDate>Tue, 09 Apr 2013 10:50:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2013/04/09/use-hangul-in-emacs.html/</guid>
-      <description>&lt;p&gt;emacs사용시 IBUS/nabi등의 XIM 외장입력기보다 내장입력기를 사용하는 것이 간단하다. &lt;/p&gt;&#xA;&lt;p&gt;다음 방법을 사용하여왔는데 OS재설치 이후에 원하는 대로 안 움직였다.&lt;/p&gt;</description>
+      <description>emacs사용시 IBUS/nabi등의 XIM 외장입력기보다 내장입력기를 사용하는 것이 간단하다. 다음 방법을 사용하여왔는데 OS재설치 이후에 원하는 대로 안 움직였다.</description>
     </item>
     <item>
       <title>여러가지 해묵은 문제 해결: Erlang, Firefox, Xmonad, Xmobar, Haskell</title>
       <link>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</guid>
-      <description>&lt;p&gt;어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.&lt;/p&gt;</description>
+      <description>어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.</description>
     </item>
   </channel>
 </rss>

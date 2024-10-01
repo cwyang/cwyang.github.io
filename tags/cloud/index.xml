@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud on A Tale That Wasn&#39;t Left</title>
+    <title>cloud on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/cloud/</link>
-    <description>Recent content in Cloud on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo</generator>
+    <description>Recent content in cloud on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Feb 2023 21:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Feb 2023 20:00:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure VNET 라우팅</title>
+      <link>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</link>
+      <pubDate>Wed, 08 Feb 2023 20:00:00 +0000</pubDate>
+      <guid>https://cwyang.github.io/2023/02/08/Azure-VNET-routing.html/</guid>
+      <description>Azure의 VNET(Virtual Network)은 클라우드상의 네트워크 환경이다. AWS의 VPC (Virtual Private Cloud)에 대응한다.</description>
+    </item>
     <item>
       <title>패스워드 매니저의 위험성과 클라우드 보안</title>
       <link>https://cwyang.github.io/2023/02/02/security-of-the-password-mangagers.html/</link>
