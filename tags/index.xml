@@ -6,27 +6,34 @@
     <description>Recent content in Tags on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 13:28:09 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 29 Nov 2024 20:00:00 +0900</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>debug</title>
-      <link>https://cwyang.github.io/tags/debug/</link>
-      <pubDate>Tue, 01 Oct 2024 13:28:09 +0900</pubDate>
-      <guid>https://cwyang.github.io/tags/debug/</guid>
-      <description></description>
-    </item>
     <item>
       <title>devel</title>
       <link>https://cwyang.github.io/tags/devel/</link>
-      <pubDate>Tue, 01 Oct 2024 13:28:09 +0900</pubDate>
+      <pubDate>Fri, 29 Nov 2024 20:00:00 +0900</pubDate>
       <guid>https://cwyang.github.io/tags/devel/</guid>
       <description></description>
     </item>
     <item>
       <title>diary</title>
       <link>https://cwyang.github.io/tags/diary/</link>
-      <pubDate>Tue, 01 Oct 2024 13:28:09 +0900</pubDate>
+      <pubDate>Fri, 29 Nov 2024 20:00:00 +0900</pubDate>
       <guid>https://cwyang.github.io/tags/diary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>기술공유</title>
+      <link>https://cwyang.github.io/tags/%EA%B8%B0%EC%88%A0%EA%B3%B5%EC%9C%A0/</link>
+      <pubDate>Fri, 29 Nov 2024 20:00:00 +0900</pubDate>
+      <guid>https://cwyang.github.io/tags/%EA%B8%B0%EC%88%A0%EA%B3%B5%EC%9C%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>debug</title>
+      <link>https://cwyang.github.io/tags/debug/</link>
+      <pubDate>Tue, 01 Oct 2024 13:28:09 +0900</pubDate>
+      <guid>https://cwyang.github.io/tags/debug/</guid>
       <description></description>
     </item>
     <item>

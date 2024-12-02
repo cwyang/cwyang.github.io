@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>기술공유 on A Tale That Wasn&#39;t Left</title>
+    <link>https://cwyang.github.io/tags/%EA%B8%B0%EC%88%A0%EA%B3%B5%EC%9C%A0/</link>
+    <description>Recent content in 기술공유 on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Nov 2024 20:00:00 +0900</lastBuildDate>
+    <atom:link href="https://cwyang.github.io/tags/%EA%B8%B0%EC%88%A0%EA%B3%B5%EC%9C%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발/운영 서버에 sar(sysstat)를 설치해요</title>
+      <link>https://cwyang.github.io/24-11-29-sar-on-ubuntu/</link>
+      <pubDate>Fri, 29 Nov 2024 20:00:00 +0900</pubDate>
+      <guid>https://cwyang.github.io/24-11-29-sar-on-ubuntu/</guid>
+      <description>서버가 죽었어. 왜그런지 한번 볼까&amp;hellip; 아니 왜 sar파일들이 없는거야!</description>
+    </item>
+  </channel>
+</rss>

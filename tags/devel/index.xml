@@ -6,8 +6,15 @@
     <description>Recent content in devel on A Tale That Wasn&#39;t Left</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 13:28:09 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 29 Nov 2024 20:00:00 +0900</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/devel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발/운영 서버에 sar(sysstat)를 설치해요</title>
+      <link>https://cwyang.github.io/24-11-29-sar-on-ubuntu/</link>
+      <pubDate>Fri, 29 Nov 2024 20:00:00 +0900</pubDate>
+      <guid>https://cwyang.github.io/24-11-29-sar-on-ubuntu/</guid>
+      <description>서버가 죽었어. 왜그런지 한번 볼까&amp;hellip; 아니 왜 sar파일들이 없는거야!</description>
+    </item>
     <item>
       <title>Missing libSegFault.so</title>
       <link>https://cwyang.github.io/24-10-01-missing-libsegfault/</link>
