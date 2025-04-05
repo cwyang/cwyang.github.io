@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on A Tale That Wasn&#39;t Left</title>
+    <title>Blog on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/categories/blog/</link>
-    <description>Recent content in blog on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Blog on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Sep 2024 02:39:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Apr 2025 02:22:00 +0900</lastBuildDate>
     <atom:link href="https://cwyang.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MCP(Model Context Protocol)에 부쳐</title>
+      <link>https://cwyang.github.io/25-04-06-mcp/</link>
+      <pubDate>Sun, 06 Apr 2025 02:22:00 +0900</pubDate>
+      <guid>https://cwyang.github.io/25-04-06-mcp/</guid>
+      <description>&lt;p&gt;청소를 하며 창문을 열어두었더니 시원한 바람이 들어왔다. 엊그제가 겨울이었지만 금세 봄이 오고, 이제 곧 여름이 다가올 것 같다. 매일같이 쏟아지는 기술 기사 속에서 세상의 변화 속도는 어지러울 지경이다. 다가올 미래는 어제까지 알고 있던 풍경과는 전혀 다를지도 모른다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Welcome to Hugo</title>
       <link>https://cwyang.github.io/welcome-to-hugo/</link>
       <pubDate>Thu, 05 Sep 2024 02:39:00 +0000</pubDate>
       <guid>https://cwyang.github.io/welcome-to-hugo/</guid>
-      <description>If it ain&#39;t broke, don&#39;t fix it은 불변의 진리이나 어느날 괜히 삽을 뜨고 싶을 때가 있다.</description>
+      <description>&lt;p&gt;&lt;code&gt;If it ain&#39;t broke, don&#39;t fix it&lt;/code&gt;은 불변의 진리이나 어느날 괜히 삽을 뜨고 싶을 때가 있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>금주 연차입니다.</title>
       <link>https://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</link>
       <pubDate>Tue, 04 Jul 2017 19:57:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2017/07/04/welcome-to-jekyll.html/</guid>
-      <description>금주 연차를 내고 집에서 쉬고 있습니다. 몸살난 주부의 역할을 체험하고 있으니, 이 옷이 내 몸에 딱 맞는듯합니다.</description>
+      <description>&lt;p&gt;금주 연차를 내고 집에서 쉬고 있습니다.&#xA;몸살난 주부의 역할을 체험하고 있으니, 이 옷이 내 몸에 딱 맞는듯합니다.&#xA;이틀째인데 아내에게 벌써 한 소리 듣고 있습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>블로그를 시작하였습니다.</title>

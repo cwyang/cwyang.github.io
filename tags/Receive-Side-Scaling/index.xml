@@ -4,7 +4,7 @@
     <title>Receive Side Scaling on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/Receive-Side-Scaling/</link>
     <description>Recent content in Receive Side Scaling on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Feb 2023 20:00:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/Receive-Side-Scaling/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</guid>
-      <description>RSS에 대해서 다시 자료를 보고 있는데 10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.</description>
+      <description>&lt;p&gt;RSS에 대해서 다시 자료를 보고 있는데&#xA;&lt;a href=&#34;https://cwyang.github.io/2010/06/10/multiqueue-nic.html/&#34;&gt;10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.&lt;/a&gt;&#xA;아 세월의 무상함이여..&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

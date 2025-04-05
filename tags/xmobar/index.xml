@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>xmobar on A Tale That Wasn&#39;t Left</title>
+    <title>Xmobar on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/xmobar/</link>
-    <description>Recent content in xmobar on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Xmobar on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Aug 2011 16:22:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/xmobar/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</guid>
-      <description>어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.</description>
+      <description>&lt;p&gt;어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

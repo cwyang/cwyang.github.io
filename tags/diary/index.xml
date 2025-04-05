@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>diary on A Tale That Wasn&#39;t Left</title>
+    <title>Diary on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/diary/</link>
-    <description>Recent content in diary on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Diary on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Nov 2024 20:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 06 Apr 2025 02:22:00 +0900</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/diary/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>개발/운영 서버에 sar(sysstat)를 설치해요</title>
-      <link>https://cwyang.github.io/24-11-29-sar-on-ubuntu/</link>
-      <pubDate>Fri, 29 Nov 2024 20:00:00 +0900</pubDate>
-      <guid>https://cwyang.github.io/24-11-29-sar-on-ubuntu/</guid>
-      <description>서버가 죽었어. 왜그런지 한번 볼까&amp;hellip; 아니 왜 sar파일들이 없는거야!</description>
+      <title>MCP(Model Context Protocol)에 부쳐</title>
+      <link>https://cwyang.github.io/25-04-06-mcp/</link>
+      <pubDate>Sun, 06 Apr 2025 02:22:00 +0900</pubDate>
+      <guid>https://cwyang.github.io/25-04-06-mcp/</guid>
+      <description>&lt;p&gt;청소를 하며 창문을 열어두었더니 시원한 바람이 들어왔다. 엊그제가 겨울이었지만 금세 봄이 오고, 이제 곧 여름이 다가올 것 같다. 매일같이 쏟아지는 기술 기사 속에서 세상의 변화 속도는 어지러울 지경이다. 다가올 미래는 어제까지 알고 있던 풍경과는 전혀 다를지도 모른다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Missing libSegFault.so</title>
       <link>https://cwyang.github.io/24-10-01-missing-libsegfault/</link>
       <pubDate>Tue, 01 Oct 2024 13:28:09 +0900</pubDate>
       <guid>https://cwyang.github.io/24-10-01-missing-libsegfault/</guid>
-      <description>https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html&#xA;SEGFAULT_SIGNALS=&amp;quot;all&amp;quot; LD_PRELOAD=/usr/lib/libSetFault.so prog&#xA;위와 같이 프로그램을 실행시키고 해당 프로세스 장애시 로그에 백트레이스를 기록하는 용도로 많이 사용했었던 glibc의 libSegFault가 단종(deprecate)되었다.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://cwyang.github.io/assets/images/i_segv.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html&#34;&gt;https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;SEGFAULT_SIGNALS=&amp;quot;all&amp;quot; LD_PRELOAD=/usr/lib/libSetFault.so prog&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>크래시 덤프 수집</title>
       <link>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</guid>
-      <description>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,</description>
+      <description>&lt;p&gt;만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,&lt;br&gt;&#xA;일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.&lt;br&gt;&#xA;프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..&lt;/p&gt;</description>
     </item>
     <item>
       <title>git submodule</title>
       <link>https://cwyang.github.io/2022/03/04/git-submodule.html/</link>
       <pubDate>Fri, 04 Mar 2022 15:54:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2022/03/04/git-submodule.html/</guid>
-      <description>parent project에서 child project를 git submodule로 사용할 때,&#xA;child의 hash를 바꾼 parent를 체크아웃해도 로컬 child는 변하지 않는다.</description>
+      <description>&lt;p&gt;&lt;code&gt;parent&lt;/code&gt; project에서 &lt;code&gt;child&lt;/code&gt; project를 git submodule로 사용할 때,&lt;br&gt;&#xA;&lt;code&gt;child&lt;/code&gt;의 hash를 바꾼 &lt;code&gt;parent&lt;/code&gt;를 체크아웃해도 로컬 &lt;code&gt;child&lt;/code&gt;는 변하지 않는다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linux 시스템 비프 활성화</title>
       <link>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</guid>
-      <description>Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다.</description>
+      <description>&lt;p&gt;Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다. pacman update시에 의존성 문제로 업데이트가 안되어 의존성을 무시하도록 했더니, 업데이트후 부팅조차 불가한 상태가 되어, ubuntu기반의 mint linux 13으로 새로 설치했다. &lt;/p&gt;</description>
     </item>
     <item>
       <title>여러가지 해묵은 문제 해결: Erlang, Firefox, Xmonad, Xmobar, Haskell</title>
       <link>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</link>
       <pubDate>Fri, 19 Aug 2011 16:22:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2011/08/19/various-dev-environ-setup.html/</guid>
-      <description>어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.</description>
+      <description>&lt;p&gt;어제오늘 오늘 그동안 게으름때문에 미뤄두고 살았던 여러가지 묵은 숙제들을 해결했다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SSL_read()와 read()는 같은가요?</title>

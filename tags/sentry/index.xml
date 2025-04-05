@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sentry on A Tale That Wasn&#39;t Left</title>
+    <title>Sentry on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/sentry/</link>
-    <description>Recent content in sentry on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Sentry on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Mar 2022 16:14:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/sentry/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</link>
       <pubDate>Fri, 04 Mar 2022 16:14:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2022/03/04/collecting-crash-dump.html/</guid>
-      <description>만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,</description>
+      <description>&lt;p&gt;만든 프로그램이 장애가 발생하면 한시라도 빨리 그 내용이 개발자에게 전달이 되어야겠으나,&lt;br&gt;&#xA;일터에서 만든 프로그램의 환경은 주로 폐쇄망이어서 결국 전화나 메시지로 전달을 받고 있다.&lt;br&gt;&#xA;프로그램의 버젼과 관련정보, 스택트레이스등을 자동적으로 받을 수 있는 그 날이 언제인가..&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

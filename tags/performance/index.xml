@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>performance on A Tale That Wasn&#39;t Left</title>
+    <title>Performance on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/performance/</link>
-    <description>Recent content in performance on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Performance on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Feb 2023 20:00:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/performance/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</link>
       <pubDate>Wed, 22 Feb 2023 20:00:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2023/02/22/Receive-Side-Scaling.html/</guid>
-      <description>RSS에 대해서 다시 자료를 보고 있는데 10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.</description>
+      <description>&lt;p&gt;RSS에 대해서 다시 자료를 보고 있는데&#xA;&lt;a href=&#34;https://cwyang.github.io/2010/06/10/multiqueue-nic.html/&#34;&gt;10년전에도 Multiqueue NIC에 대해서 썼었다는 것을 발견했다.&lt;/a&gt;&#xA;아 세월의 무상함이여..&lt;/p&gt;</description>
     </item>
     <item>
       <title>Multiqueue NIC</title>
       <link>https://cwyang.github.io/2010/06/10/multiqueue-nic.html/</link>
       <pubDate>Thu, 10 Jun 2010 18:46:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2010/06/10/multiqueue-nic.html/</guid>
-      <description>10Gbps NIC이 나오게 되면서 Single-core로는 그만한 대역폭을 내기가 어렵게 되었고, 그래서 제안된 것이 multiqueue NIC이다.</description>
+      <description>&lt;p&gt;10Gbps NIC이 나오게 되면서 Single-core로는 그만한 대역폭을 내기가 어렵게 되었고, 그래서 제안된 것이 multiqueue NIC이다. multiqueue NIC는 각 코어가 고유의 큐와 인터럽트를 할당받는다. RX시에는 NIC가 큐를 골라 (해싱 말고는 방법이 별로 없음) 패킷을 넣어주고, TX시에는 CPU가 큐를 고른다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

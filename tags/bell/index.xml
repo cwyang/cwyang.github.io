@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bell on A Tale That Wasn&#39;t Left</title>
+    <title>Bell on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/bell/</link>
-    <description>Recent content in bell on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Bell on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 Mar 2013 11:01:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/bell/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</link>
       <pubDate>Tue, 26 Mar 2013 11:01:00 +0000</pubDate>
       <guid>https://cwyang.github.io/2013/03/26/activating-linux-system-beep.html/</guid>
-      <description>Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다.</description>
+      <description>&lt;p&gt;Arch Linux설치후 오년여 만족하며 사용하고 있었으나, 최근들어 x-server가 자주 비정상 종료하는 경우가 발생했다. pacman update시에 의존성 문제로 업데이트가 안되어 의존성을 무시하도록 했더니, 업데이트후 부팅조차 불가한 상태가 되어, ubuntu기반의 mint linux 13으로 새로 설치했다. &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

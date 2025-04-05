@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>centos on A Tale That Wasn&#39;t Left</title>
+    <title>Centos on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/centos/</link>
-    <description>Recent content in centos on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Centos on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Oct 2018 14:38:00 +0000</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />

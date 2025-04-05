@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>debug on A Tale That Wasn&#39;t Left</title>
+    <title>Debug on A Tale That Wasn&#39;t Left</title>
     <link>https://cwyang.github.io/tags/debug/</link>
-    <description>Recent content in debug on A Tale That Wasn&#39;t Left</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Debug on A Tale That Wasn&#39;t Left</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Oct 2024 13:28:09 +0900</lastBuildDate>
     <atom:link href="https://cwyang.github.io/tags/debug/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://cwyang.github.io/24-10-01-missing-libsegfault/</link>
       <pubDate>Tue, 01 Oct 2024 13:28:09 +0900</pubDate>
       <guid>https://cwyang.github.io/24-10-01-missing-libsegfault/</guid>
-      <description>https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html&#xA;SEGFAULT_SIGNALS=&amp;quot;all&amp;quot; LD_PRELOAD=/usr/lib/libSetFault.so prog&#xA;위와 같이 프로그램을 실행시키고 해당 프로세스 장애시 로그에 백트레이스를 기록하는 용도로 많이 사용했었던 glibc의 libSegFault가 단종(deprecate)되었다.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://cwyang.github.io/assets/images/i_segv.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html&#34;&gt;https://sourceware.org/pipermail/glibc-cvs/2022q1/076117.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;SEGFAULT_SIGNALS=&amp;quot;all&amp;quot; LD_PRELOAD=/usr/lib/libSetFault.so prog&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
